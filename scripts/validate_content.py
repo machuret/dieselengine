@@ -14,6 +14,7 @@ Checks per page:
   * every internal link target resolves to a planned URL
 Exit code 1 if any page marked `ready` fails. Draft pages report warnings only.
 """
+import collections
 import csv
 import os
 import re
@@ -28,7 +29,10 @@ REQUIRED_FIELDS = ["url", "title", "page_type", "wave", "primary_keyword",
 # before they can be marked ready (CONTENT-PLAN.md section 9).
 REVIEW_REQUIRED = {"engine-model", "symptom", "brand-symptom", "pillar"}
 PROVIDER_GATES = {"city-hub": 10, "city-service": 5, "brand-city": 3}
-TOKEN = re.compile(r"\{\{([A-Z][A-Z0-9_:.\-]*)\}\}")
+# Placeholder tokens look like {{PRICE_TABLE:gold-coast}} — the name is
+# upper-case, but the argument after the colon is a lower-case slug, so the
+# argument must not be restricted to upper-case or the token is missed.
+TOKEN = re.compile(r"\{\{([A-Z][A-Z0-9_]*(?::[A-Za-z0-9_.\-]+)?)\}\}")
 
 
 def parse_front_matter(text, path):
@@ -143,11 +147,11 @@ def main():
     print(f"  ready: {ready_n}   draft/blocked: {len(pages) - ready_n}")
 
     if warnings:
-        print(f"\n{len(warnings)} warning(s) on draft pages:")
-        for w in warnings[:40]:
-            print(f"  ! {w}")
-        if len(warnings) > 40:
-            print(f"  ... and {len(warnings) - 40} more")
+        kinds = collections.Counter(
+            re.sub(r"^[^:]+: ", "", w).split(":")[0] for w in warnings)
+        print(f"\n{len(warnings)} warning(s) on draft pages, by kind:")
+        for kind, n in kinds.most_common():
+            print(f"  ! {n:>4}  {kind}")
     if errors:
         print(f"\n{len(errors)} ERROR(s) blocking publish:")
         for e in errors:
