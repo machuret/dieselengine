@@ -40,6 +40,22 @@ regional = {"toowoomba", "wagga-wagga", "dubbo", "ballarat", "bendigo",
 mining = {"perth", "newcastle", "wollongong", "townsville", "mackay",
           "rockhampton", "darwin", "bunbury"}
 
+# Service x city pairs below the wave-2 commercial-value gate that are
+# nonetheless justified by a documented local demand pattern. Each needs a
+# stated reason; this list is the only way past the value gate, so it stays
+# short and auditable.
+EXTRA_CITY_SERVICE = [
+    ("agricultural-diesel-mechanic", "adelaide",
+     "Agricultural crossover: Adelaide's northern workshops service tractor "
+     "and irrigation engines alongside vehicles"),
+    ("diesel-fuel-contamination", "perth",
+     "Remote refuelling and long storage make fuel contamination a leading "
+     "cause of WA injection failures"),
+    ("glow-plug-replacement", "canberra",
+     "Sub-zero winter mornings surface glow plug faults earlier than "
+     "anywhere else on the mainland east coast"),
+]
+
 rows = []
 
 
@@ -122,6 +138,16 @@ for c in tier1:
             "P0" if int(s["commercial_value"]) == 5 else "P1",
             f"/diesel-mechanics/{c['slug']}/",
             f"Needs >=5 verified local providers before publish")
+
+svc_by_slug = {s["slug"]: s for s in services}
+city_by_slug = {c["slug"]: c for c in cities}
+for sslug, cslug, reason in EXTRA_CITY_SERVICE:
+    s_, c_ = svc_by_slug[sslug], city_by_slug[cslug]
+    add(2, "city-service", f"/services/{sslug}/{cslug}/",
+        f"{s_['service']} in {c_['city']}",
+        f"{s_['service'].lower()} {c_['city'].lower()}",
+        [f"{s_['service'].lower()} near me {c_['city'].lower()}"],
+        "P1", f"/diesel-mechanics/{cslug}/", reason)
 
 for sym in symptoms:
     add(2, "symptom", f"/diesel-problems/{sym['slug']}/",
