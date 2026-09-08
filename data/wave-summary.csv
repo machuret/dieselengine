@@ -1,0 +1,16 @@
+wave,page_type,pages
+1,city-hub,10
+1,pillar,5
+1,service-national,35
+2,city-service,251
+2,decision,26
+2,symptom,35
+3,brand-hub,30
+3,engine-model,92
+4,city-hub,15
+4,city-service,195
+5,brand-city,60
+5,brand-symptom,33
+6,cost-city,260
+6,cost-service,26
+TOTAL,,1073
