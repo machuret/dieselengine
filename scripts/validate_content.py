@@ -1,0 +1,161 @@
+#!/usr/bin/env python3
+"""Validate content/ against the plan's publish gates.
+
+Enforces the rules that CONTENT-PLAN.md sets out, so a page cannot reach
+`status: ready` while it still contains unsourced figures or unmet gates.
+
+Checks per page:
+  * front matter present and complete
+  * url exists in data/keyword-map.csv and matches its planned page_type/wave
+  * no unresolved {{TOKEN}} placeholders in a page marked ready
+  * cost figures carry a `prices_checked` date
+  * provider-gated pages declare provider_count >= their gate
+  * author/reviewer set on pages whose type requires technical review
+  * every internal link target resolves to a planned URL
+Exit code 1 if any page marked `ready` fails. Draft pages report warnings only.
+"""
+import csv
+import os
+import re
+import sys
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+CONTENT = os.path.join(ROOT, "content")
+
+REQUIRED_FIELDS = ["url", "title", "page_type", "wave", "primary_keyword",
+                   "status", "parent"]
+# Page types whose technical claims must be signed off by a licensed mechanic
+# before they can be marked ready (CONTENT-PLAN.md section 9).
+REVIEW_REQUIRED = {"engine-model", "symptom", "brand-symptom", "pillar"}
+PROVIDER_GATES = {"city-hub": 10, "city-service": 5, "brand-city": 3}
+TOKEN = re.compile(r"\{\{([A-Z][A-Z0-9_:.\-]*)\}\}")
+
+
+def parse_front_matter(text, path):
+    if not text.startswith("---\n"):
+        return None, f"{path}: missing front matter"
+    end = text.find("\n---\n", 4)
+    if end == -1:
+        return None, f"{path}: unterminated front matter"
+    fm, body = {}, text[end + 5:]
+    for line in text[4:end].splitlines():
+        if not line.strip() or line.lstrip().startswith("#"):
+            continue
+        if ":" not in line:
+            return None, f"{path}: bad front matter line: {line!r}"
+        k, v = line.split(":", 1)
+        v = v.strip()
+        if v.startswith("[") and v.endswith("]"):
+            v = [x.strip() for x in v[1:-1].split(",") if x.strip()]
+        fm[k.strip()] = v
+    fm["_body"] = body
+    return fm, None
+
+
+def main():
+    planned = {}
+    with open(os.path.join(ROOT, "data", "keyword-map.csv"),
+              newline="", encoding="utf-8") as fh:
+        for row in csv.DictReader(fh):
+            planned[row["url"]] = row
+
+    errors, warnings, seen = [], [], set()
+    pages = []
+    for dirpath, _, filenames in os.walk(CONTENT):
+        for fn in sorted(filenames):
+            if fn.endswith(".md"):
+                pages.append(os.path.join(dirpath, fn))
+
+    for path in sorted(pages):
+        rel = os.path.relpath(path, ROOT)
+        with open(path, encoding="utf-8") as fh:
+            text = fh.read()
+        fm, err = parse_front_matter(text, rel)
+        if err:
+            errors.append(err)
+            continue
+
+        ready = fm.get("status") == "ready"
+        sink = errors if ready else warnings
+
+        for field in REQUIRED_FIELDS:
+            if not fm.get(field):
+                errors.append(f"{rel}: missing required field '{field}'")
+        url = fm.get("url")
+        if not url:
+            continue
+        if url in seen:
+            errors.append(f"{rel}: duplicate url {url}")
+        seen.add(url)
+
+        if url not in planned:
+            errors.append(f"{rel}: url {url} is not in keyword-map.csv")
+        else:
+            plan = planned[url]
+            if fm.get("page_type") != plan["page_type"]:
+                errors.append(f"{rel}: page_type {fm.get('page_type')!r} "
+                              f"but plan says {plan['page_type']!r}")
+            if str(fm.get("wave")) != plan["wave"]:
+                errors.append(f"{rel}: wave {fm.get('wave')} "
+                              f"but plan says {plan['wave']}")
+            if fm.get("parent") != plan["internal_link_parent"]:
+                warnings.append(f"{rel}: parent {fm.get('parent')!r} differs "
+                                f"from plan {plan['internal_link_parent']!r}")
+
+        tokens = sorted(set(TOKEN.findall(text)))
+        if tokens:
+            sink.append(f"{rel}: unresolved placeholders: {', '.join(tokens)}")
+
+        ptype = fm.get("page_type", "")
+        gate = PROVIDER_GATES.get(ptype)
+        if gate is not None:
+            try:
+                count = int(fm.get("provider_count", -1))
+            except (TypeError, ValueError):
+                count = -1
+            if count < gate:
+                sink.append(f"{rel}: provider_count {count} below gate "
+                            f"{gate} for {ptype}")
+
+        body = fm["_body"]
+        # Any dollar figure on a page must be dated, or it is unsourced.
+        if re.search(r"\$\s?[\d,]+", body) and not fm.get("prices_checked"):
+            sink.append(f"{rel}: contains price figures but no "
+                        f"'prices_checked' date")
+
+        if ptype in REVIEW_REQUIRED:
+            if not fm.get("reviewed_by") or fm.get("reviewed_by") == "TBD":
+                sink.append(f"{rel}: {ptype} requires a named "
+                            f"'reviewed_by' mechanic")
+        if not fm.get("author") or fm.get("author") == "TBD":
+            sink.append(f"{rel}: missing named author")
+
+        for link in re.findall(r"\]\((/[^)#\s]*)\)", body):
+            if link not in planned and link != "/":
+                warnings.append(f"{rel}: links to unplanned url {link}")
+
+    print(f"Scanned {len(pages)} pages ({len(seen)} unique urls)")
+    ready_n = 0
+    for path in pages:
+        with open(path, encoding="utf-8") as fh:
+            if "\nstatus: ready\n" in fh.read()[:800]:
+                ready_n += 1
+    print(f"  ready: {ready_n}   draft/blocked: {len(pages) - ready_n}")
+
+    if warnings:
+        print(f"\n{len(warnings)} warning(s) on draft pages:")
+        for w in warnings[:40]:
+            print(f"  ! {w}")
+        if len(warnings) > 40:
+            print(f"  ... and {len(warnings) - 40} more")
+    if errors:
+        print(f"\n{len(errors)} ERROR(s) blocking publish:")
+        for e in errors:
+            print(f"  x {e}")
+        return 1
+    print("\nNo publish-blocking errors.")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
