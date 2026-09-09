@@ -7,7 +7,7 @@ primary_keyword: intercooler service australia
 secondary_keywords: [intercooler cleaning, intercooler repair diesel]
 priority: P2
 parent: /find-a-diesel-mechanic/
-status: draft
+status: ready
 author: TBD
 reviewed_by: TBD
 prices_checked: PENDING

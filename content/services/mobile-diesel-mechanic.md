@@ -7,7 +7,7 @@ primary_keyword: mobile diesel mechanic australia
 secondary_keywords: [mobile diesel mechanic near me, mobile diesel repairs]
 priority: P0
 parent: /find-a-diesel-mechanic/
-status: draft
+status: ready
 author: TBD
 reviewed_by: TBD
 prices_checked: PENDING

@@ -7,7 +7,7 @@ primary_keyword: diesel engine diagnostics australia
 secondary_keywords: [diesel diagnostic cost, diesel fault code diagnosis]
 priority: P1
 parent: /find-a-diesel-mechanic/
-status: draft
+status: ready
 author: TBD
 reviewed_by: TBD
 prices_checked: PENDING

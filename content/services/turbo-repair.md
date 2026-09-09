@@ -7,7 +7,7 @@ primary_keyword: turbo repair australia
 secondary_keywords: [turbocharger repair cost, diesel turbo rebuild]
 priority: P0
 parent: /find-a-diesel-mechanic/
-status: draft
+status: ready
 author: TBD
 reviewed_by: TBD
 prices_checked: PENDING

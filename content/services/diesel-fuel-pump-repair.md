@@ -7,7 +7,7 @@ primary_keyword: diesel fuel pump repair australia
 secondary_keywords: [high pressure fuel pump repair, diesel pump rebuild cost]
 priority: P1
 parent: /find-a-diesel-mechanic/
-status: draft
+status: ready
 author: TBD
 reviewed_by: TBD
 prices_checked: PENDING

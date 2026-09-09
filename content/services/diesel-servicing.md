@@ -7,7 +7,7 @@ primary_keyword: diesel servicing australia
 secondary_keywords: [diesel service cost, diesel log book service]
 priority: P1
 parent: /find-a-diesel-mechanic/
-status: draft
+status: ready
 author: TBD
 reviewed_by: TBD
 prices_checked: PENDING

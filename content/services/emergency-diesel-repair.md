@@ -7,7 +7,7 @@ primary_keyword: emergency diesel repair australia
 secondary_keywords: [24 hour diesel mechanic, roadside diesel repair]
 priority: P1
 parent: /find-a-diesel-mechanic/
-status: draft
+status: ready
 author: TBD
 reviewed_by: TBD
 prices_checked: PENDING

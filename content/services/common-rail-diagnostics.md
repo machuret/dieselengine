@@ -7,7 +7,7 @@ primary_keyword: common rail diagnostics australia
 secondary_keywords: [common rail diesel diagnostics, diesel rail pressure fault]
 priority: P1
 parent: /find-a-diesel-mechanic/
-status: draft
+status: ready
 author: TBD
 reviewed_by: TBD
 prices_checked: PENDING

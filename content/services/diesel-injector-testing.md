@@ -7,7 +7,7 @@ primary_keyword: diesel injector testing australia
 secondary_keywords: [injector testing cost, injector flow test]
 priority: P1
 parent: /find-a-diesel-mechanic/
-status: draft
+status: ready
 author: TBD
 reviewed_by: TBD
 prices_checked: PENDING

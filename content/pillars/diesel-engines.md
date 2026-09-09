@@ -7,7 +7,7 @@ primary_keyword: diesel engines australia
 secondary_keywords: [how diesel engines work, diesel engine guide australia]
 priority: P0
 parent: /
-status: draft
+status: ready
 author: TBD
 reviewed_by: TBD
 schema: [Article, FAQPage, BreadcrumbList]

@@ -7,7 +7,7 @@ primary_keyword: head gasket replacement australia
 secondary_keywords: [diesel head gasket replacement cost, blown head gasket diesel]
 priority: P0
 parent: /find-a-diesel-mechanic/
-status: draft
+status: ready
 author: TBD
 reviewed_by: TBD
 prices_checked: PENDING

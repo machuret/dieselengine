@@ -7,7 +7,7 @@ primary_keyword: diesel performance upgrades australia
 secondary_keywords: [diesel performance parts, 4wd diesel power upgrades]
 priority: P2
 parent: /find-a-diesel-mechanic/
-status: draft
+status: ready
 author: TBD
 reviewed_by: TBD
 compliance_review: required

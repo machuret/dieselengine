@@ -7,7 +7,7 @@ primary_keyword: diesel repair cost australia
 secondary_keywords: [diesel mechanic hourly rate australia]
 priority: P0
 parent: /
-status: draft
+status: ready
 author: TBD
 reviewed_by: TBD
 schema: [Article, FAQPage, BreadcrumbList]

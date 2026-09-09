@@ -7,7 +7,7 @@ primary_keyword: engine block machining australia
 secondary_keywords: [diesel block boring, cylinder liner replacement]
 priority: P1
 parent: /find-a-diesel-mechanic/
-status: draft
+status: ready
 author: TBD
 reviewed_by: TBD
 prices_checked: PENDING

@@ -7,7 +7,7 @@ primary_keyword: 4wd diesel specialist australia
 secondary_keywords: [4wd diesel mechanic, ute diesel specialist]
 priority: P0
 parent: /find-a-diesel-mechanic/
-status: draft
+status: ready
 author: TBD
 reviewed_by: TBD
 prices_checked: PENDING

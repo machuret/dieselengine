@@ -7,7 +7,7 @@ primary_keyword: diesel generator service australia
 secondary_keywords: [generator servicing cost, standby generator maintenance]
 priority: P2
 parent: /find-a-diesel-mechanic/
-status: draft
+status: ready
 author: TBD
 reviewed_by: TBD
 prices_checked: PENDING

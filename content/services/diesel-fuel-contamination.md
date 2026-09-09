@@ -7,7 +7,7 @@ primary_keyword: diesel fuel contamination repair
 secondary_keywords: [water in diesel fuel repair, wrong fuel in diesel]
 priority: P1
 parent: /find-a-diesel-mechanic/
-status: draft
+status: ready
 author: TBD
 reviewed_by: TBD
 prices_checked: PENDING

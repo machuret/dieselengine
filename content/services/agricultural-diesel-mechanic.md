@@ -7,7 +7,7 @@ primary_keyword: agricultural diesel mechanic australia
 secondary_keywords: [tractor mechanic near me, farm machinery diesel repair]
 priority: P2
 parent: /find-a-diesel-mechanic/
-status: draft
+status: ready
 author: TBD
 reviewed_by: TBD
 prices_checked: PENDING

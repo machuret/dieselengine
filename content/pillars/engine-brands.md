@@ -7,7 +7,7 @@ primary_keyword: diesel engine brands
 secondary_keywords: [diesel engine manufacturers australia]
 priority: P0
 parent: /
-status: draft
+status: ready
 author: TBD
 reviewed_by: TBD
 schema: [Article, FAQPage, BreadcrumbList]

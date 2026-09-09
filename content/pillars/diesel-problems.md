@@ -7,7 +7,7 @@ primary_keyword: diesel engine problems
 secondary_keywords: [diesel engine symptoms, common diesel faults]
 priority: P0
 parent: /
-status: draft
+status: ready
 author: TBD
 reviewed_by: TBD
 schema: [Article, FAQPage, BreadcrumbList]

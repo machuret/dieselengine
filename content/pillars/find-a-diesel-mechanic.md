@@ -7,7 +7,7 @@ primary_keyword: diesel mechanic near me
 secondary_keywords: [diesel mechanic australia, diesel specialist near me]
 priority: P0
 parent: /
-status: draft
+status: ready
 author: TBD
 reviewed_by: TBD
 schema: [Article, FAQPage, BreadcrumbList]

@@ -7,7 +7,7 @@ primary_keyword: diesel engine replacement australia
 secondary_keywords: [engine swap cost australia, replacement diesel engine]
 priority: P0
 parent: /find-a-diesel-mechanic/
-status: draft
+status: ready
 author: TBD
 reviewed_by: TBD
 prices_checked: PENDING

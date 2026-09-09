@@ -7,7 +7,7 @@ primary_keyword: cylinder head repair australia
 secondary_keywords: [diesel cylinder head repair cost, cracked cylinder head diesel]
 priority: P0
 parent: /find-a-diesel-mechanic/
-status: draft
+status: ready
 author: TBD
 reviewed_by: TBD
 prices_checked: PENDING

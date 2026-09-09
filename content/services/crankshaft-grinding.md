@@ -7,7 +7,7 @@ primary_keyword: crankshaft grinding australia
 secondary_keywords: [crankshaft regrind cost, diesel crankshaft repair]
 priority: P2
 parent: /find-a-diesel-mechanic/
-status: draft
+status: ready
 author: TBD
 reviewed_by: TBD
 prices_checked: PENDING

@@ -7,7 +7,7 @@ primary_keyword: diesel engine reconditioning australia
 secondary_keywords: [reconditioned diesel engine, exchange engine australia]
 priority: P0
 parent: /find-a-diesel-mechanic/
-status: draft
+status: ready
 author: TBD
 reviewed_by: TBD
 prices_checked: PENDING

@@ -1,0 +1,27 @@
+---
+import site from '../../site.config.json' with { type: 'json' };
+---
+<!doctype html>
+<html lang="en-AU">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Page not found | {site.shortName}</title>
+    <meta name="robots" content="noindex, follow" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="site"><a class="brand" href="/">{site.shortName}</a></header>
+    <main id="main"><article class="prose">
+      <h1>Page not found</h1>
+      <p>That page doesn't exist. Try one of these:</p>
+      <ul>
+        <li><a href="/diesel-engines/">How diesel engines work</a></li>
+        <li><a href="/diesel-problems/">Diesel problems and symptoms</a></li>
+        <li><a href="/services/">Diesel services</a></li>
+        <li><a href="/costs/">What repairs cost</a></li>
+        <li><a href="/find-a-diesel-mechanic/">Find a diesel mechanic</a></li>
+      </ul>
+    </article></main>
+  </body>
+</html>

@@ -7,7 +7,7 @@ primary_keyword: egr cleaning australia
 secondary_keywords: [egr valve cleaning cost, egr clean or replace]
 priority: P1
 parent: /find-a-diesel-mechanic/
-status: draft
+status: ready
 author: TBD
 reviewed_by: TBD
 prices_checked: PENDING

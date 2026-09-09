@@ -7,7 +7,7 @@ primary_keyword: glow plug replacement australia
 secondary_keywords: [glow plug replacement cost, diesel glow plug failure]
 priority: P2
 parent: /find-a-diesel-mechanic/
-status: draft
+status: ready
 author: TBD
 reviewed_by: TBD
 prices_checked: PENDING

@@ -7,7 +7,7 @@ primary_keyword: turbo replacement australia
 secondary_keywords: [turbo replacement cost, new turbo diesel]
 priority: P0
 parent: /find-a-diesel-mechanic/
-status: draft
+status: ready
 author: TBD
 reviewed_by: TBD
 prices_checked: PENDING

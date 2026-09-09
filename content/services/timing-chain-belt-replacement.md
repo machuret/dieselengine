@@ -7,7 +7,7 @@ primary_keyword: timing chain replacement diesel australia
 secondary_keywords: [diesel timing belt replacement cost, timing chain rattle diesel]
 priority: P1
 parent: /find-a-diesel-mechanic/
-status: draft
+status: ready
 author: TBD
 reviewed_by: TBD
 prices_checked: PENDING

@@ -7,7 +7,7 @@ primary_keyword: diesel tuning australia
 secondary_keywords: [diesel ecu remapping, diesel chip tuning australia]
 priority: P1
 parent: /find-a-diesel-mechanic/
-status: draft
+status: ready
 author: TBD
 reviewed_by: TBD
 compliance_review: required

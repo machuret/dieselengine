@@ -7,7 +7,7 @@ primary_keyword: truck diesel mechanic australia
 secondary_keywords: [heavy vehicle diesel mechanic, truck mechanic near me]
 priority: P0
 parent: /find-a-diesel-mechanic/
-status: draft
+status: ready
 author: TBD
 reviewed_by: TBD
 prices_checked: PENDING

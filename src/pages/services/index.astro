@@ -1,0 +1,20 @@
+---
+import Page from '../../layouts/Page.astro';
+import { allPages } from '../../lib/content.js';
+const services = allPages.filter((p) => p.pageType === 'service-national');
+const page = {
+  url: '/services/', title: 'Diesel Services in Australia', pageType: 'index',
+  status: 'ready', author: null, reviewer: null, needsReviewer: false,
+  parent: '/', schema: ['Article'], updated: null, indexable: false,
+  blockers: ['index page: publishes once its child service pages are ready'],
+  description: 'Every diesel repair and servicing type covered on this site, with what the job involves and what it should cost in Australia.',
+};
+---
+<Page page={page}>
+  <h1>Diesel services in Australia</h1>
+  <p class="lede">What each job involves, when you need it, what it should cost,
+  and how to tell a complete quote from a cheap one.</p>
+  <ul>{services.map((s) => (
+    <li><a href={s.url}>{s.title.replace(' in Australia', '')}</a></li>
+  ))}</ul>
+</Page>

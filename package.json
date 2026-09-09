@@ -1,0 +1,14 @@
+{
+  "name": "marinedieselengine",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "node scripts/prebuild-check.mjs && astro build",
+    "preview": "astro preview",
+    "check": "python3 scripts/validate_content.py"
+  },
+  "dependencies": {
+    "astro": "^5.6.1"
+  }
+}

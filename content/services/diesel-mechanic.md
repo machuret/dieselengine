@@ -7,7 +7,7 @@ primary_keyword: diesel mechanic australia
 secondary_keywords: [diesel mechanic cost, what is a diesel mechanic]
 priority: P0
 parent: /find-a-diesel-mechanic/
-status: draft
+status: ready
 author: TBD
 reviewed_by: TBD
 prices_checked: PENDING

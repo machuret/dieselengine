@@ -1,0 +1,18 @@
+---
+import Page from '../layouts/Page.astro';
+import { allPages } from '../lib/content.js';
+
+export function getStaticPaths() {
+  const byUrl = new Map(allPages.map((p) => [p.url, p]));
+  return allPages.map((page) => ({
+    // Astro's catch-all wants the path without leading/trailing slashes;
+    // trailingSlash:'always' + format:'directory' re-adds them on output.
+    params: { slug: page.url.replace(/^\/|\/$/g, '') },
+    props: { page: { ...page, parentTitle: byUrl.get(page.parent)?.title } },
+  }));
+}
+
+const { page } = Astro.props;
+const { Content } = page;
+---
+<Page page={page}><Content /></Page>

@@ -1,0 +1,86 @@
+---
+import site from '../../site.config.json' with { type: 'json' };
+import { allPages } from '../lib/content.js';
+
+const canonical = `${site.domain}/`;
+const pillars = ['/diesel-engines/', '/diesel-problems/', '/find-a-diesel-mechanic/', '/costs/', '/engine-brands/']
+  .map((u) => allPages.find((p) => p.url === u))
+  .filter(Boolean);
+const cities = allPages.filter((p) => p.pageType === 'city-hub');
+const services = allPages.filter((p) => p.pageType === 'service-national');
+const ready = allPages.filter((p) => p.indexable).length;
+
+const jsonld = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    { '@type': 'Organization', '@id': `${site.domain}/#publisher`, name: site.name, url: site.domain, description: site.description },
+    { '@type': 'WebSite', url: canonical, name: site.name, inLanguage: site.locale, publisher: { '@id': `${site.domain}/#publisher` } },
+  ],
+};
+---
+<!doctype html>
+<html lang="en-AU">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{site.name} — {site.tagline}</title>
+    <meta name="description" content={site.description} />
+    <link rel="canonical" href={canonical} />
+    <meta name="robots" content={ready > 0 ? 'index, follow' : 'noindex, follow'} />
+    <meta property="og:title" content={site.name} />
+    <meta property="og:description" content={site.description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content="en_AU" />
+    <script type="application/ld+json" set:html={JSON.stringify(jsonld)} />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site">
+      <a class="brand" href="/">{site.shortName}</a>
+      <nav aria-label="Primary">
+        <a href="/diesel-engines/">Diesel engines</a>
+        <a href="/diesel-problems/">Problems</a>
+        <a href="/services/">Services</a>
+        <a href="/costs/">Costs</a>
+        <a href="/find-a-diesel-mechanic/">Find a mechanic</a>
+      </nav>
+    </header>
+
+    {ready === 0 && (
+      <div class="draft-banner" role="status">
+        <strong>No page has been published yet.</strong> Every page is served
+        <code>noindex</code> and the sitemap is empty until pages clear their
+        publish checks. See <code>docs/deployment.md</code>.
+      </div>
+    )}
+
+    <main id="main">
+      <article class="prose">
+        <h1>Diesel engines in Australia</h1>
+        <p class="lede">
+          Independent guides to how diesel engines work, what goes wrong with
+          them, what repairs should cost, and how to find a workshop that knows
+          your engine. We don't repair vehicles and we don't sell parts.
+        </p>
+
+        <h2>Start here</h2>
+        <ul class="cards">
+          {pillars.map((p) => (
+            <li><a href={p.url}><strong>{p.title}</strong></a></li>
+          ))}
+        </ul>
+
+        <h2>Find a diesel mechanic by city</h2>
+        <p>{cities.map((p, i) => (<>{i > 0 && ' · '}<a href={p.url}>{p.title.replace('Diesel Mechanics in ', '')}</a></>))}</p>
+
+        <h2>Services</h2>
+        <p>{services.map((p, i) => (<>{i > 0 && ' · '}<a href={p.url}>{p.title.replace(' in Australia', '')}</a></>))}</p>
+      </article>
+    </main>
+
+    <footer class="site">
+      <p><strong>{site.name}</strong> is an independent information site. We do not repair vehicles, sell parts, or perform any of the work described here.</p>
+    </footer>
+  </body>
+</html>

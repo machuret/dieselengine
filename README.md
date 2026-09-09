@@ -1,8 +1,13 @@
 # Diesel Engine AU — Content Programme
 
-Planning repository for the Australian diesel engine education and referral
-site. No application code — this repo holds the content strategy, the keyword
-architecture, and the source data that generates it.
+Content and site for the Australian diesel engine education and referral site
+at **marinedieselengine.com.au** — the content strategy, the keyword
+architecture, the source data that generates it, and the Astro app that
+publishes it.
+
+```bash
+npm install && npm run build
+```
 
 ## Start here
 - **[CONTENT-PLAN.md](CONTENT-PLAN.md)** — the full plan: strategy, site
@@ -11,6 +16,15 @@ architecture, and the source data that generates it.
 - **[docs/editorial-standards.md](docs/editorial-standards.md)** — how pages
   must read, review requirements, refresh cycles.
 - **[templates/](templates/)** — one template per page type.
+- **[docs/deployment.md](docs/deployment.md)** — Vercel setup, and how the
+  publish gates are enforced at build time.
+
+## Publishing
+
+50 pages build today and **0 are indexable**: pages that fail a publish gate are
+served `noindex` and kept out of the sitemap rather than shipped thin. The 40
+pillar and service pages need only a named author and reviewer in
+`site.config.json` to go live. See [docs/deployment.md](docs/deployment.md).
 
 ## Regenerate the keyword map
 

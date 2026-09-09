@@ -7,7 +7,7 @@ primary_keyword: diesel engine rebuild australia
 secondary_keywords: [diesel engine rebuild cost, engine rebuild vs replace]
 priority: P0
 parent: /find-a-diesel-mechanic/
-status: draft
+status: ready
 author: TBD
 reviewed_by: TBD
 prices_checked: PENDING

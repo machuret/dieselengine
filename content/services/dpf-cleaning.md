@@ -7,7 +7,7 @@ primary_keyword: dpf cleaning australia
 secondary_keywords: [dpf cleaning cost, what is dpf cleaning]
 priority: P0
 parent: /find-a-diesel-mechanic/
-status: draft
+status: ready
 author: TBD
 reviewed_by: TBD
 prices_checked: PENDING

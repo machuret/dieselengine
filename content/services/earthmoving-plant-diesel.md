@@ -7,7 +7,7 @@ primary_keyword: earthmoving diesel repair australia
 secondary_keywords: [plant diesel mechanic, excavator engine repair]
 priority: P1
 parent: /find-a-diesel-mechanic/
-status: draft
+status: ready
 author: TBD
 reviewed_by: TBD
 prices_checked: PENDING

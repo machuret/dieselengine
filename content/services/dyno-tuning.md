@@ -7,7 +7,7 @@ primary_keyword: dyno tuning diesel australia
 secondary_keywords: [diesel dyno tune cost, dyno tuning near me]
 priority: P2
 parent: /find-a-diesel-mechanic/
-status: draft
+status: ready
 author: TBD
 reviewed_by: TBD
 compliance_review: required
