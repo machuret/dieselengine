@@ -1,20 +1,61 @@
 ---
 import Page from '../../layouts/Page.astro';
 import { allPages } from '../../lib/content.js';
+
 const services = allPages.filter((p) => p.pageType === 'service-national');
+const byCluster = new Map();
+const CLUSTERS = [
+  ['Cooling and raw water', ['impeller', 'heat-exchanger', 'exhaust-elbow', 'aftercooler', 'raw-water', 'cooling-system']],
+  ['Corrosion', ['anode', 'corrosion']],
+  ['Fuel', ['fuel-polishing', 'diesel-bug', 'injector', 'fuel-pump', 'fuel-filter']],
+  ['Engine', ['engine-rebuild', 'reconditioning', 'repower', 'cylinder-head', 'head-gasket', 'saltwater-damage', 'turbo', 'engine-repair', 'engine-service', 'diesel-mechanic']],
+  ['Driveline', ['gearbox', 'sterndrive', 'shaft-seal', 'alignment', 'propeller-shaft']],
+  ['Electrical', ['electrical', 'alarms']],
+  ['Inspection', ['survey', 'sea-trial', 'oil-analysis']],
+  ['Seasonal', ['winterisation', 'recommissioning']],
+  ['Attendance', ['mobile', 'emergency', 'slipway']],
+  ['By vessel type', ['commercial-vessel', 'charter-fleet', 'yacht-auxiliary', 'workboat']],
+];
+for (const [label, keys] of CLUSTERS) byCluster.set(label, []);
+const other = [];
+for (const s of services) {
+  const slug = s.url.split('/')[2];
+  const hit = CLUSTERS.find(([, keys]) => keys.some((k) => slug.includes(k)));
+  (hit ? byCluster.get(hit[0]) : other).push(s);
+}
+
 const page = {
-  url: '/services/', title: 'Diesel Services in Australia', pageType: 'index',
+  url: '/services/', title: 'Marine Engine Services in Australia', pageType: 'index',
   status: 'ready', author: null, reviewer: null, needsReviewer: false,
-  parent: '/', schema: ['Article'], updated: null, indexable: false,
+  parent: '/', parentTitle: 'Home', schema: ['Article'], updated: null,
+  indexable: false, headings: [],
   blockers: ['index page: publishes once its child service pages are ready'],
-  description: 'Every diesel repair and servicing type covered on this site, with what the job involves and what it should cost in Australia.',
+  description: 'Every marine engine job covered on this site — what it involves, when you need it, and what it should cost in Australia.',
 };
 ---
 <Page page={page}>
-  <h1>Diesel services in Australia</h1>
-  <p class="lede">What each job involves, when you need it, what it should cost,
-  and how to tell a complete quote from a cheap one.</p>
-  <ul>{services.map((s) => (
-    <li><a href={s.url}>{s.title.replace(' in Australia', '')}</a></li>
-  ))}</ul>
+  <h1>Marine engine services</h1>
+  <p>
+    What each job actually involves, when you need it, what it should cost, and
+    how to tell a complete quote from a cheap one.
+  </p>
+
+  {[...byCluster.entries()].filter(([, v]) => v.length).map(([label, list]) => (
+    <>
+      <h2>{label}</h2>
+      <ul class="chips">
+        {list.map((s) => (
+          <li><a href={s.url}>{s.title.replace(' in Australia', '')}</a></li>
+        ))}
+      </ul>
+    </>
+  ))}
+  {other.length > 0 && (
+    <>
+      <h2>Other</h2>
+      <ul class="chips">
+        {other.map((s) => <li><a href={s.url}>{s.title.replace(' in Australia', '')}</a></li>)}
+      </ul>
+    </>
+  )}
 </Page>

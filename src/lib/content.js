@@ -11,6 +11,8 @@ function build() {
     const raw = mod.rawContent ? mod.rawContent() : '';
     const page = toPage(mod.frontmatter ?? {}, raw, file);
     page.Content = mod.Content;
+    // Only h2s: these pages are long, and a two-level contents list is noise.
+    page.headings = (mod.getHeadings?.() ?? []).filter((h) => h.depth === 2);
     pages.push(page);
   }
 

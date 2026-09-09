@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
 import site from './site.config.json' with { type: 'json' };
 import { remarkStripTokens } from './src/lib/remark-strip-tokens.mjs';
+import { rehypeEnhance } from './src/lib/rehype-enhance.mjs';
 
 export default defineConfig({
   site: site.domain,
@@ -13,6 +14,7 @@ export default defineConfig({
   },
   markdown: {
     remarkPlugins: [remarkStripTokens],
+    rehypePlugins: [rehypeEnhance],
     shikiConfig: { theme: 'github-light', wrap: true },
   },
 });
