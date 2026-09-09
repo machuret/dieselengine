@@ -18,7 +18,13 @@ const PRIORITY = {
 };
 
 export function getStaticPaths() {
-  return site.sections.map((s) => ({ params: { section: s.id } }));
+  // Only emit a section sitemap that actually has indexable pages. An empty
+  // <urlset> is not a useful thing to serve, and the sitemap index already
+  // omits these sections.
+  const used = new Set(indexablePages.map((p) => sectionOf(p.url)));
+  return site.sections
+    .filter((s) => used.has(s.id))
+    .map((s) => ({ params: { section: s.id } }));
 }
 
 export function GET({ params }) {

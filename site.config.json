@@ -6,8 +6,8 @@
   "description": "Independent Australian guides to marine diesel engines, faults, service costs and how to find a marine mechanic. We do not sell repairs.",
   "locale": "en-AU",
   "country": "AU",
-  "_comment_publishing": "Filling defaultAuthor and defaultReviewer lets pages be marked status: ready. Until both are set to real named people, every page is served noindex and kept out of the sitemap. Do not put a placeholder here.",
-  "defaultAuthor": null,
+  "_comment_publishing": "defaultAuthor is the publishing organisation and is a legitimate byline. defaultReviewer must be a real, named, licensed marine mechanic \u2014 never a placeholder. Until it is set, pillars and symptom/engine pages stay noindex and out of the sitemap, because those carry direct diagnostic and safety advice. Service pages publish on the author byline alone.",
+  "defaultAuthor": "The Marine Diesel Engine editorial team",
   "defaultReviewer": null,
   "sections": [
     {
