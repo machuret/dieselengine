@@ -56,8 +56,8 @@ Two tests separate the cheap causes from the expensive one, and both are quick:
   cooling system, which is what a head gasket actually does
 
 Insist on both before authorising head removal. On a boat, head access is often
-poor and the job is expensive; ruling out a $200 pressure cap first is not
-excessive caution.
+poor and the job is expensive. Ruling out a pressure cap — one of the cheapest
+parts on the engine — before authorising that is not excessive caution.
 
 → [Heat exchanger service](/services/heat-exchanger-service/) ·
 [Marine cooling system repair](/services/marine-cooling-system-repair/)
