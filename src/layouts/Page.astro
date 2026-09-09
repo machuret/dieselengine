@@ -1,11 +1,13 @@
 ---
 import site from '../../site.config.json' with { type: 'json' };
+import { seoTitle } from '../lib/extract.js';
 import Masthead from '../components/Masthead.astro';
 import SiteFooter from '../components/SiteFooter.astro';
+import Related from '../components/Related.astro';
 
 const { page } = Astro.props;
 const canonical = new URL(page.url, site.domain).href;
-const description = (page.description ?? site.description).slice(0, 300);
+const description = page.description || site.description;
 const headings = page.headings ?? [];
 const showToc = headings.length >= 4;
 
@@ -32,6 +34,12 @@ const jsonld = {
       ...(page.author ? { author: { '@type': 'Organization', name: page.author } } : {}),
       ...(page.reviewer ? { reviewedBy: { '@type': 'Person', name: page.reviewer } } : {}),
       publisher: { '@id': `${site.domain}/#publisher` },
+      ...(page.geo
+        ? {
+            about: { '@id': `${canonical}#place` },
+            spatialCoverage: { '@id': `${canonical}#place` },
+          }
+        : {}),
     },
     {
       '@type': 'Organization',
@@ -40,9 +48,39 @@ const jsonld = {
       url: site.domain,
       description: site.description,
     },
+    // A location hub is about a place; say so in a way a machine can read.
+    ...(page.geo
+      ? [{
+          '@type': 'Place',
+          '@id': `${canonical}#place`,
+          name: page.geo.city,
+          address: {
+            '@type': 'PostalAddress',
+            addressLocality: page.geo.locality,
+            addressRegion: page.geo.state,
+            postalCode: page.geo.postcode,
+            addressCountry: 'AU',
+          },
+          geo: {
+            '@type': 'GeoCoordinates',
+            latitude: page.geo.lat,
+            longitude: page.geo.lon,
+          },
+        }]
+      : []),
+    ...(page.faqs?.length
+      ? [{
+          '@type': 'FAQPage',
+          '@id': `${canonical}#faq`,
+          mainEntity: page.faqs.map((f) => ({
+            '@type': 'Question',
+            name: f.question,
+            acceptedAnswer: { '@type': 'Answer', text: f.answer },
+          })),
+        }]
+      : []),
     {
       '@type': 'BreadcrumbList',
-      itemElement: undefined,
       itemListElement: crumbs.map((c, i) => ({
         '@type': 'ListItem',
         position: i + 1,
@@ -58,7 +96,7 @@ const jsonld = {
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{page.title} | {site.shortName}</title>
+    <title>{page.seoTitleTag ?? seoTitle(page, site.shortName)}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
     {page.indexable
@@ -109,6 +147,7 @@ const jsonld = {
       <div class="layout">
         <article class="prose">
           <slot />
+          <Related page={page} />
           <footer class="byline">
             {page.author
               ? <p>Written by {page.author}{page.reviewer ? `. Technically reviewed by ${page.reviewer}.` : ''}</p>

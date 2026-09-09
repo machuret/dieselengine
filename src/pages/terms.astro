@@ -1,0 +1,111 @@
+---
+import Page from '../layouts/Page.astro';
+import site from '../../site.config.json' with { type: 'json' };
+const page = {
+  url: '/terms/', title: 'Terms and Conditions', seoTitle: 'Terms and Conditions',
+  pageType: 'legal', status: 'ready', author: site.defaultAuthor, reviewer: null,
+  needsReviewer: false, parent: '/', parentTitle: 'Home',
+  schema: ['Article'], updated: site.legalUpdated, indexable: true,
+  blockers: [], headings: [], faqs: [],
+  description: 'Terms for using MarineDieselEngine.com.au. Information is general in nature and is not a substitute for a licensed marine mechanic.',
+};
+---
+<Page page={page}>
+  <h1>Terms and conditions</h1>
+  <p>
+    These terms apply to your use of {site.name}. If you do not accept them,
+    please do not use the site.
+  </p>
+
+  <h2>What this site is</h2>
+  <p>
+    {site.name} publishes general information about marine diesel engines in
+    Australia, and lists marine businesses. <strong>We do not work on boats, sell
+    parts, or perform any of the work described here.</strong> We are not a
+    party to any arrangement you make with a business you find through this
+    site.
+  </p>
+
+  <h2>Information is general, not advice for your engine</h2>
+  <p>
+    Everything here is general information. It is written carefully, but it
+    cannot account for your specific vessel, engine, installation or
+    circumstances, and it is not a substitute for a licensed marine mechanic
+    inspecting your engine.
+  </p>
+  <p>
+    <strong>Marine engine faults can be dangerous.</strong> Some can cause fire,
+    flooding, or leave you without propulsion at sea. Where a page tells you to
+    stop the engine and get professional help, that is the advice — do not
+    substitute your own judgement based on a general guide.
+  </p>
+  <p>
+    You are responsible for deciding what to do with your vessel. Do not rely on
+    this site alone for a decision that affects safety.
+  </p>
+
+  <h2>Prices</h2>
+  <p>
+    Price ranges are collected from Australian businesses and are dated on the
+    page. They are indicative only. Real quotes vary with access, vessel, engine,
+    location and what is found once work starts. A price on this site is not an
+    offer, a quote, or a promise that anyone will do the work for that amount.
+  </p>
+
+  <h2>Business listings</h2>
+  <p>
+    We verify listings before publishing them and re-check them periodically,
+    but we do not guarantee that any listed business is available, appropriately
+    licensed or insured for your work, or suitable for it. Satisfy yourself
+    before engaging anyone. Check licences and insurance directly with the
+    business and the relevant authority.
+  </p>
+  <p>
+    Where a listing involves a paid referral relationship, we say so on the
+    listing itself. Payment never buys a higher position within a page.
+  </p>
+  <p>
+    A listing is not an endorsement, and the absence of a business is not a
+    judgement about it.
+  </p>
+
+  <h2>Links to other sites</h2>
+  <p>
+    We link to other sites for your convenience. We do not control them and are
+    not responsible for their content, their practices, or anything you do
+    there.
+  </p>
+
+  <h2>Your consumer rights</h2>
+  <p>
+    Nothing in these terms excludes, restricts or modifies any consumer guarantee
+    or right you have under the Australian Consumer Law or any other law that
+    cannot be excluded. Where a right cannot be excluded, these terms apply only
+    to the extent they are consistent with it.
+  </p>
+  <p>
+    Subject to that, and to the extent the law allows, we are not liable for loss
+    or damage arising from your use of this site or from your reliance on
+    information published here.
+  </p>
+
+  <h2>Our content</h2>
+  <p>
+    The writing, structure and data on this site belong to us. You are welcome to
+    read it, print it for your own use, and link to it. Republishing it — in
+    whole or in substantial part, including reproducing it as your own content —
+    requires our permission.
+  </p>
+
+  <h2>Corrections</h2>
+  <p>
+    If something here is wrong, tell us. We would rather fix it than leave it.
+    Send corrections to <a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a>.
+  </p>
+
+  <h2>Changes and governing law</h2>
+  <p>
+    We may update these terms; the current version is always the one on this
+    page, dated below. These terms are governed by the laws of Australia.
+  </p>
+</Page>

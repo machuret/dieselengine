@@ -44,6 +44,11 @@
       "id": "costs",
       "label": "Costs",
       "match": "^/costs/."
+    },
+    {
+      "id": "questions",
+      "label": "Questions",
+      "match": "^/questions/"
     }
   ],
   "_comment_domain": "Must match the host actually served. The apex 308-redirects to www in production, so canonicals, Open Graph URLs and every sitemap entry use www \u2014 otherwise each one costs a redirect hop and the canonical points at a URL that is not the one served.",
@@ -57,7 +62,30 @@
       "url": "/services/",
       "section": "services",
       "priority": "0.9"
+    },
+    {
+      "url": "/privacy/",
+      "section": "pages",
+      "priority": "0.3"
+    },
+    {
+      "url": "/terms/",
+      "section": "pages",
+      "priority": "0.3"
+    },
+    {
+      "url": "/sitemap/",
+      "section": "pages",
+      "priority": "0.4"
+    },
+    {
+      "url": "/questions/",
+      "section": "questions",
+      "priority": "0.8"
     }
   ],
-  "_comment_staticRoutes": "Pages built from .astro rather than content/. They are real URLs and must appear in the sitemap \u2014 the homepage is the most important URL on the site and was previously absent from it entirely."
+  "_comment_staticRoutes": "Pages built from .astro rather than content/. They are real URLs and must appear in the sitemap \u2014 the homepage is the most important URL on the site and was previously absent from it entirely.",
+  "contactEmail": "hello@marinedieselengine.com.au",
+  "legalUpdated": "2026-09-09",
+  "_comment_contact": "Used on the privacy and terms pages. Point this at a mailbox that is actually monitored \u2014 both pages invite corrections and listing removal requests, and the privacy page commits to responding."
 }

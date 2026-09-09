@@ -1,5 +1,5 @@
 import site from '../../site.config.json' with { type: 'json' };
-import { indexablePages, sectionOf } from '../lib/content.js';
+import { sitemapRoutes as indexablePages, sectionOf } from '../lib/routes.js';
 
 /**
  * Sitemap index. CONTENT-PLAN.md section 6 calls for one sitemap per section

@@ -169,7 +169,10 @@ main { padding: 0 var(--gutter) 4rem; }
 /* --- prose --------------------------------------------------------------- */
 .prose { min-width: 0; }
 .prose > * { max-width: var(--measure); }
-.prose > h1, .prose > h2 { max-width: 22ch; }
+.prose > h1 { max-width: 22ch; }
+/* h2 keeps the measure: section headings are short, but a question used as a
+   heading needs the full column or it wraps after three words. */
+.prose > h2 { max-width: var(--measure); }
 
 .prose h1 {
   font-family: var(--display); font-weight: 700;
@@ -268,7 +271,12 @@ main { padding: 0 var(--gutter) 4rem; }
 /* --- sidebar / table of contents ----------------------------------------- */
 .side { display: none; }
 @media (min-width: 62rem) {
-  .side { display: block; position: sticky; top: 4.6rem; font-size: .85rem; }
+  .side {
+    display: block; position: sticky; top: 4.6rem; font-size: .85rem;
+    max-height: calc(100vh - 6rem); overflow-y: auto; overscroll-behavior: contain;
+  }
+  .side::-webkit-scrollbar { width: 6px; }
+  .side::-webkit-scrollbar-thumb { background: var(--rule); border-radius: 3px; }
 }
 .toc-title {
   font-size: .7rem; font-weight: 600; text-transform: uppercase;
@@ -361,7 +369,31 @@ footer.site {
 @media (min-width: 44rem) { .footer-inner { grid-template-columns: 1.4fr 1fr; } }
 footer.site strong { color: var(--ink-strong); }
 footer.site p { margin: .45rem 0; max-width: 42rem; }
-footer.site nav { display: flex; flex-wrap: wrap; gap: .5rem 1.1rem; }
+footer.site nav { display: flex; flex-direction: column; gap: .35rem; }
+.footer-navs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
+.footer-head {
+  margin: 0 0 .15rem; font-size: .72rem; font-weight: 600; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--ink-strong);
+}
+
+/* Related links after the article body. */
+.related {
+  max-width: var(--measure); margin: 2.5rem 0 0; padding-top: 1.2rem;
+  border-top: 1px solid var(--rule);
+}
+.related h2 {
+  font-family: var(--sans); font-size: .72rem; font-weight: 600;
+  letter-spacing: .08em; text-transform: uppercase; color: var(--muted);
+  margin: 0 0 .7rem; border: 0; padding: 0;
+}
+.related ul { list-style: none; margin: 0; padding: 0; display: grid; gap: .4rem; }
+@media (min-width: 34rem) { .related ul { grid-template-columns: repeat(2, 1fr); } }
+.related a {
+  display: block; padding: .5rem .75rem; font-size: .9rem;
+  background: var(--surface); border: 1px solid var(--rule-soft);
+  border-radius: 8px; text-decoration: none; color: var(--ink);
+}
+.related a:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-wash); }
 footer.site nav a { color: var(--muted); text-decoration: none; }
 footer.site nav a:hover { color: var(--accent); text-decoration: underline; }
 .muted { color: var(--muted); }

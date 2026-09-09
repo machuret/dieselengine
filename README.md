@@ -23,7 +23,7 @@ npm install && npm run build
 
 ## Publishing
 
-**59 routes, all 59 in the sitemap.** The build refuses to ship a page that is
+**72 routes, all 72 in the sitemap.** The build refuses to ship a page that is
 indexable but missing from the sitemap, a sitemap URL that was never built, or a
 raw `{{PLACEHOLDER}}` in rendered output.
 

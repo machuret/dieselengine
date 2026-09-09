@@ -1,0 +1,46 @@
+---
+import Page from '../../layouts/Page.astro';
+import { questionClusters } from '../../lib/questions.js';
+
+export function getStaticPaths() {
+  return questionClusters.map((c) => ({ params: { cluster: c.slug }, props: { cluster: c } }));
+}
+
+const { cluster } = Astro.props;
+const page = {
+  url: `/questions/${cluster.slug}/`,
+  title: `${cluster.title}: common questions`,
+  seoTitle: cluster.title,
+  pageType: 'questions', status: 'ready', author: null, reviewer: null,
+  needsReviewer: false, parent: '/questions/', parentTitle: 'Common Marine Diesel Questions',
+  schema: ['Article'], updated: null, indexable: true, blockers: [],
+  headings: cluster.items.map((q) => ({ depth: 2, slug: q.id, text: q.question })),
+  // Every answer on the page is marked up, so the cluster is eligible for rich
+  // results as a whole rather than one question at a time.
+  faqs: cluster.items.map((q) => ({ question: q.question, answer: q.answer })),
+  description: `${cluster.items.length} answered questions about ${cluster.title.toLowerCase()} on Australian marine diesel engines.`,
+};
+---
+<Page page={page}>
+  <h1>{cluster.title}</h1>
+  <p>{cluster.blurb}</p>
+
+  {cluster.items.map((q, i) => (
+    <>
+      <h2 id={q.id}>{q.question}</h2>
+      <p>{q.answer}</p>
+      {/* Consecutive questions usually come from the same guide; naming it once
+          per run reads as attribution rather than repetition. */}
+      {(i === 0 || cluster.items[i - 1].source !== q.source) && (
+        <p class="linkrow"><a href={q.source}>Full guide: {q.sourceTitle.replace(' in Australia', '')}</a></p>
+      )}
+    </>
+  ))}
+
+  <h2>Other topics</h2>
+  <ul class="chips">
+    {questionClusters.filter((c) => c.slug !== cluster.slug).map((c) => (
+      <li><a href={`/questions/${c.slug}/`}>{c.title}</a></li>
+    ))}
+  </ul>
+</Page>

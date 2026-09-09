@@ -1,0 +1,53 @@
+---
+import Page from '../layouts/Page.astro';
+import { allPages } from '../lib/content.js';
+
+// A reader-facing index of the whole site. The XML sitemap is for crawlers;
+// this is for people, and it doubles as a hub that puts every page within two
+// clicks of the homepage.
+const pillars = allPages.filter((p) => p.pageType === 'pillar');
+const locations = allPages.filter((p) => p.pageType === 'city-hub');
+const services = allPages.filter((p) => p.pageType === 'service-national');
+
+const page = {
+  url: '/sitemap/', title: 'Site Index', seoTitle: 'Site Index',
+  pageType: 'index', status: 'ready', author: null, reviewer: null,
+  needsReviewer: false, parent: '/', parentTitle: 'Home',
+  schema: ['Article'], updated: null, indexable: true, blockers: [],
+  headings: [], faqs: [],
+  description: 'Every page on MarineDieselEngine.com.au — marine engine services, mechanics by location, engine guides, costs and common questions.',
+};
+---
+<Page page={page}>
+  <h1>Site index</h1>
+  <p>
+    Every page on this site. If you are looking for the machine-readable
+    version, it is at <a href="/sitemap.xml">/sitemap.xml</a>.
+  </p>
+
+  <h2>Start here</h2>
+  <ul class="chips">
+    {pillars.map((p) => <li><a href={p.url}>{p.title}</a></li>)}
+    <li><a href="/questions/">Common questions</a></li>
+  </ul>
+
+  <h2>Marine mechanics by location</h2>
+  <ul class="chips">
+    {locations.map((p) => (
+      <li><a href={p.url}>{p.title.replace('Marine Diesel Mechanics in ', '')}</a></li>
+    ))}
+  </ul>
+
+  <h2>Services</h2>
+  <ul class="chips">
+    {services.map((p) => (
+      <li><a href={p.url}>{p.title.replace(' in Australia', '')}</a></li>
+    ))}
+  </ul>
+
+  <h2>About this site</h2>
+  <ul class="chips">
+    <li><a href="/privacy/">Privacy policy</a></li>
+    <li><a href="/terms/">Terms and conditions</a></li>
+  </ul>
+</Page>

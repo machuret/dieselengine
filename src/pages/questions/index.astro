@@ -1,0 +1,37 @@
+---
+import Page from '../../layouts/Page.astro';
+import { questionClusters, questionCount } from '../../lib/questions.js';
+
+const page = {
+  url: '/questions/', title: 'Common Marine Diesel Questions',
+  seoTitle: 'Marine Diesel Questions',
+  pageType: 'index', status: 'ready', author: null, reviewer: null,
+  needsReviewer: false, parent: '/', parentTitle: 'Home',
+  schema: ['Article'], updated: null, indexable: true, blockers: [],
+  headings: [], faqs: [],
+  description: `${questionCount} answered questions about marine diesel engines in Australia — overheating, fuel, gearboxes, rebuilds, servicing and finding a mechanic.`,
+};
+---
+<Page page={page}>
+  <h1>Common marine diesel questions</h1>
+  <p>
+    {questionCount} questions boat owners actually ask, answered plainly and
+    grouped by topic. Every answer links to the guide it comes from if you want
+    the full explanation.
+  </p>
+
+  {questionClusters.map((c) => (
+    <>
+      <h2><a href={`/questions/${c.slug}/`}>{c.title}</a></h2>
+      <p>{c.blurb}</p>
+      <ul>
+        {c.items.slice(0, 5).map((q) => (
+          <li><a href={`/questions/${c.slug}/#${q.id}`}>{q.question}</a></li>
+        ))}
+      </ul>
+      <p class="linkrow">
+        <a href={`/questions/${c.slug}/`}>All {c.items.length} questions on {c.title.toLowerCase()}</a>
+      </p>
+    </>
+  ))}
+</Page>

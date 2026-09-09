@@ -80,8 +80,9 @@ See `remarkStripTokens` in `src/lib/remark-strip-tokens.mjs`.
 
 ## Current state
 
-**59 routes, all 59 in the sitemap.** 57 content pages plus the homepage and
-`/services/`.
+**72 routes, all 72 in the sitemap.** 57 content pages, 9 question cluster
+pages, and 6 hand-written routes (home, services index, question hub, HTML site
+index, privacy, terms).
 
 Two things are outstanding on published pages, reported on every build:
 
@@ -120,3 +121,44 @@ exist, so a broken internal-link graph cannot reach production.
 2. Write `content/<section>/<slug>.md` with front matter whose `url` matches
    the plan.
 3. `npm run check` then `npm run build`.
+
+
+## SEO surface
+
+Derived from the markdown rather than hand-maintained, in `src/lib/extract.js`:
+
+| | How |
+|---|---|
+| Title tag | `seo_title` front matter, else the page title with " in Australia" trimmed; the brand is appended only if the result stays under 60 characters |
+| Meta description | First real paragraph, truncated at a sentence boundary near 155 characters |
+| FAQ schema | The "Frequently asked questions" section is parsed into `FAQPage` JSON-LD — 265 Q&A pairs across 57 pages |
+| Question pages | The same Q&As, deduplicated and grouped into 9 topic clusters at `/questions/{topic}/` |
+| Geo schema | `Place`, `PostalAddress` and `GeoCoordinates` on location hubs, from the lat/lon columns in `data/cities.csv` |
+| Related links | Service pages relate by their `cluster` column; location hubs by great-circle distance |
+
+Both were previously broken rather than merely absent: every page served the
+same site-wide meta description, and every title ran past what a search result
+shows.
+
+### Why questions are clustered, not one page each
+
+265 individual question pages was the obvious reading of "unique URLs", but the
+answers run 25-35 words. That many pages of that length is a doorway-page
+pattern, which is penalised rather than rewarded. Nine cluster pages each carry
+9-63 substantial answers, are internally linked from every related page, and
+carry `FAQPage` markup for the whole set.
+
+The answers also remain on their source pages, where readers expect them. That
+overlap is deliberate: the cluster page targets topic-level questions, the
+service page targets the head term, and each answer links back to its full
+guide.
+
+### AI crawlers
+
+`robots.txt` allows 19 named AI agents explicitly, and `/llms.txt` gives a
+plain-text map of the site. The llms.txt carries a "context for summarising"
+block stating what this site is not — it does not do the work, prices are not
+quotes, and safety instructions must survive summarisation. To reverse the
+policy, change the entries in `src/pages/robots.txt.js` to `Disallow`. Note that
+`Google-Extended` governs Gemini training only; disallowing it does not affect
+Googlebot or ordinary search indexing.

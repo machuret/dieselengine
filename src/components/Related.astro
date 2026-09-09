@@ -1,0 +1,62 @@
+---
+import { allPages } from '../lib/content.js';
+import { questionClusters } from '../lib/questions.js';
+
+/**
+ * Automatic related links.
+ *
+ * The plan asks every page to link sideways as well as up and down, which is
+ * not maintainable by hand across 1,279 planned pages. This derives the links
+ * from the source data the pages were generated from: a service page relates to
+ * its own cluster (cooling, fuel, driveline), and a location relates to the
+ * ones actually nearest to it by coordinates. Word-overlap guessing produced
+ * plausible-looking but wrong pairings, which is worse than none.
+ */
+const { page } = Astro.props;
+
+const published = allPages.filter((p) => p.indexable && p.url !== page.url);
+let related = [];
+
+if (page.pageType === 'service-national' && page.cluster) {
+  const sameCluster = published.filter(
+    (p) => p.pageType === 'service-national' && p.cluster === page.cluster
+  );
+  const others = published.filter(
+    (p) => p.pageType === 'service-national' && p.cluster !== page.cluster
+  );
+  related = [...sameCluster, ...others].slice(0, 6);
+} else if (page.pageType === 'city-hub' && page.geo) {
+  const km = (a, b) => {
+    const R = 6371, r = Math.PI / 180;
+    const dLat = (b.lat - a.lat) * r, dLon = (b.lon - a.lon) * r;
+    const h = Math.sin(dLat / 2) ** 2 +
+      Math.cos(a.lat * r) * Math.cos(b.lat * r) * Math.sin(dLon / 2) ** 2;
+    return 2 * R * Math.asin(Math.sqrt(h));
+  };
+  const here = { lat: +page.geo.lat, lon: +page.geo.lon };
+  related = published
+    .filter((p) => p.pageType === 'city-hub' && p.geo)
+    .map((p) => ({ p, d: km(here, { lat: +p.geo.lat, lon: +p.geo.lon }) }))
+    .sort((a, b) => a.d - b.d)
+    .slice(0, 4)
+    .map((x) => x.p);
+} else {
+  related = published.filter((p) => p.pageType === page.pageType).slice(0, 5);
+}
+
+const cluster = questionClusters.find((c) => c.match.test(page.url));
+const strip = (t) =>
+  t.replace(' in Australia', '').replace('Marine Diesel Mechanics in ', '');
+const label = page.pageType === 'city-hub' ? 'Nearby' : 'Related';
+---
+{related.length > 0 && (
+  <nav class="related" aria-label={`${label} pages`}>
+    <h2>{label}</h2>
+    <ul>
+      {related.map((p) => <li><a href={p.url}>{strip(p.title)}</a></li>)}
+      {cluster && (
+        <li><a href={`/questions/${cluster.slug}/`}>Questions: {cluster.title.toLowerCase()}</a></li>
+      )}
+    </ul>
+  </nav>
+)}

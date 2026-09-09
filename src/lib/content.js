@@ -1,5 +1,30 @@
 import site from '../../site.config.json' with { type: 'json' };
 import { toPage } from './gates.js';
+import { extractFaqs, firstParagraph, metaDescription, seoTitle } from './extract.js';
+
+// Source data the pages are generated from. Loading it here lets a page know
+// its own service cluster and its location's coordinates, which is what makes
+// related links accurate rather than guessed from word overlap.
+const csvFiles = import.meta.glob('/data/*.csv', { eager: true, query: '?raw', import: 'default' });
+
+function parseCsv(raw) {
+  const [head, ...lines] = (raw ?? '').trim().split('\n');
+  const cols = head.split(',');
+  return lines.map((line) => {
+    // Values may be quoted and contain commas.
+    const cells = line.match(/("([^"]|"")*"|[^,]*)(,|$)/g)?.map((c) =>
+      c.replace(/,$/, '').replace(/^"|"$/g, '').replace(/""/g, '"')) ?? [];
+    return Object.fromEntries(cols.map((c, i) => [c, cells[i]]));
+  });
+}
+
+function indexBy(file, key) {
+  const rows = parseCsv(csvFiles[file]);
+  return Object.fromEntries(rows.filter((r) => r[key]).map((r) => [r[key], r]));
+}
+
+const GEO = indexBy('/data/cities.csv', 'slug');
+const SERVICES = indexBy('/data/services.csv', 'slug');
 export { sectionOf, gateFailures } from './gates.js';
 
 // Astro parses the YAML front matter of every file under /content and hands us
@@ -14,6 +39,17 @@ function build() {
     page.Content = mod.Content;
     // Only h2s: these pages are long, and a two-level contents list is noise.
     page.headings = (mod.getHeadings?.() ?? []).filter((h) => h.depth === 2);
+    // Derived metadata. Every page previously served the site-wide description,
+    // so all 59 shared one meta description; and every title ran past the ~60
+    // characters a search result shows.
+    page.description = page.description || metaDescription(firstParagraph(raw));
+    page.seoTitleTag = seoTitle(page, site.shortName);
+    page.faqs = extractFaqs(raw);
+    const slug = page.url.replace(/\/$/, '').split('/').pop();
+    if (page.pageType === 'city-hub') page.geo = GEO[slug] ?? null;
+    if (page.pageType === 'service-national') {
+      page.cluster = SERVICES[slug]?.cluster ?? null;
+    }
     pages.push(page);
   }
 
@@ -27,20 +63,4 @@ function build() {
 }
 
 export const allPages = build();
-
-/**
- * Everything that belongs in a sitemap: the content pages that cleared their
- * gates, plus the .astro routes. Those are real URLs — the homepage most of
- * all — and were previously absent from the sitemap because it only ever read
- * from content/.
- */
-export const indexablePages = [
-  ...allPages.filter((p) => p.indexable),
-  ...(site.staticRoutes ?? []).map((r) => ({
-    url: r.url,
-    pageType: 'static',
-    priority: r.priority,
-    updated: null,
-    indexable: true,
-  })),
-].sort((a, b) => a.url.localeCompare(b.url));
+export const indexablePages = allPages.filter((p) => p.indexable);

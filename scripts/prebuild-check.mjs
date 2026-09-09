@@ -6,8 +6,12 @@ import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 import { parseFrontMatter, toPage, sectionOf } from '../src/lib/gates.js';
 
-// Routes that exist as .astro pages rather than as content files.
-const STATIC_ROUTES = new Set(['/', '/services/']);
+// Routes that exist as .astro pages rather than content files, read from the
+// route table so this check and the sitemap cannot disagree about what exists.
+import site from '../site.config.json' with { type: 'json' };
+const STATIC_ROUTES = new Set((site.staticRoutes ?? []).map((r) => r.url));
+// Endpoints generated at build time rather than served from public/.
+const GENERATED = new Set(['/sitemap.xml', '/robots.txt', '/llms.txt']);
 
 function walk(dir, ext = '.md') {
   return readdirSync(dir).flatMap((entry) => {
@@ -40,6 +44,7 @@ const templateFiles = walk('src', '.astro');
 for (const file of templateFiles) {
   const src = readFileSync(file, 'utf8');
   for (const [, href] of src.matchAll(/href="(\/[^"#?]*)"/g)) {
+    if (GENERATED.has(href)) continue;
     if (/\.[a-z0-9]+$/i.test(href)) {
       // An asset reference, not a route. It must exist in public/, or the page
       // silently loads nothing — which is how a missing stylesheet or a

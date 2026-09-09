@@ -3,6 +3,7 @@ import site from '../../site.config.json' with { type: 'json' };
 import Masthead from '../components/Masthead.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import { allPages } from '../lib/content.js';
+import { seoTitle } from '../lib/extract.js';
 
 const canonical = `${site.domain}/`;
 const ready = allPages.filter((p) => p.indexable).length;
@@ -38,7 +39,7 @@ const jsonld = {
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{site.name} — {site.tagline}</title>
+    <title>{seoTitle({ seoTitle: 'Marine Diesel Engines in Australia' }, site.shortName)}</title>
     <meta name="description" content={site.description} />
     <link rel="canonical" href={canonical} />
     <meta name="robots" content={ready > 0 ? 'index, follow' : 'noindex, follow'} />

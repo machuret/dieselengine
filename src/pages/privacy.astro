@@ -1,0 +1,98 @@
+---
+import Page from '../layouts/Page.astro';
+import site from '../../site.config.json' with { type: 'json' };
+const page = {
+  url: '/privacy/', title: 'Privacy Policy', seoTitle: 'Privacy Policy',
+  pageType: 'legal', status: 'ready', author: site.defaultAuthor, reviewer: null,
+  needsReviewer: false, parent: '/', parentTitle: 'Home',
+  schema: ['Article'], updated: site.legalUpdated, indexable: true,
+  blockers: [], headings: [], faqs: [],
+  description: 'What MarineDieselEngine.com.au collects, why, and how to contact us about it. We do not sell personal information.',
+};
+---
+<Page page={page}>
+  <h1>Privacy policy</h1>
+  <p>
+    This policy explains what {site.name} collects when you use this site, why,
+    and what you can do about it. It is written to be read, not to be
+    impenetrable.
+  </p>
+
+  <h2>The short version</h2>
+  <p>
+    We are an independent information site. We do not sell personal
+    information, we do not require you to create an account, and we do not ask
+    for personal details in order to read anything here.
+  </p>
+
+  <h2>What we collect</h2>
+  <p>
+    <strong>Analytics.</strong> We collect aggregate information about how pages
+    are used — which pages are viewed, roughly where visitors are located by
+    country or region, what kind of device is used, and which site referred you.
+    This is used to work out which guides are useful and which are not.
+  </p>
+  <p>
+    <strong>Server logs.</strong> Our hosting provider records standard request
+    information, including IP address, browser user agent and the time of the
+    request. This is ordinary web server operation and is used for security and
+    reliability.
+  </p>
+  <p>
+    <strong>Anything you send us.</strong> If you contact us — to correct a
+    listing, report an error, or ask to be listed — we keep what you send for as
+    long as we need it to deal with your message.
+  </p>
+
+  <h2>What we do not collect</h2>
+  <p>
+    We do not ask for your name, address, phone number or payment details to use
+    this site. We do not run accounts or logins. We do not buy personal
+    information about you from anyone else.
+  </p>
+
+  <h2>Cookies</h2>
+  <p>
+    The site itself does not require cookies to function. Analytics and hosting
+    may set cookies or use similar storage. You can block or delete these in
+    your browser without breaking anything on this site.
+  </p>
+
+  <h2>Third parties</h2>
+  <p>
+    Pages load fonts from a third-party font service, which means that service
+    receives a request from your browser. Our hosting provider processes
+    requests on our behalf. Where we link to a marine business, following that
+    link takes you to their site, which has its own privacy practices we do not
+    control.
+  </p>
+
+  <h2>Business listings</h2>
+  <p>
+    Listings on this site describe businesses, not individuals. We publish
+    business contact details that the business has made public. If you are a
+    listed business and want your entry corrected or removed, ask us and we will
+    do it.
+  </p>
+
+  <h2>Your rights under Australian privacy law</h2>
+  <p>
+    Australian privacy law gives you rights to ask what personal information an
+    organisation holds about you, to have it corrected, and to complain if it is
+    mishandled. If you want to exercise any of those, contact us and we will
+    respond. If you are not satisfied with our response, you can complain to the
+    Office of the Australian Information Commissioner.
+  </p>
+
+  <h2>Changes</h2>
+  <p>
+    If this policy changes materially we will update the date below. Continuing
+    to use the site after a change means the updated policy applies.
+  </p>
+
+  <h2>Contact</h2>
+  <p>
+    Questions about this policy, or about a listing, can be sent to
+    <a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a>.
+  </p>
+</Page>
