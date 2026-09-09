@@ -43,51 +43,63 @@ and served**, so no URL 404s, but it is:
 When nothing is publishable, `robots.txt` serves `Disallow: /` rather than
 advertising an empty sitemap.
 
-The gates:
+The gates that block publication:
 
 | Gate | Applies to |
 |---|---|
 | `status: ready` in front matter | every page |
 | A named author | every page |
-| A named marine mechanic reviewer | pillars, symptoms, engine models |
-| `{{PROVIDERS}}` resolved | location hubs, location services |
-| `provider_count` at or above the type's gate | location hubs (10), location services (5) |
+| A named marine mechanic reviewer | symptom, engine-model and brand-symptom pages |
 
-### The two kinds of placeholder
+The reviewer gate is deliberately narrow. It applies to pages whose primary
+content is diagnostic procedure — a differential diagnosis, or "what you can
+check yourself" — where a wrong instruction hurts someone. Education, cost,
+directory and index pages route the reader to a mechanic rather than
+instructing them, so they publish on the author byline. Those pages are the
+ones coming in waves 2 and 3; wave 1 has none of them.
 
-`{{PROVIDERS:sydney}}` **blocks publication**. A location hub without its operator
-list has no reason to exist.
+### Placeholders
 
-`{{PRICE_TABLE:sydney}}` **does not**. The paragraph is stripped at render and
-the page publishes without it, because a service page missing its local price
-band is still a complete explanation of the job — the plan's "folding is not
-failure". The build report counts what was stripped so it is not forgotten.
+Neither kind reaches a reader as raw `{{...}}` — the post-build check fails the
+build if one does.
 
-To change which is which, edit `BLOCKING_TOKENS` in `src/lib/gates.js`.
+`{{PRICE_TABLE:x}}` is **removed**. A service page missing its local price band
+is still a complete explanation of the job.
+
+`{{PROVIDERS:x}}` is **replaced with a note** saying listings are being
+verified. It is announced rather than silently dropped because the reader
+arrived looking for operators, and an unexplained gap reads as broken.
+
+A location hub publishes without its listings because it is not an empty
+directory page — it carries roughly 750 words of local substance (fleet mix,
+water conditions, state rules, what to ask locally) that stands on its own and
+that nothing else on the web covers. The operator shortfall is reported on
+every build instead of blocking one.
+
+See `remarkStripTokens` in `src/lib/remark-strip-tokens.mjs`.
 
 ## Current state
 
-57 pages build. **0 are indexable.** All 47 pillar and service pages are
-content-complete and marked `status: ready`; they are held back by one thing
-only:
+**59 routes, all 59 in the sitemap.** 57 content pages plus the homepage and
+`/services/`.
 
-> `site.config.json` has `defaultAuthor: null` and `defaultReviewer: null`.
+Two things are outstanding on published pages, reported on every build:
 
-Set both to real named people and those 47 pages go live in the sitemap
-immediately:
+**No named mechanic reviewer** (`defaultReviewer` is `null`). This does not
+block wave 1, but it must be set before the wave 2 symptom pages and wave 3
+engine pages are written — those cannot publish without it, by design. It is
+also the E-E-A-T signal for a site giving repair advice.
 
 ```json
-"defaultAuthor": "Jane Smith",
 "defaultReviewer": "John Citizen, Licensed Marine Mechanic (Lic. 12345)"
 ```
 
-Do not put a placeholder there. For a site giving repair advice, the named
-reviewer is the E-E-A-T signal and the thing that keeps the advice correct —
-see CONTENT-PLAN.md section 9. Per-page `author:` / `reviewed_by:` front
-matter overrides the default where a different person wrote or checked a page.
+Do not put a placeholder there. Per-page `author:` / `reviewed_by:` front matter
+overrides the default.
 
-The 10 location hubs stay blocked until `data/providers.csv` exists and each hub
-carries at least 10 verified local operators. That is the wave 2 critical path.
+**No operator data.** All 10 location hubs publish without listings. Building
+`data/providers.csv` is the wave 2 critical path and is what turns them from
+useful local guides into the referral pages they are meant to be.
 
 ## Commands
 

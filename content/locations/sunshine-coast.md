@@ -7,8 +7,7 @@ primary_keyword: marine diesel mechanic sunshine coast
 secondary_keywords: [boat mechanic sunshine coast, marine engineer sunshine coast, boat engine repairs sunshine coast]
 priority: P0
 parent: /find-a-marine-mechanic/
-status: blocked
-blocked_on: provider-data
+status: ready
 provider_count: 0
 author: TBD
 reviewed_by: TBD

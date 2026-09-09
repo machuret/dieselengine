@@ -7,8 +7,7 @@ primary_keyword: marine diesel mechanic cairns
 secondary_keywords: [boat mechanic cairns, marine engineer cairns, boat engine repairs cairns]
 priority: P0
 parent: /find-a-marine-mechanic/
-status: blocked
-blocked_on: provider-data
+status: ready
 provider_count: 0
 author: TBD
 reviewed_by: TBD

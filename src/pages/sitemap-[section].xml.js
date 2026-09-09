@@ -34,7 +34,7 @@ export function GET({ params }) {
     const lastmod = p.updated ? `\n    <lastmod>${p.updated}</lastmod>` : '';
     return `  <url>
     <loc>${loc}</loc>${lastmod}
-    <priority>${PRIORITY[p.pageType] ?? '0.5'}</priority>
+    <priority>${p.priority ?? PRIORITY[p.pageType] ?? '0.5'}</priority>
   </url>`;
   });
 

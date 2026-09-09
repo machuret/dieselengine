@@ -42,7 +42,7 @@ tier2 = [c for c in cities if c["tier"] == "2"]
 commercial = {"cairns", "whitsundays", "gladstone", "townsville", "mackay",
               "darwin", "port-lincoln", "hobart", "broome", "adelaide",
               "brisbane", "perth", "sydney", "port-stephens", "coffs-harbour",
-              "batemans-bay"}
+              "batemans-bay", "sunshine-coast"}
 # charter: bareboat, game fishing and reef charter operators running
 # high-hour engines to a schedule.
 charter = {"whitsundays", "cairns", "gold-coast", "sunshine-coast",
@@ -91,6 +91,9 @@ EXTRA_CITY_SERVICE = [
     ("engine-alarms-instruments", "gold-coast",
      "Australia's largest refit and boatbuilding hub does proportionally more "
      "instrumentation and helm electronics work"),
+    ("workboat-ferry-servicing", "whitsundays",
+     "Island ferries, water taxis and resort tenders run to timetable "
+     "alongside the bareboat fleet"),
     ("workboat-ferry-servicing", "cairns",
      "Cairns supports a genuine commercial workboat, reef tender and pilot "
      "fleet alongside its charter trade"),

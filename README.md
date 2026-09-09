@@ -23,10 +23,13 @@ npm install && npm run build
 
 ## Publishing
 
-57 pages build today and **0 are indexable**: pages that fail a publish gate are
-served `noindex` and kept out of the sitemap rather than shipped thin. The 47
-pillar and service pages need only a named author and reviewer in
-`site.config.json` to go live. See [docs/deployment.md](docs/deployment.md).
+**59 routes, all 59 in the sitemap.** The build refuses to ship a page that is
+indexable but missing from the sitemap, a sitemap URL that was never built, or a
+raw `{{PLACEHOLDER}}` in rendered output.
+
+Two things are still outstanding and are reported on every build: no named
+mechanic reviewer (required before the wave 2 symptom pages), and no operator
+data for the location hubs. See [docs/deployment.md](docs/deployment.md).
 
 ## Regenerate the keyword map
 

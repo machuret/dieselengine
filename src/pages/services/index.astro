@@ -24,12 +24,16 @@ for (const s of services) {
   (hit ? byCluster.get(hit[0]) : other).push(s);
 }
 
+// An index page is worth indexing once it has children to point at, and not
+// before. Derived rather than hardcoded so it cannot drift from reality.
+const published = services.filter((s) => s.indexable);
 const page = {
   url: '/services/', title: 'Marine Engine Services in Australia', pageType: 'index',
   status: 'ready', author: null, reviewer: null, needsReviewer: false,
   parent: '/', parentTitle: 'Home', schema: ['Article'], updated: null,
-  indexable: false, headings: [],
-  blockers: ['index page: publishes once its child service pages are ready'],
+  headings: [],
+  indexable: published.length > 0,
+  blockers: published.length > 0 ? [] : ['no child service page has been published yet'],
   description: 'Every marine engine job covered on this site — what it involves, when you need it, and what it should cost in Australia.',
 };
 ---

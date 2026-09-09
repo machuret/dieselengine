@@ -7,8 +7,7 @@ primary_keyword: marine diesel mechanic whitsundays
 secondary_keywords: [boat mechanic whitsundays, marine engineer whitsundays, boat engine repairs whitsundays]
 priority: P0
 parent: /find-a-marine-mechanic/
-status: blocked
-blocked_on: provider-data
+status: ready
 provider_count: 0
 author: TBD
 reviewed_by: TBD

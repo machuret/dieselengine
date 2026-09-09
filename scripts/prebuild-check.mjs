@@ -70,6 +70,26 @@ if (indexable.length === 0) {
   console.log('In sitemap by section:', bySection);
 }
 
+// Published pages can still be incomplete. These no longer block a deploy, so
+// they are reported every build — otherwise "we'll add the operators later"
+// quietly becomes never.
+const outstanding = new Map();
+for (const p of pages) {
+  for (const w of p.warnings ?? []) {
+    const key = w.replace(/^\d+\//, 'n/');
+    if (!outstanding.has(key)) outstanding.set(key, []);
+    outstanding.get(key).push(p.url);
+  }
+}
+if (outstanding.size) {
+  console.log('\nOutstanding on published pages:');
+  for (const [what, urls] of [...outstanding].sort((a, b) => b[1].length - a[1].length)) {
+    const sample = urls.length > 3 ? `${urls.slice(0, 3).join(', ')} +${urls.length - 3} more` : urls.join(', ');
+    console.log(`  ${String(urls.length).padStart(3)}  ${what}`);
+    console.log(`       ${sample}`);
+  }
+}
+
 if (errors.length) {
   console.error('\nBuild failed:\n' + errors.map((e) => '  x ' + e).join('\n'));
   process.exit(1);

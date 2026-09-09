@@ -7,8 +7,7 @@ primary_keyword: marine diesel mechanic port stephens
 secondary_keywords: [boat mechanic port stephens, marine engineer port stephens, boat engine repairs port stephens]
 priority: P0
 parent: /find-a-marine-mechanic/
-status: blocked
-blocked_on: provider-data
+status: ready
 provider_count: 0
 author: TBD
 reviewed_by: TBD

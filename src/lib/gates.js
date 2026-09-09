@@ -23,7 +23,7 @@ export const TOKEN = /\{\{([A-Z][A-Z0-9_]*)(?::([A-Za-z0-9_.-]+))?\}\}/g;
  * section is stripped at render and counted in the build report so it is never
  * silently forgotten.
  */
-export const BLOCKING_TOKENS = new Set(['PROVIDERS']);
+export const BLOCKING_TOKENS = new Set();
 
 /** Strip placeholders that are omitted rather than blocking, plus the "→ cost
  *  page" line that immediately follows a price table and would dangle. */
@@ -39,7 +39,12 @@ export function tokensIn(raw) {
 }
 
 const PROVIDER_GATES = { 'city-hub': 10, 'city-service': 5, 'brand-city': 3 };
-const REVIEW_REQUIRED = new Set(['engine-model', 'symptom', 'brand-symptom', 'pillar']);
+// Pages whose primary content is diagnostic procedure — a differential
+// diagnosis, or "what you can check yourself". A wrong instruction on one of
+// these hurts someone, so they do not publish without a named mechanic.
+// Education, cost, directory and index pages are deliberately not here: they
+// route the reader to a mechanic rather than instructing them.
+const REVIEW_REQUIRED = new Set(['symptom', 'engine-model', 'brand-symptom']);
 
 /** Minimal front-matter reader for the simple `key: value` / `[a, b]` form
  *  the content files use. Only needed outside the Vite pipeline. */
@@ -92,6 +97,7 @@ export function toPage(fm, raw, file) {
     tokens: tokensIn(raw),
   };
   page.blockers = gateFailures(page);
+  page.warnings = qualityWarnings(page);
   page.indexable = page.blockers.length === 0;
   return page;
 }
@@ -112,15 +118,25 @@ export function gateFailures(page) {
   if (blocking.length) {
     f.push(`unresolved ${blocking.map((t) => `{{${t}}}`).join(', ')} in the body`);
   }
-  if (page.providerGate && (page.provider_count ?? 0) < page.providerGate) {
-    f.push(`provider_count ${page.provider_count ?? 0} below gate ${page.providerGate}`);
-  }
   return f;
 }
 
 function toDate(v) {
   if (v instanceof Date) return v.toISOString().slice(0, 10);
   return String(v).slice(0, 10);
+}
+
+/** Non-blocking quality warnings, surfaced in the build report. */
+export function qualityWarnings(page) {
+  const w = [];
+  if (page.providerGate && (page.provider_count ?? 0) < page.providerGate) {
+    w.push(`${page.provider_count ?? 0}/${page.providerGate} verified operators`);
+  }
+  if ((page.tokens ?? []).length) {
+    w.push(`unresolved ${page.tokens.map((t) => `{{${t}}}`).join(', ')}`);
+  }
+  if (!page.reviewer) w.push('no named mechanic reviewer');
+  return w;
 }
 
 export function sectionOf(url) {

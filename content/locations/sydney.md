@@ -7,8 +7,7 @@ primary_keyword: marine diesel mechanic sydney
 secondary_keywords: [boat mechanic sydney, marine engineer sydney, boat engine repairs sydney]
 priority: P0
 parent: /find-a-marine-mechanic/
-status: blocked
-blocked_on: provider-data
+status: ready
 provider_count: 0
 author: TBD
 reviewed_by: TBD

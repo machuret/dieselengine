@@ -1,3 +1,4 @@
+import site from '../../site.config.json' with { type: 'json' };
 import { toPage } from './gates.js';
 export { sectionOf, gateFailures } from './gates.js';
 
@@ -26,4 +27,20 @@ function build() {
 }
 
 export const allPages = build();
-export const indexablePages = allPages.filter((p) => p.indexable);
+
+/**
+ * Everything that belongs in a sitemap: the content pages that cleared their
+ * gates, plus the .astro routes. Those are real URLs — the homepage most of
+ * all — and were previously absent from the sitemap because it only ever read
+ * from content/.
+ */
+export const indexablePages = [
+  ...allPages.filter((p) => p.indexable),
+  ...(site.staticRoutes ?? []).map((r) => ({
+    url: r.url,
+    pageType: 'static',
+    priority: r.priority,
+    updated: null,
+    indexable: true,
+  })),
+].sort((a, b) => a.url.localeCompare(b.url));

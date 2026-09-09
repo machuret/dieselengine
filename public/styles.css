@@ -241,6 +241,15 @@ main { padding: 0 var(--gutter) 4rem; }
 .prose p.linkrow a:hover { background: var(--accent); color: var(--surface); border-color: var(--accent); }
 .prose p.linkrow > br { display: none; }
 
+/* A section whose data is not collected yet. Stated plainly rather than left
+   as an unexplained gap where a reader expected listings. */
+.prose .pending-note {
+  max-width: none; margin: 1.4rem 0; padding: .9rem 1.1rem;
+  background: var(--surface); border: 1px dashed var(--rule);
+  border-radius: var(--radius); font-size: .92rem; color: var(--muted);
+}
+.prose .pending-note strong { color: var(--ink-strong); }
+
 /* --- safety callout ------------------------------------------------------ */
 /* Applied to the "shut down now / stop driving" sections, which must not read
    like ordinary body copy. */

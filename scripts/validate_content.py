@@ -34,9 +34,12 @@ DEFAULT_REVIEWER = SITE.get("defaultReviewer")
 
 REQUIRED_FIELDS = ["url", "title", "page_type", "wave", "primary_keyword",
                    "status", "parent"]
-# Page types whose technical claims must be signed off by a licensed mechanic
-# before they can be marked ready (CONTENT-PLAN.md section 9).
-REVIEW_REQUIRED = {"engine-model", "symptom", "brand-symptom", "pillar"}
+# Pages whose primary content is diagnostic procedure. Kept in step with
+# REVIEW_REQUIRED in src/lib/gates.js — the build and this script must not
+# disagree about what is publishable.
+REVIEW_REQUIRED = {"symptom", "engine-model", "brand-symptom"}
+# Operator shortfalls and unresolved placeholders are reported, not blocking:
+# a location hub carries substantial local content without its listings.
 PROVIDER_GATES = {"city-hub": 10, "city-service": 5, "brand-city": 3}
 # Placeholder tokens look like {{PRICE_TABLE:gold-coast}} — the name is
 # upper-case, but the argument after the colon is a lower-case slug, so the
@@ -117,7 +120,7 @@ def main():
 
         tokens = sorted(set(TOKEN.findall(text)))
         if tokens:
-            sink.append(f"{rel}: unresolved placeholders: {', '.join(tokens)}")
+            warnings.append(f"{rel}: unresolved placeholders: {', '.join(tokens)}")
 
         ptype = fm.get("page_type", "")
         gate = PROVIDER_GATES.get(ptype)
@@ -127,14 +130,16 @@ def main():
             except (TypeError, ValueError):
                 count = -1
             if count < gate:
-                sink.append(f"{rel}: provider_count {count} below gate "
-                            f"{gate} for {ptype}")
+                warnings.append(f"{rel}: {max(count, 0)}/{gate} verified "
+                                f"operators for {ptype}")
 
         body = fm["_body"]
-        # Any dollar figure on a page must be dated, or it is unsourced.
-        if re.search(r"\$\s?[\d,]+", body) and not fm.get("prices_checked"):
-            sink.append(f"{rel}: contains price figures but no "
-                        f"'prices_checked' date")
+        # Any dollar figure on a page must be dated, or it is unsourced. This
+        # one stays blocking: an undated price is worse than no price.
+        checked = fm.get("prices_checked")
+        if re.search(r"\$\s?[\d,]+", body) and (not checked or checked == "PENDING"):
+            errors.append(f"{rel}: contains price figures but no "
+                          f"'prices_checked' date")
 
         author = fm.get("author")
         if not author or author == "TBD":
@@ -146,6 +151,8 @@ def main():
         if ptype in REVIEW_REQUIRED and not reviewer:
             sink.append(f"{rel}: {ptype} requires a named "
                         f"'reviewed_by' mechanic (or site.config defaultReviewer)")
+        elif not reviewer:
+            warnings.append(f"{rel}: no named mechanic reviewer")
         if not author:
             sink.append(f"{rel}: missing named author "
                         f"(or site.config defaultAuthor)")
@@ -165,7 +172,7 @@ def main():
     if warnings:
         kinds = collections.Counter(
             re.sub(r"^[^:]+: ", "", w).split(":")[0] for w in warnings)
-        print(f"\n{len(warnings)} warning(s) on draft pages, by kind:")
+        print(f"\n{len(warnings)} outstanding item(s), by kind:")
         for kind, n in kinds.most_common():
             print(f"  ! {n:>4}  {kind}")
     if errors:

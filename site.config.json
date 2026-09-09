@@ -46,5 +46,18 @@
       "match": "^/costs/."
     }
   ],
-  "_comment_domain": "Must match the host actually served. The apex 308-redirects to www in production, so canonicals, Open Graph URLs and every sitemap entry use www \u2014 otherwise each one costs a redirect hop and the canonical points at a URL that is not the one served."
+  "_comment_domain": "Must match the host actually served. The apex 308-redirects to www in production, so canonicals, Open Graph URLs and every sitemap entry use www \u2014 otherwise each one costs a redirect hop and the canonical points at a URL that is not the one served.",
+  "staticRoutes": [
+    {
+      "url": "/",
+      "section": "pages",
+      "priority": "1.0"
+    },
+    {
+      "url": "/services/",
+      "section": "services",
+      "priority": "0.9"
+    }
+  ],
+  "_comment_staticRoutes": "Pages built from .astro rather than content/. They are real URLs and must appear in the sitemap \u2014 the homepage is the most important URL on the site and was previously absent from it entirely."
 }
