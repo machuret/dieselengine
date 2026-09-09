@@ -16,12 +16,21 @@ Exit code 1 if any page marked `ready` fails. Draft pages report warnings only.
 """
 import collections
 import csv
+import json
 import os
 import re
 import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CONTENT = os.path.join(ROOT, "content")
+
+# Author and reviewer may be set once in site.config.json rather than on every
+# page; the Astro build reads the same file, so both tools must agree on who
+# counts as named. A per-page value still overrides the default.
+with open(os.path.join(ROOT, "site.config.json"), encoding="utf-8") as fh:
+    SITE = json.load(fh)
+DEFAULT_AUTHOR = SITE.get("defaultAuthor")
+DEFAULT_REVIEWER = SITE.get("defaultReviewer")
 
 REQUIRED_FIELDS = ["url", "title", "page_type", "wave", "primary_keyword",
                    "status", "parent"]
@@ -127,12 +136,19 @@ def main():
             sink.append(f"{rel}: contains price figures but no "
                         f"'prices_checked' date")
 
-        if ptype in REVIEW_REQUIRED:
-            if not fm.get("reviewed_by") or fm.get("reviewed_by") == "TBD":
-                sink.append(f"{rel}: {ptype} requires a named "
-                            f"'reviewed_by' mechanic")
-        if not fm.get("author") or fm.get("author") == "TBD":
-            sink.append(f"{rel}: missing named author")
+        author = fm.get("author")
+        if not author or author == "TBD":
+            author = DEFAULT_AUTHOR
+        reviewer = fm.get("reviewed_by")
+        if not reviewer or reviewer == "TBD":
+            reviewer = DEFAULT_REVIEWER
+
+        if ptype in REVIEW_REQUIRED and not reviewer:
+            sink.append(f"{rel}: {ptype} requires a named "
+                        f"'reviewed_by' mechanic (or site.config defaultReviewer)")
+        if not author:
+            sink.append(f"{rel}: missing named author "
+                        f"(or site.config defaultAuthor)")
 
         for link in re.findall(r"\]\((/[^)#\s]*)\)", body):
             if link not in planned and link != "/":
