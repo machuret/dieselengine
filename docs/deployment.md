@@ -49,13 +49,13 @@ The gates:
 |---|---|
 | `status: ready` in front matter | every page |
 | A named author | every page |
-| A named mechanic reviewer | pillars, symptoms, engine models |
-| `{{PROVIDERS}}` resolved | city hubs, city services |
-| `provider_count` at or above the type's gate | city hubs (10), city services (5) |
+| A named marine mechanic reviewer | pillars, symptoms, engine models |
+| `{{PROVIDERS}}` resolved | location hubs, location services |
+| `provider_count` at or above the type's gate | location hubs (10), location services (5) |
 
 ### The two kinds of placeholder
 
-`{{PROVIDERS:sydney}}` **blocks publication**. A city hub without its provider
+`{{PROVIDERS:sydney}}` **blocks publication**. A location hub without its operator
 list has no reason to exist.
 
 `{{PRICE_TABLE:sydney}}` **does not**. The paragraph is stripped at render and
@@ -67,18 +67,18 @@ To change which is which, edit `BLOCKING_TOKENS` in `src/lib/gates.js`.
 
 ## Current state
 
-50 pages build. **0 are indexable.** All 40 pillar and service pages are
+57 pages build. **0 are indexable.** All 47 pillar and service pages are
 content-complete and marked `status: ready`; they are held back by one thing
 only:
 
 > `site.config.json` has `defaultAuthor: null` and `defaultReviewer: null`.
 
-Set both to real named people and those 40 pages go live in the sitemap
+Set both to real named people and those 47 pages go live in the sitemap
 immediately:
 
 ```json
 "defaultAuthor": "Jane Smith",
-"defaultReviewer": "John Citizen, Licensed Diesel Mechanic (Lic. 12345)"
+"defaultReviewer": "John Citizen, Licensed Marine Mechanic (Lic. 12345)"
 ```
 
 Do not put a placeholder there. For a site giving repair advice, the named
@@ -86,8 +86,8 @@ reviewer is the E-E-A-T signal and the thing that keeps the advice correct —
 see CONTENT-PLAN.md section 9. Per-page `author:` / `reviewed_by:` front
 matter overrides the default where a different person wrote or checked a page.
 
-The 10 city hubs stay blocked until `data/providers.csv` exists and each hub
-carries at least 10 verified local workshops. That is the wave 2 critical path.
+The 10 location hubs stay blocked until `data/providers.csv` exists and each hub
+carries at least 10 verified local operators. That is the wave 2 critical path.
 
 ## Commands
 

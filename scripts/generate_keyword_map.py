@@ -91,6 +91,9 @@ EXTRA_CITY_SERVICE = [
     ("engine-alarms-instruments", "gold-coast",
      "Australia's largest refit and boatbuilding hub does proportionally more "
      "instrumentation and helm electronics work"),
+    ("workboat-ferry-servicing", "cairns",
+     "Cairns supports a genuine commercial workboat, reef tender and pilot "
+     "fleet alongside its charter trade"),
     ("marine-corrosion-repair", "darwin",
      "Tropical heat and high salinity accelerate galvanic corrosion well "
      "beyond temperate-water rates"),

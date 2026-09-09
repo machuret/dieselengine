@@ -36,7 +36,7 @@ winterisation-layup,Winterisation & Seasonal Layup,transactional,seasonal,4,"Sou
 recommissioning-service,Recommissioning After Layup,transactional,seasonal,4,"Where most season-opening failures are found"
 mobile-marine-mechanic,Mobile Marine Mechanic,transactional,delivery-mode,5,"Dock and mooring visits; strong modifier"
 emergency-marine-breakdown,Emergency & On-Water Breakdown Repair,transactional,delivery-mode,4,"Time critical"
-slipway-haul-out,Slipway & Haul-Out Engine Work,transactional,delivery-mode,3,"Anything below the waterline"
+slipway-haul-out,Slipway & Haul-Out Engine Work,transactional,delivery-mode,4,"Anything below the waterline; high-intent local search at haul-out locations"
 commercial-vessel-servicing,Commercial Vessel Engine Servicing,transactional,vessel-class,5,"Survey obligations and downtime economics"
 charter-fleet-servicing,Charter Fleet Engine Servicing,transactional,vessel-class,4,"High-hour engines; Whitsundays and Cairns"
 yacht-auxiliary-service,Yacht Auxiliary Engine Service,transactional,vessel-class,4,"Saildrives and small auxiliaries; low hours, high neglect"

@@ -4,7 +4,7 @@ The gates in `CONTENT-PLAN.md` §4 decide *whether* a page ships. This decides
 *how it reads*.
 
 ## Voice
-Write like an experienced mechanic explaining something to a customer who is
+Write like an experienced marine mechanic explaining something to an owner who is
 about to spend real money. Direct, specific, unhurried. No hype, no "in today's
 fast-paced world", no keyword stuffing. If a sentence exists only to hold a
 keyword, delete it.
@@ -17,19 +17,26 @@ keyword, delete it.
 - **Says what it doesn't know.** "Costs vary widely for X because Y" beats an
   invented number.
 - **Never implies we do the work.** We educate and refer. Every CTA reflects it.
+- **States where the work happens** — dockside, workshop or haul-out. On a boat
+  this changes the cost and the feasibility more than anything else.
 
 ## Mandatory review
-- All engine, symptom and repair-procedure content: licensed diesel mechanic,
+- All engine, symptom and repair-procedure content: licensed marine mechanic,
   named on the page, with a review date.
-- All compliance content (DPF, EGR, emissions, tuning, ADR, consumer law):
-  reviewed against the current instrument, with the check date on the page.
+- All compliance content (AMSA domestic commercial vessel obligations, state
+  recreational authorities, Australian Consumer Law): reviewed against the
+  current instrument, with the check date on the page, and marked
+  `compliance_review: required` in front matter.
+- **Safety-critical answers.** Every symptom page's "is it safe to keep going"
+  answer is reviewed. A boat cannot pull over, and getting this wrong is not a
+  ranking problem.
 
 ## Refresh cycle
 | Content | Cycle |
 |---|---|
 | Cost pages | 6 months |
-| Provider listings | 6 months |
-| Compliance pages | 12 months, or on legislative change |
+| Operator listings | 6 months |
+| Compliance pages | 12 months, or on regulatory change |
 | Engine and symptom pages | 24 months |
 
 A page past its cycle gets updated or unpublished. Stale prices are worse than
@@ -42,8 +49,9 @@ paid placement presented as a recommendation is misleading conduct under
 Australian Consumer Law.
 
 ## Banned patterns
-- City pages that differ only by the city name
+- Location pages that differ only by the location name
 - Invented FAQs — take them from Search Console queries and People Also Ask
-- Cost figures without a date and a stated basis
-- DPF/EGR delete content written as a how-to
+- Cost figures without a date, a stated basis, and a stated access assumption
+- Any advice to crank an engine that may be hydrolocked
+- Compliance content written as advice rather than orientation
 - Any listing for a business we could not verify
