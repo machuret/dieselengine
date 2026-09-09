@@ -73,7 +73,6 @@ const jsonld = {
     <meta property="og:locale" content="en_AU" />
     <meta property="og:site_name" content={site.name} />
     <meta name="twitter:card" content="summary_large_image" />
-    <link rel="alternate" type="application/rss+xml" title={site.name} href="/rss.xml" />
     <script type="application/ld+json" set:html={JSON.stringify(jsonld)} />
     <link rel="stylesheet" href="/styles.css" />
   </head>
@@ -82,11 +81,11 @@ const jsonld = {
     <header class="site">
       <a class="brand" href="/">{site.shortName}</a>
       <nav aria-label="Primary">
-        <a href="/diesel-engines/">Diesel engines</a>
-        <a href="/diesel-problems/">Problems</a>
+        <a href="/marine-diesel-engines/">Marine engines</a>
+        <a href="/marine-engine-problems/">Problems</a>
         <a href="/services/">Services</a>
         <a href="/costs/">Costs</a>
-        <a href="/find-a-diesel-mechanic/">Find a mechanic</a>
+        <a href="/find-a-marine-mechanic/">Find a mechanic</a>
       </nav>
     </header>
 
@@ -111,11 +110,11 @@ const jsonld = {
     <footer class="site">
       <p>
         <strong>{site.name}</strong> is an independent information site. We do not
-        repair vehicles, sell parts, or perform any of the work described here.
+        work on boats, sell parts, or perform any of the work described here.
       </p>
       <p class="muted">
-        Information is general in nature. Always have diesel faults diagnosed by a
-        licensed mechanic.
+        Information is general in nature. Always have engine faults diagnosed by a
+        licensed marine mechanic.
       </p>
     </footer>
   </body>
