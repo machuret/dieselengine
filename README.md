@@ -20,6 +20,8 @@ npm install && npm run build
 - **[templates/](templates/)** — one template per page type.
 - **[docs/deployment.md](docs/deployment.md)** — Vercel setup, and how the
   publish gates are enforced at build time.
+- **[docs/seo-growth-plan.md](docs/seo-growth-plan.md)** — how the site grows
+  from 72 pages to ~2,900, sequenced by data dependency and indexation risk.
 
 ## Publishing
 
