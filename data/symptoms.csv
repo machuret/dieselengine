@@ -1,36 +1,36 @@
 slug,symptom,cluster,funnel_stage,maps_to_service
-diesel-blowing-white-smoke,Diesel Blowing White Smoke,smoke,problem-aware,diesel-engine-diagnostics
-diesel-blowing-blue-smoke,Diesel Blowing Blue Smoke,smoke,problem-aware,diesel-engine-rebuild
-diesel-blowing-black-smoke,Diesel Blowing Black Smoke,smoke,problem-aware,diesel-injector-replacement
-diesel-hard-to-start-cold,Diesel Hard To Start When Cold,starting,problem-aware,glow-plug-replacement
-diesel-wont-start,Diesel Engine Won't Start,starting,problem-aware,diesel-engine-diagnostics
-diesel-cranks-but-wont-fire,Diesel Cranks But Won't Fire,starting,problem-aware,diesel-fuel-pump-repair
-diesel-loss-of-power,Diesel Loss Of Power,performance,problem-aware,turbo-repair
-diesel-limp-mode,Diesel Stuck In Limp Mode,performance,problem-aware,diesel-engine-diagnostics
-diesel-rough-idle,Diesel Rough Idle,performance,problem-aware,diesel-injector-testing
-diesel-excessive-fuel-use,Diesel Using Too Much Fuel,performance,problem-aware,diesel-injector-replacement
-diesel-knocking-noise,Diesel Knocking Or Ticking Noise,noise,problem-aware,cylinder-head-repair
-diesel-turbo-whistle,Turbo Whistle Or Whine,noise,problem-aware,turbo-repair
-diesel-overheating,Diesel Engine Overheating,cooling,problem-aware,head-gasket-replacement
-diesel-coolant-loss-no-leak,Losing Coolant With No Visible Leak,cooling,problem-aware,head-gasket-replacement
-diesel-oil-in-coolant,Oil In Coolant,cooling,problem-aware,head-gasket-replacement
-diesel-white-mayo-oil-cap,Mayonnaise Under The Oil Cap,cooling,problem-aware,head-gasket-replacement
-dpf-light-on,DPF Warning Light On,emissions,problem-aware,dpf-cleaning
-dpf-wont-regenerate,DPF Won't Regenerate,emissions,problem-aware,dpf-cleaning
-adblue-warning-countdown,AdBlue Warning & Countdown To No-Start,emissions,problem-aware,adblue-scr-repair
-egr-valve-stuck,EGR Valve Stuck Or Clogged,emissions,problem-aware,egr-cleaning
-diesel-oil-dilution,Diesel In The Engine Oil,lubrication,problem-aware,diesel-injector-replacement
-diesel-excessive-blowby,Excessive Blow-By,lubrication,problem-aware,diesel-engine-rebuild
-diesel-low-oil-pressure,Low Oil Pressure Warning,lubrication,problem-aware,diesel-engine-rebuild
-diesel-runaway,Diesel Engine Runaway,critical,problem-aware,diesel-engine-rebuild
-diesel-hydraulic-lock,Diesel Hydraulic Lock,critical,problem-aware,diesel-engine-rebuild
-diesel-injector-leak-off,Failed Injector Leak-Off Test,fuel-system,solution-aware,diesel-injector-testing
-diesel-water-in-fuel-light,Water In Fuel Warning Light,fuel-system,problem-aware,diesel-fuel-contamination
-put-petrol-in-diesel,Put Petrol In A Diesel By Mistake,fuel-system,problem-aware,diesel-fuel-contamination
-diesel-fuel-gelling-cold,Diesel Fuel Gelling In Cold Weather,fuel-system,problem-aware,diesel-servicing
-diesel-glow-plug-light-flashing,Glow Plug Light Flashing,electrical,problem-aware,glow-plug-replacement
-diesel-timing-chain-rattle,Timing Chain Rattle On Startup,engine-internals,problem-aware,timing-chain-belt-replacement
-diesel-swirl-flap-failure,Swirl Flap Failure,intake,problem-aware,diesel-engine-diagnostics
-diesel-intake-manifold-carbon,Carbon Build-Up In The Intake Manifold,intake,problem-aware,egr-cleaning
-diesel-boost-leak,Boost Leak Symptoms,forced-induction,problem-aware,intercooler-service
-diesel-turbo-oil-leak,Turbo Leaking Oil,forced-induction,problem-aware,turbo-repair
+marine-engine-overheating,Marine Engine Overheating,cooling,problem-aware,heat-exchanger-service
+no-water-from-exhaust,No Water Coming Out Of The Exhaust,cooling,problem-aware,impeller-replacement
+impeller-failure,Raw Water Impeller Has Failed,cooling,problem-aware,impeller-replacement
+overheat-alarm-sounding,Overheat Alarm Sounding,cooling,problem-aware,marine-cooling-system-repair
+engine-running-cold,Marine Engine Running Too Cold,cooling,problem-aware,marine-cooling-system-repair
+coolant-loss-marine,Losing Coolant With No Visible Leak,cooling,problem-aware,heat-exchanger-service
+blocked-exhaust-elbow,Blocked Or Corroded Exhaust Elbow,cooling,problem-aware,exhaust-elbow-replacement
+saltwater-in-engine-oil,Saltwater In The Engine Oil,water-ingress,problem-aware,saltwater-damage-repair
+marine-engine-hydrolock,Marine Engine Hydrolock,water-ingress,problem-aware,saltwater-damage-repair
+water-in-cylinders,Water In The Cylinders,water-ingress,problem-aware,saltwater-damage-repair
+milky-oil-marine,Milky Oil On The Dipstick,water-ingress,problem-aware,marine-head-gasket-replacement
+marine-engine-wont-start,Marine Engine Won't Start,starting,problem-aware,marine-engine-electrical
+cranks-but-wont-fire-marine,Cranks But Won't Fire,starting,problem-aware,marine-fuel-pump-repair
+hard-starting-after-layup,Hard Starting After Layup,starting,problem-aware,recommissioning-service
+marine-engine-loses-power,Loses Power Under Load,performance,problem-aware,fuel-polishing
+wont-reach-wot-rpm,Won't Reach Wide Open Throttle RPM,performance,problem-aware,sea-trial
+marine-engine-black-smoke,Marine Engine Blowing Black Smoke,smoke,problem-aware,marine-injector-service
+marine-engine-white-smoke,Marine Engine Blowing White Smoke,smoke,problem-aware,marine-cylinder-head-repair
+marine-engine-blue-smoke,Marine Engine Blowing Blue Smoke,smoke,problem-aware,marine-engine-rebuild
+soot-on-transom,Black Soot On The Transom,smoke,problem-aware,marine-injector-service
+marine-rough-idle,Rough Idle Or Uneven Running,performance,problem-aware,marine-injector-service
+blocked-fuel-filters,Fuel Filters Keep Blocking,fuel-system,problem-aware,diesel-bug-treatment
+diesel-bug-symptoms,Diesel Bug In The Fuel Tank,fuel-system,problem-aware,fuel-polishing
+water-in-fuel-marine,Water In The Fuel,fuel-system,problem-aware,fuel-polishing
+marine-fuel-starvation,Fuel Starvation At High Revs,fuel-system,problem-aware,marine-fuel-filter-service
+marine-low-oil-pressure,Low Oil Pressure Alarm,lubrication,problem-aware,marine-engine-rebuild
+marine-excessive-blowby,Excessive Blow-By,lubrication,problem-aware,marine-engine-rebuild
+gearbox-slipping,Marine Gearbox Slipping Or Not Engaging,driveline,problem-aware,marine-gearbox-service
+gearbox-overheating,Marine Gearbox Overheating,driveline,problem-aware,marine-gearbox-service
+shaft-vibration,Propeller Shaft Vibration,driveline,problem-aware,engine-alignment
+stern-gland-leaking,Stern Gland Leaking Or Overheating,driveline,problem-aware,shaft-seal-stern-gland
+sterndrive-bellows-failure,Sterndrive Bellows Failure,driveline,problem-aware,sterndrive-service
+anodes-wasting-fast,Anodes Wasting Away Too Fast,corrosion,problem-aware,anode-replacement
+marine-battery-not-charging,Battery Not Charging,electrical,problem-aware,marine-engine-electrical
+marine-engine-alarm-buzzer,Engine Alarm Buzzer Won't Stop,electrical,problem-aware,engine-alarms-instruments

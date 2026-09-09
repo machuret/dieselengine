@@ -2,22 +2,48 @@
   "domain": "https://marinedieselengine.com.au",
   "name": "Marine Diesel Engine",
   "shortName": "MarineDieselEngine.com.au",
-  "tagline": "Independent diesel engine information for Australia",
-  "description": "Independent Australian guides to diesel engines, faults, repair costs and how to find a workshop. We do not sell repairs.",
+  "tagline": "Independent marine diesel information for Australia",
+  "description": "Independent Australian guides to marine diesel engines, faults, service costs and how to find a marine mechanic. We do not sell repairs.",
   "locale": "en-AU",
   "country": "AU",
-
   "_comment_publishing": "Filling defaultAuthor and defaultReviewer lets pages be marked status: ready. Until both are set to real named people, every page is served noindex and kept out of the sitemap. Do not put a placeholder here.",
   "defaultAuthor": null,
   "defaultReviewer": null,
-
   "sections": [
-    { "id": "pages",    "label": "Pillars",  "match": "^/(diesel-engines|find-a-diesel-mechanic|diesel-problems|engine-brands|costs)/$" },
-    { "id": "services", "label": "Services", "match": "^/services/" },
-    { "id": "cities",   "label": "Cities",   "match": "^/diesel-mechanics/" },
-    { "id": "problems", "label": "Problems", "match": "^/diesel-problems/." },
-    { "id": "engines",  "label": "Engines",  "match": "^/engine-brands/." },
-    { "id": "guides",   "label": "Guides",   "match": "^/guides/" },
-    { "id": "costs",    "label": "Costs",    "match": "^/costs/." }
+    {
+      "id": "pages",
+      "label": "Pillars",
+      "match": "^/(marine-diesel-engines|find-a-marine-mechanic|marine-engine-problems|engine-brands|costs)/$"
+    },
+    {
+      "id": "services",
+      "label": "Services",
+      "match": "^/services/"
+    },
+    {
+      "id": "locations",
+      "label": "Locations",
+      "match": "^/marine-mechanics/"
+    },
+    {
+      "id": "problems",
+      "label": "Problems",
+      "match": "^/marine-engine-problems/."
+    },
+    {
+      "id": "engines",
+      "label": "Engines",
+      "match": "^/engine-brands/."
+    },
+    {
+      "id": "guides",
+      "label": "Guides",
+      "match": "^/guides/"
+    },
+    {
+      "id": "costs",
+      "label": "Costs",
+      "match": "^/costs/."
+    }
   ]
 }

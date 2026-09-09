@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate the page/keyword map for the Diesel Engine AU content expansion.
+"""Generate the page/keyword map for the marinedieselengine.com.au content plan.
 
 Reads the source data in data/*.csv and emits:
   data/keyword-map.csv   one row per planned page, with target keyword,
@@ -7,9 +7,11 @@ Reads the source data in data/*.csv and emits:
   data/wave-summary.csv  page counts per wave and page type.
 
 Gating rules keep the programmatic sets from degenerating into thin pages:
-every generated page must have at least one source of unique substance
-(local provider data, an engine-specific fault pattern, or a cost model),
-so the gates below are deliberately narrower than the full cross product.
+every generated page must have at least one source of unique substance (local
+provider data, an engine-specific fault pattern, or a cost model), so the gates
+below are deliberately narrower than the full cross product. On a marine site
+the strongest gate is fleet mix — a winterisation page in Cairns or a charter
+fleet page in Geelong would be fiction.
 """
 import csv
 import os
@@ -32,28 +34,66 @@ topics = load("decision-topics.csv")
 
 tier1 = [c for c in cities if c["tier"] == "1"]
 tier2 = [c for c in cities if c["tier"] == "2"]
-coastal = {"sydney", "melbourne", "brisbane", "perth", "gold-coast",
-           "newcastle", "sunshine-coast", "wollongong", "hobart", "cairns",
-           "townsville", "darwin", "mackay", "bunbury", "launceston"}
-regional = {"toowoomba", "wagga-wagga", "dubbo", "ballarat", "bendigo",
-            "albury-wodonga", "rockhampton", "mackay", "adelaide", "launceston"}
-mining = {"perth", "newcastle", "wollongong", "townsville", "mackay",
-          "rockhampton", "darwin", "bunbury"}
+# Every location on a marine site is on the water, so there is no coastal
+# gate. What differs between them is fleet mix, and that is what gates the
+# vessel-class and seasonal pages below.
+#
+# commercial: a working fleet large enough to support survey-vessel servicing.
+commercial = {"cairns", "whitsundays", "gladstone", "townsville", "mackay",
+              "darwin", "port-lincoln", "hobart", "broome", "adelaide",
+              "brisbane", "perth", "sydney", "port-stephens", "coffs-harbour",
+              "batemans-bay"}
+# charter: bareboat, game fishing and reef charter operators running
+# high-hour engines to a schedule.
+charter = {"whitsundays", "cairns", "gold-coast", "sunshine-coast",
+           "port-stephens", "hervey-bay", "broome", "darwin", "sydney"}
+# sailing: a cruising and racing keelboat fleet, so saildrives and small
+# auxiliaries rather than planing-craft engines.
+sailing = {"sydney", "melbourne", "hobart", "adelaide", "perth", "brisbane",
+           "gold-coast", "port-stephens", "geelong", "gippsland-lakes",
+           "batemans-bay"}
+# cold_layup: a real winter layup season. Queensland and the tropics do not
+# have one, and a winterisation page there would be fiction.
+cold_layup = {"melbourne", "hobart", "adelaide", "geelong", "gippsland-lakes",
+              "batemans-bay", "wollongong", "port-lincoln", "perth"}
+# slipway: a haul-out facility, without which below-waterline work is not
+# offered locally.
+slipway = {"gold-coast", "sydney", "brisbane", "melbourne", "perth", "cairns",
+           "whitsundays", "hobart", "adelaide", "port-stephens", "gladstone",
+           "townsville", "darwin", "port-lincoln", "geelong"}
+
+SEGMENT_GATES = {
+    "commercial-vessel-servicing": commercial,
+    "workboat-ferry-servicing": commercial,
+    "charter-fleet-servicing": charter,
+    "yacht-auxiliary-service": sailing,
+    "winterisation-layup": cold_layup,
+    "recommissioning-service": cold_layup,
+    "slipway-haul-out": slipway,
+    "propeller-shaft-service": slipway,
+}
+
+
+def segment_allows(service_slug, city_slug):
+    """A location page only exists where that segment of the fleet does."""
+    allowed = SEGMENT_GATES.get(service_slug)
+    return allowed is None or city_slug in allowed
+
 
 # Service x city pairs below the wave-2 commercial-value gate that are
 # nonetheless justified by a documented local demand pattern. Each needs a
 # stated reason; this list is the only way past the value gate, so it stays
 # short and auditable.
 EXTRA_CITY_SERVICE = [
-    ("agricultural-diesel-mechanic", "adelaide",
-     "Agricultural crossover: Adelaide's northern workshops service tractor "
-     "and irrigation engines alongside vehicles"),
-    ("diesel-fuel-contamination", "perth",
-     "Remote refuelling and long storage make fuel contamination a leading "
-     "cause of WA injection failures"),
-    ("glow-plug-replacement", "canberra",
-     "Sub-zero winter mornings surface glow plug faults earlier than "
-     "anywhere else on the mainland east coast"),
+    ("marine-engine-oil-analysis", "whitsundays",
+     "Bareboat charter fleets run predictive oil analysis as standard because "
+     "an engine failure strands paying passengers"),
+    ("engine-alarms-instruments", "gold-coast",
+     "Australia's largest refit and boatbuilding hub does proportionally more "
+     "instrumentation and helm electronics work"),
+    ("marine-corrosion-repair", "darwin",
+     "Tropical heat and high salinity accelerate galvanic corrosion well "
+     "beyond temperate-water rates"),
 ]
 
 rows = []
@@ -75,25 +115,25 @@ def add(wave, page_type, url, title, keyword, secondary, priority, parent, notes
 
 # ---------------------------------------------------------------- wave 1
 # Pillars. Everything else links up into these, so they ship first.
-add(1, "pillar", "/diesel-engines/", "Diesel Engines in Australia",
-    "diesel engines australia",
-    ["how diesel engines work", "diesel engine guide australia"],
+add(1, "pillar", "/marine-diesel-engines/", "Marine Diesel Engines in Australia",
+    "marine diesel engines australia",
+    ["how marine diesel engines work", "boat diesel engine guide"],
     "P0", "/", "Top-level education pillar")
-add(1, "pillar", "/find-a-diesel-mechanic/", "Find a Diesel Mechanic in Australia",
-    "diesel mechanic near me",
-    ["diesel mechanic australia", "diesel specialist near me"],
+add(1, "pillar", "/find-a-marine-mechanic/", "Find a Marine Diesel Mechanic in Australia",
+    "marine diesel mechanic near me",
+    ["boat mechanic near me", "marine engineer australia"],
     "P0", "/", "Directory entry point; routes to city hubs")
-add(1, "pillar", "/diesel-problems/", "Diesel Engine Problems and Symptoms",
-    "diesel engine problems",
-    ["diesel engine symptoms", "common diesel faults"],
+add(1, "pillar", "/marine-engine-problems/", "Marine Diesel Engine Problems and Symptoms",
+    "marine diesel engine problems",
+    ["boat engine problems", "common marine diesel faults"],
     "P0", "/", "Symptom hub")
-add(1, "pillar", "/engine-brands/", "Diesel Engine Brands in Australia",
-    "diesel engine brands",
-    ["diesel engine manufacturers australia"],
+add(1, "pillar", "/engine-brands/", "Marine Diesel Engine Brands in Australia",
+    "marine diesel engine brands",
+    ["boat engine brands australia", "marine engine manufacturers"],
     "P0", "/", "Brand hub")
-add(1, "pillar", "/costs/", "What Diesel Repairs Cost in Australia",
-    "diesel repair cost australia",
-    ["diesel mechanic hourly rate australia"],
+add(1, "pillar", "/costs/", "What Marine Engine Work Costs in Australia",
+    "marine engine repair cost australia",
+    ["marine mechanic hourly rate australia"],
     "P0", "/", "Cost hub; feeds every cost page")
 
 for s in services:
@@ -102,32 +142,28 @@ for s in services:
         f"{s['service'].lower()} australia",
         [f"{s['service'].lower()} cost", f"what is {s['service'].lower()}"],
         "P0" if int(s["commercial_value"]) >= 5 else "P1",
-        "/find-a-diesel-mechanic/",
+        "/find-a-marine-mechanic/",
         f"Cluster: {s['cluster']}")
 
 for c in tier1:
-    add(1, "city-hub", f"/diesel-mechanics/{c['slug']}/",
-        f"Diesel Mechanics in {c['city']}",
-        f"diesel mechanic {c['city'].lower()}",
-        [f"diesel mechanic near me {c['city'].lower()}",
-         f"diesel specialist {c['city'].lower()}",
-         f"diesel repairs {c['city'].lower()}"],
-        "P0", "/find-a-diesel-mechanic/",
+    add(1, "city-hub", f"/marine-mechanics/{c['slug']}/",
+        f"Marine Diesel Mechanics in {c['city']}",
+        f"marine diesel mechanic {c['city'].lower()}",
+        [f"boat mechanic {c['city'].lower()}",
+         f"marine engineer {c['city'].lower()}",
+         f"boat engine repairs {c['city'].lower()}"],
+        "P0", "/find-a-marine-mechanic/",
         f"{c['state']} — {c['notes']}")
 
 # ---------------------------------------------------------------- wave 2
-# Tier-1 city x high-value service. Gate: commercial_value >= 4, plus
-# segment gates so marine/agricultural/plant pages only exist where the
-# demand does.
+# Tier-1 location x high-value service. Gate: commercial_value >= 4, plus the
+# fleet-segment gates above, so a charter, commercial, saildrive, layup or
+# slipway page only exists where that part of the fleet actually is.
 for c in tier1:
     for s in services:
         if int(s["commercial_value"]) < 4:
             continue
-        if s["slug"] == "marine-diesel-mechanic" and c["slug"] not in coastal:
-            continue
-        if s["slug"] == "agricultural-diesel-mechanic" and c["slug"] not in regional:
-            continue
-        if s["slug"] == "earthmoving-plant-diesel" and c["slug"] not in mining:
+        if not segment_allows(s["slug"], c["slug"]):
             continue
         add(2, "city-service", f"/services/{s['slug']}/{c['slug']}/",
             f"{s['service']} in {c['city']}",
@@ -136,7 +172,7 @@ for c in tier1:
              f"{s['service'].lower()} {c['state'].lower()}",
              f"best {s['service'].lower()} {c['city'].lower()}"],
             "P0" if int(s["commercial_value"]) == 5 else "P1",
-            f"/diesel-mechanics/{c['slug']}/",
+            f"/marine-mechanics/{c['slug']}/",
             f"Needs >=5 verified local providers before publish")
 
 svc_by_slug = {s["slug"]: s for s in services}
@@ -147,16 +183,16 @@ for sslug, cslug, reason in EXTRA_CITY_SERVICE:
         f"{s_['service']} in {c_['city']}",
         f"{s_['service'].lower()} {c_['city'].lower()}",
         [f"{s_['service'].lower()} near me {c_['city'].lower()}"],
-        "P1", f"/diesel-mechanics/{cslug}/", reason)
+        "P1", f"/marine-mechanics/{cslug}/", reason)
 
 for sym in symptoms:
-    add(2, "symptom", f"/diesel-problems/{sym['slug']}/",
+    add(2, "symptom", f"/marine-engine-problems/{sym['slug']}/",
         sym["symptom"],
         sym["symptom"].lower(),
         [f"{sym['symptom'].lower()} causes",
          f"{sym['symptom'].lower()} fix",
          f"why is my {sym['symptom'].lower()}"],
-        "P0", "/diesel-problems/",
+        "P0", "/marine-engine-problems/",
         f"CTA routes to /services/{sym['maps_to_service']}/")
 
 for t in topics:
@@ -164,7 +200,7 @@ for t in topics:
         t["title"], t["title"].lower(),
         [f"{t['title'].lower()} australia"],
         "P0" if t["cluster"] == "cost" else "P1",
-        "/costs/" if t["cluster"] == "cost" else "/diesel-engines/",
+        "/costs/" if t["cluster"] == "cost" else "/marine-diesel-engines/",
         f"{t['cluster']} / {t['funnel_stage']}")
 
 # ---------------------------------------------------------------- wave 3
@@ -172,10 +208,10 @@ for t in topics:
 # copy long tail lives.
 for b in brands:
     add(3, "brand-hub", f"/engine-brands/{b['brand_slug']}/",
-        f"{b['brand']} Diesel Engines in Australia",
-        f"{b['brand'].lower()} diesel engine",
-        [f"{b['brand'].lower()} diesel engine problems",
-         f"{b['brand'].lower()} diesel engine specs"],
+        f"{b['brand']} Marine Engines in Australia",
+        f"{b['brand'].lower()} marine engine",
+        [f"{b['brand'].lower()} marine engine problems",
+         f"{b['brand'].lower()} marine engine specs"],
         "P0" if int(b["au_relevance"]) >= 4 else "P1",
         "/engine-brands/", b["notes"])
     for fam in [f.strip() for f in b["notable_engine_families"].split(";") if f.strip()]:
@@ -194,22 +230,22 @@ for b in brands:
 # ---------------------------------------------------------------- wave 4
 # Tier-2 cities, mirroring the wave 1-2 structure at reduced depth.
 for c in tier2:
-    add(4, "city-hub", f"/diesel-mechanics/{c['slug']}/",
-        f"Diesel Mechanics in {c['city']}",
-        f"diesel mechanic {c['city'].lower()}",
-        [f"diesel repairs {c['city'].lower()}",
-         f"diesel specialist {c['city'].lower()}"],
-        "P1", "/find-a-diesel-mechanic/", c["notes"])
+    add(4, "city-hub", f"/marine-mechanics/{c['slug']}/",
+        f"Marine Diesel Mechanics in {c['city']}",
+        f"marine diesel mechanic {c['city'].lower()}",
+        [f"boat engine repairs {c['city'].lower()}",
+         f"marine engineer {c['city'].lower()}"],
+        "P1", "/find-a-marine-mechanic/", c["notes"])
     for s in services:
         if int(s["commercial_value"]) < 5:
             continue
-        if s["slug"] == "marine-diesel-mechanic" and c["slug"] not in coastal:
+        if not segment_allows(s["slug"], c["slug"]):
             continue
         add(4, "city-service", f"/services/{s['slug']}/{c['slug']}/",
             f"{s['service']} in {c['city']}",
             f"{s['service'].lower()} {c['city'].lower()}",
             [f"{s['service'].lower()} near me {c['city'].lower()}"],
-            "P2", f"/diesel-mechanics/{c['slug']}/",
+            "P2", f"/marine-mechanics/{c['slug']}/",
             "Publish only where >=3 verified local providers exist")
 
 # ---------------------------------------------------------------- wave 5
@@ -220,35 +256,33 @@ for b in top_brands:
     for c in tier1:
         add(5, "brand-city",
             f"/engine-brands/{b['brand_slug']}/specialists/{c['slug']}/",
-            f"{b['brand']} Diesel Specialists in {c['city']}",
-            f"{b['brand'].lower()} diesel specialist {c['city'].lower()}",
-            [f"{b['brand'].lower()} diesel mechanic {c['city'].lower()}",
+            f"{b['brand']} Specialists in {c['city']}",
+            f"{b['brand'].lower()} specialist {c['city'].lower()}",
+            [f"{b['brand'].lower()} service {c['city'].lower()}",
              f"{b['brand'].lower()} engine rebuild {c['city'].lower()}"],
             "P2", f"/engine-brands/{b['brand_slug']}/",
             "Gate on verified brand-specialist providers in that city")
 
 # Brand x symptom, for the brands where the fault is genuinely characteristic.
 brand_symptom_pairs = [
-    ("nissan", ["diesel-loss-of-power", "diesel-blowing-black-smoke",
-                "diesel-timing-chain-rattle", "diesel-excessive-blowby"]),
-    ("toyota", ["dpf-light-on", "dpf-wont-regenerate",
-                "diesel-intake-manifold-carbon", "diesel-injector-leak-off"]),
-    ("ford", ["diesel-oil-dilution", "diesel-limp-mode",
-              "diesel-turbo-oil-leak", "dpf-wont-regenerate"]),
-    ("isuzu", ["dpf-wont-regenerate", "diesel-blowing-white-smoke",
-               "diesel-overheating"]),
-    ("mitsubishi", ["diesel-hard-to-start-cold", "diesel-loss-of-power",
-                    "diesel-timing-chain-rattle"]),
-    ("volkswagen", ["diesel-limp-mode", "egr-valve-stuck",
-                    "diesel-swirl-flap-failure"]),
-    ("mercedes-benz", ["adblue-warning-countdown", "diesel-swirl-flap-failure",
-                       "diesel-oil-in-coolant"]),
-    ("land-rover", ["diesel-timing-chain-rattle", "diesel-low-oil-pressure",
-                    "diesel-coolant-loss-no-leak"]),
-    ("cummins", ["diesel-excessive-blowby", "diesel-runaway",
-                 "diesel-low-oil-pressure"]),
-    ("caterpillar", ["diesel-low-oil-pressure", "diesel-overheating",
-                     "diesel-excessive-blowby"]),
+    ("volvo-penta", ["blocked-exhaust-elbow", "saltwater-in-engine-oil",
+                     "marine-engine-overheating", "sterndrive-bellows-failure"]),
+    ("yanmar", ["impeller-failure", "no-water-from-exhaust",
+                "blocked-exhaust-elbow", "hard-starting-after-layup"]),
+    ("mercruiser", ["sterndrive-bellows-failure", "marine-engine-overheating",
+                    "marine-battery-not-charging"]),
+    ("cummins-marine", ["marine-excessive-blowby", "marine-low-oil-pressure",
+                        "marine-engine-overheating", "marine-engine-black-smoke"]),
+    ("caterpillar-marine", ["marine-low-oil-pressure", "marine-engine-overheating",
+                            "marine-excessive-blowby"]),
+    ("perkins-sabre", ["marine-engine-overheating", "coolant-loss-marine",
+                       "marine-engine-white-smoke"]),
+    ("john-deere-marine", ["marine-engine-overheating", "coolant-loss-marine"]),
+    ("beta-marine", ["impeller-failure", "hard-starting-after-layup"]),
+    ("nanni", ["impeller-failure", "marine-engine-overheating"]),
+    ("zf-marine", ["gearbox-slipping", "gearbox-overheating", "shaft-vibration"]),
+    ("twin-disc", ["gearbox-slipping", "gearbox-overheating"]),
+    ("yanmar-saildrive", ["stern-gland-leaking", "anodes-wasting-fast"]),
 ]
 sym_by_slug = {s["slug"]: s for s in symptoms}
 brand_by_slug = {b["brand_slug"]: b for b in brands}

@@ -1,27 +1,27 @@
 slug,title,cluster,funnel_stage
-diesel-engine-rebuild-cost-australia,How Much Does A Diesel Engine Rebuild Cost In Australia,cost,solution-aware
-dpf-cleaning-cost-australia,DPF Cleaning Cost In Australia,cost,solution-aware
-diesel-injector-replacement-cost,Diesel Injector Replacement Cost,cost,solution-aware
-turbo-replacement-cost-australia,Turbo Replacement Cost In Australia,cost,solution-aware
-head-gasket-replacement-cost,Head Gasket Replacement Cost,cost,solution-aware
-rebuild-vs-replace-diesel-engine,Rebuild Or Replace A Diesel Engine,comparison,solution-aware
-recon-vs-secondhand-engine,Reconditioned vs Second-Hand Engine,comparison,solution-aware
-dealer-vs-independent-diesel-mechanic,Dealer vs Independent Diesel Mechanic,comparison,solution-aware
-common-rail-vs-mechanical-injection,Common Rail vs Mechanical Injection,comparison,informational
-dpf-clean-vs-replace,DPF Clean vs Replace,comparison,solution-aware
-how-to-choose-a-diesel-mechanic,How To Choose A Diesel Mechanic,buyers-guide,solution-aware
-questions-to-ask-a-diesel-workshop,Questions To Ask A Diesel Workshop Before You Book,buyers-guide,solution-aware
-diesel-repair-warranty-rights-australia,Your Repair Warranty Rights Under Australian Consumer Law,compliance,solution-aware
-diesel-emissions-rules-australia,Diesel Emissions Rules In Australia,compliance,informational
-adr-compliance-engine-modifications,ADR Compliance For Engine Modifications,compliance,informational
-diesel-engine-life-expectancy,How Long Should A Diesel Engine Last,education,unaware
-diesel-service-intervals-australia,Diesel Service Intervals Explained,education,unaware
-how-a-common-rail-system-works,How A Common Rail Diesel System Works,education,unaware
-how-a-dpf-works,How A DPF Works,education,unaware
-how-a-turbocharger-works,How A Turbocharger Works,education,unaware
-how-adblue-scr-works,How AdBlue And SCR Work,education,unaware
-diesel-engine-glossary,Diesel Engine Glossary,education,unaware
-towing-and-diesel-engine-wear,Towing And Diesel Engine Wear,education,unaware
-short-trips-kill-diesel-engines,Why Short Trips Damage Diesel Engines,education,unaware
-diesel-fuel-quality-australia,Diesel Fuel Quality In Australia,education,unaware
-pre-purchase-diesel-inspection,Pre-Purchase Diesel Inspection Checklist,buyers-guide,solution-aware
+marine-engine-rebuild-cost-australia,How Much Does A Marine Engine Rebuild Cost In Australia,cost,solution-aware
+marine-repower-cost-australia,What Does A Marine Repower Cost In Australia,cost,solution-aware
+marine-engine-service-cost,Marine Engine Service Cost In Australia,cost,solution-aware
+impeller-replacement-cost,Impeller Replacement Cost,cost,solution-aware
+heat-exchanger-service-cost,Heat Exchanger Service Cost,cost,solution-aware
+marine-gearbox-rebuild-cost,Marine Gearbox Rebuild Cost,cost,solution-aware
+repower-vs-rebuild,Repower Or Rebuild Your Marine Diesel,comparison,solution-aware
+shaft-vs-sterndrive-vs-ips,Shaft Drive vs Sterndrive vs IPS,comparison,informational
+raw-water-vs-keel-cooling,Raw Water vs Keel Cooling,comparison,informational
+new-vs-reconditioned-marine-engine,New vs Reconditioned Marine Engine,comparison,solution-aware
+petrol-vs-diesel-boat-engine,Petrol vs Diesel Boat Engines,comparison,unaware
+how-to-choose-a-marine-mechanic,How To Choose A Marine Diesel Mechanic,buyers-guide,solution-aware
+questions-to-ask-a-marine-workshop,Questions To Ask A Marine Workshop Before You Book,buyers-guide,solution-aware
+pre-purchase-marine-engine-checklist,Pre-Purchase Marine Engine Inspection Checklist,buyers-guide,solution-aware
+marine-engine-service-schedule,Marine Engine Service Schedule By Hours,buyers-guide,unaware
+commercial-vessel-survey-requirements,Engine Requirements For Commercial Vessel Survey,compliance,informational
+marine-repair-warranty-rights-australia,Your Repair Rights Under Australian Consumer Law,compliance,solution-aware
+marine-emissions-rules-australia,Marine Engine Emissions Rules In Australia,compliance,informational
+how-marine-diesel-cooling-works,How Marine Diesel Cooling Works,education,unaware
+how-a-saildrive-works,How A Saildrive Works,education,unaware
+how-a-marine-gearbox-works,How A Marine Gearbox Works,education,unaware
+why-anodes-matter,Why Sacrificial Anodes Matter,education,unaware
+marine-diesel-engine-life-expectancy,How Long Should A Marine Diesel Last,education,unaware
+low-hours-is-not-good-news,Why Low Engine Hours Can Be Bad News,education,unaware
+marine-fuel-quality-australia,Marine Diesel Fuel Quality And Storage In Australia,education,unaware
+marine-diesel-glossary,Marine Diesel Engine Glossary,education,unaware
