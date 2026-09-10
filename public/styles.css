@@ -396,6 +396,13 @@ main { padding: 0 var(--gutter) 5rem; }
   transition: border-color .18s, background-color .18s, color .18s;
 }
 .related a:hover { border-color: var(--accent); color: var(--accent); background: var(--wash); }
+.children-group {
+  font-size: .8rem; font-weight: 650; text-transform: uppercase;
+  letter-spacing: .06em; color: var(--muted);
+  margin: 1.4rem 0 .6rem;
+}
+.children-group:first-of-type { margin-top: 0; }
+.children + .related { margin-top: 2.5rem; }
 
 .byline {
   max-width: var(--measure); margin: 3rem 0 0; padding-top: 1.25rem;

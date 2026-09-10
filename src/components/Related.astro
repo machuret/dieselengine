@@ -40,6 +40,14 @@ if (page.pageType === 'service-national' && page.cluster) {
     .sort((a, b) => a.d - b.d)
     .slice(0, 4)
     .map((x) => x.p);
+} else if (page.pageType === 'decision' && page.cluster) {
+  const sameCluster = published.filter(
+    (p) => p.pageType === 'decision' && p.cluster === page.cluster
+  );
+  const others = published.filter(
+    (p) => p.pageType === 'decision' && p.cluster !== page.cluster
+  );
+  related = [...sameCluster, ...others].slice(0, 6);
 } else {
   related = published.filter((p) => p.pageType === page.pageType).slice(0, 5);
 }

@@ -1,0 +1,43 @@
+---
+import { allPages } from '../lib/content.js';
+
+/**
+ * Down-links from a hub to everything published beneath it.
+ *
+ * Pillars were linking to only the handful of children that happened to be
+ * named in their prose, so most guides had no path down from their own parent.
+ * Deriving it from `parent` keeps the hub complete as pages are added.
+ */
+const { page } = Astro.props;
+
+const children = allPages
+  .filter((p) => p.indexable && p.parent === page.url && p.url !== page.url)
+  .sort((a, b) => a.title.localeCompare(b.title));
+
+const groups = new Map();
+for (const c of children) {
+  const key = c.cluster ?? '';
+  if (!groups.has(key)) groups.set(key, []);
+  groups.get(key).push(c);
+}
+const LABELS = {
+  cost: 'What it costs',
+  comparison: 'Choosing between options',
+  'buyers-guide': 'Before you book',
+  compliance: 'Rules and rights',
+  education: 'How it works',
+};
+const grouped = [...groups.entries()].filter(([k]) => LABELS[k]);
+const useGroups = grouped.length > 1 && grouped.flatMap(([, v]) => v).length === children.length;
+---
+{children.length > 0 && (
+  <nav class="related children" aria-label="In this section">
+    <h2>In this section</h2>
+    {useGroups ? grouped.map(([key, items]) => (
+      <>
+        <p class="children-group">{LABELS[key]}</p>
+        <ul>{items.map((c) => <li><a href={c.url}>{c.title}</a></li>)}</ul>
+      </>
+    )) : <ul>{children.map((c) => <li><a href={c.url}>{c.title}</a></li>)}</ul>}
+  </nav>
+)}

@@ -4,6 +4,7 @@ import { seoTitle } from '../lib/extract.js';
 import Masthead from '../components/Masthead.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import Related from '../components/Related.astro';
+import Children from '../components/Children.astro';
 
 const { page } = Astro.props;
 const canonical = new URL(page.url, site.domain).href;
@@ -147,6 +148,7 @@ const jsonld = {
       <div class="layout">
         <article class="prose">
           <slot />
+          <Children page={page} />
           <Related page={page} />
           <footer class="byline">
             {page.author

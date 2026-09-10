@@ -25,6 +25,7 @@ function indexBy(file, key) {
 
 const GEO = indexBy('/data/cities.csv', 'slug');
 const SERVICES = indexBy('/data/services.csv', 'slug');
+const TOPICS = indexBy('/data/decision-topics.csv', 'slug');
 export { sectionOf, gateFailures } from './gates.js';
 
 // Astro parses the YAML front matter of every file under /content and hands us
@@ -50,6 +51,10 @@ function build() {
     if (page.pageType === 'service-national') {
       page.cluster = SERVICES[slug]?.cluster ?? null;
     }
+    // Guides carry the cluster they were planned under (cost, comparison,
+    // buyers-guide, compliance, education) so Related can pair a cost guide
+    // with the other cost guides rather than with whatever sorts first.
+    if (page.pageType === 'decision') page.cluster = TOPICS[slug]?.cluster ?? null;
     pages.push(page);
   }
 
