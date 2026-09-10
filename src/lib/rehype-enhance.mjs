@@ -25,12 +25,73 @@ function isLink(node) {
   return node.type === 'element' && node.tagName === 'a';
 }
 
+/** True when everything from `from` onward is links, separators or whitespace. */
+function onlyLinksAfter(kids, from) {
+  for (let i = from; i < kids.length; i++) {
+    const c = kids[i];
+    if (isLink(c)) continue;
+    if (c.type === 'element' && c.tagName === 'br') continue;
+    if (c.type === 'text' && !/[a-z0-9]/i.test(c.value.replace(/→/g, ''))) continue;
+    return false;
+  }
+  return true;
+}
+
+function stripArrows(kids) {
+  for (const c of kids) {
+    if (c.type === 'text') c.value = c.value.replace(/→/g, '').replace(/\s{2,}/g, ' ');
+  }
+  return kids;
+}
+
+function linkRow(children) {
+  return {
+    type: 'element',
+    tagName: 'p',
+    properties: { className: ['linkrow'] },
+    children,
+  };
+}
+
+/**
+ * A bullet can also carry a trailing "→ link". Inside a list a chip row would
+ * be out of place, so the reference becomes a small block beneath the bullet
+ * text instead — same intent, appropriate form.
+ */
+function fixListItems(node) {
+  if (node.type !== 'element') return;
+  if (node.tagName === 'li') {
+    const kids = node.children ?? [];
+    const arrowAt = kids.findIndex((c) => c.type === 'text' && c.value.includes('→'));
+    if (arrowAt !== -1 && kids.slice(arrowAt + 1).some(isLink) && onlyLinksAfter(kids, arrowAt + 1)) {
+      const at = kids[arrowAt];
+      const before = at.value.slice(0, at.value.indexOf('→')).replace(/\s+$/, '');
+      const after = at.value.slice(at.value.indexOf('→') + 1);
+      const head = kids.slice(0, arrowAt);
+      if (before) head.push({ type: 'text', value: before });
+      const tail = stripArrows([{ type: 'text', value: after }, ...kids.slice(arrowAt + 1)]);
+      node.children = [
+        ...head,
+        { type: 'element', tagName: 'span', properties: { className: ['li-link'] }, children: tail },
+      ];
+      return;
+    }
+  }
+  for (const child of node.children ?? []) fixListItems(child);
+}
+
 export function rehypeEnhance() {
   return (tree) => {
+    for (const child of tree.children) fixListItems(child);
+    tree.children = transform(tree.children);
+  };
+}
+
+function transform(children) {
     const out = [];
 
-    for (let i = 0; i < tree.children.length; i++) {
-      const node = tree.children[i];
+    for (let i = 0; i < children.length; i++) {
+      const node = children[i];
 
       // --- tables: wrap for horizontal scroll --------------------------------
       if (node.type === 'element' && node.tagName === 'table') {
@@ -43,21 +104,52 @@ export function rehypeEnhance() {
         continue;
       }
 
-      // --- link-heavy paragraphs become chip rows ---------------------------
+      // --- link rows -------------------------------------------------------
       if (node.type === 'element' && node.tagName === 'p') {
-        const links = (node.children ?? []).filter(isLink);
+        const kids = node.children ?? [];
+        const links = kids.filter(isLink);
+
         if (links.length > 0) {
+          // The content marks related links with a leading "→". A paragraph
+          // may be entirely such links, or may be body copy with a "→ link"
+          // tail appended on its last line. Both become chip rows, and the
+          // arrow goes: an arrow glued to link text is decoration, and once
+          // the row is rendered as chips it says nothing the layout doesn't.
+          // The arrow usually sits inside a text node that also holds the end
+          // of the sentence before it, so the split happens within that node
+          // rather than between children.
+          const arrowAt = kids.findIndex(
+            (c) => c.type === 'text' && c.value.includes('→')
+          );
+
+          if (arrowAt !== -1 && onlyLinksAfter(kids, arrowAt + 1)) {
+            const at = kids[arrowAt];
+            const before = at.value.slice(0, at.value.indexOf('→')).replace(/\s+$/, '');
+            const after = at.value.slice(at.value.indexOf('→') + 1);
+            const head = kids.slice(0, arrowAt);
+            if (before) head.push({ type: 'text', value: before });
+            const tail = [{ type: 'text', value: after }, ...kids.slice(arrowAt + 1)];
+
+            if (head.some((c) => isLink(c) || /[a-z0-9]/i.test(text(c)))) {
+              // Real body copy precedes the arrow: keep it, and move the links
+              // into their own row beneath.
+              node.children = head;
+              out.push(node);
+              out.push(linkRow(stripArrows(tail)));
+            } else {
+              // The whole paragraph was a link row.
+              out.push(linkRow(stripArrows(kids)));
+            }
+            continue;
+          }
+
           const total = text(node).trim();
           const linked = links.map(text).join('');
-          // Strip the separators the content uses between related links.
           const rest = total.replace(/[→·—\-|]/g, '').replace(/\s+/g, ' ').trim();
           const mostlyLinks = linked.length / Math.max(total.length, 1) > 0.5;
           if (mostlyLinks && rest.length - linked.length < 45) {
-            node.properties = node.properties ?? {};
-            node.properties.className = [
-              ...(node.properties.className ?? []),
-              'linkrow',
-            ];
+            out.push(linkRow(stripArrows(kids)));
+            continue;
           }
         }
         out.push(node);
@@ -69,8 +161,8 @@ export function rehypeEnhance() {
           SAFETY_HEADING.test(text(node).trim())) {
         const section = [node];
         let j = i + 1;
-        while (j < tree.children.length) {
-          const next = tree.children[j];
+        while (j < children.length) {
+          const next = children[j];
           if (next.type === 'element' && /^h[12]$/.test(next.tagName)) break;
           section.push(next);
           j++;
@@ -79,7 +171,10 @@ export function rehypeEnhance() {
           type: 'element',
           tagName: 'section',
           properties: { className: ['safety'], role: 'note' },
-          children: section,
+          // Transform the section body, but not its own heading — that
+          // heading is what matched SAFETY_HEADING, and feeding it back in
+          // would wrap it again without end.
+          children: [node, ...transform(section.slice(1))],
         });
         i = j - 1;
         continue;
@@ -88,6 +183,5 @@ export function rehypeEnhance() {
       out.push(node);
     }
 
-    tree.children = out;
-  };
+  return out;
 }

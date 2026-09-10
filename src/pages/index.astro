@@ -8,6 +8,22 @@ import { seoTitle } from '../lib/extract.js';
 const canonical = `${site.domain}/`;
 const ready = allPages.filter((p) => p.indexable).length;
 
+// Ordered by urgency, then by how often people arrive with them.
+const TRIAGE = [
+  { url: '/marine-engine-problems/no-water-from-exhaust/',
+    q: 'No water from the exhaust', a: 'Shut down now' },
+  { url: '/marine-engine-problems/marine-engine-overheating/',
+    q: 'Running hot or overheating', a: 'Shut down now' },
+  { url: '/marine-engine-problems/marine-engine-wont-start/',
+    q: "Won't start", a: 'Batteries or fuel' },
+  { url: '/marine-engine-problems/marine-engine-loses-power/',
+    q: 'Loses power under load', a: 'Often the hull' },
+  { url: '/marine-engine-problems/marine-engine-black-smoke/',
+    q: 'Blowing black smoke', a: 'Usually overloaded' },
+  { url: '/marine-engine-problems/saltwater-in-engine-oil/',
+    q: 'Saltwater in the oil', a: 'Act within hours' },
+];
+
 const PILLARS = [
   { url: '/marine-engine-problems/', t: 'Something is wrong',
     d: 'Start from the symptom. Likely causes ranked by how often they turn out to be the answer — and whether it is safe to keep going.' },
@@ -50,7 +66,7 @@ const jsonld = {
     <meta property="og:locale" content="en_AU" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;650&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" />
     <script type="application/ld+json" set:html={JSON.stringify(jsonld)} />
     <link rel="stylesheet" href="/styles.css" />
   </head>
@@ -60,16 +76,36 @@ const jsonld = {
 
     <main id="main">
       <section class="hero">
-        <span class="eyebrow">Independent · Australia</span>
-        <h1>Marine diesel engines, explained properly.</h1>
-        <p>
-          What goes wrong with boat engines, what the work should cost in
-          Australia, and how to find a mechanic who knows your engine.
-        </p>
-        <p class="note muted">
-          We don't work on boats and we don't sell parts. That is the point —
-          nothing here is trying to win your job.
-        </p>
+        <div class="hero-main">
+          <h1>Something wrong with your engine?</h1>
+          <p class="hero-lede">
+            Independent Australian guides to marine diesels: what the symptom
+            means, what the repair should cost, and how to find a mechanic who
+            knows your engine.
+          </p>
+          <p class="hero-note muted">
+            We don't work on boats and we don't sell parts. Nothing here is
+            trying to win your job.
+          </p>
+        </div>
+
+        {/* The most characteristic thing in this subject's world is triage:
+            most people arrive mid-problem. Let them start from the symptom
+            here rather than navigate to it. */}
+        <aside class="triage" aria-labelledby="triage-h">
+          <h2 id="triage-h">Start with the symptom</h2>
+          <ul>
+            {TRIAGE.map((t) => (
+              <li>
+                <a href={t.url}>
+                  <span class="q">{t.q}</span>
+                  <span class="a">{t.a}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+          <p class="all"><a href="/marine-engine-problems/">All 35 symptoms</a></p>
+        </aside>
       </section>
 
       <ul class="cards wrap">
