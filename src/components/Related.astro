@@ -14,6 +14,7 @@ import { questionClusters } from '../lib/questions.js';
  */
 const { page } = Astro.props;
 
+let crossLink = null;
 const published = allPages.filter((p) => p.indexable && p.url !== page.url);
 let related = [];
 
@@ -25,7 +26,7 @@ if (page.pageType === 'service-national' && page.cluster) {
     (p) => p.pageType === 'service-national' && p.cluster !== page.cluster
   );
   related = [...sameCluster, ...others].slice(0, 6);
-} else if (page.pageType === 'city-hub' && page.geo) {
+} else if (page.geo) {
   const km = (a, b) => {
     const R = 6371, r = Math.PI / 180;
     const dLat = (b.lat - a.lat) * r, dLon = (b.lon - a.lon) * r;
@@ -34,12 +35,20 @@ if (page.pageType === 'service-national' && page.cluster) {
     return 2 * R * Math.asin(Math.sqrt(h));
   };
   const here = { lat: +page.geo.lat, lon: +page.geo.lon };
-  related = published
-    .filter((p) => p.pageType === 'city-hub' && p.geo)
+  const nearby = published
+    .filter((p) => p.pageType === page.pageType && p.geo)
     .map((p) => ({ p, d: km(here, { lat: +p.geo.lat, lon: +p.geo.lon }) }))
     .sort((a, b) => a.d - b.d)
     .slice(0, 4)
     .map((x) => x.p);
+  // The two place families answer different halves of the same question —
+  // where to buy an engine here, and who can fit it — so each links across to
+  // its counterpart for the same region before listing neighbours.
+  const counterpart = published.find(
+    (p) => p.geo?.slug === page.geo.slug && p.pageType !== page.pageType
+  );
+  crossLink = counterpart ?? null;
+  related = nearby;
 } else if (page.pageType === 'decision' && page.cluster) {
   const sameCluster = published.filter(
     (p) => p.pageType === 'decision' && p.cluster === page.cluster
@@ -55,12 +64,13 @@ if (page.pageType === 'service-national' && page.cluster) {
 const cluster = questionClusters.find((c) => c.match.test(page.url));
 const strip = (t) =>
   t.replace(' in Australia', '').replace('Marine Diesel Mechanics in ', '');
-const label = page.pageType === 'city-hub' ? 'Nearby' : 'Related';
+const label = page.geo ? 'Nearby' : 'Related';
 ---
-{related.length > 0 && (
+{(related.length > 0 || crossLink) && (
   <nav class="related" aria-label={`${label} pages`}>
     <h2>{label}</h2>
     <ul>
+      {crossLink && <li><a href={crossLink.url}>{crossLink.title}</a></li>}
       {related.map((p) => <li><a href={p.url}>{strip(p.title)}</a></li>)}
       {cluster && (
         <li><a href={`/questions/${cluster.slug}/`}>Questions: {cluster.title.toLowerCase()}</a></li>

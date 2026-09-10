@@ -2,8 +2,10 @@ wave,page_type,pages
 1,city-hub,10
 1,pillar,5
 1,service-national,42
+2,buying-city,25
 2,city-service,321
 2,decision,26
+2,pillar,1
 2,symptom,35
 3,brand-hub,30
 3,engine-model,116
@@ -13,4 +15,4 @@ wave,page_type,pages
 5,brand-symptom,34
 6,cost-city,340
 6,cost-service,34
-TOTAL,,1302
+TOTAL,,1328

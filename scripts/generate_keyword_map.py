@@ -141,6 +141,25 @@ add(1, "pillar", "/costs/", "What Marine Engine Work Costs in Australia",
     "marine engine repair cost australia",
     ["marine mechanic hourly rate australia"],
     "P0", "/", "Cost hub; feeds every cost page")
+add(2, "pillar", "/buy-marine-diesel-engine/", "Buy A Marine Diesel Engine In Australia",
+    "buy marine diesel engine australia",
+    ["marine engine dealers australia", "where to buy boat engine australia"],
+    "P0", "/", "Buying hub; transactional intent, routes to regional pages")
+
+# One buying page per boating region. This is the transactional half of the
+# location strategy: /marine-mechanics/<city>/ answers "who can fit it",
+# /buy-marine-diesel-engine/<city>/ answers "where do I get one and what
+# should I choose for these waters". Every region gets one, not just tier 1,
+# because the buying answer changes most where the supply chain is thinnest.
+for c in cities:
+    add(2, "buying-city", f"/buy-marine-diesel-engine/{c['slug']}/",
+        f"Buy A Marine Diesel Engine In {c['city']}",
+        f"buy marine diesel engine {c['city'].lower()}",
+        [f"marine engine dealers {c['city'].lower()}",
+         f"boat repower {c['city'].lower()}"],
+        "P0" if int(c["tier"]) == 1 else "P1",
+        "/buy-marine-diesel-engine/",
+        "Local market, conditions and supply chain; unique per region")
 
 for s in services:
     add(1, "service-national", f"/services/{s['slug']}/",

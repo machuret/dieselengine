@@ -47,7 +47,11 @@ function build() {
     page.seoTitleTag = seoTitle(page, site.shortName);
     page.faqs = extractFaqs(raw);
     const slug = page.url.replace(/\/$/, '').split('/').pop();
-    if (page.pageType === 'city-hub') page.geo = GEO[slug] ?? null;
+    // Both the mechanic directory and the buying pages are about a real
+    // place, so both earn Place/PostalAddress schema from the same source.
+    if (page.pageType === 'city-hub' || page.pageType === 'buying-city') {
+      page.geo = GEO[slug] ?? null;
+    }
     if (page.pageType === 'service-national') {
       page.cluster = SERVICES[slug]?.cluster ?? null;
     }

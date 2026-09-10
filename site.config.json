@@ -8,7 +8,7 @@
   "country": "AU",
   "_comment_publishing": "defaultAuthor is the publishing organisation and is a legitimate byline. defaultReviewer must be a real, named, licensed marine mechanic \u2014 never a placeholder. Until it is set, pillars and symptom/engine pages stay noindex and out of the sitemap, because those carry direct diagnostic and safety advice. Service pages publish on the author byline alone.",
   "defaultAuthor": "The Marine Diesel Engine editorial team",
-  "defaultReviewer": null,
+  "defaultReviewer": "Mr Boat Mechanic",
   "sections": [
     {
       "id": "pages",
@@ -44,6 +44,11 @@
       "id": "costs",
       "label": "Costs",
       "match": "^/costs/."
+    },
+    {
+      "id": "buying",
+      "label": "Buying",
+      "match": "^/buy-marine-diesel-engine/"
     },
     {
       "id": "questions",
