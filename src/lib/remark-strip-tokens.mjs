@@ -41,6 +41,24 @@ export function remarkStripTokens() {
 
       const [, name, arg] = only;
 
+      if (name === 'DEALERS') {
+        // Same contract as PROVIDERS, different preposition: a distributor
+        // page's listing is "for a brand", not "in a place", and the wrong
+        // one reads as broken English on 20 pages.
+        const brand = arg ? ` for ${titleCase(arg)}` : '';
+        out.push({
+          type: 'html',
+          value:
+            `<div class="pending-note"><strong>Verified dealer and service ` +
+            `listings${brand} are being compiled.</strong> We list marine ` +
+            `businesses only after confirming them directly, so none appear ` +
+            `here yet. Until they do, the manufacturer's own dealer locator ` +
+            `is the authoritative list, and the guidance on this page applies ` +
+            `whoever you choose.</div>`,
+        });
+        continue;
+      }
+
       if (name === 'PROVIDERS') {
         const where = arg ? ` in ${titleCase(arg)}` : '';
         out.push({

@@ -7,12 +7,15 @@ wave,page_type,pages
 2,decision,26
 2,pillar,1
 2,symptom,35
+3,boat-brand,24
 3,brand-hub,30
+3,distributor,23
 3,engine-model,116
+3,pillar,2
 4,city-hub,15
 4,city-service,234
 5,brand-city,60
 5,brand-symptom,34
 6,cost-city,340
 6,cost-service,34
-TOTAL,,1328
+TOTAL,,1377

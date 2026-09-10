@@ -38,7 +38,9 @@ export function tokensIn(raw) {
   return [...new Set([...(raw ?? '').matchAll(TOKEN)].map((m) => m[1]))];
 }
 
-const PROVIDER_GATES = { 'city-hub': 10, 'city-service': 5, 'brand-city': 3 };
+const PROVIDER_GATES = {
+  'city-hub': 10, 'city-service': 5, 'brand-city': 3, distributor: 3,
+};
 // Pages whose primary content is diagnostic procedure — a differential
 // diagnosis, or "what you can check yourself". A wrong instruction on one of
 // these hurts someone, so they do not publish without a named mechanic.

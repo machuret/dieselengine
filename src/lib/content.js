@@ -26,6 +26,19 @@ function indexBy(file, key) {
 const GEO = indexBy('/data/cities.csv', 'slug');
 const SERVICES = indexBy('/data/services.csv', 'slug');
 const TOPICS = indexBy('/data/decision-topics.csv', 'slug');
+const BOATS = indexBy('/data/boat-brands.csv', 'slug');
+const ENGINE_BRANDS = indexBy('/data/engine-brands.csv', 'brand_slug');
+
+// engine-brands.csv segments are fine-grained enough that several brands are
+// alone in their segment, which left the volume brands with no siblings to
+// relate to. Fold them into the four groups an owner actually chooses between.
+function distributorCluster(segment) {
+  if (!segment) return null;
+  if (/transmission/.test(segment)) return 'driveline';
+  if (/commercial|performance|genset/.test(segment)) return 'commercial';
+  if (/sail|saildrive|base-engine/.test(segment)) return 'small-inboard';
+  return 'planing';
+}
 export { sectionOf, gateFailures } from './gates.js';
 
 // Astro parses the YAML front matter of every file under /content and hands us
@@ -59,6 +72,13 @@ function build() {
     // buyers-guide, compliance, education) so Related can pair a cost guide
     // with the other cost guides rather than with whatever sorts first.
     if (page.pageType === 'decision') page.cluster = TOPICS[slug]?.cluster ?? null;
+    // A Jeanneau owner is served by the other production cruisers, not by a
+    // trawler; a Volvo Penta page by the other volume brands. Both cluster
+    // from the source data rather than by whatever sorts first.
+    if (page.pageType === 'boat-brand') page.cluster = BOATS[slug]?.category ?? null;
+    if (page.pageType === 'distributor') {
+      page.cluster = distributorCluster(ENGINE_BRANDS[slug]?.segment);
+    }
     pages.push(page);
   }
 

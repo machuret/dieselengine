@@ -31,6 +31,7 @@ services = load("services.csv")
 brands = load("engine-brands.csv")
 symptoms = load("symptoms.csv")
 topics = load("decision-topics.csv")
+boats = load("boat-brands.csv")
 
 tier1 = [c for c in cities if c["tier"] == "1"]
 tier2 = [c for c in cities if c["tier"] == "2"]
@@ -141,6 +142,35 @@ add(1, "pillar", "/costs/", "What Marine Engine Work Costs in Australia",
     "marine engine repair cost australia",
     ["marine mechanic hourly rate australia"],
     "P0", "/", "Cost hub; feeds every cost page")
+add(3, "pillar", "/marine-diesel-engine-for/", "Marine Diesel Engines By Boat Brand",
+    "marine diesel engine by boat brand",
+    ["what engine is in my boat", "boat brand engine guide australia"],
+    "P0", "/", "Boat-brand hub; captures owners searching by their hull")
+add(3, "pillar", "/distributors/", "Marine Diesel Engine Distributors In Australia",
+    "marine diesel engine distributors australia",
+    ["marine engine dealers australia"],
+    "P0", "/", "Distribution hub; structure of each brand's AU network")
+
+# One page per boat brand or hull type. Owners search by the boat they have,
+# not by the engine they have never looked at.
+for bb in boats:
+    add(3, "boat-brand", f"/marine-diesel-engine-for/{bb['slug']}/",
+        f"Marine Diesel Engines For {bb['name']}",
+        f"{bb['name'].lower()} marine diesel engine",
+        [f"{bb['name'].lower()} engine service", f"{bb['name'].lower()} repower"],
+        "P1", "/marine-diesel-engine-for/",
+        f"{bb['category']} / {bb['drive']}")
+
+# One distributor page per engine brand with a real Australian network. These
+# explain how the brand's network is structured rather than listing dealers we
+# have not verified.
+for eb in [e for e in brands if int(e["au_relevance"]) >= 3]:
+    add(3, "distributor", f"/distributors/{eb['brand_slug']}/",
+        f"{eb['brand']} Distributors In Australia",
+        f"{eb['brand'].lower()} distributors australia",
+        [f"{eb['brand'].lower()} dealer australia"],
+        "P1", "/distributors/", "Network structure; verified listings pending")
+
 add(2, "pillar", "/buy-marine-diesel-engine/", "Buy A Marine Diesel Engine In Australia",
     "buy marine diesel engine australia",
     ["marine engine dealers australia", "where to buy boat engine australia"],

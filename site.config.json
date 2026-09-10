@@ -51,6 +51,16 @@
       "match": "^/buy-marine-diesel-engine/"
     },
     {
+      "id": "boats",
+      "label": "Boats",
+      "match": "^/marine-diesel-engine-for/"
+    },
+    {
+      "id": "distributors",
+      "label": "Distributors",
+      "match": "^/distributors/"
+    },
+    {
       "id": "questions",
       "label": "Questions",
       "match": "^/questions/"

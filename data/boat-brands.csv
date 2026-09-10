@@ -1,0 +1,25 @@
+slug,name,kind,category,drive,notes
+jeanneau,Jeanneau,brand,sail-monohull,saildrive,French production cruiser; very large AU fleet
+beneteau,Beneteau,brand,sail-monohull,saildrive,French production cruiser; the other half of the AU fleet
+bavaria,Bavaria,brand,sail-monohull,saildrive,German production cruiser
+hanse,Hanse,brand,sail-monohull,saildrive,German performance cruiser
+dufour,Dufour,brand,sail-monohull,saildrive,French cruiser
+catalina,Catalina,brand,sail-monohull,shaft,US production cruiser; shaft common
+catamaran,Catamarans,type,multihull,saildrive,Type page covering twin-engine catamaran installations
+lagoon,Lagoon,brand,multihull,saildrive,Largest production cruising cat builder
+fountaine-pajot,Fountaine Pajot,brand,multihull,saildrive,French cruising and charter cats
+leopard,Leopard,brand,multihull,saildrive,South African built; heavy charter use
+seawind,Seawind,brand,multihull,saildrive,Australian-designed cruising cats
+riviera,Riviera,brand,power-cruiser,shaft,Australia's largest luxury boat builder; Coomera
+maritimo,Maritimo,brand,power-cruiser,shaft,Australian long-range flybridge and sports motor yachts
+princess,Princess,brand,power-cruiser,shaft,UK flybridge and V-class
+sunseeker,Sunseeker,brand,power-cruiser,shaft,UK performance motor yachts
+grand-banks,Grand Banks,brand,trawler,shaft,Classic and modern trawler yachts
+nordhavn,Nordhavn,brand,trawler,shaft,Long-range passagemakers; single main plus wing
+bertram,Bertram,brand,game-boat,shaft,Deep-V sportfishers
+caribbean,Caribbean,brand,power-cruiser,shaft,Australian-built; long-running Sydney production
+mustang,Mustang,brand,power-cruiser,shaft,Australian sports cruisers
+steber,Steber,brand,commercial,shaft,Taree-built commercial charter and patrol hulls
+sea-ray,Sea Ray,brand,power-cruiser,sterndrive,US cruisers; diesel sterndrive and inboard options
+trawler-yacht,Trawler Yachts,type,trawler,shaft,Type page covering displacement trawler installations
+game-boat,Game Boats,type,game-boat,shaft,Type page covering sportfisher installations

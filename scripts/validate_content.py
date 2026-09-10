@@ -40,7 +40,7 @@ REQUIRED_FIELDS = ["url", "title", "page_type", "wave", "primary_keyword",
 REVIEW_REQUIRED = {"symptom", "engine-model", "brand-symptom"}
 # Operator shortfalls and unresolved placeholders are reported, not blocking:
 # a location hub carries substantial local content without its listings.
-PROVIDER_GATES = {"city-hub": 10, "city-service": 5, "brand-city": 3}
+PROVIDER_GATES = {"city-hub": 10, "city-service": 5, "brand-city": 3, "distributor": 3}
 # Placeholder tokens look like {{PRICE_TABLE:gold-coast}} — the name is
 # upper-case, but the argument after the colon is a lower-case slug, so the
 # argument must not be restricted to upper-case or the token is missed.
