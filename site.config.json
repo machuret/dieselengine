@@ -90,6 +90,8 @@
     }
   ],
   "_comment_staticRoutes": "Pages built from .astro rather than content/. They are real URLs and must appear in the sitemap \u2014 the homepage is the most important URL on the site and was previously absent from it entirely.",
+  "heroFigure": null,
+  "_comment_heroFigure": "Set to {src, alt, caption} to show a technical figure under the homepage hero. src must be a file in public/ \u2014 prebuild-check enforces that, because a hero that 404s is worse than no hero. alt carries the labelled part names, which are otherwise unreadable to a search engine or a screen reader in a raster drawing.",
   "contactEmail": "hello@marinedieselengine.com.au",
   "legalUpdated": "2026-09-09",
   "_comment_contact": "Used on the privacy and terms pages. Point this at a mailbox that is actually monitored \u2014 both pages invite corrections and listing removal requests, and the privacy page commits to responding."

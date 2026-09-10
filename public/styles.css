@@ -424,3 +424,50 @@ footer.site nav { display: flex; flex-direction: column; gap: .5rem; }
 footer.site nav a { color: var(--muted); text-decoration: none; }
 footer.site nav a:hover { color: var(--accent); text-decoration: underline; }
 .muted { color: var(--muted); }
+
+/* ---- Homepage blueprint figure ------------------------------------------
+   Full-bleed dark band under the hero. The artwork is its own deep navy, so
+   the band is painted to match rather than floating a dark rectangle on the
+   paper ground — and it stays that colour in both themes, because the drawing
+   does. */
+.blueprint {
+  /* main carries a gutter; the band breaks out of it to the viewport edge
+     without introducing horizontal scroll on the page itself. */
+  margin: 3rem calc(var(--gutter) * -1) 0;
+  padding: 0;
+  background: #0a2a5e;
+  border-block: 1px solid #0a2a5e;
+}
+.blueprint-frame {
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+}
+.blueprint-frame:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+.blueprint img {
+  display: block;
+  width: 100%;
+  height: auto;
+  /* Below this width the callout type falls under about 9px and the drawing
+     stops being readable, so it is panned instead of shrunk. */
+  min-width: 52rem;
+  margin-inline: auto;
+}
+.blueprint figcaption {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: .85rem var(--gutter) 1rem;
+  font-size: .85rem;
+  line-height: 1.5;
+  color: #b8cbe8;
+}
+@media (min-width: 56rem) {
+  .blueprint img { min-width: 0; }
+  .blueprint figcaption { text-align: center; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .blueprint-frame { scroll-behavior: smooth; }
+}

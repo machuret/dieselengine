@@ -40,6 +40,18 @@ for (const p of pages) {
 // Links hardcoded in layouts and .astro pages are not covered by the content
 // front matter check, and a stale one in the shared layout breaks every page on
 // the site at once. Verify them against the real route table.
+// The homepage figure's src comes from config rather than from a literal in a
+// template, so the href sweep below cannot see it. Check it here: a hero image
+// that 404s is more damaging than no hero image.
+if (site.heroFigure) {
+  const { src, alt, caption } = site.heroFigure;
+  if (!src || !alt || !caption) {
+    errors.push('site.config heroFigure needs src, alt and caption');
+  } else if (!existsSync(join('public', src))) {
+    errors.push(`site.config heroFigure.src ${src} is not in public/`);
+  }
+}
+
 const templateFiles = walk('src', '.astro');
 for (const file of templateFiles) {
   const src = readFileSync(file, 'utf8');

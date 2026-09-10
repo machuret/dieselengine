@@ -108,6 +108,24 @@ const jsonld = {
         </aside>
       </section>
 
+      {site.heroFigure && (
+        /* A labelled cutaway is the one image that earns its place on a page
+           about engines: it is the subject, not decoration. It sits below the
+           triage panel rather than behind the copy, because callout text and
+           body text competing in the same space makes both unreadable.
+           The drawing is ~1650px of dense annotation, so on a phone it stays
+           at a legible scale inside a scroller instead of being crushed to
+           fit — a shrunk technical drawing is a blue smear. */
+        <figure class="blueprint">
+          <div class="blueprint-frame" tabindex="0" role="group"
+               aria-label="Marine diesel engine cutaway, scrollable">
+            <img src={site.heroFigure.src} alt={site.heroFigure.alt}
+                 width="1656" height="947" fetchpriority="high" decoding="async" />
+          </div>
+          <figcaption>{site.heroFigure.caption}</figcaption>
+        </figure>
+      )}
+
       <ul class="cards wrap">
         {PILLARS.map((p) => (
           <li>
