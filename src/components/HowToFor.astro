@@ -1,0 +1,29 @@
+---
+import { allPages } from '../lib/content.js';
+
+/**
+ * Reverse index of how-to pages onto the pages they help with.
+ *
+ * A how-to names the symptoms and services it applies to in `relates_to`, and
+ * this builds the link back. Written by hand it would be two edits per pair and
+ * half of them would be forgotten; derived, the pair cannot be half-made, and a
+ * how-to that is deleted takes its inbound links with it.
+ */
+const { page } = Astro.props;
+
+const matches = allPages.filter(
+  (p) => p.pageType === 'howto' && p.indexable && (p.relatesTo ?? []).includes(page.url)
+);
+---
+{matches.length > 0 && (
+  <nav class="howto-for" aria-label="Step-by-step procedures">
+    <p class="howto-label">Do it yourself</p>
+    <ul>
+      {matches.map((m) => (
+        <li>
+          <a href={m.url}>{m.title.replace(/^How To /, 'How to ')}</a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+)}

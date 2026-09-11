@@ -676,3 +676,20 @@ footer.site nav a:hover { color: var(--accent); text-decoration: underline; }
 }
 .rules p { margin: 0 0 .7rem; font-size: .95rem; line-height: 1.6; color: var(--ink-2); }
 .rules p:last-child { margin-bottom: 0; }
+
+/* ---- "Do it yourself" cross-links -------------------------------------- */
+.howto-for {
+  max-width: var(--measure); margin: 2.5rem 0 0;
+  padding: 1.1rem 1.3rem; border-radius: var(--r-md);
+  border: 1px solid var(--rule); border-left: 3px solid var(--accent);
+  background: var(--wash);
+}
+.howto-label {
+  margin: 0 0 .6rem; font-family: var(--mono); font-size: .68rem;
+  font-weight: 500; letter-spacing: .13em; text-transform: uppercase;
+  color: var(--accent-2);
+}
+.howto-for ul { list-style: none; margin: 0; padding: 0; display: grid; gap: .4rem; }
+.howto-for li { margin: 0; }
+.howto-for a { font-weight: 600; text-decoration: none; }
+.howto-for a:hover { text-decoration: underline; }

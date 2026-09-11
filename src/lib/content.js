@@ -1,6 +1,6 @@
 import site from '../../site.config.json' with { type: 'json' };
 import { toPage } from './gates.js';
-import { extractFaqs, firstParagraph, metaDescription, seoTitle } from './extract.js';
+import { extractFaqs, firstParagraph, howSteps, metaDescription, seoTitle } from './extract.js';
 
 // Source data the pages are generated from. Loading it here lets a page know
 // its own service cluster and its location's coordinates, which is what makes
@@ -60,6 +60,7 @@ function build() {
     page.description = page.description || metaDescription(firstParagraph(raw));
     page.seoTitleTag = seoTitle(page, site.shortName);
     page.faqs = extractFaqs(raw);
+    if (page.pageType === 'howto') page.steps = howSteps(raw);
     const slug = page.url.replace(/\/$/, '').split('/').pop();
     // Both the mechanic directory and the buying pages are about a real
     // place, so both earn Place/PostalAddress schema from the same source.

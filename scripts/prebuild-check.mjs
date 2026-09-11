@@ -52,6 +52,18 @@ for (const p of pages) {
  * draft and 404s until that page is generated. Nothing caught the difference.
  */
 const known = new Set([...seen.keys(), ...STATIC_ROUTES, ...GENERATED]);
+
+// relates_to drives the reverse index that puts "do it yourself" links on
+// symptom and service pages. A typo there produces no error and no link — the
+// same silent failure that let 795 dead body links reach production — so it is
+// validated against the route table like everything else.
+for (const p of pages) {
+  for (const url of p.relatesTo ?? []) {
+    if (!known.has(url)) {
+      errors.push(`${p.file}: relates_to names ${url}, which is not a page`);
+    }
+  }
+}
 for (const [file, body] of bodies) {
   const bad = [];
   for (const [, href] of body.matchAll(/\]\((\/[^)#?\s]*)\)/g)) {

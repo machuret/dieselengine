@@ -4,6 +4,17 @@ wave,page_type,url,title,primary_keyword,secondary_keywords,priority,internal_li
 1,pillar,/marine-engine-problems/,Marine Diesel Engine Problems and Symptoms,marine diesel engine problems,boat engine problems | common marine diesel faults,P0,/,Symptom hub
 1,pillar,/engine-brands/,Marine Diesel Engine Brands in Australia,marine diesel engine brands,boat engine brands australia | marine engine manufacturers,P0,/,Brand hub
 1,pillar,/costs/,What Marine Engine Work Costs in Australia,marine engine repair cost australia,marine mechanic hourly rate australia,P0,/,Cost hub; feeds every cost page
+5,pillar,/how/,How To Do It — Marine Diesel Procedures,how to marine diesel engine,marine engine how to guides,P0,/,Procedure hub; HowTo schema and reverse-indexed cross-links
+5,howto,/how/how-to-bleed-a-marine-diesel-fuel-system/,How To Bleed A Marine Diesel Fuel System,how to bleed a marine diesel fuel system,bleed a marine diesel fuel system,P1,/how/,Procedure; review gate applies
+5,howto,/how/how-to-change-a-marine-engine-impeller/,How To Change A Marine Engine Impeller,how to change a marine engine impeller,change a marine engine impeller,P1,/how/,Procedure; review gate applies
+5,howto,/how/how-to-check-a-marine-engine-before-buying/,How To Check A Marine Engine Before Buying,how to check a marine engine before buying,check a marine engine before buying,P1,/how/,Procedure; review gate applies
+5,howto,/how/how-to-check-for-water-in-marine-fuel/,How To Check For Water In Marine Fuel,how to check for water in marine fuel,check for water in marine fuel,P1,/how/,Procedure; review gate applies
+5,howto,/how/how-to-diagnose-marine-engine-overheating/,How To Diagnose Marine Engine Overheating,how to diagnose marine engine overheating,diagnose marine engine overheating,P1,/how/,Procedure; review gate applies
+5,howto,/how/how-to-get-a-marine-engine-quote-you-can-compare/,How To Get A Marine Engine Quote You Can Compare,how to compare marine engine quotes,compare marine engine quotes,P1,/how/,Procedure; review gate applies
+5,howto,/how/how-to-identify-your-marine-engine/,How To Identify Your Marine Engine,how to identify your marine engine,identify your marine engine,P1,/how/,Procedure; review gate applies
+5,howto,/how/how-to-read-marine-engine-exhaust-smoke/,How To Read Marine Engine Exhaust Smoke,how to read marine engine exhaust smoke,read marine engine exhaust smoke,P1,/how/,Procedure; review gate applies
+5,howto,/how/how-to-replace-marine-engine-anodes/,How To Replace Marine Engine Anodes,how to replace marine engine anodes,replace marine engine anodes,P1,/how/,Procedure; review gate applies
+5,howto,/how/how-to-tell-if-your-heat-exchanger-is-blocked/,How To Tell If Your Heat Exchanger Is Blocked,how to tell if heat exchanger is blocked boat,tell if heat exchanger is blocked boat,P1,/how/,Procedure; review gate applies
 4,pillar,/marine-diesel/,Marine Diesel By Australian Region,marine diesel australia by region,marine diesel service by city australia,P0,/,Region hub index
 4,region-hub,/marine-diesel/gold-coast/,Marine Diesel In Gold Coast,marine diesel gold coast,marine mechanic gold coast | boat engine repair gold coast,P0,/marine-diesel/,"Head-term hub; routes to mechanic, buying and service intents"
 4,region-hub,/marine-diesel/sydney/,Marine Diesel In Sydney,marine diesel sydney,marine mechanic sydney | boat engine repair sydney,P0,/marine-diesel/,"Head-term hub; routes to mechanic, buying and service intents"

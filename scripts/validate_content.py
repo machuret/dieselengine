@@ -37,7 +37,7 @@ REQUIRED_FIELDS = ["url", "title", "page_type", "wave", "primary_keyword",
 # Pages whose primary content is diagnostic procedure. Kept in step with
 # REVIEW_REQUIRED in src/lib/gates.js — the build and this script must not
 # disagree about what is publishable.
-REVIEW_REQUIRED = {"symptom", "engine-model", "brand-symptom"}
+REVIEW_REQUIRED = {"symptom", "engine-model", "brand-symptom", "howto"}
 # Operator shortfalls and unresolved placeholders are reported, not blocking:
 # a location hub carries substantial local content without its listings.
 PROVIDER_GATES = {"city-hub": 10, "city-service": 5, "brand-city": 3, "distributor": 3}

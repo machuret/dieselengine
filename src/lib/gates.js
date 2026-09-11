@@ -46,7 +46,7 @@ const PROVIDER_GATES = {
 // these hurts someone, so they do not publish without a named mechanic.
 // Education, cost, directory and index pages are deliberately not here: they
 // route the reader to a mechanic rather than instructing them.
-const REVIEW_REQUIRED = new Set(['symptom', 'engine-model', 'brand-symptom']);
+const REVIEW_REQUIRED = new Set(['symptom', 'engine-model', 'brand-symptom', 'howto']);
 
 /** Minimal front-matter reader for the simple `key: value` / `[a, b]` form
  *  the content files use. Only needed outside the Vite pipeline. */
@@ -96,6 +96,7 @@ export function toPage(fm, raw, file) {
     // full ISO timestamp. Sitemaps and bylines both want the plain date.
     updated: fm.last_updated ? toDate(fm.last_updated) : null,
     schema: fm.schema ?? ['Article'],
+    relatesTo: fm.relates_to ?? [],
     tokens: tokensIn(raw),
   };
   page.blockers = gateFailures(page);

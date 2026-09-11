@@ -109,3 +109,41 @@ export function seoTitle(page, brand, max = 60) {
   if (withBrand.length <= max) return withBrand;
   return base.length <= max ? base : base.slice(0, base.lastIndexOf(' ', max)).trim();
 }
+
+
+/**
+ * Ordered steps for HowTo schema, read from the first numbered list in the body.
+ *
+ * Deriving it from the rendered procedure rather than from a separate front
+ * matter field means the structured data and the visible instructions cannot
+ * disagree — which on a page telling someone how to work on an engine is a
+ * correctness question, not a tidiness one.
+ */
+export function howSteps(raw) {
+  const lines = String(raw ?? '').split('\n');
+  // Markdown list items wrap, so a continuation line is indented and does NOT
+  // start with a number. Matching only numbered lines found one step out of
+  // twelve; the block has to be read from its first item to the first line that
+  // is neither a new item nor a continuation of one.
+  const start = lines.findIndex((l) => /^1\.\s+\S/.test(l));
+  if (start === -1) return [];
+  const items = [];
+  for (let i = start; i < lines.length; i++) {
+    const line = lines[i];
+    if (/^\d+\.\s+\S/.test(line)) {
+      items.push(line.replace(/^\d+\.\s+/, ''));
+    } else if (items.length && /^\s+\S/.test(line)) {
+      items[items.length - 1] += ' ' + line.trim();
+    } else if (line.trim() === '') {
+      // A blank line inside a list is allowed; stop only if the list has ended.
+      const next = lines[i + 1] ?? '';
+      if (!/^(\d+\.\s+\S|\s+\S)/.test(next)) break;
+    } else {
+      break;
+    }
+  }
+  return items.map((text) => {
+    const t = plain(text);
+    return { name: t.split(/(?<=[.?!])\s/)[0].slice(0, 110), text: t };
+  });
+}

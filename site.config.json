@@ -51,6 +51,11 @@
       "match": "^/buy-marine-diesel-engine/"
     },
     {
+      "id": "how",
+      "label": "How to",
+      "match": "^/how/"
+    },
+    {
       "id": "regions",
       "label": "Regions",
       "match": "^/marine-diesel/"

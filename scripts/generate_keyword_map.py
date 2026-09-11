@@ -33,6 +33,7 @@ symptoms = load("symptoms.csv")
 topics = load("decision-topics.csv")
 boats = load("boat-brands.csv")
 precincts = load("precincts.csv")
+howq = load("how-questions.csv")
 
 tier1 = [c for c in cities if c["tier"] == "1"]
 tier2 = [c for c in cities if c["tier"] == "2"]
@@ -143,6 +144,19 @@ add(1, "pillar", "/costs/", "What Marine Engine Work Costs in Australia",
     "marine engine repair cost australia",
     ["marine mechanic hourly rate australia"],
     "P0", "/", "Cost hub; feeds every cost page")
+add(5, "pillar", "/how/", "How To Do It \u2014 Marine Diesel Procedures",
+    "how to marine diesel engine",
+    ["marine engine how to guides"],
+    "P0", "/", "Procedure hub; HowTo schema and reverse-indexed cross-links")
+
+# "How" pages: a procedure or a diagnostic sequence, one per URL, each carrying
+# HowTo + FAQPage schema and naming in relates_to the symptom and service pages
+# it applies to. The reverse index turns each of those into a link back.
+for hq in howq:
+    add(5, "howto", f"/how/{hq['slug']}/", hq["title"], hq["primary_keyword"],
+        [hq["primary_keyword"].replace("how to ", "")],
+        "P1", "/how/", "Procedure; review gate applies")
+
 add(4, "pillar", "/marine-diesel/", "Marine Diesel By Australian Region",
     "marine diesel australia by region",
     ["marine diesel service by city australia"],

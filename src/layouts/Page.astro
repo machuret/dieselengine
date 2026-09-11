@@ -7,6 +7,7 @@ import Related from '../components/Related.astro';
 import Children from '../components/Children.astro';
 import ServiceIndex from '../components/ServiceIndex.astro';
 import StateRules from '../components/StateRules.astro';
+import HowToFor from '../components/HowToFor.astro';
 
 const { page } = Astro.props;
 const canonical = new URL(page.url, site.domain).href;
@@ -44,6 +45,22 @@ const jsonld = {
           }
         : {}),
     },
+    ...(page.steps?.length
+      ? [{
+          '@type': 'HowTo',
+          '@id': `${canonical}#howto`,
+          name: page.title,
+          description,
+          inLanguage: site.locale,
+          step: page.steps.map((s, i) => ({
+            '@type': 'HowToStep',
+            position: i + 1,
+            name: s.name,
+            text: s.text,
+            url: `${canonical}#step-${i + 1}`,
+          })),
+        }]
+      : []),
     {
       '@type': 'Organization',
       '@id': `${site.domain}/#publisher`,
@@ -152,6 +169,7 @@ const jsonld = {
           <slot />
           {page.pageType === 'city-hub' && <StateRules state={page.geo?.state} />}
           {page.pageType === 'city-hub' && <ServiceIndex city={page.geo?.city} />}
+          <HowToFor page={page} />
           <Children page={page} />
           <Related page={page} />
           <footer class="byline">
