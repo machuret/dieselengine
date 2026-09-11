@@ -1,0 +1,45 @@
+---
+/**
+ * Regulatory reference for a city hub.
+ *
+ * This was ~120 words written verbatim into all ten location files, identical
+ * apart from the name of the state agency. It was the entire remaining driver
+ * of trigram overlap between those pages once the service index moved out.
+ *
+ * It is real content, not navigation, so hiding it would be dishonest — the fix
+ * is to say the same thing in a third of the words, with the genuinely
+ * state-specific part carrying the weight instead of buried in boilerplate.
+ */
+const { state } = Astro.props;
+
+const AGENCY = {
+  QLD: 'Maritime Safety Queensland',
+  NSW: 'Transport for NSW (NSW Maritime)',
+  VIC: 'Maritime Safety Victoria',
+  SA: 'Marine Safety SA',
+  WA: 'the WA Department of Transport',
+  TAS: 'Marine and Safety Tasmania',
+  NT: 'NT Marine Safety',
+};
+const agency = AGENCY[state];
+---
+{agency && (
+  <aside class="rules">
+    <p class="rules-label">Who regulates what</p>
+    <p>
+      Recreational registration, licensing and safety equipment are administered
+      by <strong>{agency}</strong>. There is no periodic engine inspection —
+      engine condition is the owner's responsibility, which is why a service
+      record matters more here than a certificate does.
+    </p>
+    <p>
+      A vessel carrying paying passengers is a domestic commercial vessel under
+      the national AMSA system, where the installation and the maintenance
+      records form part of survey. Your workshop's paperwork is part of your
+      compliance position — see
+      <a href="/guides/commercial-vessel-survey-requirements/">what survey looks at</a>.
+      If a repair goes wrong, <a href="/guides/marine-repair-warranty-rights-australia/">your
+      rights under Australian Consumer Law</a> apply to the work.
+    </p>
+  </aside>
+)}

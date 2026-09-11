@@ -38,6 +38,44 @@ the interval that suits a Sydney boat is too long for a Cairns one.
 Cyclone season also structures the year: vessels are prepared or moved, and the
 maintenance calendar works around it.
 
+## Where the trade is
+
+Cairns has the largest marine engineering capability in Far North Queensland,
+and it exists at that depth for one reason: sending work south is impractical.
+
+**Trinity Inlet** and the port precinct carry the slipways, hardstand and
+workshops that handle serious commercial work — the reef fleet, the game boats,
+superyacht and expedition vessels.
+
+**Yorkeys Knob** at Half Moon Bay serves the recreational fleet.
+
+**Port Douglas** covers the reef charter and game boats to the north with its
+own trade.
+
+## Commercial standards, available to private owners
+
+The workshops here work to survey standards because most of their customers are
+in survey. Documentation, scheduled maintenance and turnaround discipline are
+normal rather than exceptional.
+
+A private owner benefits from that directly. Ask for the same record-keeping the
+commercial fleet gets — it costs nothing extra and it is worth real money at
+resale.
+
+## Mobile, workshop or slipway
+
+Slipway capacity is the constraint here, not parts and not availability. Engines
+and components arrive by road routinely; getting a boat out of the water on the
+date you want is the harder problem.
+
+## Booking around the season
+
+Cyclone season, roughly November to April, structures the year. Major work
+happens in the dry, and **dry season slots book out during the wet**.
+
+An owner who waits for the season to start before booking has already lost that
+year. Plan in the wet for work in the dry.
+
 ## What marine engine work costs in Cairns
 
 Rates reflect a commercially-driven regional market. The commercial and
@@ -71,26 +109,6 @@ seasonally.
 **Corrosion runs faster.** Warm, saline water accelerates galvanic activity, so
 anodes waste more quickly. Check them on a shorter cycle.
 → [Anode inspection and replacement](/services/anode-replacement/)
-
-**Use the commercial capability.** Operators servicing the reef and game fleets
-work to survey standards, and they apply the same rigour to private vessels.
-
-**Plan around cyclone season.** November to April structures the local
-maintenance calendar.
-
-## Queensland rules that affect you
-
-**Recreational vessels.** Registration, licensing and safety equipment
-requirements are administered by Maritime Safety Queensland. There is no periodic engine inspection for
-recreational vessels — engine condition is the owner's responsibility.
-
-**Commercial vessels.** Domestic commercial vessels operate under the national
-system administered by AMSA, carrying survey, maintenance and record-keeping
-obligations well beyond recreational requirements. Your workshop's paperwork
-forms part of your compliance position.
-→ [Engine requirements for commercial vessel survey](/guides/commercial-vessel-survey-requirements/)
-
-**Your rights.** → [Repair rights under Australian Consumer Law](/guides/marine-repair-warranty-rights-australia/)
 
 
 ## Nearby

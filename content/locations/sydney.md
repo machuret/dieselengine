@@ -33,6 +33,45 @@ The fleet skews to sailing yachts on Pittwater and the Hawkesbury and to
 powerboats in the harbour and Botany, which changes which engines dominate.
 Yanmar, Volvo Penta D1/D2 and the Kubota-based auxiliaries are everywhere north.
 
+## Where the trade is
+
+Sydney's marine engine trade is not in one place, and the four clusters do
+different work.
+
+**Pittwater** is the centre of the sailing and cruising trade. Saildrive legs,
+diaphragms, yacht auxiliaries and the slipping capacity to service them. If you
+own a production cruiser, this is where the people who see your boat weekly are.
+
+**Middle Harbour and the lower harbour** are served largely by mobile operators.
+Marina berths and swing moorings, limited on-site workshop capacity, and
+servicing done where the boat lies.
+
+**Rozelle Bay** carries commercial and workboat capability, and the hardstand
+that goes with it. Heavier installations and larger vessels.
+
+**Botany and the Georges River** serve trailer boats and sportfishers — a
+different trade again, geared to sterndrives and outboards alongside inboard
+diesel.
+
+## Mobile, workshop or slipway
+
+More Sydney boats live on swing moorings than in most Australian cities, and
+that decides how you engage the trade:
+
+**Mobile** covers servicing and most diagnostics, worked from a tender. For an
+oil and filter change, an impeller or a fault-find, this is normal here and
+there is no reason to move the boat.
+
+**Workshop** means delivering the boat, which on a mooring means a passage and a
+berth at the other end.
+
+**Slipway or travel lift** is the constrained resource. Capacity across the
+basin is scarce, contested and expensive, and for anything below the waterline
+it sets your timeline more than the workshop diary does.
+
+Ask which of the three a quote assumes before comparing it with another. Two
+quotes that look different frequently assume different attendance.
+
 ## What marine engine work costs in Sydney
 
 Sydney rates sit at the top of the national range, and mooring access adds
@@ -53,34 +92,11 @@ Bay), Botany Bay and the Georges River, and the Hawkesbury (Brooklyn, Berowra).
 
 ## Choosing an operator in Sydney
 
-**Match them to your waterway.** This matters more in Sydney than anywhere else.
-A Pittwater operator crossing to Botany is charging you two hours of travel.
-
-**Say whether you're on a mooring or a berth.** It determines whether the job is
-possible in a day, and whether they need a tender.
 
 **Sailing yachts need auxiliary experience.** A small auxiliary that does 30
 hours a year fails from neglect, not wear. The faults are different from a
 powerboat's, and so is the maintenance schedule.
 → [Yacht auxiliary service](/services/yacht-auxiliary-service/)
-
-**Haul-out is a separate booking.** Sydney's slipways are limited relative to
-the fleet size. Anything below the waterline needs planning.
-→ [Slipway and haul-out engine work](/services/slipway-haul-out/)
-
-## New South Wales rules that affect you
-
-**Recreational vessels.** Registration, licensing and safety equipment
-requirements are administered by Transport for NSW (NSW Maritime). There is no
-periodic engine inspection for recreational vessels — condition is the owner's
-responsibility entirely.
-
-**Commercial vessels.** Domestic commercial vessels operate under the national
-system administered by AMSA, with survey and maintenance record obligations well
-beyond recreational requirements.
-→ [Engine requirements for commercial vessel survey](/guides/commercial-vessel-survey-requirements/)
-
-**Your rights.** → [Repair rights under Australian Consumer Law](/guides/marine-repair-warranty-rights-australia/)
 
 
 ## Nearby

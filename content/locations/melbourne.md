@@ -33,6 +33,42 @@ The answer is not more repair capacity — it is proper layup in autumn and prop
 recommissioning in spring. Melbourne operators are good at both, and it is the
 single best value work you can buy here.
 
+## Where the trade is
+
+Melbourne's engine trade is spread around Port Phillip rather than concentrated,
+and which side of the bay you are on matters more than it does elsewhere.
+
+**Williamstown** and the Yarra carry the commercial and larger recreational
+capability, with slipping, hardstand and the heavier engineering.
+
+**Sandringham** and **St Kilda** serve the metropolitan fleet from marina
+berths, with mobile operators covering most servicing.
+
+**Hastings** is on Western Port, physically separate from the bay fleet and
+served by its own trade.
+
+**Mordialloc** covers the creek berths and the southern bay.
+
+Behind all of it sits Melbourne's general diesel engineering — machining,
+injection service, turbocharger work — at a depth that few Australian cities
+match. For a rebuild, that shortens the part of the job that usually stretches.
+
+## Mobile, workshop or slipway
+
+Marina berthing makes mobile servicing straightforward for most of the fleet.
+The constraint is seasonal rather than physical.
+
+## Booking: the local advantage
+
+Port Phillip has a genuine off-season, and it is worth money.
+
+From about May the fleet is laid up and yards have capacity. Work booked over
+winter costs you no boating season, and quotes are more competitive when the
+diary is not full.
+
+The trap is discovering in November that the engine needs attention. By then the
+whole fleet is ahead of you. **If your engine is marginal, book in autumn.**
+
 ## What marine engine work costs in Melbourne
 
 Rates sit below Sydney. Melbourne has good engine reconditioning depth — the
@@ -54,11 +90,6 @@ bay, and Queenscliff at the heads.
 
 ## Choosing an operator in Melbourne
 
-**Book layup in autumn, not on the way out.** Winterisation done properly —
-fuel treated and tank checked, coolant tested for freeze and corrosion
-protection, raw water circuit drained where appropriate, batteries maintained,
-impeller relieved — prevents most of what fails in spring.
-→ [Winterisation and seasonal layup](/services/winterisation-layup/)
 
 **Recommission before the first trip, not during it.** A proper spring service
 finds the failures on the dock instead of at the heads.
@@ -73,20 +104,6 @@ proper operating temperature, which causes its own problems — bore glazing,
 carbon build-up and diluted oil. A thermostat that sticks open is a real fault,
 not a harmless one.
 → [Engine running too cold](/marine-engine-problems/engine-running-cold/)
-
-## Victorian rules that affect you
-
-**Recreational vessels.** Registration, licensing and safety equipment
-requirements are administered by Maritime Safety Victoria and Transport Safety Victoria. There is no periodic engine inspection for
-recreational vessels — engine condition is the owner's responsibility.
-
-**Commercial vessels.** Domestic commercial vessels operate under the national
-system administered by AMSA, carrying survey, maintenance and record-keeping
-obligations well beyond recreational requirements. Your workshop's paperwork
-forms part of your compliance position.
-→ [Engine requirements for commercial vessel survey](/guides/commercial-vessel-survey-requirements/)
-
-**Your rights.** → [Repair rights under Australian Consumer Law](/guides/marine-repair-warranty-rights-australia/)
 
 
 ## Nearby

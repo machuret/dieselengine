@@ -35,6 +35,43 @@ diesels. The fleet skews older than Sydney's or the Gold Coast's, and the
 knowledge to work on Perkins, older Yanmars and mechanical Volvo Pentas is still
 here. If you own an older engine, that is worth a great deal.
 
+## Where the trade is
+
+Adelaide's trade is concentrated in fewer places than the eastern capitals, and
+that makes it straightforward to navigate.
+
+**North Haven** is the largest marina and the main recreational service centre.
+
+**Outer Harbor** and the Port River carry the commercial and hardstand
+capability, including the engineering that supports South Australia's fishing
+and aquaculture fleet.
+
+**Wirrina** serves the Fleurieu and gulf-access fleet.
+
+The commercial connection is the useful part. Machining, reconditioning and
+major repower capability exist here at a level the recreational fleet alone
+would not sustain, and that capability is available to private owners.
+
+## Older engines are a local strength
+
+Adelaide's fleet skews older than Sydney's or the Gold Coast's, and the
+knowledge to work on mechanically injected diesels is still here in depth. That
+skill is thinning nationally.
+
+If you own an older Perkins, an early Yanmar or a mechanical Volvo Penta, this
+is a good city to own it in. Ask directly whether the workshop has someone who
+works on your injection system — the answer is more often yes here.
+
+The trade-off is the other end: the pool of operators holding current
+manufacturer software for the newest electronic engines is smaller than on the
+east coast. Confirm diagnostic capability before booking rather than after they
+have had the boat a day.
+
+## Booking
+
+The season is short and the whole fleet discovers its problems in the same few
+weeks each spring. Book servicing before the season rather than during it.
+
 ## What marine engine work costs in Adelaide
 
 Rates sit below the national average and Adelaide is one of the more economical
@@ -56,10 +93,6 @@ River on Kangaroo Island.
 
 ## Choosing an operator in Adelaide
 
-**Use the older-engine expertise.** If your boat has a mechanically injected
-diesel, Adelaide is a good place to own it. That knowledge is thinning
-nationally and it is still here.
-→ [Marine engine reconditioning](/services/marine-engine-reconditioning/)
 
 **Check electronic diagnostic coverage for newer engines.** The pool of
 operators with current manufacturer software for the latest electronic engines
@@ -72,23 +105,6 @@ breezes mean engines work harder than a glance at the chart suggests.
 **Winter layup is real here.** Not as pronounced as Melbourne, but many Adelaide
 boats sit through winter and pick up the same fuel and impeller problems.
 → [Winterisation and seasonal layup](/services/winterisation-layup/)
-
-**Commercial capability is available.** Operators serving the Spencer Gulf fleet
-apply commercial standards and are worth approaching for major work.
-
-## South Australian rules that affect you
-
-**Recreational vessels.** Registration, licensing and safety equipment
-requirements are administered by the Department for Infrastructure and Transport (Marine Safety SA). There is no periodic engine inspection for
-recreational vessels — engine condition is the owner's responsibility.
-
-**Commercial vessels.** Domestic commercial vessels operate under the national
-system administered by AMSA, carrying survey, maintenance and record-keeping
-obligations well beyond recreational requirements. Your workshop's paperwork
-forms part of your compliance position.
-→ [Engine requirements for commercial vessel survey](/guides/commercial-vessel-survey-requirements/)
-
-**Your rights.** → [Repair rights under Australian Consumer Law](/guides/marine-repair-warranty-rights-australia/)
 
 
 ## Nearby

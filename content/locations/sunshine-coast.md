@@ -33,6 +33,45 @@ The other half of the market is the opposite: seasonal cruisers and retirees'
 boats that sit for months between trips, then do a long run north. Those fail on
 fuel and idle-related faults.
 
+## Where the trade is
+
+**Mooloolaba** holds most of the region's marine engineering, alongside the
+marina and hardstand. **Noosa** and the Mooloolah River carry a smaller service
+trade for the local fleet.
+
+It is a specialised market rather than a broad one. The workshops here see
+sportfisher repowers, charter operators under survey, and boats that cross a bar
+every time they go out.
+
+## What that specialisation means for you
+
+**Game boat experience is genuine.** Twin installations, high-hour take-outs and
+the duty-rating conversation are routine here in a way they are not in a general
+recreational market.
+
+**Survey familiarity.** A meaningful part of the fleet carries paying
+passengers, so the workshops understand what survey requires of an installation
+rather than just of an engine.
+
+**Bar-crossing reliability is taken seriously.** Ask about fuel filtration and
+cooling under sustained load and you will get a considered answer rather than a
+puzzled one.
+
+## Mobile, workshop or slipway
+
+Mobile servicing at the marina is standard. Hardstand and slipping exist at
+Mooloolaba, and capacity tightens ahead of the fishing season.
+
+Both Brisbane and the Gold Coast are within a couple of hours by road, so
+sourcing parts or a specialist is rarely the constraint. **Yard capacity
+usually is.**
+
+## Booking
+
+Outside the peak fishing season. The fleet that fills the local diary is the
+same fleet that is out fishing when the weather is good, so the quieter weather
+months are when workshops have room.
+
 ## What marine engine work costs on the Sunshine Coast
 
 Rates sit close to Brisbane's. The bar crossing at Mooloolaba means local
@@ -70,20 +109,6 @@ the impeller are the risks, not wear.
 
 **Noosa river access has constraints.** Depth and bridge access affect where a
 boat can be worked on and hauled. Confirm before committing to a yard.
-
-## Queensland rules that affect you
-
-**Recreational vessels.** Registration and safety equipment requirements are
-administered by Maritime Safety Queensland. There is no periodic engine
-inspection for recreational craft — engine condition is entirely the owner's
-responsibility.
-
-**Commercial vessels.** Domestic commercial vessels operate under the national
-system administered by AMSA, carrying survey, maintenance and record-keeping
-obligations well beyond recreational requirements.
-→ [Engine requirements for commercial vessel survey](/guides/commercial-vessel-survey-requirements/)
-
-**Your rights.** → [Repair rights under Australian Consumer Law](/guides/marine-repair-warranty-rights-australia/)
 
 
 ## Nearby

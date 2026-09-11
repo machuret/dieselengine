@@ -33,6 +33,45 @@ are standard practice here in a way they are not in most recreational markets.
 For a private owner cruising the Whitsundays, that depth is an advantage — the
 operators are used to getting vessels back in service quickly.
 
+## Where the trade is
+
+**Abell Point** at Airlie Beach is the main marina and the centre of the local
+trade. **Shute Harbour** provides Whitsunday access and supports commercial
+vessels.
+
+That is a small footprint for the amount of engine work done here, and it is
+because almost all of it serves a working fleet.
+
+## A trade organised around turnaround
+
+A bareboat comes back in the afternoon and goes out the next morning. The local
+workshops are built around that:
+
+- **Fault-finding fast**, because a boat alongside is losing money
+- **Parts on the shelf** for the engine families the fleet runs
+- **Servicing scheduled into the booking calendar** rather than whenever an
+  owner remembers
+- **Preventive replacement** of anything that would otherwise fail mid-charter
+
+A private owner can buy into that discipline, and it is the main reason to
+service here rather than elsewhere. Booking into the fleet's quiet weeks gets
+you people who fix things to a deadline for a living.
+
+## Mobile, workshop or slipway
+
+Mobile servicing at the marina is routine. Slipway capacity is the constraint
+for anything below the waterline, and it is contested — the commercial fleet has
+standing bookings.
+
+Parts are not usually the problem. Airlie Beach is well served by road from
+Mackay and Townsville.
+
+## Booking
+
+Peak charter runs through the dry. The shoulder seasons are when capacity
+exists, and cyclone season from about November changes what insurers require and
+where boats are kept.
+
 ## What marine engine work costs in the Whitsundays
 
 Rates reflect a commercially-driven market and the logistics of a regional
@@ -56,35 +95,9 @@ of Airlie, Shute Harbour, and Hamilton Island.
 matters more than the labour rate. An operator with your impeller, filters and
 belts on the shelf is worth more than one who is cheaper and two weeks away.
 
-**Use the charter fleet's maintenance model.** Oil analysis and scheduled
-replacement are normal here and genuinely worthwhile — they catch failures
-before they strand you somewhere without a road.
-→ [Marine engine oil analysis](/services/marine-engine-oil-analysis/) ·
-[Charter fleet servicing](/services/charter-fleet-servicing/)
-
-**Plan around the season.** The dry season is peak charter operation and peak
-demand. Major work happens in the wet season for a reason.
-
-**Cyclone season is a maintenance deadline.** Vessels are prepared, moved or
-hauled ahead of the season, and it is the natural time for engine work — but
-everyone else has the same idea.
 
 **Cruising here means self-reliance.** Spares, filters, an impeller and the
 knowledge to change them matter more in the Whitsundays than in a capital.
-
-## Queensland rules that affect you
-
-**Recreational vessels.** Registration, licensing and safety equipment
-requirements are administered by Maritime Safety Queensland. There is no periodic engine inspection for
-recreational vessels — engine condition is the owner's responsibility.
-
-**Commercial vessels.** Domestic commercial vessels operate under the national
-system administered by AMSA, carrying survey, maintenance and record-keeping
-obligations well beyond recreational requirements. Your workshop's paperwork
-forms part of your compliance position.
-→ [Engine requirements for commercial vessel survey](/guides/commercial-vessel-survey-requirements/)
-
-**Your rights.** → [Repair rights under Australian Consumer Law](/guides/marine-repair-warranty-rights-australia/)
 
 
 ## Nearby

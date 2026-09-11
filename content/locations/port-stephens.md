@@ -34,6 +34,42 @@ peaks mean charter operators run their engines hard for months and the local
 trades are fully committed during exactly that period. Book major work outside
 it.
 
+## Where the trade is
+
+This is two markets half an hour apart, and using both is the local advantage.
+
+**Nelson Bay** and **Soldiers Point** carry the marina berths and the service
+trade sized to a cruising, charter and fishing fleet. Servicing, diagnostics and
+routine work happen here.
+
+**Newcastle** carries the engineering. Machining, fabrication, injection and
+turbocharger service, and commercial marine capability built around a working
+port and its workboats.
+
+## Why that matters for a rebuild
+
+On most of the coast, a rebuild stalls at the same point: components go away to
+a machine shop somewhere else, and the boat waits in a queue you cannot see.
+
+Newcastle has that capability locally. For the jobs that are hardest to
+schedule — boring, honing, crank grinding, head work — the timeline is shorter
+and visible.
+
+It is why some Sydney boats come north for major work rather than south, and why
+this region punches above its size for engine rebuilds.
+
+## Mobile, workshop or slipway
+
+Mobile attendance covers servicing across the Port Stephens fleet. Hardstand is
+obtainable without the queue that makes Sydney work expensive, which is the
+other half of the northward traffic.
+
+## Booking
+
+The fleet quietens over winter — milder than Melbourne's off-season but real —
+and that is when yard and workshop capacity exists. For anyone within a couple
+of hours, booking substantial work for the cooler months is the local advantage.
+
 ## What marine engine work costs in Port Stephens and Newcastle
 
 Rates sit below Sydney's, and Newcastle's engineering base makes major work
@@ -54,12 +90,6 @@ and Lake Macquarie to the south.
 
 ## Choosing an operator here
 
-**Use Newcastle for the heavy work.** Machining, fabrication, major rebuilds and
-repowers are better supported there than in Port Stephens. For servicing and
-diagnosis, local is better.
-
-**Book outside the season.** Port Stephens trades are committed through summer
-and whale season. Autumn and late winter are when major work actually happens.
 
 **Lake Macquarie is a separate service area.** It is a large fleet in its own
 right, largely sailing and small powerboats, with its own operators.
@@ -67,20 +97,6 @@ right, largely sailing and small powerboats, with its own operators.
 **Bar and open-water use raises the stakes.** Boats running offshore out of Port
 Stephens need pre-trip cooling and fuel checks in a way that a sheltered-water
 boat does not.
-
-## New South Wales rules that affect you
-
-**Recreational vessels.** Registration, licensing and safety equipment
-requirements are administered by Transport for NSW (NSW Maritime). There is no periodic engine inspection for
-recreational vessels — engine condition is the owner's responsibility.
-
-**Commercial vessels.** Domestic commercial vessels operate under the national
-system administered by AMSA, carrying survey, maintenance and record-keeping
-obligations well beyond recreational requirements. Your workshop's paperwork
-forms part of your compliance position.
-→ [Engine requirements for commercial vessel survey](/guides/commercial-vessel-survey-requirements/)
-
-**Your rights.** → [Repair rights under Australian Consumer Law](/guides/marine-repair-warranty-rights-australia/)
 
 
 ## Nearby

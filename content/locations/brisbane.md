@@ -34,6 +34,43 @@ Brisbane also has genuine engine reconditioning and repower depth — Rivergate 
 the river yards handle large commercial work, which means the capability exists
 for pleasure craft too.
 
+## Where the trade is
+
+Brisbane's engine trade splits between the river and the bay, and they are not
+interchangeable.
+
+**Rivergate** is the heavy end — hardstand, travel lift, refit capability and
+the workshops that take engines out. If your job involves removing an engine,
+this is the kind of facility it needs.
+
+**Newstead** and the river berths upstream are served by a mix of mobile
+operators and smaller yards.
+
+**Manly** is the bay's main boat harbour and carries the largest concentration
+of recreational service capability, with slipping and hardstand alongside.
+
+**Scarborough** at Redcliffe and **Raby Bay** at Cleveland serve their own local
+fleets, and for owners berthed there the local operator is usually the practical
+choice rather than travelling to the river.
+
+## Mobile, workshop or slipway
+
+Brisbane's marina berthing means mobile attendance is straightforward for most
+servicing — a mechanic can drive to the berth and work alongside. That is a
+genuine advantage over mooring-heavy cities.
+
+The constraint here is **haul-out**, not access. River and bay facilities each
+have their own tide and booking patterns, and a job requiring the boat out of
+the water needs the yard booked before the workshop.
+
+## Booking
+
+Queensland has no hard off-season, but diaries tighten ahead of summer and
+school holidays, and the wet season from about December disrupts river work.
+
+The Coomera precinct is an hour south. For a large job, a comparison quote from
+there is realistic and worth the phone call.
+
 ## What marine engine work costs in Brisbane
 
 Rates sit below the Gold Coast and well below Sydney. Brisbane is frequently the
@@ -54,13 +91,6 @@ and the Gold Coast side of southern Moreton Bay.
 
 ## Choosing an operator in Brisbane
 
-**Tell them where the boat is berthed.** River or bay is the first question, and
-it changes the maintenance advice as well as the travel time.
-
-**Use the river's commercial capability for major work.** Yards set up for
-workboats and commercial vessels have the lifting equipment, machining
-relationships and repower experience that a small marina operator does not.
-→ [Marine engine repower](/services/marine-engine-repower/)
 
 **Ask about raw water intervals specifically** if you berth upriver. The
 standard impeller and heat exchanger schedule assumes cleaner water than the
@@ -69,20 +99,6 @@ Brisbane River delivers.
 **Flood debris is a real seasonal factor.** After significant rain the river
 carries a substantially increased debris load, and strainer blockages spike.
 Check yours after a wet period rather than waiting for an overheat.
-
-## Queensland rules that affect you
-
-**Recreational vessels.** Registration and safety equipment requirements are
-administered by Maritime Safety Queensland. There is no periodic engine
-inspection for recreational craft — engine condition is entirely the owner's
-responsibility.
-
-**Commercial vessels.** Domestic commercial vessels operate under the national
-system administered by AMSA, carrying survey, maintenance and record-keeping
-obligations well beyond recreational requirements.
-→ [Engine requirements for commercial vessel survey](/guides/commercial-vessel-survey-requirements/)
-
-**Your rights.** → [Repair rights under Australian Consumer Law](/guides/marine-repair-warranty-rights-australia/)
 
 
 ## Nearby

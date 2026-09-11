@@ -33,6 +33,45 @@ Perth's other characteristic is isolation. Parts for less common engines come
 from the eastern states, and lead time is a real factor in planning any major
 job. Ask about parts availability before you authorise work, not after.
 
+## Where the trade is
+
+Perth's trade runs along the coast and up the river, and the ends of it do
+different work.
+
+**Fremantle** is the industrial and commercial end, with engineering capability
+attached to the fishing and offshore industries. Heavier work, slipping and
+machining.
+
+**Hillarys** serves the large northern-suburbs recreational fleet from the boat
+harbour.
+
+**Mandurah** covers the Peel estuary and the southern fleet, with its own local
+trade.
+
+**Applecross** and the Swan River berths are served largely by mobile operators.
+
+## The question to ask first
+
+In most Australian cities the first question is availability. In Perth it is
+**parts**.
+
+Anything not held in Western Australia comes across the Nullarbor by road or by
+air, and both cost days. A workshop that holds stock for your engine family is
+worth more than one that quotes slightly cheaper and orders from the east coast.
+
+Ask directly: do you hold parts for this engine, or do they come from
+interstate, and what is the realistic turnaround?
+
+That single question changes the outcome of more Perth jobs than any other.
+
+## Mobile, workshop or slipway
+
+Mobile attendance is straightforward across the marina-berthed fleet. Slipping
+and hardstand cluster at Fremantle and Mandurah.
+
+For anything requiring a part that is not local, establish the lead time before
+the boat comes out of the water rather than after.
+
 ## What marine engine work costs in Perth
 
 Rates sit at or above the national average. Parts freight and lead time from the
@@ -53,12 +92,6 @@ marinas, Mandurah and the Peel estuary, and Rockingham and Garden Island.
 
 ## Choosing an operator in Perth
 
-**Confirm parts availability before authorising work.** This is the Perth
-question. A job that would take three days in Sydney can take three weeks here
-if a part has to come across. A good operator will tell you up front.
-
-**Match them to your water.** River, ocean marina and Mandurah are distinct
-service areas.
 
 **Exposed-water use is harder on cooling.** Running at sustained load in swell
 means the raw water circuit works harder. Keep the impeller and strainer on a
@@ -68,24 +101,6 @@ tighter schedule than a sheltered-water boat.
 pick up sand through the raw water intake, which abrades impellers and settles
 in heat exchangers.
 → [Raw water system repair](/services/raw-water-system-repair/)
-
-**Commercial and defence work sets local standards.** The Henderson and Garden
-Island industrial capability means serious engine work is available — but those
-yards run to their own schedules.
-
-## Western Australian rules that affect you
-
-**Recreational vessels.** Registration, licensing and safety equipment
-requirements are administered by the Department of Transport (Marine Safety). There is no periodic engine inspection for
-recreational vessels — engine condition is the owner's responsibility.
-
-**Commercial vessels.** Domestic commercial vessels operate under the national
-system administered by AMSA, carrying survey, maintenance and record-keeping
-obligations well beyond recreational requirements. Your workshop's paperwork
-forms part of your compliance position.
-→ [Engine requirements for commercial vessel survey](/guides/commercial-vessel-survey-requirements/)
-
-**Your rights.** → [Repair rights under Australian Consumer Law](/guides/marine-repair-warranty-rights-australia/)
 
 
 ## Nearby

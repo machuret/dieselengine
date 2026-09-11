@@ -33,6 +33,44 @@ The local fleet is unusually broad — production cruisers and sportfishers in t
 canal estates, superyachts in refit at Coomera, charter operators out of Marina
 Mirage and Southport, and a large trailer-boat population.
 
+## Where the trade is
+
+The Gold Coast has the deepest concentration of marine engine capability in
+Australia, and it is organised by function rather than scattered by geography.
+
+**Coomera** is the industrial core — refit yards, travel lifts, hardstand,
+machining, and the workshops that handle engine removal as routine work. Almost
+any job can be done here, and most of the region's heavy work is.
+
+**Hope Island** and **Sanctuary Cove** are marina precincts with service trades
+attached, geared to boats berthed there.
+
+**Runaway Bay** serves the Broadwater fleet with servicing and slipping.
+
+**Southport** is moorings and Broadwater access, largely mobile-served.
+
+## What the density actually buys you
+
+**Competing quotes without travel.** This is the practical benefit and most
+owners underuse it. On a job of any size, two or three quotes are available
+within a twenty-minute radius.
+
+**Engine removal as routine.** In most Australian ports, getting an engine out
+is the hard part of the job. Here it is scheduled work.
+
+**Specialists rather than generalists.** Injection, turbo, machining and gearbox
+work are separate trades here, each with people who do only that. Elsewhere one
+workshop covers all of it.
+
+## Booking
+
+The local calendar is real. Boat show periods and the build-up to summer both
+fill diaries, and a job wanted in November has been competing since August.
+
+The quieter months are when yards have capacity and quote sharply. Booking a
+spring slot in late winter is normal practice and it is the single biggest
+saving available to a Gold Coast owner.
+
 ## What marine engine work costs on the Gold Coast
 
 Competition keeps labour rates keen relative to Sydney. The advantage here is
@@ -54,13 +92,6 @@ Currumbin and Tweed.
 
 ## Choosing an operator on the Gold Coast
 
-**Use the specialist depth.** This is the one place in Australia where you can
-reasonably insist on a specialist for the exact job — a ZF gearbox rebuilder, an
-injection shop, a turbo specialist — rather than accepting a generalist. Ask who
-does the sub-work and whether you can deal with them directly.
-
-**Book around the season.** Winter is peak cruising and peak servicing on the
-Gold Coast. If you want work done before a season, book months out, not weeks.
 
 **Check haul-out separately.** The Coomera yards are excellent and busy. Engine
 work requiring a haul-out is two bookings, not one, and the yard's availability
@@ -70,24 +101,6 @@ usually sets the date.
 **Canal berths are not all accessible.** A mechanic who works the marinas may
 not service private canal pontoons, and vice versa. Confirm they can get to your
 berth before booking.
-
-## Queensland rules that affect you
-
-**Recreational vessels.** Registration and safety equipment requirements are
-administered by Maritime Safety Queensland. There is no periodic engine
-inspection for recreational craft, which means condition is entirely the owner's
-responsibility.
-
-**Commercial vessels.** Domestic commercial vessels operate under the national
-system administered by AMSA, which carries survey, maintenance and
-record-keeping obligations well beyond recreational requirements. If you operate
-commercially, your engine maintenance sits inside that regime and your
-workshop's paperwork matters.
-→ [Engine requirements for commercial vessel survey](/guides/commercial-vessel-survey-requirements/)
-
-**Your rights.** Repair work carries consumer guarantees under Australian
-Consumer Law regardless of a workshop's own terms.
-→ [Your repair rights](/guides/marine-repair-warranty-rights-australia/)
 
 
 ## Nearby
