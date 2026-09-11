@@ -32,6 +32,40 @@ wave,page_type,url,title,primary_keyword,secondary_keywords,priority,internal_li
 4,region-hub,/marine-diesel/port-lincoln/,Marine Diesel In Port Lincoln,marine diesel port lincoln,marine mechanic port lincoln | boat engine repair port lincoln,P1,/marine-diesel/,"Head-term hub; routes to mechanic, buying and service intents"
 3,pillar,/marine-diesel-engine-for/,Marine Diesel Engines By Boat Brand,marine diesel engine by boat brand,what engine is in my boat | boat brand engine guide australia,P0,/,Boat-brand hub; captures owners searching by their hull
 3,pillar,/distributors/,Marine Diesel Engine Distributors In Australia,marine diesel engine distributors australia,marine engine dealers australia,P0,/,Distribution hub; structure of each brand's AU network
+5,precinct,/marine-diesel/gold-coast/coomera/,Marine Diesel At Coomera,marine mechanic coomera,boat engine repair coomera,P2,/marine-diesel/gold-coast/,boatyard-precinct; facilities PENDING
+5,precinct,/marine-diesel/gold-coast/hope-island/,Marine Diesel At Hope Island,marine mechanic hope island,boat engine repair hope island,P2,/marine-diesel/gold-coast/,marina; facilities PENDING
+5,precinct,/marine-diesel/gold-coast/sanctuary-cove/,Marine Diesel At Sanctuary Cove,marine mechanic sanctuary cove,boat engine repair sanctuary cove,P2,/marine-diesel/gold-coast/,marina; facilities PENDING
+5,precinct,/marine-diesel/gold-coast/runaway-bay/,Marine Diesel At Runaway Bay,marine mechanic runaway bay,boat engine repair runaway bay,P2,/marine-diesel/gold-coast/,marina; facilities PENDING
+5,precinct,/marine-diesel/gold-coast/southport/,Marine Diesel At Southport,marine mechanic southport,boat engine repair southport,P2,/marine-diesel/gold-coast/,marina; facilities PENDING
+5,precinct,/marine-diesel/sydney/pittwater/,Marine Diesel At Pittwater,marine mechanic pittwater,boat engine repair pittwater,P2,/marine-diesel/sydney/,cruising-base; facilities PENDING
+5,precinct,/marine-diesel/sydney/newport-nsw/,Marine Diesel At Newport,marine mechanic newport,boat engine repair newport,P2,/marine-diesel/sydney/,marina; facilities PENDING
+5,precinct,/marine-diesel/sydney/middle-harbour/,Marine Diesel At Middle Harbour,marine mechanic middle harbour,boat engine repair middle harbour,P2,/marine-diesel/sydney/,marina; facilities PENDING
+5,precinct,/marine-diesel/sydney/rozelle-bay/,Marine Diesel At Rozelle Bay,marine mechanic rozelle bay,boat engine repair rozelle bay,P2,/marine-diesel/sydney/,boatyard-precinct; facilities PENDING
+5,precinct,/marine-diesel/sydney/botany/,Marine Diesel At Botany,marine mechanic botany,boat engine repair botany,P2,/marine-diesel/sydney/,marina; facilities PENDING
+5,precinct,/marine-diesel/sydney/sylvania/,Marine Diesel At Sylvania,marine mechanic sylvania,boat engine repair sylvania,P2,/marine-diesel/sydney/,marina; facilities PENDING
+5,precinct,/marine-diesel/brisbane/manly-qld/,Marine Diesel At Manly,marine mechanic manly,boat engine repair manly,P2,/marine-diesel/brisbane/,marina; facilities PENDING
+5,precinct,/marine-diesel/brisbane/scarborough/,Marine Diesel At Scarborough,marine mechanic scarborough,boat engine repair scarborough,P2,/marine-diesel/brisbane/,marina; facilities PENDING
+5,precinct,/marine-diesel/brisbane/rivergate/,Marine Diesel At Rivergate,marine mechanic rivergate,boat engine repair rivergate,P2,/marine-diesel/brisbane/,boatyard-precinct; facilities PENDING
+5,precinct,/marine-diesel/brisbane/newstead/,Marine Diesel At Newstead,marine mechanic newstead,boat engine repair newstead,P2,/marine-diesel/brisbane/,marina; facilities PENDING
+5,precinct,/marine-diesel/brisbane/raby-bay/,Marine Diesel At Raby Bay,marine mechanic raby bay,boat engine repair raby bay,P2,/marine-diesel/brisbane/,marina; facilities PENDING
+5,precinct,/marine-diesel/melbourne/williamstown/,Marine Diesel At Williamstown,marine mechanic williamstown,boat engine repair williamstown,P2,/marine-diesel/melbourne/,boatyard-precinct; facilities PENDING
+5,precinct,/marine-diesel/melbourne/sandringham/,Marine Diesel At Sandringham,marine mechanic sandringham,boat engine repair sandringham,P2,/marine-diesel/melbourne/,marina; facilities PENDING
+5,precinct,/marine-diesel/melbourne/st-kilda/,Marine Diesel At St Kilda,marine mechanic st kilda,boat engine repair st kilda,P2,/marine-diesel/melbourne/,marina; facilities PENDING
+5,precinct,/marine-diesel/melbourne/hastings/,Marine Diesel At Hastings,marine mechanic hastings,boat engine repair hastings,P2,/marine-diesel/melbourne/,marina; facilities PENDING
+5,precinct,/marine-diesel/melbourne/mordialloc/,Marine Diesel At Mordialloc,marine mechanic mordialloc,boat engine repair mordialloc,P2,/marine-diesel/melbourne/,river-base; facilities PENDING
+5,precinct,/marine-diesel/perth/fremantle/,Marine Diesel At Fremantle,marine mechanic fremantle,boat engine repair fremantle,P2,/marine-diesel/perth/,boatyard-precinct; facilities PENDING
+5,precinct,/marine-diesel/perth/hillarys/,Marine Diesel At Hillarys,marine mechanic hillarys,boat engine repair hillarys,P2,/marine-diesel/perth/,marina; facilities PENDING
+5,precinct,/marine-diesel/perth/mandurah/,Marine Diesel At Mandurah,marine mechanic mandurah,boat engine repair mandurah,P2,/marine-diesel/perth/,marina; facilities PENDING
+5,precinct,/marine-diesel/perth/applecross/,Marine Diesel At Applecross,marine mechanic applecross,boat engine repair applecross,P2,/marine-diesel/perth/,river-base; facilities PENDING
+5,precinct,/marine-diesel/cairns/trinity-inlet/,Marine Diesel At Trinity Inlet,marine mechanic trinity inlet,boat engine repair trinity inlet,P2,/marine-diesel/cairns/,boatyard-precinct; facilities PENDING
+5,precinct,/marine-diesel/cairns/yorkeys-knob/,Marine Diesel At Yorkeys Knob,marine mechanic yorkeys knob,boat engine repair yorkeys knob,P2,/marine-diesel/cairns/,marina; facilities PENDING
+5,precinct,/marine-diesel/cairns/port-douglas/,Marine Diesel At Port Douglas,marine mechanic port douglas,boat engine repair port douglas,P2,/marine-diesel/cairns/,marina; facilities PENDING
+5,precinct,/marine-diesel/port-stephens/nelson-bay/,Marine Diesel At Nelson Bay,marine mechanic nelson bay,boat engine repair nelson bay,P2,/marine-diesel/port-stephens/,marina; facilities PENDING
+5,precinct,/marine-diesel/port-stephens/soldiers-point/,Marine Diesel At Soldiers Point,marine mechanic soldiers point,boat engine repair soldiers point,P2,/marine-diesel/port-stephens/,marina; facilities PENDING
+5,precinct,/marine-diesel/port-stephens/newcastle/,Marine Diesel At Newcastle,marine mechanic newcastle,boat engine repair newcastle,P2,/marine-diesel/port-stephens/,boatyard-precinct; facilities PENDING
+5,precinct,/marine-diesel/adelaide/north-haven/,Marine Diesel At North Haven,marine mechanic north haven,boat engine repair north haven,P2,/marine-diesel/adelaide/,marina; facilities PENDING
+5,precinct,/marine-diesel/adelaide/outer-harbor/,Marine Diesel At Outer Harbor,marine mechanic outer harbor,boat engine repair outer harbor,P2,/marine-diesel/adelaide/,boatyard-precinct; facilities PENDING
+5,precinct,/marine-diesel/adelaide/wirrina/,Marine Diesel At Wirrina,marine mechanic wirrina,boat engine repair wirrina,P2,/marine-diesel/adelaide/,marina; facilities PENDING
 3,boat-brand,/marine-diesel-engine-for/jeanneau/,Marine Diesel Engines For Jeanneau,jeanneau marine diesel engine,jeanneau engine service | jeanneau repower,P1,/marine-diesel-engine-for/,sail-monohull / saildrive
 3,boat-brand,/marine-diesel-engine-for/beneteau/,Marine Diesel Engines For Beneteau,beneteau marine diesel engine,beneteau engine service | beneteau repower,P1,/marine-diesel-engine-for/,sail-monohull / saildrive
 3,boat-brand,/marine-diesel-engine-for/bavaria/,Marine Diesel Engines For Bavaria,bavaria marine diesel engine,bavaria engine service | bavaria repower,P1,/marine-diesel-engine-for/,sail-monohull / saildrive

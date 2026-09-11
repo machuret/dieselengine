@@ -18,7 +18,7 @@ const isRegionHub = page.pageType === 'region-hub' && page.geo;
 const children = allPages
   .filter((p) => {
     if (!p.indexable || p.url === page.url) return false;
-    if (isRegionHub) return p.geo?.slug === page.geo.slug;
+    if (isRegionHub) return p.geo?.slug === page.geo.slug || p.parent === page.url;
     return p.parent === page.url;
   })
   .sort((a, b) => a.title.localeCompare(b.title));
@@ -32,6 +32,7 @@ for (const c of children) {
 const LABELS = {
   'city-hub': 'Find a mechanic here',
   'buying-city': 'Buying an engine here',
+  precinct: 'Marinas and precincts',
   cost: 'What it costs',
   comparison: 'Choosing between options',
   'buyers-guide': 'Before you book',

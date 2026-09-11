@@ -81,6 +81,35 @@ Coomera, Pittwater, Rivergate, Williamstown, Fremantle, Abell Point and so on.
 Every row is marked `verify: PENDING`: the names are right, but facilities,
 hardstand and lift capability must be confirmed before any page publishes.
 
+### When a precinct does NOT get a page
+
+Measured, not assumed. Building the first ten precinct pages showed a clean
+split against their own region hub:
+
+| Region | Precincts | Precinct vs region hub |
+|---|---|---|
+| Sydney | 6 | 0.9% |
+| Brisbane | 5 | 3.0-5.5% |
+| Cairns | 3 | 4.6% |
+| Perth | 4 | 5.2% |
+| Gold Coast | 5 | 5.8% |
+| Melbourne | 5 | 7.0% |
+| Port Stephens | 3 | 10.9% |
+| **Whitsundays** | **2** | **20.0%** |
+| **Sunshine Coast** | **2** | **20.9%** |
+
+The rule that falls out: **where a region has one precinct of substance, the
+precinct page and the region hub are the same page.** The Sunshine Coast hub is
+about Mooloolaba because that is where everything is; the Whitsundays hub is
+about Abell Point for the same reason.
+
+Those two precinct pages were written and then deleted. Paraphrasing them apart
+would have passed the overlap check and left two URLs competing for one query,
+which is the failure this plan exists to prevent. `data/precincts.csv` marks
+them NO PAGE so the decision is not re-made later.
+
+That drops the realistic precinct ceiling from ~120 to roughly 100.
+
 ## 5. The doorway-page test
 
 Google's guidance on doorway pages is the live risk for every geo build. Each

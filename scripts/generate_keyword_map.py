@@ -32,6 +32,7 @@ brands = load("engine-brands.csv")
 symptoms = load("symptoms.csv")
 topics = load("decision-topics.csv")
 boats = load("boat-brands.csv")
+precincts = load("precincts.csv")
 
 tier1 = [c for c in cities if c["tier"] == "1"]
 tier2 = [c for c in cities if c["tier"] == "2"]
@@ -167,6 +168,23 @@ add(3, "pillar", "/distributors/", "Marine Diesel Engine Distributors In Austral
     "marine diesel engine distributors australia",
     ["marine engine dealers australia"],
     "P0", "/", "Distribution hub; structure of each brand's AU network")
+
+# Precincts: marinas and boatyard precincts within a region. Only where the
+# region has more than one of substance — see docs/geo-plan.md. A single-precinct
+# region's precinct page and its region hub are the same page.
+_pc = {}
+for pcr in precincts:
+    _pc.setdefault(pcr["region_slug"], []).append(pcr)
+for reg, items in _pc.items():
+    if len(items) < 3:
+        continue
+    for pcr in items:
+        add(5, "precinct", f"/marine-diesel/{reg}/{pcr['slug']}/",
+            f"Marine Diesel At {pcr['precinct']}",
+            f"marine mechanic {pcr['precinct'].lower()}",
+            [f"boat engine repair {pcr['precinct'].lower()}"],
+            "P2", f"/marine-diesel/{reg}/",
+            f"{pcr['kind']}; facilities {pcr['verify']}")
 
 # One page per boat brand or hull type. Owners search by the boat they have,
 # not by the engine they have never looked at.

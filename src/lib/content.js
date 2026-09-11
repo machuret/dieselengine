@@ -27,6 +27,7 @@ const GEO = indexBy('/data/cities.csv', 'slug');
 const SERVICES = indexBy('/data/services.csv', 'slug');
 const TOPICS = indexBy('/data/decision-topics.csv', 'slug');
 const BOATS = indexBy('/data/boat-brands.csv', 'slug');
+const PRECINCTS = indexBy('/data/precincts.csv', 'slug');
 const ENGINE_BRANDS = indexBy('/data/engine-brands.csv', 'brand_slug');
 
 // engine-brands.csv segments are fine-grained enough that several brands are
@@ -62,6 +63,13 @@ function build() {
     const slug = page.url.replace(/\/$/, '').split('/').pop();
     // Both the mechanic directory and the buying pages are about a real
     // place, so both earn Place/PostalAddress schema from the same source.
+    if (page.pageType === 'precinct') {
+      const row = PRECINCTS[slug];
+      // Precincts inherit their region's coordinates: the region is the real
+      // geographic entity we hold verified lat/lon for, and inventing a
+      // precinct coordinate would be worse than reusing an accurate one.
+      page.geo = row ? { ...GEO[row.region_slug], city: row.precinct } : null;
+    }
     if (['city-hub', 'buying-city', 'region-hub'].includes(page.pageType)) {
       page.geo = GEO[slug] ?? null;
     }
