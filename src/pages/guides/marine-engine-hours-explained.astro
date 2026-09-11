@@ -1,0 +1,63 @@
+---
+import Page from '../../layouts/Page.astro';
+import GuideGraphic from '../../components/GuideGraphic.astro';
+import SourcePanel from '../../components/SourcePanel.astro';
+import site from '../../../site.config.json' with { type: 'json' };
+
+const headings = [
+  { depth: 2, slug: 'hours-dont-tell', text: 'What engine hours do not tell you' },
+  { depth: 2, slug: 'low-hours', text: 'Why very low hours can be a warning' },
+  { depth: 2, slug: 'high-hours', text: 'How to assess a higher-hour engine' },
+  { depth: 2, slug: 'verify-hours', text: 'How to verify the story' },
+  { depth: 2, slug: 'buying-decision', text: 'Use condition, not one number' },
+];
+const page = {
+  url: '/guides/marine-engine-hours-explained/', title: 'Marine Diesel Engine Hours Explained',
+  seoTitle: 'Marine Diesel Engine Hours Explained', pageType: 'decision', status: 'ready',
+  author: site.defaultAuthor, reviewer: null, needsReviewer: false, parent: '/marine-diesel-engines/',
+  parentTitle: 'Marine Diesel Engines', schema: ['TechArticle', 'BreadcrumbList'], updated: site.legalUpdated,
+  indexable: true, blockers: [], headings, faqs: [],
+  description: 'Understand what marine diesel engine hours mean when buying a boat, including low-hour risks, service evidence and installation condition.',
+  image: '/images/marine-drivetrain-installation.jpg', imageWidth: 1400, imageHeight: 933,
+  imageAlt: 'Compact marine diesel engine and drivetrain installed in a yacht',
+};
+const sources = [
+  { title: 'YANMAR Marine operation and maintenance guidance', url: 'https://www.yanmar.com/marine/service/faq/' },
+  { title: 'Manufacturer manuals and technical resources', url: '/resources/' },
+];
+---
+<Page page={page}>
+  <p class="kicker">Buying and condition</p>
+  <h1>Marine diesel engine hours explained</h1>
+  <p class="lead">The hour meter answers one narrow question: how long the meter says the engine has run. It does not measure corrosion, cooling-system condition, maintenance quality, loading, exhaust geometry or whether the meter has always been connected.</p>
+
+  <GuideGraphic variant="hours" />
+
+  <h2 id="hours-dont-tell">What engine hours do not tell you</h2>
+  <p>Two engines with the same hours can have completely different futures. One may have reached operating temperature regularly, received documented maintenance and lived in a dry, accessible installation. The other may have idled briefly, sat for months with damp exhaust components, run with old coolant and been serviced only when it failed.</p>
+  <p>Hours also say little about the surrounding boat systems. A healthy long block can still be attached to a restricted exhaust elbow, contaminated fuel tank, corroded wiring, tired mounts, poor shaft alignment or neglected saildrive.</p>
+
+  <h2 id="low-hours">Why very low hours can be a warning</h2>
+  <p>Low hours are useful only when the service history explains them. Diesel engines generally benefit from reaching normal operating temperature and working under appropriate load. Repeated short starts can leave moisture and combustion deposits behind. Long idle periods allow seals, impellers, fuel and cooling components to age without adding hours.</p>
+  <p>Compare the claimed hours with the boat’s age and use. A fifteen-year-old cruising boat showing a few hundred hours needs an explanation. The explanation may be genuine—limited use, a replacement engine or a changed meter—but it should be supported by invoices, installation dates and condition.</p>
+
+  <h2 id="high-hours">How to assess a higher-hour engine</h2>
+  <p>Higher hours are not automatically a rejection. Look for regular oil and filter changes, coolant and heat-exchanger work, valve checks where specified, injector or turbo history, exhaust maintenance and clean starting behaviour. Commercial-style use at stable load with disciplined maintenance can be kinder than intermittent recreational neglect.</p>
+  <p>Ask what work is approaching, not just what was recently done. A fresh oil change does not reset a heat exchanger, mounts, exhaust elbow, gearbox or saildrive diaphragm. Estimate those items separately when comparing boats.</p>
+
+  <h2 id="verify-hours">How to verify the story</h2>
+  <ul>
+    <li>Compare the hour meter with dated invoices, logbooks and survey reports.</li>
+    <li>Check whether an electronic control unit stores independent operating hours.</li>
+    <li>Confirm whether the tachometer or panel has ever been replaced.</li>
+    <li>Inspect wear at controls, mounts, pulleys and service points for consistency.</li>
+    <li>Record cold-start behaviour and complete a properly loaded sea trial.</li>
+    <li>Use oil analysis or mechanical testing when the purchase risk justifies it.</li>
+  </ul>
+  <p>No single test proves remaining life. A marine-engine survey combines evidence and makes uncertainty visible.</p>
+
+  <h2 id="buying-decision">Use condition, not one number</h2>
+  <p>Price the boat around present condition, documented work and the cost of known upcoming maintenance. Treat an unverifiable meter reading as unknown rather than true or false. For a purchase, follow the <a href="/how/how-to-check-a-marine-engine-before-buying/">marine engine pre-purchase check</a> and arrange an independent inspection where the engine materially affects the boat’s value or safety.</p>
+
+  <SourcePanel links={sources} />
+</Page>

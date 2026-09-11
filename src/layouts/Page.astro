@@ -11,11 +11,14 @@ import HowToFor from '../components/HowToFor.astro';
 import NextSteps from '../components/NextSteps.astro';
 import BrandIdentity from '../components/BrandIdentity.astro';
 import BrandDirectory from '../components/BrandDirectory.astro';
+import EditorialVisual from '../components/EditorialVisual.astro';
 
 const { page } = Astro.props;
 const canonical = new URL(page.url, site.domain).href;
 const description = page.description || site.description;
-const socialImage = new URL(site.socialImage, site.domain).href;
+const pageImage = page.image ?? site.socialImage;
+const socialImage = new URL(pageImage, site.domain).href;
+const socialImageAlt = page.imageAlt ?? 'Marine diesel engine installed in a yacht engine bay';
 const schemaType = page.schema.includes('TechArticle')
   ? 'TechArticle'
   : page.schema.includes('ContactPage')
@@ -46,7 +49,14 @@ const jsonld = {
       ...(['Article', 'TechArticle'].includes(schemaType) ? { headline: page.title } : {}),
       description,
       url: canonical,
-      image: socialImage,
+      image: {
+        '@type': 'ImageObject',
+        url: socialImage,
+        contentUrl: socialImage,
+        width: page.imageWidth ?? 1200,
+        height: page.imageHeight ?? 800,
+        caption: socialImageAlt,
+      },
       inLanguage: site.locale,
       isAccessibleForFree: true,
       ...(page.updated ? { dateModified: page.updated } : {}),
@@ -148,7 +158,7 @@ const jsonld = {
     <meta property="og:locale" content="en_AU" />
     <meta property="og:site_name" content={site.name} />
     <meta property="og:image" content={socialImage} />
-    <meta property="og:image:alt" content="Marine diesel engine installed in a yacht engine bay" />
+    <meta property="og:image:alt" content={socialImageAlt} />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -187,7 +197,16 @@ const jsonld = {
       <div class="layout">
         <article class="prose">
           {(page.pageType === 'brand-hub' || page.pageType === 'distributor') && <BrandIdentity page={page} />}
+          {showToc && (
+            <details class="mobile-toc">
+              <summary>On this page <span aria-hidden="true">＋</span></summary>
+              <nav aria-label="On this page">
+                <ul>{headings.map((h) => <li><a href={`#${h.slug}`}>{h.text}</a></li>)}</ul>
+              </nav>
+            </details>
+          )}
           <slot />
+          <EditorialVisual page={page} />
           {page.pageType === 'city-hub' && <StateRules state={page.geo?.state} />}
           {page.pageType === 'city-hub' && <ServiceIndex city={page.geo?.city} />}
           <HowToFor page={page} />

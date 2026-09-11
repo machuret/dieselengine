@@ -114,6 +114,31 @@
       "priority": "0.7"
     },
     {
+      "url": "/guides/marine-diesel-maintenance-checklist/",
+      "section": "guides",
+      "priority": "0.8"
+    },
+    {
+      "url": "/guides/marine-engine-room-inspection-checklist/",
+      "section": "guides",
+      "priority": "0.8"
+    },
+    {
+      "url": "/guides/marine-diesel-parts-explained/",
+      "section": "guides",
+      "priority": "0.8"
+    },
+    {
+      "url": "/guides/marine-engine-hours-explained/",
+      "section": "guides",
+      "priority": "0.8"
+    },
+    {
+      "url": "/guides/emergency-engine-shutdown/",
+      "section": "guides",
+      "priority": "0.8"
+    },
+    {
       "url": "/sitemap/",
       "section": "pages",
       "priority": "0.4"

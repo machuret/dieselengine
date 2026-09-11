@@ -4,9 +4,11 @@ import Masthead from '../components/Masthead.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import { allPages } from '../lib/content.js';
 import { seoTitle } from '../lib/extract.js';
+import { questionClusters } from '../lib/questions.js';
 
 const canonical = `${site.domain}/`;
 const ready = allPages.filter((p) => p.indexable).length;
+const publishedCount = ready + site.staticRoutes.length + questionClusters.length;
 
 // Ordered by urgency, then by how often people arrive with them.
 // Severity is data, not a CSS nth-child guess. Getting this wrong is the one
@@ -88,7 +90,7 @@ const jsonld = {
       <section class="hero deep-band">
        <div class="hero-inner">
         <div class="hero-main">
-          <p class="eyebrow"><span class="rule-dash" aria-hidden="true"></span>Independent · Australia · {ready} pages</p>
+          <p class="eyebrow"><span class="rule-dash" aria-hidden="true"></span>Independent · Australia · {publishedCount} pages</p>
           <h1>Something wrong with your engine?</h1>
           <p class="hero-lede">
             Independent Australian guides to marine diesels: what the symptom
@@ -194,6 +196,34 @@ const jsonld = {
           <li><a href="/marine-engine-problems/blocked-exhaust-elbow/"><span>04</span><strong>Wet exhaust</strong><small>Elbow → waterlock → outlet</small></a></li>
           <li><a href="/services/marine-gearbox-service/"><span>05</span><strong>Drive</strong><small>Gearbox → shaft → propeller</small></a></li>
         </ol>
+      </section>
+
+      <section class="workshop-library wrap" aria-labelledby="workshop-library-h">
+        <div class="field-notes-head">
+          <div>
+            <p class="kicker">Practical library</p>
+            <h2 id="workshop-library-h">See the system before touching it</h2>
+          </div>
+          <p>Visual guides for maintenance, inspection and the parts that most often create confusion in a marine installation.</p>
+        </div>
+        <div class="workshop-grid">
+          <a href="/guides/marine-diesel-maintenance-checklist/">
+            <img src="/images/marine-diesel-service-kit.jpg" width="1400" height="933" loading="lazy" decoding="async" alt="Marine diesel annual-service parts and tools arranged on a work mat" />
+            <span><small>Maintenance</small><strong>Build the right service routine</strong><em>Checklist →</em></span>
+          </a>
+          <a href="/guides/marine-diesel-parts-explained/">
+            <img src="/images/marine-fuel-filter-inspection.jpg" width="1400" height="933" loading="lazy" decoding="async" alt="Marine mechanic inspecting a yacht fuel-water separator" />
+            <span><small>Know the system</small><strong>Marine diesel parts explained</strong><em>System guide →</em></span>
+          </a>
+          <a href="/marine-engine-problems/blocked-exhaust-elbow/">
+            <img src="/images/exhaust-elbow-corrosion-comparison.jpg" width="1400" height="933" loading="lazy" decoding="async" alt="Blocked marine exhaust elbow beside a clean replacement" />
+            <span><small>Wet exhaust</small><strong>What internal corrosion looks like</strong><em>Fault guide →</em></span>
+          </a>
+          <a href="/guides/marine-engine-hours-explained/">
+            <img src="/images/marine-drivetrain-installation.jpg" width="1400" height="933" loading="lazy" decoding="async" alt="Compact marine diesel and drivetrain in a yacht engine room" />
+            <span><small>Buying a boat</small><strong>Engine hours are not the verdict</strong><em>Buying guide →</em></span>
+          </a>
+        </div>
       </section>
 
       <h2 class="section-head">Find a marine mechanic</h2>

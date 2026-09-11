@@ -1,0 +1,68 @@
+---
+import Page from '../../layouts/Page.astro';
+import GuideGraphic from '../../components/GuideGraphic.astro';
+import SourcePanel from '../../components/SourcePanel.astro';
+import site from '../../../site.config.json' with { type: 'json' };
+
+const headings = [
+  { depth: 2, slug: 'before-every-start', text: 'Before every start' },
+  { depth: 2, slug: 'annual-service', text: 'Annual or hour-based service' },
+  { depth: 2, slug: 'less-frequent-work', text: 'Less-frequent work' },
+  { depth: 2, slug: 'service-record', text: 'Build a useful service record' },
+  { depth: 2, slug: 'when-to-stop', text: 'When to stop and call a mechanic' },
+];
+const page = {
+  url: '/guides/marine-diesel-maintenance-checklist/', title: 'Marine Diesel Maintenance Checklist',
+  seoTitle: 'Marine Diesel Maintenance Checklist Australia', pageType: 'decision',
+  status: 'ready', author: site.defaultAuthor, reviewer: null, needsReviewer: false,
+  parent: '/marine-diesel-engines/', parentTitle: 'Marine Diesel Engines', schema: ['TechArticle', 'BreadcrumbList'],
+  updated: site.legalUpdated, indexable: true, blockers: [], headings, faqs: [],
+  description: 'A practical marine diesel maintenance checklist covering pre-start checks, annual servicing, records and jobs that require a mechanic.',
+  image: '/images/marine-diesel-service-kit.jpg', imageWidth: 1400, imageHeight: 933,
+  imageAlt: 'Marine diesel service parts and tools arranged on a workshop mat',
+};
+const sources = [
+  { title: 'YANMAR Marine maintenance guidance', url: 'https://www.yanmar.com/marine/service/faq/' },
+  { title: 'Volvo Penta manuals and service information', url: 'https://www.volvopenta.com/connect/login' },
+  { title: 'Cummins manuals and technical documents', url: 'https://www.cummins.com/parts/manuals-and-technical-documents' },
+];
+---
+<Page page={page}>
+  <p class="kicker">Owner checklist</p>
+  <h1>Marine diesel maintenance checklist</h1>
+  <p class="lead">A useful schedule starts with the operation manual for the exact engine and installation. This checklist helps you organise that work; it does not replace the manufacturer’s intervals, fluid specifications or safety instructions.</p>
+
+  <figure class="editorial-visual editorial-visual--lead">
+    <img src="/images/marine-diesel-service-kit.jpg" width="1400" height="933" alt="Marine diesel service parts arranged on a mat, including filters, an impeller, sealing washers, oil and hand tools." fetchpriority="high" decoding="async" />
+    <figcaption>Order consumables from the model and serial number—not from the colour of the engine or the boat brochure.</figcaption>
+  </figure>
+
+  <GuideGraphic variant="maintenance" />
+
+  <h2 id="before-every-start">Before every start</h2>
+  <p>Open the engine space before starting. Look and smell before touching anything. The bilge should not contain fresh oil, coolant, diesel or seawater. Check the engine-oil level on a level boat using the method in the manual, and inspect the coolant header tank only when the engine is cold.</p>
+  <ul>
+    <li>Confirm the raw-water seacock is open and the strainer lid is secure.</li>
+    <li>Look for loose belts, black belt dust, chafe, cracked hoses and salt tracks around hose joints.</li>
+    <li>Check fuel level and the primary filter bowl for water or sediment where it is visible.</li>
+    <li>After starting, confirm the alarm self-test finishes, oil pressure establishes and cooling water appears at the exhaust.</li>
+  </ul>
+  <p>A new sound, smell, drip or vibration is information. Record it before it becomes normal in your mind.</p>
+
+  <h2 id="annual-service">Annual or hour-based service</h2>
+  <p>Most manuals specify both elapsed time and engine hours. Use whichever limit arrives first. Boats that run few hours still age: oil collects moisture and combustion by-products, impellers take a set, coolant loses protection, fuel grows contamination and anodes continue to dissolve.</p>
+  <p>A typical service may include engine oil and filter, primary and secondary fuel filters, raw-water impeller inspection or replacement, belt and hose checks, coolant testing, engine and heat-exchanger anodes, gearbox or saildrive oil, battery terminals, control cables and a careful leak inspection. “Annual service” is not a universal package. Ask the workshop to identify what is included and which manual interval it satisfies.</p>
+
+  <h2 id="less-frequent-work">Less-frequent work</h2>
+  <p>Heat-exchanger cleaning, valve-clearance adjustment, injector testing, coolant replacement, exhaust-elbow inspection, engine-mount assessment, alignment and saildrive diaphragm work usually sit on longer intervals or depend on condition. They are also the jobs most easily lost when invoices say only “full service”.</p>
+  <p>Warm, silty or heavily fouled Australian water can shorten raw-water-system intervals. Long idle periods and short low-load runs can be harder on an engine than regular operation. Treat the manual as the baseline and actual operating conditions as the reason to inspect sooner.</p>
+
+  <h2 id="service-record">Build a useful service record</h2>
+  <p>Record the date, engine hours, exact parts, fluid grade and quantity, observations and who completed the work. Photograph the hour meter, drained gearbox oil, old impeller and any contamination in filter bowls. Keep invoices with the engine serial number. A good record makes fault diagnosis faster and gives a future buyer evidence rather than reassurance.</p>
+  <p>Carry spares that match the installed engine: belts, impeller and gasket, fuel filters, oil filter, coolant, approved oil, hose clamps and the tools needed to fit them. A spare is only useful if it is still sealed, correctly identified and accessible underway.</p>
+
+  <h2 id="when-to-stop">When to stop and call a mechanic</h2>
+  <p>Stop when there is loss of cooling water, an oil-pressure or over-temperature alarm, fuel spray, heavy smoke, coolant in the bilge, water in engine oil, repeated belt failure or an unexplained metal noise. Do not repeatedly restart to “see if it clears”. Use the <a href="/guides/emergency-engine-shutdown/">emergency shutdown guide</a>, then arrange diagnosis by the appropriate marine trade.</p>
+
+  <SourcePanel links={sources} />
+</Page>

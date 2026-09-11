@@ -1,0 +1,63 @@
+---
+import Page from '../../layouts/Page.astro';
+import GuideGraphic from '../../components/GuideGraphic.astro';
+import SourcePanel from '../../components/SourcePanel.astro';
+import site from '../../../site.config.json' with { type: 'json' };
+
+const headings = [
+  { depth: 2, slug: 'engine-stopped', text: 'With the engine stopped' },
+  { depth: 2, slug: 'after-starting', text: 'Immediately after starting' },
+  { depth: 2, slug: 'under-load', text: 'Under load' },
+  { depth: 2, slug: 'record-baseline', text: 'Create a baseline' },
+  { depth: 2, slug: 'stop-signs', text: 'Stop-now signs' },
+];
+const page = {
+  url: '/guides/marine-engine-room-inspection-checklist/', title: 'Marine Engine Room Inspection Checklist',
+  seoTitle: 'Marine Engine Room Inspection Checklist', pageType: 'decision', status: 'ready',
+  author: site.defaultAuthor, reviewer: null, needsReviewer: false, parent: '/marine-diesel-engines/',
+  parentTitle: 'Marine Diesel Engines', schema: ['TechArticle', 'BreadcrumbList'], updated: site.legalUpdated,
+  indexable: true, blockers: [], headings, faqs: [],
+  description: 'A five-minute marine engine-room inspection routine for leaks, hoses, cooling water, vibration and warning signs before departure.',
+  image: '/images/marine-fuel-filter-inspection.jpg', imageWidth: 1400, imageHeight: 933,
+  imageAlt: 'Marine mechanic inspecting a fuel-water separator in a yacht engine space',
+};
+const sources = [
+  { title: 'AMSA vessel safety information', url: 'https://www.amsa.gov.au/' },
+  { title: 'Australian marine safety agencies', url: 'https://www.amsa.gov.au/about/who-we-are/marine-safety-agencies' },
+  { title: 'Manufacturer manuals and safety resources', url: '/resources/' },
+];
+---
+<Page page={page}>
+  <p class="kicker">Five-minute routine</p>
+  <h1>Marine engine-room inspection checklist</h1>
+  <p class="lead">The fastest way to recognise a developing fault is to know what clean, dry and normal looks like on your own boat. Use the same inspection order before departure and record changes.</p>
+
+  <GuideGraphic variant="inspection" />
+
+  <h2 id="engine-stopped">With the engine stopped</h2>
+  <p>Ventilate the space and start at the lowest point. Fluid in the bilge often tells the story before the engine does. Clear water may be condensation or a seawater leak; coloured coolant, black oil and diesel each need a source. Absorbent pads help reveal a new leak but should never conceal an old one.</p>
+  <ul>
+    <li>Check oil, coolant and gearbox levels by the manufacturer’s procedure.</li>
+    <li>Trace every raw-water hose from the seacock to the exhaust injection point.</li>
+    <li>Look for salt crystals, green staining, soft hose ends, doubled clamps that no longer sit square, and strain at fittings.</li>
+    <li>Inspect battery cables, starter and alternator connections for looseness, heat damage or corrosion.</li>
+    <li>Look across the engine mounts for collapsed rubber, loose fasteners or shiny movement marks.</li>
+    <li>Confirm nothing can fall against the belt, shaft, coupling or hot exhaust.</li>
+  </ul>
+
+  <h2 id="after-starting">Immediately after starting</h2>
+  <p>Stand clear of belts and rotating machinery. Confirm the warning lamps and buzzer behaved as the manual describes. The engine should establish a steady idle without fuel mist, raw-water leakage or a persistent metallic knock. Look at the exhaust outlet for cooling-water flow, but do not lean over the stern in an unsafe position.</p>
+  <p>A brief puff of smoke can have several explanations; smoke that persists, changes colour under load or accompanies rough running deserves diagnosis. Use the <a href="/how/how-to-read-marine-engine-exhaust-smoke/">exhaust-smoke guide</a> as a starting point, not a verdict.</p>
+
+  <h2 id="under-load">Under load</h2>
+  <p>A no-load idle check cannot reveal every cooling, fuel or propeller problem. Once safely underway, watch temperature, charging and oil-pressure indications. Note whether the boat reaches its usual speed and engine rpm without excessive smoke or vibration. A gradual loss of performance is easier to see when normal numbers are written down.</p>
+  <p>After the first loaded run following service, inspect again for weeping filters, disturbed hose joints and belt dust. Shut down before approaching moving parts.</p>
+
+  <h2 id="record-baseline">Create a baseline</h2>
+  <p>Take clear photographs of each side of the engine, the bilge, hose routes, filter bowls, battery connections, mount positions and the shaft or drive coupling. Record cold and warm fluid levels, normal charging voltage, normal operating temperature, cruising rpm and exhaust-water appearance. Future changes become much easier to demonstrate to a workshop.</p>
+
+  <h2 id="stop-signs">Stop-now signs</h2>
+  <p>Stop for loss of exhaust cooling water, an oil-pressure alarm, rapidly rising temperature, fuel spray, smoke inside the boat, a burning electrical smell, uncontrolled seawater entry, severe vibration or oil that has turned milky. Protect the vessel and people first. The <a href="/guides/emergency-engine-shutdown/">emergency engine shutdown guide</a> explains the immediate sequence.</p>
+
+  <SourcePanel links={sources} />
+</Page>
