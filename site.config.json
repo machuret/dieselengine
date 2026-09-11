@@ -110,7 +110,12 @@
     }
   ],
   "_comment_staticRoutes": "Pages built from .astro rather than content/. They are real URLs and must appear in the sitemap \u2014 the homepage is the most important URL on the site and was previously absent from it entirely.",
-  "heroFigure": null,
+  "heroFigure": {
+    "src": "/images/marine-diesel-engine-bay.jpg",
+    "alt": "Compact inboard marine diesel engine installed in a yacht engine bay, with the alternator, drive belt, coolant reservoir, hoses and raw-water strainer visible.",
+    "caption": "Know what you are looking at before you start troubleshooting. Our guides explain the systems around the engine as well as the engine itself."
+  },
+  "socialImage": "/images/marine-diesel-engine-bay.jpg",
   "_comment_heroFigure": "Set to {src, alt, caption} to show a technical figure under the homepage hero. src must be a file in public/ \u2014 prebuild-check enforces that, because a hero that 404s is worse than no hero. alt carries the labelled part names, which are otherwise unreadable to a search engine or a screen reader in a raster drawing.",
   "contactEmail": "gabriel@marinedieselengine.com.au",
   "legalUpdated": "2026-09-09",

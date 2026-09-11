@@ -9,6 +9,7 @@
     "check": "python3 scripts/validate_content.py"
   },
   "dependencies": {
-    "astro": "^5.6.1"
+    "@astrojs/markdown-remark": "^7.3.1",
+    "astro": "^7.3.2"
   }
 }

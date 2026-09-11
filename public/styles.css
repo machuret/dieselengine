@@ -132,6 +132,14 @@ header.site {
   color: var(--on-deep); text-decoration: none; margin-right: auto;
 }
 .brand svg { flex: none; color: var(--accent-hot); }
+header.site .nav-menu { margin-left: auto; }
+header.site .nav-toggle {
+  display: none; color: var(--on-deep); cursor: pointer;
+  font-family: inherit; background: transparent;
+  font-size: .86rem; font-weight: 650; list-style: none;
+  padding: .45rem .7rem; border: 1px solid var(--deep-rule);
+  border-radius: var(--r-sm);
+}
 header.site nav { display: flex; gap: .15rem; }
 header.site nav a {
   color: var(--on-deep-2); text-decoration: none; font-size: .9rem; font-weight: 500;
@@ -142,17 +150,34 @@ header.site nav a:hover, header.site nav a:focus-visible {
   color: var(--on-deep);
   background: color-mix(in srgb, var(--on-deep) 10%, transparent);
 }
+header.site nav .nav-cta {
+  margin-left: .35rem; color: var(--deep); background: var(--accent-hot);
+  font-weight: 700;
+}
+header.site nav .nav-cta:hover, header.site nav .nav-cta:focus-visible {
+  color: var(--deep); background: #83e4d2;
+}
 header.site :focus-visible { outline-color: var(--accent-hot); }
 
 @media (max-width: 60rem) {
-  header.site { gap: .75rem; padding-inline: 0; }
-  .brand { font-size: .95rem; padding-left: var(--gutter); }
+  header.site { gap: .75rem; padding: .7rem var(--gutter); }
+  .brand { font-size: .9rem; padding-left: 0; }
+  header.site .nav-toggle { display: block; }
+  header.site .nav-menu.is-open .nav-toggle { background: var(--deep-2); }
   header.site nav {
-    overflow-x: auto; scrollbar-width: none; padding-right: var(--gutter);
-    -webkit-overflow-scrolling: touch;
+    position: absolute; left: var(--gutter); right: var(--gutter); top: calc(100% + .5rem);
+    display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .25rem; padding: .65rem; background: var(--deep);
+    border: 1px solid var(--deep-rule); border-radius: var(--r-md);
+    box-shadow: 0 24px 50px rgb(0 0 0 / .35);
   }
-  header.site nav::-webkit-scrollbar { display: none; }
-  header.site nav a { font-size: .85rem; padding: .35rem .55rem; }
+  header.site .nav-menu:not(.is-open) nav { display: none; }
+  header.site nav a { font-size: .9rem; padding: .65rem .7rem; }
+  header.site nav .nav-cta { margin-left: 0; text-align: center; }
+}
+@media (max-width: 24rem) {
+  .brand { font-size: .82rem; }
+  .brand svg { width: 19px; height: 19px; }
 }
 
 main { padding: 0 var(--gutter) 5rem; }
@@ -583,52 +608,88 @@ footer.site nav a { color: var(--muted); text-decoration: none; }
 footer.site nav a:hover { color: var(--accent); text-decoration: underline; }
 .muted { color: var(--muted); }
 
-/* ---- Homepage blueprint figure ------------------------------------------
-   Full-bleed dark band under the hero. The artwork is its own deep navy, so
-   the band is painted to match rather than floating a dark rectangle on the
-   paper ground — and it stays that colour in both themes, because the drawing
-   does. */
+/* ---- Homepage engine photograph -----------------------------------------
+   A real engine bay establishes subject authority without competing with the
+   emergency-first copy. The dark frame connects it to the hero above. */
 .blueprint {
   /* main carries a gutter; the band breaks out of it to the viewport edge
      without introducing horizontal scroll on the page itself. */
-  margin: 3rem calc(var(--gutter) * -1) 0;
-  padding: 0;
-  background: #0a2a5e;
-  border-block: 1px solid #0a2a5e;
+  max-width: 72rem; margin: 0 auto;
+  padding: 0; background: var(--deep);
+  border: 1px solid var(--deep-rule); border-radius: 0 0 var(--r-lg) var(--r-lg);
+  overflow: hidden; box-shadow: 0 26px 70px -45px rgb(0 0 0 / .75);
 }
 .blueprint-frame {
-  overflow-x: auto;
-  overscroll-behavior-x: contain;
-  -webkit-overflow-scrolling: touch;
+  overflow: hidden;
 }
 .blueprint-frame:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: -2px;
 }
 .blueprint img {
-  display: block;
-  width: 100%;
-  height: auto;
-  /* Below this width the callout type falls under about 9px and the drawing
-     stops being readable, so it is panned instead of shrunk. */
-  min-width: 52rem;
-  margin-inline: auto;
+  display: block; width: 100%; height: clamp(17rem, 48vw, 34rem);
+  object-fit: cover; object-position: center;
 }
 .blueprint figcaption {
-  max-width: var(--measure);
-  margin: 0 auto;
-  padding: .85rem var(--gutter) 1rem;
-  font-size: .85rem;
-  line-height: 1.5;
-  color: #b8cbe8;
-}
-@media (min-width: 56rem) {
-  .blueprint img { min-width: 0; }
-  .blueprint figcaption { text-align: center; }
+  max-width: 62rem; margin: 0;
+  padding: 1rem 1.25rem 1.15rem; font-size: .88rem;
+  line-height: 1.55; color: var(--on-deep-2);
 }
 @media (prefers-reduced-motion: no-preference) {
   .blueprint-frame { scroll-behavior: smooth; }
 }
+
+/* --- Homepage trust and visual field notes ------------------------------ */
+.trust-strip {
+  display: grid; gap: 1px; margin-top: 1.5rem; overflow: hidden;
+  background: var(--rule); border: 1px solid var(--rule); border-radius: var(--r-md);
+}
+.trust-strip p {
+  margin: 0; padding: 1rem 1.1rem; background: var(--surface);
+  font-size: .88rem; line-height: 1.45;
+}
+.trust-strip strong { display: block; color: var(--ink); font-size: .92rem; }
+.trust-strip span { color: var(--muted); }
+@media (min-width: 44rem) { .trust-strip { grid-template-columns: repeat(3, 1fr); } }
+
+.field-notes { margin-top: clamp(3.5rem, 7vw, 6rem); }
+.field-notes-head {
+  display: grid; gap: .75rem 3rem; align-items: end; margin-bottom: 1.35rem;
+}
+@media (min-width: 48rem) { .field-notes-head { grid-template-columns: 1fr 1fr; } }
+.field-notes h2 {
+  margin: .35rem 0 0; color: var(--ink); font-size: clamp(1.65rem, 1.3rem + 1.2vw, 2.25rem);
+  line-height: 1.15; letter-spacing: -.03em;
+}
+.field-notes-head > p { margin: 0; color: var(--muted); font-size: .98rem; }
+.kicker {
+  display: block; margin: 0; color: var(--accent); font-family: var(--mono);
+  font-size: .7rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase;
+}
+.feature-grid { display: grid; gap: 1rem; }
+@media (min-width: 44rem) { .feature-grid { grid-template-columns: repeat(2, 1fr); } }
+.feature-card {
+  position: relative; min-height: 24rem; overflow: hidden; border-radius: var(--r-lg);
+  color: #fff; text-decoration: none; background: var(--deep);
+  isolation: isolate;
+}
+.feature-card img {
+  position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%;
+  object-fit: cover; transition: transform .45s ease;
+}
+.feature-card::after {
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background: linear-gradient(180deg, transparent 28%, rgb(3 19 31 / .9) 100%);
+}
+.feature-copy { position: absolute; inset: auto 0 0; display: grid; gap: .3rem; padding: 1.4rem; }
+.feature-copy .kicker { color: var(--accent-hot); }
+.feature-copy strong { color: #fff; font-size: 1.35rem; letter-spacing: -.02em; }
+.feature-copy > span:last-child { color: #c7d5df; font-size: .94rem; line-height: 1.5; }
+.feature-card:hover { color: #fff; }
+@media (prefers-reduced-motion: no-preference) { .feature-card:hover img { transform: scale(1.025); } }
+.section-more { margin-top: 1.25rem; }
+.section-more a { font-weight: 700; text-decoration: none; }
+.section-more a:hover { text-decoration: underline; }
 
 /* ---- Service index on city hubs ---------------------------------------- */
 .svc-index {

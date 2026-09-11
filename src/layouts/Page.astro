@@ -12,6 +12,7 @@ import HowToFor from '../components/HowToFor.astro';
 const { page } = Astro.props;
 const canonical = new URL(page.url, site.domain).href;
 const description = page.description || site.description;
+const socialImage = new URL(site.socialImage, site.domain).href;
 const headings = page.headings ?? [];
 const showToc = headings.length >= 4;
 
@@ -129,6 +130,8 @@ const jsonld = {
     <meta property="og:url" content={canonical} />
     <meta property="og:locale" content="en_AU" />
     <meta property="og:site_name" content={site.name} />
+    <meta property="og:image" content={socialImage} />
+    <meta property="og:image:alt" content="Marine diesel engine installed in a yacht engine bay" />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

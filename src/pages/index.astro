@@ -44,6 +44,8 @@ const PILLARS = [
 
 const locations = allPages.filter((p) => p.pageType === 'city-hub');
 const services = allPages.filter((p) => p.pageType === 'service-national');
+const featuredServices = services.slice(0, 12);
+const socialImage = new URL(site.socialImage, site.domain).href;
 
 const jsonld = {
   '@context': 'https://schema.org',
@@ -58,7 +60,7 @@ const jsonld = {
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{seoTitle({ seoTitle: 'Marine Diesel Engines in Australia' }, site.shortName)}</title>
+    <title>{seoTitle({ seoTitle: 'Marine Diesel Engine Guides, Costs & Mechanics Australia' }, site.shortName)}</title>
     <meta name="description" content={site.description} />
     <link rel="canonical" href={canonical} />
     <meta name="robots" content={ready > 0 ? 'index, follow' : 'noindex, follow'} />
@@ -67,6 +69,10 @@ const jsonld = {
     <meta property="og:description" content={site.description} />
     <meta property="og:url" content={canonical} />
     <meta property="og:locale" content="en_AU" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content={socialImage} />
+    <meta property="og:image:alt" content="Marine diesel engine installed in a yacht engine bay" />
+    <meta name="twitter:card" content="summary_large_image" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" />
@@ -115,22 +121,24 @@ const jsonld = {
       </section>
 
       {site.heroFigure && (
-        /* A labelled cutaway is the one image that earns its place on a page
-           about engines: it is the subject, not decoration. It sits below the
-           triage panel rather than behind the copy, because callout text and
-           body text competing in the same space makes both unreadable.
-           The drawing is ~1650px of dense annotation, so on a phone it stays
-           at a legible scale inside a scroller instead of being crushed to
-           fit — a shrunk technical drawing is a blue smear. */
+        /* Keep the engine visible without putting text over busy machinery.
+           The photograph follows the urgent triage panel, where it adds
+           context without delaying the reader's route to safety advice. */
         <figure class="blueprint">
-          <div class="blueprint-frame" tabindex="0" role="group"
-               aria-label="Marine diesel engine cutaway, scrollable">
+          <div class="blueprint-frame" role="group"
+               aria-label="Marine diesel engine installation photograph">
             <img src={site.heroFigure.src} alt={site.heroFigure.alt}
-                 width="1656" height="947" fetchpriority="high" decoding="async" />
+                 width="1672" height="941" fetchpriority="high" decoding="async" />
           </div>
           <figcaption>{site.heroFigure.caption}</figcaption>
         </figure>
       )}
+
+      <section class="trust-strip wrap" aria-label="What you will find here">
+        <p><strong>Independent advice</strong><span>No repair shop, parts sales or hidden pitch.</span></p>
+        <p><strong>Australian context</strong><span>Local labour, marina access and price ranges.</span></p>
+        <p><strong>Safety first</strong><span>Clear stop-now warnings before troubleshooting.</span></p>
+      </section>
 
       {/* Six identical rounded cards in a 2-up grid was the most generic thing
           on this page, and it flattened urgency: "Something is wrong" looked
@@ -152,6 +160,26 @@ const jsonld = {
         ))}
       </ol>
 
+      <section class="field-notes wrap" aria-labelledby="field-notes-h">
+        <div class="field-notes-head">
+          <div>
+            <p class="kicker">From the engine bay</p>
+            <h2 id="field-notes-h">Two systems worth checking first</h2>
+          </div>
+          <p>Cooling and condition checks prevent a small warning sign becoming a tow, a rebuild or a flooded cylinder.</p>
+        </div>
+        <div class="feature-grid">
+          <a class="feature-card" href="/marine-engine-problems/no-water-from-exhaust/">
+            <img src="/images/raw-water-strainer-inspection.jpg" width="1200" height="800" loading="lazy" decoding="async" alt="Gloved hands inspecting a marine engine raw-water strainer" />
+            <span class="feature-copy"><span class="kicker">Cooling system</span><strong>No water from the exhaust?</strong><span>What to shut down, inspect and clear — in the right order.</span></span>
+          </a>
+          <a class="feature-card" href="/find-a-marine-mechanic/">
+            <img src="/images/marine-mechanic-engine-inspection.jpg" width="1200" height="800" loading="lazy" decoding="async" alt="Marine mechanic inspecting an inboard diesel engine aboard a yacht" />
+            <span class="feature-copy"><span class="kicker">Before you book</span><strong>Get a useful diagnosis</strong><span>What to record, what to ask and which marine trade you actually need.</span></span>
+          </a>
+        </div>
+      </section>
+
       <h2 class="section-head">Find a marine mechanic</h2>
       <p class="section-sub">
         Verified operators by marina and precinct, with the engine brands they
@@ -168,10 +196,13 @@ const jsonld = {
         What the work involves, when you need it, and what it should cost.
       </p>
       <ul class="chips wrap">
-        {services.map((p) => (
+        {featuredServices.map((p) => (
           <li><a href={p.url}>{p.title.replace(' in Australia', '')}</a></li>
         ))}
       </ul>
+      {services.length > featuredServices.length && (
+        <p class="section-more wrap"><a href="/services/">Browse all {services.length} marine diesel services <span aria-hidden="true">&rarr;</span></a></p>
+      )}
     </main>
 
     <SiteFooter />
