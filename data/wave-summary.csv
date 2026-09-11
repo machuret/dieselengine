@@ -14,8 +14,10 @@ wave,page_type,pages
 3,pillar,2
 4,city-hub,15
 4,city-service,234
+4,pillar,1
+4,region-hub,25
 5,brand-city,60
 5,brand-symptom,34
 6,cost-city,340
 6,cost-service,34
-TOTAL,,1377
+TOTAL,,1403

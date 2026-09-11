@@ -62,7 +62,7 @@ function build() {
     const slug = page.url.replace(/\/$/, '').split('/').pop();
     // Both the mechanic directory and the buying pages are about a real
     // place, so both earn Place/PostalAddress schema from the same source.
-    if (page.pageType === 'city-hub' || page.pageType === 'buying-city') {
+    if (['city-hub', 'buying-city', 'region-hub'].includes(page.pageType)) {
       page.geo = GEO[slug] ?? null;
     }
     if (page.pageType === 'service-national') {

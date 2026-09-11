@@ -10,17 +10,28 @@ import { allPages } from '../lib/content.js';
  */
 const { page } = Astro.props;
 
+// A regional hub's job is to route, and its spokes live under other parents
+// (/marine-mechanics/, /buy-marine-diesel-engine/, /services/...). So it
+// gathers by region rather than by parent — that routing IS the page's
+// purpose, and without it the hub is a dead end for the head term it owns.
+const isRegionHub = page.pageType === 'region-hub' && page.geo;
 const children = allPages
-  .filter((p) => p.indexable && p.parent === page.url && p.url !== page.url)
+  .filter((p) => {
+    if (!p.indexable || p.url === page.url) return false;
+    if (isRegionHub) return p.geo?.slug === page.geo.slug;
+    return p.parent === page.url;
+  })
   .sort((a, b) => a.title.localeCompare(b.title));
 
 const groups = new Map();
 for (const c of children) {
-  const key = c.cluster ?? '';
+  const key = isRegionHub ? c.pageType : (c.cluster ?? '');
   if (!groups.has(key)) groups.set(key, []);
   groups.get(key).push(c);
 }
 const LABELS = {
+  'city-hub': 'Find a mechanic here',
+  'buying-city': 'Buying an engine here',
   cost: 'What it costs',
   comparison: 'Choosing between options',
   'buyers-guide': 'Before you book',
@@ -32,7 +43,7 @@ const useGroups = grouped.length > 1 && grouped.flatMap(([, v]) => v).length ===
 ---
 {children.length > 0 && (
   <nav class="related children" aria-label="In this section">
-    <h2>In this section</h2>
+    <h2>{isRegionHub ? 'In this region' : 'In this section'}</h2>
     {useGroups ? grouped.map(([key, items]) => (
       <>
         <p class="children-group">{LABELS[key]}</p>

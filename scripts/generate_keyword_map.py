@@ -142,6 +142,23 @@ add(1, "pillar", "/costs/", "What Marine Engine Work Costs in Australia",
     "marine engine repair cost australia",
     ["marine mechanic hourly rate australia"],
     "P0", "/", "Cost hub; feeds every cost page")
+add(4, "pillar", "/marine-diesel/", "Marine Diesel By Australian Region",
+    "marine diesel australia by region",
+    ["marine diesel service by city australia"],
+    "P0", "/", "Region hub index")
+
+# Regional hubs own the ambiguous head term ("marine diesel brisbane") and route
+# to the intent-specific pages. One per region, and no more: see docs/geo-plan.md
+# on why forty Brisbane pages compete rather than accumulate.
+for c in cities:
+    add(4, "region-hub", f"/marine-diesel/{c['slug']}/",
+        f"Marine Diesel In {c['city']}",
+        f"marine diesel {c['city'].lower()}",
+        [f"marine mechanic {c['city'].lower()}",
+         f"boat engine repair {c['city'].lower()}"],
+        "P0" if int(c["tier"]) == 1 else "P1", "/marine-diesel/",
+        "Head-term hub; routes to mechanic, buying and service intents")
+
 add(3, "pillar", "/marine-diesel-engine-for/", "Marine Diesel Engines By Boat Brand",
     "marine diesel engine by boat brand",
     ["what engine is in my boat", "boat brand engine guide australia"],
