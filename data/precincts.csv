@@ -1,0 +1,39 @@
+slug,precinct,region_slug,state,kind,verify,notes
+coomera,Coomera,gold-coast,QLD,boatyard-precinct,PENDING,Largest marine industry concentration in Australia; refit and build
+hope-island,Hope Island,gold-coast,QLD,marina,PENDING,Marina and canal berths
+sanctuary-cove,Sanctuary Cove,gold-coast,QLD,marina,PENDING,Marina and boat show venue
+runaway-bay,Runaway Bay,gold-coast,QLD,marina,PENDING,Broadwater marina and service trade
+southport,Southport,gold-coast,QLD,marina,PENDING,Broadwater access and moorings
+pittwater,Pittwater,sydney,NSW,cruising-base,PENDING,Largest Sydney cruising and sailing concentration
+newport-nsw,Newport,sydney,NSW,marina,PENDING,Pittwater marina and mooring base
+middle-harbour,Middle Harbour,sydney,NSW,marina,PENDING,Marina berths and swing moorings
+rozelle-bay,Rozelle Bay,sydney,NSW,boatyard-precinct,PENDING,Commercial and workboat capability
+botany,Botany,sydney,NSW,marina,PENDING,Georges River and Botany Bay fleet
+sylvania,Sylvania,sydney,NSW,marina,PENDING,Georges River recreational fleet
+manly-qld,Manly,brisbane,QLD,marina,PENDING,Moreton Bay boat harbour and service trade
+scarborough,Scarborough,brisbane,QLD,marina,PENDING,Redcliffe peninsula marina
+rivergate,Rivergate,brisbane,QLD,boatyard-precinct,PENDING,Brisbane River refit and hardstand
+newstead,Newstead,brisbane,QLD,marina,PENDING,Brisbane River berths
+raby-bay,Raby Bay,brisbane,QLD,marina,PENDING,Cleveland canal and marina berths
+mooloolaba,Mooloolaba,sunshine-coast,QLD,marina,PENDING,Game fishing port and marina
+noosa,Noosa,sunshine-coast,QLD,river-base,PENDING,Noosa River fleet and bar entrance
+williamstown,Williamstown,melbourne,VIC,boatyard-precinct,PENDING,Yarra and Port Phillip commercial and recreational
+sandringham,Sandringham,melbourne,VIC,marina,PENDING,Port Phillip metropolitan fleet
+st-kilda,St Kilda,melbourne,VIC,marina,PENDING,Port Phillip marina berths
+hastings,Hastings,melbourne,VIC,marina,PENDING,Western Port; muddier water than the open bay
+mordialloc,Mordialloc,melbourne,VIC,river-base,PENDING,Creek berths and Port Phillip access
+fremantle,Fremantle,perth,WA,boatyard-precinct,PENDING,Industrial and commercial marine capability
+hillarys,Hillarys,perth,WA,marina,PENDING,Northern suburbs boat harbour
+mandurah,Mandurah,perth,WA,marina,PENDING,Peel estuary and ocean access
+applecross,Applecross,perth,WA,river-base,PENDING,Swan River berths; brackish upstream
+abell-point,Abell Point,whitsundays,QLD,marina,PENDING,Airlie Beach marina; charter fleet base
+shute-harbour,Shute Harbour,whitsundays,QLD,marina,PENDING,Whitsunday access and commercial vessels
+trinity-inlet,Trinity Inlet,cairns,QLD,boatyard-precinct,PENDING,Cairns port marine precinct and slipways
+yorkeys-knob,Yorkeys Knob,cairns,QLD,marina,PENDING,Half Moon Bay marina
+port-douglas,Port Douglas,cairns,QLD,marina,PENDING,Reef charter and game fishing base
+nelson-bay,Nelson Bay,port-stephens,NSW,marina,PENDING,Port Stephens marina and charter base
+soldiers-point,Soldiers Point,port-stephens,NSW,marina,PENDING,Port Stephens berths
+newcastle,Newcastle,port-stephens,NSW,boatyard-precinct,PENDING,Industrial port; heavy engineering and machining
+north-haven,North Haven,adelaide,SA,marina,PENDING,Largest SA marina
+outer-harbor,Outer Harbor,adelaide,SA,boatyard-precinct,PENDING,Commercial and hardstand capability
+wirrina,Wirrina,adelaide,SA,marina,PENDING,Fleurieu marina and gulf access
