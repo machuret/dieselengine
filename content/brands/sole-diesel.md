@@ -46,6 +46,15 @@ you are not dependent on software access.
 **Keep records.** On an uncommon engine your own documentation is what the next
 mechanic works from, and it is worth more than usual at resale.
 
+## Build a useful parts record
+
+Keep photographs of both identification plates, receipts with part numbers and
+a copy of the correct operator manual aboard. Record which filters and impeller
+were actually fitted rather than relying on a model-only catalogue search.
+Repowers often retain parts of the previous installation, so the control panel,
+fuel plumbing or exhaust may not match a standard package. That record makes
+routine service easier for any competent independent workshop.
+
 ## Frequently asked questions
 
 **Are Solé engines well supported in Australia?**

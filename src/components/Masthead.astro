@@ -1,6 +1,12 @@
 ---
 import site from '../../site.config.json' with { type: 'json' };
 ---
+<div class="publisher-bar" aria-label="Publisher">
+  <div class="publisher-inner">
+    <img src="/brand/yousail-logo.png" width="32" height="32" alt="YouSail logo" />
+    <span>Powered by <strong>YouSail.com.au</strong></span>
+  </div>
+</div>
 <header class="site">
   <a class="brand" href="/">
     {/* A propeller-and-water mark: specific to marine, no anchors or rope. */}
@@ -17,14 +23,34 @@ import site from '../../site.config.json' with { type: 'json' };
     </svg>
     {site.shortName}
   </a>
-  <nav aria-label="Primary">
-    <a href="/marine-diesel-engines/">Marine engines</a>
-    <a href="/marine-engine-problems/">Problems</a>
-    <a href="/services/">Services</a>
-    <a href="/costs/">Costs</a>
-    <a href="/buy-marine-diesel-engine/">Buy an engine</a>
-    <a href="/how/">How to</a>
-    <a href="/marine-diesel/">By region</a>
-    <a href="/find-a-marine-mechanic/">Find a mechanic</a>
-  </nav>
+  <div class="nav-menu">
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+    <nav id="primary-nav" aria-label="Primary">
+      <a href="/marine-engine-problems/">Problems</a>
+      <a href="/services/">Services</a>
+      <a href="/costs/">Costs</a>
+      <a href="/marine-diesel-engines/">Engines</a>
+      <a href="/how/">How to</a>
+      <a href="/buy-marine-diesel-engine/">Buying</a>
+      <a href="/marine-diesel/">By region</a>
+      <a href="/resources/">Resources</a>
+      <a class="nav-cta" href="/find-a-marine-mechanic/">Find a mechanic</a>
+    </nav>
+  </div>
 </header>
+
+<script>
+  const menu = document.querySelector<HTMLElement>('.nav-menu');
+  const toggle = menu?.querySelector<HTMLButtonElement>('.nav-toggle');
+  toggle?.addEventListener('click', () => {
+    const open = menu?.classList.toggle('is-open') ?? false;
+    toggle.setAttribute('aria-expanded', String(open));
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && menu?.classList.contains('is-open')) {
+      menu.classList.remove('is-open');
+      toggle?.setAttribute('aria-expanded', 'false');
+      toggle?.focus();
+    }
+  });
+</script>

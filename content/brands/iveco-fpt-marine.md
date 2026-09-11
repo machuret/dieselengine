@@ -43,6 +43,16 @@ understand the engine. See
 **Duty ratings matter** for charter and survey vessels — see
 [engine requirements for survey](/guides/commercial-vessel-survey-requirements/).
 
+## Prepare the identification trail
+
+Photograph the package badge, base-engine data plate, gearbox plate and any
+electronic display showing a fault. The same base family can appear in different
+marine packages, and those packages do not necessarily share cooling, exhaust
+or control parts. When requesting a quote, state whether the vessel is
+recreational or commercial, its operating hours and the rating shown on the
+plate. That gives the supplier enough information to choose the correct service
+literature before attendance.
+
 ## Frequently asked questions
 
 **My Mercury Diesel has an FPT block — who services it?** Establish which network holds which parts. Drive and package support is Mercury\u2019s; some base engine items may lead to FPT.

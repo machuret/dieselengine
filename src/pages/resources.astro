@@ -1,0 +1,90 @@
+---
+import Page from '../layouts/Page.astro';
+import site from '../../site.config.json' with { type: 'json' };
+
+const page = {
+  url: '/resources/', title: 'Authoritative Marine Diesel Resources',
+  seoTitle: 'Marine Diesel Manuals & Australian Safety Resources',
+  pageType: 'resources', status: 'ready', author: site.defaultAuthor,
+  reviewer: null, needsReviewer: false, parent: '/', parentTitle: 'Home',
+  schema: ['CollectionPage', 'BreadcrumbList'], updated: site.legalUpdated,
+  indexable: true, blockers: [], headings: [], faqs: [],
+  description: 'Primary Australian marine safety, weather, consumer-law and manufacturer manual resources for boat owners.',
+};
+---
+<Page page={page}>
+  <h1>Authority resources</h1>
+  <p>
+    Start here when you need the source of truth rather than a general guide.
+    These links go to government agencies and engine manufacturers. Always
+    match technical information to the model and serial number on your engine.
+  </p>
+
+  <h2>Australian marine safety</h2>
+  <div class="resource-list">
+    <a href="https://www.amsa.gov.au/" rel="external noopener">
+      <strong>Australian Maritime Safety Authority</strong>
+      <span>National commercial-vessel regulation, safety information, incident reporting and navigation resources.</span>
+      <em>amsa.gov.au ↗</em>
+    </a>
+    <a href="https://www.amsa.gov.au/about/who-we-are/marine-safety-agencies" rel="external noopener">
+      <strong>State and territory marine safety agencies</strong>
+      <span>AMSA’s directory to the authority responsible for recreational boating rules in each jurisdiction.</span>
+      <em>amsa.gov.au ↗</em>
+    </a>
+    <a href="https://www.bom.gov.au/weather-and-climate/specialised-forecasts-and-observations/coasts-and-oceans/marine-weather-safety/marine-weather-hazards-and-warnings" rel="external noopener">
+      <strong>Bureau of Meteorology marine warnings</strong>
+      <span>Official coastal forecasts, wind warnings and guidance for understanding marine weather hazards.</span>
+      <em>bom.gov.au ↗</em>
+    </a>
+    <a href="https://beacons.amsa.gov.au/" rel="external noopener">
+      <strong>AMSA distress beacon registration</strong>
+      <span>Register and update EPIRB and PLB details so rescue authorities can identify you in an emergency.</span>
+      <em>beacons.amsa.gov.au ↗</em>
+    </a>
+  </div>
+
+  <h2>Manuals and technical information</h2>
+  <p>
+    A manufacturer manual beats a generic procedure. Record the full model and
+    serial number first; see our guide to
+    <a href="/how/how-to-identify-your-marine-engine/">identifying a marine engine</a>.
+  </p>
+  <div class="resource-list">
+    <a href="https://www.volvopenta.com/connect/login" rel="external noopener">
+      <strong>Volvo Penta Connect</strong>
+      <span>Official product-specific manuals, handbooks, campaigns and warranty information.</span>
+      <em>volvopenta.com ↗</em>
+    </a>
+    <a href="https://www.yanmar.com/marine/service/faq/" rel="external noopener">
+      <strong>YANMAR Marine service information</strong>
+      <span>Official service guidance, maintenance references, warranty information and dealer support.</span>
+      <em>yanmar.com ↗</em>
+    </a>
+    <a href="https://www.cummins.com/parts/manuals-and-technical-documents" rel="external noopener">
+      <strong>Cummins manuals and technical documents</strong>
+      <span>Owner manuals, wiring diagrams and serial-number-specific QuickServe information.</span>
+      <em>cummins.com ↗</em>
+    </a>
+  </div>
+
+  <h2>Quotes, repairs and privacy</h2>
+  <div class="resource-list">
+    <a href="https://www.accc.gov.au/consumers/buying-products-and-services/consumer-rights-and-guarantees" rel="external noopener">
+      <strong>ACCC consumer rights and guarantees</strong>
+      <span>Official guidance on acceptable quality, repair facilities, spare parts and services supplied with due care and skill.</span>
+      <em>accc.gov.au ↗</em>
+    </a>
+    <a href="https://www.oaic.gov.au/privacy/your-privacy-rights" rel="external noopener">
+      <strong>OAIC privacy rights</strong>
+      <span>Australian guidance on access, correction, complaints and handling personal information.</span>
+      <em>oaic.gov.au ↗</em>
+    </a>
+  </div>
+
+  <p class="pending-note">
+    <strong>Found a broken or better primary link?</strong>
+    <a href="/contact/">Send it to the editorial team</a>. External pages can
+    move, so we periodically re-check this list.
+  </p>
+</Page>

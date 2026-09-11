@@ -43,6 +43,15 @@ engine, so those services matter more and are less deferrable.
 **Correct propping matters more.** A boat that cannot reach rated maximum rpm is
 telling you something, and on a high-output engine that something costs more.
 
+## Bring operating data, not only a symptom
+
+For an electronic MAN installation, record fault messages, coolant temperature,
+boost, fuel level and the rpm of both engines under the same sea conditions.
+Note hull and propeller condition before treating lost speed as an engine fault.
+Twin-engine comparison can be valuable, but only when both displays and sensors
+are known to be accurate. Ask the appointed workshop what data export or sea
+trial they need before the booking.
+
 ## Frequently asked questions
 
 **Is MAN well supported outside the capitals?** Support is concentrated where the boats are. Confirm capability before basing a MAN-powered boat regionally.

@@ -1,0 +1,14 @@
+---
+import BrandMark from './BrandMark.astro';
+import { brandMarkFor, brandSlug } from '../lib/brand-marks.js';
+
+const { page } = Astro.props;
+const slug = brandSlug(page.url);
+const mark = brandMarkFor(page.url);
+---
+{mark && (
+  <div class="brand-identity" aria-label={`${mark.name} brand`}>
+    <BrandMark slug={slug} />
+    <p><span>Brand guide</span>Independent ownership, service and support information</p>
+  </div>
+)}

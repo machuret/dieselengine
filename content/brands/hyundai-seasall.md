@@ -40,6 +40,15 @@ not have it, and a dealer network that is still building means fewer options.
 records — on a less common engine your documentation is what the next mechanic
 works from.
 
+## What to record for a workshop
+
+Start with a clear photograph of the data plate and the complete engine bay,
+then record hours, recent service work, alarm messages and the exact conditions
+that produce the fault. “Loses power” is far less useful than the rpm, load,
+temperature and time from a cold start. Ask whether the workshop can read the
+installed electronic controls before arranging attendance. That single question
+can avoid paying for a visit that ends with a referral elsewhere.
+
 ## Frequently asked questions
 
 **Is Hyundai SeasAll well supported in Australia?** It is a more recent entrant, so confirm parts holding and diagnostic access locally before committing.
