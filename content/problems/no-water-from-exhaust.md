@@ -97,9 +97,9 @@ Any raw-water-cooled marine diesel can do this, but impellers and strainers
 cause it disproportionately on engines that sit between uses — yacht
 auxiliaries and seasonal boats especially.
 
-→ [Yanmar](/engine-brands/yanmar/) ·
-[Volvo Penta](/engine-brands/volvo-penta/) ·
-[Beta Marine](/engine-brands/beta-marine/) ·
+→ [Yanmar](/engine-brands/) ·
+[Volvo Penta](/engine-brands/) ·
+[Beta Marine](/engine-brands/) ·
 [Marine engine brands](/engine-brands/)
 
 ## Frequently asked questions

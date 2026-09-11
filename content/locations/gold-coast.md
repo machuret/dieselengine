@@ -65,7 +65,7 @@ Gold Coast. If you want work done before a season, book months out, not weeks.
 **Check haul-out separately.** The Coomera yards are excellent and busy. Engine
 work requiring a haul-out is two bookings, not one, and the yard's availability
 usually sets the date.
-→ [Slipway and haul-out engine work](/services/slipway-haul-out/gold-coast/)
+→ [Slipway and haul-out engine work](/services/slipway-haul-out/)
 
 **Canal berths are not all accessible.** A mechanic who works the marinas may
 not service private canal pontoons, and vice versa. Confirm they can get to your
@@ -92,50 +92,50 @@ Consumer Law regardless of a workshop's own terms.
 ## Marine engine services in the Gold Coast
 
 **Cooling and raw water** —
-[Impeller replacement](/services/impeller-replacement/gold-coast/) ·
-[Heat exchanger service](/services/heat-exchanger-service/gold-coast/) ·
-[Exhaust elbow replacement](/services/exhaust-elbow-replacement/gold-coast/) ·
-[Aftercooler service](/services/aftercooler-service/gold-coast/) ·
-[Raw water system repair](/services/raw-water-system-repair/gold-coast/) ·
-[Cooling system repair](/services/marine-cooling-system-repair/gold-coast/)
+[Impeller replacement](/services/impeller-replacement/) ·
+[Heat exchanger service](/services/heat-exchanger-service/) ·
+[Exhaust elbow replacement](/services/exhaust-elbow-replacement/) ·
+[Aftercooler service](/services/aftercooler-service/) ·
+[Raw water system repair](/services/raw-water-system-repair/) ·
+[Cooling system repair](/services/marine-cooling-system-repair/)
 
 **Fuel** —
-[Fuel polishing and tank cleaning](/services/fuel-polishing/gold-coast/) ·
-[Diesel bug treatment](/services/diesel-bug-treatment/gold-coast/) ·
-[Injector testing and replacement](/services/marine-injector-service/gold-coast/) ·
-[Fuel pump repair](/services/marine-fuel-pump-repair/gold-coast/)
+[Fuel polishing and tank cleaning](/services/fuel-polishing/) ·
+[Diesel bug treatment](/services/diesel-bug-treatment/) ·
+[Injector testing and replacement](/services/marine-injector-service/) ·
+[Fuel pump repair](/services/marine-fuel-pump-repair/)
 
 **Engine** —
-[Engine servicing](/services/marine-engine-service/gold-coast/) ·
-[Engine repair](/services/marine-engine-repair/gold-coast/) ·
-[Cylinder head repair](/services/marine-cylinder-head-repair/gold-coast/) ·
-[Head gasket replacement](/services/marine-head-gasket-replacement/gold-coast/) ·
-[Engine rebuild](/services/marine-engine-rebuild/gold-coast/) ·
-[Engine reconditioning](/services/marine-engine-reconditioning/gold-coast/) ·
-[Repower and replacement](/services/marine-engine-repower/gold-coast/) ·
-[Saltwater ingress and hydrolock](/services/saltwater-damage-repair/gold-coast/) ·
-[Turbocharger repair](/services/marine-turbo-repair/gold-coast/)
+[Engine servicing](/services/marine-engine-service/) ·
+[Engine repair](/services/marine-engine-repair/) ·
+[Cylinder head repair](/services/marine-cylinder-head-repair/) ·
+[Head gasket replacement](/services/marine-head-gasket-replacement/) ·
+[Engine rebuild](/services/marine-engine-rebuild/) ·
+[Engine reconditioning](/services/marine-engine-reconditioning/) ·
+[Repower and replacement](/services/marine-engine-repower/) ·
+[Saltwater ingress and hydrolock](/services/saltwater-damage-repair/) ·
+[Turbocharger repair](/services/marine-turbo-repair/)
 
 **Driveline** —
-[Gearbox service](/services/marine-gearbox-service/gold-coast/) ·
-[Sterndrive service](/services/sterndrive-service/gold-coast/) ·
-[Shaft seal and stern gland](/services/shaft-seal-stern-gland/gold-coast/)
+[Gearbox service](/services/marine-gearbox-service/) ·
+[Sterndrive service](/services/sterndrive-service/) ·
+[Shaft seal and stern gland](/services/shaft-seal-stern-gland/)
 
 **Corrosion and electrical** —
-[Anode replacement](/services/anode-replacement/gold-coast/) ·
-[Engine electrical and charging](/services/marine-engine-electrical/gold-coast/)
+[Anode replacement](/services/anode-replacement/) ·
+[Engine electrical and charging](/services/marine-engine-electrical/)
 
 **Inspection** —
-[Engine survey and pre-purchase inspection](/services/marine-engine-survey/gold-coast/)
+[Engine survey and pre-purchase inspection](/services/marine-engine-survey/)
 
 **Attendance** —
-[Mobile marine mechanic](/services/mobile-marine-mechanic/gold-coast/) ·
-[Emergency and on-water breakdown](/services/emergency-marine-breakdown/gold-coast/)
+[Mobile marine mechanic](/services/mobile-marine-mechanic/) ·
+[Emergency and on-water breakdown](/services/emergency-marine-breakdown/)
 
 **By vessel type** —
-[Charter fleet servicing](/services/charter-fleet-servicing/gold-coast/) ·
-[Yacht auxiliary service](/services/yacht-auxiliary-service/gold-coast/) ·
-[Slipway and haul-out](/services/slipway-haul-out/gold-coast/)
+[Charter fleet servicing](/services/charter-fleet-servicing/) ·
+[Yacht auxiliary service](/services/yacht-auxiliary-service/) ·
+[Slipway and haul-out](/services/slipway-haul-out/)
 
 ## Nearby
 

@@ -73,20 +73,20 @@ alternative involves beds, controls, shaft and instruments.
 
 {{PRICE_TABLE:marine-engine-repair}}
 
-→ [Marine engine repair cost](/costs/marine-engine-repair/)
+→ [Marine engine repair cost](/costs/)
 
 ## Find marine engine repair in your city
 
-[Gold Coast](/services/marine-engine-repair/gold-coast/) ·
-[Sydney](/services/marine-engine-repair/sydney/) ·
-[Brisbane](/services/marine-engine-repair/brisbane/) ·
-[Sunshine Coast](/services/marine-engine-repair/sunshine-coast/) ·
-[Melbourne](/services/marine-engine-repair/melbourne/) ·
-[Perth](/services/marine-engine-repair/perth/) ·
-[Whitsundays](/services/marine-engine-repair/whitsundays/) ·
-[Cairns](/services/marine-engine-repair/cairns/) ·
-[Port Stephens & Newcastle](/services/marine-engine-repair/port-stephens/) ·
-[Adelaide](/services/marine-engine-repair/adelaide/)
+[Gold Coast](/services/marine-engine-repair/) ·
+[Sydney](/services/marine-engine-repair/) ·
+[Brisbane](/services/marine-engine-repair/) ·
+[Sunshine Coast](/services/marine-engine-repair/) ·
+[Melbourne](/services/marine-engine-repair/) ·
+[Perth](/services/marine-engine-repair/) ·
+[Whitsundays](/services/marine-engine-repair/) ·
+[Cairns](/services/marine-engine-repair/) ·
+[Port Stephens & Newcastle](/services/marine-engine-repair/) ·
+[Adelaide](/services/marine-engine-repair/)
 
 ## Frequently asked questions
 

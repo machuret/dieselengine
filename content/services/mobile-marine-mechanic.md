@@ -86,20 +86,20 @@ Attendance plus labour, with attendance varying substantially by access.
 
 {{PRICE_TABLE:mobile-marine-mechanic}}
 
-→ [Mobile marine mechanic cost](/costs/mobile-marine-mechanic/)
+→ [Mobile marine mechanic cost](/costs/)
 
 ## Find a mobile marine mechanic in your city
 
-[Gold Coast](/services/mobile-marine-mechanic/gold-coast/) ·
-[Sydney](/services/mobile-marine-mechanic/sydney/) ·
-[Brisbane](/services/mobile-marine-mechanic/brisbane/) ·
-[Sunshine Coast](/services/mobile-marine-mechanic/sunshine-coast/) ·
-[Melbourne](/services/mobile-marine-mechanic/melbourne/) ·
-[Perth](/services/mobile-marine-mechanic/perth/) ·
-[Whitsundays](/services/mobile-marine-mechanic/whitsundays/) ·
-[Cairns](/services/mobile-marine-mechanic/cairns/) ·
-[Port Stephens & Newcastle](/services/mobile-marine-mechanic/port-stephens/) ·
-[Adelaide](/services/mobile-marine-mechanic/adelaide/)
+[Gold Coast](/services/mobile-marine-mechanic/) ·
+[Sydney](/services/mobile-marine-mechanic/) ·
+[Brisbane](/services/mobile-marine-mechanic/) ·
+[Sunshine Coast](/services/mobile-marine-mechanic/) ·
+[Melbourne](/services/mobile-marine-mechanic/) ·
+[Perth](/services/mobile-marine-mechanic/) ·
+[Whitsundays](/services/mobile-marine-mechanic/) ·
+[Cairns](/services/mobile-marine-mechanic/) ·
+[Port Stephens & Newcastle](/services/mobile-marine-mechanic/) ·
+[Adelaide](/services/mobile-marine-mechanic/)
 
 ## Frequently asked questions
 

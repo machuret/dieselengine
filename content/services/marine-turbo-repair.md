@@ -90,20 +90,20 @@ Fitting a turbo without that list is how owners buy two.
 
 {{PRICE_TABLE:marine-turbo-repair}}
 
-→ [Marine turbo repair cost](/costs/marine-turbo-repair/)
+→ [Marine turbo repair cost](/costs/)
 
 ## Find turbocharger repair in your city
 
-[Gold Coast](/services/marine-turbo-repair/gold-coast/) ·
-[Sydney](/services/marine-turbo-repair/sydney/) ·
-[Brisbane](/services/marine-turbo-repair/brisbane/) ·
-[Sunshine Coast](/services/marine-turbo-repair/sunshine-coast/) ·
-[Melbourne](/services/marine-turbo-repair/melbourne/) ·
-[Perth](/services/marine-turbo-repair/perth/) ·
-[Whitsundays](/services/marine-turbo-repair/whitsundays/) ·
-[Cairns](/services/marine-turbo-repair/cairns/) ·
-[Port Stephens & Newcastle](/services/marine-turbo-repair/port-stephens/) ·
-[Adelaide](/services/marine-turbo-repair/adelaide/)
+[Gold Coast](/services/marine-turbo-repair/) ·
+[Sydney](/services/marine-turbo-repair/) ·
+[Brisbane](/services/marine-turbo-repair/) ·
+[Sunshine Coast](/services/marine-turbo-repair/) ·
+[Melbourne](/services/marine-turbo-repair/) ·
+[Perth](/services/marine-turbo-repair/) ·
+[Whitsundays](/services/marine-turbo-repair/) ·
+[Cairns](/services/marine-turbo-repair/) ·
+[Port Stephens & Newcastle](/services/marine-turbo-repair/) ·
+[Adelaide](/services/marine-turbo-repair/)
 
 ## Frequently asked questions
 

@@ -81,20 +81,20 @@ much faster than they used to, an electrical investigation is warranted.
 
 {{PRICE_TABLE:marine-engine-electrical}}
 
-→ [Marine engine electrical cost](/costs/marine-engine-electrical/)
+→ [Marine engine electrical cost](/costs/)
 
 ## Find marine engine electrical in your city
 
-[Gold Coast](/services/marine-engine-electrical/gold-coast/) ·
-[Sydney](/services/marine-engine-electrical/sydney/) ·
-[Brisbane](/services/marine-engine-electrical/brisbane/) ·
-[Sunshine Coast](/services/marine-engine-electrical/sunshine-coast/) ·
-[Melbourne](/services/marine-engine-electrical/melbourne/) ·
-[Perth](/services/marine-engine-electrical/perth/) ·
-[Whitsundays](/services/marine-engine-electrical/whitsundays/) ·
-[Cairns](/services/marine-engine-electrical/cairns/) ·
-[Port Stephens & Newcastle](/services/marine-engine-electrical/port-stephens/) ·
-[Adelaide](/services/marine-engine-electrical/adelaide/)
+[Gold Coast](/services/marine-engine-electrical/) ·
+[Sydney](/services/marine-engine-electrical/) ·
+[Brisbane](/services/marine-engine-electrical/) ·
+[Sunshine Coast](/services/marine-engine-electrical/) ·
+[Melbourne](/services/marine-engine-electrical/) ·
+[Perth](/services/marine-engine-electrical/) ·
+[Whitsundays](/services/marine-engine-electrical/) ·
+[Cairns](/services/marine-engine-electrical/) ·
+[Port Stephens & Newcastle](/services/marine-engine-electrical/) ·
+[Adelaide](/services/marine-engine-electrical/)
 
 ## Frequently asked questions
 

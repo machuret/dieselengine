@@ -91,20 +91,20 @@ is what an established case needs — is not.
 
 {{PRICE_TABLE:diesel-bug-treatment}}
 
-→ [Diesel bug treatment cost](/costs/diesel-bug-treatment/)
+→ [Diesel bug treatment cost](/costs/)
 
 ## Find diesel bug treatment in your city
 
-[Gold Coast](/services/diesel-bug-treatment/gold-coast/) ·
-[Sydney](/services/diesel-bug-treatment/sydney/) ·
-[Brisbane](/services/diesel-bug-treatment/brisbane/) ·
-[Sunshine Coast](/services/diesel-bug-treatment/sunshine-coast/) ·
-[Melbourne](/services/diesel-bug-treatment/melbourne/) ·
-[Perth](/services/diesel-bug-treatment/perth/) ·
-[Whitsundays](/services/diesel-bug-treatment/whitsundays/) ·
-[Cairns](/services/diesel-bug-treatment/cairns/) ·
-[Port Stephens & Newcastle](/services/diesel-bug-treatment/port-stephens/) ·
-[Adelaide](/services/diesel-bug-treatment/adelaide/)
+[Gold Coast](/services/diesel-bug-treatment/) ·
+[Sydney](/services/diesel-bug-treatment/) ·
+[Brisbane](/services/diesel-bug-treatment/) ·
+[Sunshine Coast](/services/diesel-bug-treatment/) ·
+[Melbourne](/services/diesel-bug-treatment/) ·
+[Perth](/services/diesel-bug-treatment/) ·
+[Whitsundays](/services/diesel-bug-treatment/) ·
+[Cairns](/services/diesel-bug-treatment/) ·
+[Port Stephens & Newcastle](/services/diesel-bug-treatment/) ·
+[Adelaide](/services/diesel-bug-treatment/)
 
 ## Frequently asked questions
 

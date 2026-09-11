@@ -84,8 +84,8 @@ Sender and connection failures dominate on older boats in salt air. Genuine
 pressure loss is most often an oil condition problem before it is a wear
 problem.
 
-→ [Cummins Marine: low oil pressure](/engine-brands/cummins-marine/problems/marine-low-oil-pressure/) ·
-[Caterpillar Marine: low oil pressure](/engine-brands/caterpillar-marine/problems/marine-low-oil-pressure/)
+→ [Cummins Marine: low oil pressure](/engine-brands/) ·
+[Caterpillar Marine: low oil pressure](/engine-brands/)
 
 ## Frequently asked questions
 

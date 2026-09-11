@@ -89,20 +89,20 @@ Driven by tank size, access, and whether physical cleaning is required.
 
 {{PRICE_TABLE:fuel-polishing}}
 
-→ [Fuel polishing cost](/costs/fuel-polishing/)
+→ [Fuel polishing cost](/costs/)
 
 ## Find fuel polishing and tank cleaning in your city
 
-[Gold Coast](/services/fuel-polishing/gold-coast/) ·
-[Sydney](/services/fuel-polishing/sydney/) ·
-[Brisbane](/services/fuel-polishing/brisbane/) ·
-[Sunshine Coast](/services/fuel-polishing/sunshine-coast/) ·
-[Melbourne](/services/fuel-polishing/melbourne/) ·
-[Perth](/services/fuel-polishing/perth/) ·
-[Whitsundays](/services/fuel-polishing/whitsundays/) ·
-[Cairns](/services/fuel-polishing/cairns/) ·
-[Port Stephens & Newcastle](/services/fuel-polishing/port-stephens/) ·
-[Adelaide](/services/fuel-polishing/adelaide/)
+[Gold Coast](/services/fuel-polishing/) ·
+[Sydney](/services/fuel-polishing/) ·
+[Brisbane](/services/fuel-polishing/) ·
+[Sunshine Coast](/services/fuel-polishing/) ·
+[Melbourne](/services/fuel-polishing/) ·
+[Perth](/services/fuel-polishing/) ·
+[Whitsundays](/services/fuel-polishing/) ·
+[Cairns](/services/fuel-polishing/) ·
+[Port Stephens & Newcastle](/services/fuel-polishing/) ·
+[Adelaide](/services/fuel-polishing/)
 
 ## Frequently asked questions
 

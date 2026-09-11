@@ -58,11 +58,11 @@ bay, and Queenscliff at the heads.
 fuel treated and tank checked, coolant tested for freeze and corrosion
 protection, raw water circuit drained where appropriate, batteries maintained,
 impeller relieved — prevents most of what fails in spring.
-→ [Winterisation and seasonal layup](/services/winterisation-layup/melbourne/)
+→ [Winterisation and seasonal layup](/services/winterisation-layup/)
 
 **Recommission before the first trip, not during it.** A proper spring service
 finds the failures on the dock instead of at the heads.
-→ [Recommissioning after layup](/services/recommissioning-service/melbourne/)
+→ [Recommissioning after layup](/services/recommissioning-service/)
 
 **Port Phillip conditions are harder than they look.** The bay gets short, steep
 seas quickly and the heads are genuinely demanding. Engine reliability matters
@@ -91,59 +91,59 @@ forms part of your compliance position.
 ## Marine engine services in Melbourne
 
 **Cooling and raw water** —
-[Impeller replacement](/services/impeller-replacement/melbourne/) ·
-[Heat exchanger service](/services/heat-exchanger-service/melbourne/) ·
-[Exhaust elbow replacement](/services/exhaust-elbow-replacement/melbourne/) ·
-[Aftercooler service](/services/aftercooler-service/melbourne/) ·
-[Raw water system repair](/services/raw-water-system-repair/melbourne/) ·
-[Cooling system repair](/services/marine-cooling-system-repair/melbourne/)
+[Impeller replacement](/services/impeller-replacement/) ·
+[Heat exchanger service](/services/heat-exchanger-service/) ·
+[Exhaust elbow replacement](/services/exhaust-elbow-replacement/) ·
+[Aftercooler service](/services/aftercooler-service/) ·
+[Raw water system repair](/services/raw-water-system-repair/) ·
+[Cooling system repair](/services/marine-cooling-system-repair/)
 
 **Fuel** —
-[Fuel polishing and tank cleaning](/services/fuel-polishing/melbourne/) ·
-[Diesel bug treatment](/services/diesel-bug-treatment/melbourne/) ·
-[Injector testing and replacement](/services/marine-injector-service/melbourne/) ·
-[Fuel pump repair](/services/marine-fuel-pump-repair/melbourne/)
+[Fuel polishing and tank cleaning](/services/fuel-polishing/) ·
+[Diesel bug treatment](/services/diesel-bug-treatment/) ·
+[Injector testing and replacement](/services/marine-injector-service/) ·
+[Fuel pump repair](/services/marine-fuel-pump-repair/)
 
 **Engine** —
-[Engine servicing](/services/marine-engine-service/melbourne/) ·
-[Engine repair](/services/marine-engine-repair/melbourne/) ·
-[Cylinder head repair](/services/marine-cylinder-head-repair/melbourne/) ·
-[Head gasket replacement](/services/marine-head-gasket-replacement/melbourne/) ·
-[Engine rebuild](/services/marine-engine-rebuild/melbourne/) ·
-[Engine reconditioning](/services/marine-engine-reconditioning/melbourne/) ·
-[Repower and replacement](/services/marine-engine-repower/melbourne/) ·
-[Saltwater ingress and hydrolock](/services/saltwater-damage-repair/melbourne/) ·
-[Turbocharger repair](/services/marine-turbo-repair/melbourne/)
+[Engine servicing](/services/marine-engine-service/) ·
+[Engine repair](/services/marine-engine-repair/) ·
+[Cylinder head repair](/services/marine-cylinder-head-repair/) ·
+[Head gasket replacement](/services/marine-head-gasket-replacement/) ·
+[Engine rebuild](/services/marine-engine-rebuild/) ·
+[Engine reconditioning](/services/marine-engine-reconditioning/) ·
+[Repower and replacement](/services/marine-engine-repower/) ·
+[Saltwater ingress and hydrolock](/services/saltwater-damage-repair/) ·
+[Turbocharger repair](/services/marine-turbo-repair/)
 
 **Driveline** —
-[Gearbox service](/services/marine-gearbox-service/melbourne/) ·
-[Sterndrive service](/services/sterndrive-service/melbourne/) ·
-[Shaft seal and stern gland](/services/shaft-seal-stern-gland/melbourne/)
+[Gearbox service](/services/marine-gearbox-service/) ·
+[Sterndrive service](/services/sterndrive-service/) ·
+[Shaft seal and stern gland](/services/shaft-seal-stern-gland/)
 
 **Corrosion and electrical** —
-[Anode replacement](/services/anode-replacement/melbourne/) ·
-[Engine electrical and charging](/services/marine-engine-electrical/melbourne/)
+[Anode replacement](/services/anode-replacement/) ·
+[Engine electrical and charging](/services/marine-engine-electrical/)
 
 **Inspection** —
-[Engine survey and pre-purchase inspection](/services/marine-engine-survey/melbourne/)
+[Engine survey and pre-purchase inspection](/services/marine-engine-survey/)
 
 **Attendance** —
-[Mobile marine mechanic](/services/mobile-marine-mechanic/melbourne/) ·
-[Emergency and on-water breakdown](/services/emergency-marine-breakdown/melbourne/)
+[Mobile marine mechanic](/services/mobile-marine-mechanic/) ·
+[Emergency and on-water breakdown](/services/emergency-marine-breakdown/)
 
 **Seasonal** —
-[Winterisation and layup](/services/winterisation-layup/melbourne/) ·
-[Recommissioning after layup](/services/recommissioning-service/melbourne/)
+[Winterisation and layup](/services/winterisation-layup/) ·
+[Recommissioning after layup](/services/recommissioning-service/)
 
 **By vessel type** —
-[Yacht auxiliary service](/services/yacht-auxiliary-service/melbourne/) ·
-[Slipway and haul-out](/services/slipway-haul-out/melbourne/)
+[Yacht auxiliary service](/services/yacht-auxiliary-service/) ·
+[Slipway and haul-out](/services/slipway-haul-out/)
 
 ## Nearby
 
-[Geelong](/marine-mechanics/geelong/) ·
-[Gippsland Lakes](/marine-mechanics/gippsland-lakes/) ·
-[Hobart](/marine-mechanics/hobart/)
+[Geelong](/) ·
+[Gippsland Lakes](/) ·
+[Hobart](/)
 
 ## Frequently asked questions
 

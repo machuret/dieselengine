@@ -59,7 +59,7 @@ River on Kangaroo Island.
 **Use the older-engine expertise.** If your boat has a mechanically injected
 diesel, Adelaide is a good place to own it. That knowledge is thinning
 nationally and it is still here.
-→ [Marine engine reconditioning](/services/marine-engine-reconditioning/adelaide/)
+→ [Marine engine reconditioning](/services/marine-engine-reconditioning/)
 
 **Check electronic diagnostic coverage for newer engines.** The pool of
 operators with current manufacturer software for the latest electronic engines
@@ -71,7 +71,7 @@ breezes mean engines work harder than a glance at the chart suggests.
 
 **Winter layup is real here.** Not as pronounced as Melbourne, but many Adelaide
 boats sit through winter and pick up the same fuel and impeller problems.
-→ [Winterisation and seasonal layup](/services/winterisation-layup/adelaide/)
+→ [Winterisation and seasonal layup](/services/winterisation-layup/)
 
 **Commercial capability is available.** Operators serving the Spencer Gulf fleet
 apply commercial standards and are worth approaching for major work.
@@ -93,58 +93,58 @@ forms part of your compliance position.
 ## Marine engine services in Adelaide
 
 **Cooling and raw water** —
-[Impeller replacement](/services/impeller-replacement/adelaide/) ·
-[Heat exchanger service](/services/heat-exchanger-service/adelaide/) ·
-[Exhaust elbow replacement](/services/exhaust-elbow-replacement/adelaide/) ·
-[Aftercooler service](/services/aftercooler-service/adelaide/) ·
-[Raw water system repair](/services/raw-water-system-repair/adelaide/) ·
-[Cooling system repair](/services/marine-cooling-system-repair/adelaide/)
+[Impeller replacement](/services/impeller-replacement/) ·
+[Heat exchanger service](/services/heat-exchanger-service/) ·
+[Exhaust elbow replacement](/services/exhaust-elbow-replacement/) ·
+[Aftercooler service](/services/aftercooler-service/) ·
+[Raw water system repair](/services/raw-water-system-repair/) ·
+[Cooling system repair](/services/marine-cooling-system-repair/)
 
 **Fuel** —
-[Fuel polishing and tank cleaning](/services/fuel-polishing/adelaide/) ·
-[Diesel bug treatment](/services/diesel-bug-treatment/adelaide/) ·
-[Injector testing and replacement](/services/marine-injector-service/adelaide/) ·
-[Fuel pump repair](/services/marine-fuel-pump-repair/adelaide/)
+[Fuel polishing and tank cleaning](/services/fuel-polishing/) ·
+[Diesel bug treatment](/services/diesel-bug-treatment/) ·
+[Injector testing and replacement](/services/marine-injector-service/) ·
+[Fuel pump repair](/services/marine-fuel-pump-repair/)
 
 **Engine** —
-[Engine servicing](/services/marine-engine-service/adelaide/) ·
-[Engine repair](/services/marine-engine-repair/adelaide/) ·
-[Cylinder head repair](/services/marine-cylinder-head-repair/adelaide/) ·
-[Head gasket replacement](/services/marine-head-gasket-replacement/adelaide/) ·
-[Engine rebuild](/services/marine-engine-rebuild/adelaide/) ·
-[Engine reconditioning](/services/marine-engine-reconditioning/adelaide/) ·
-[Repower and replacement](/services/marine-engine-repower/adelaide/) ·
-[Saltwater ingress and hydrolock](/services/saltwater-damage-repair/adelaide/) ·
-[Turbocharger repair](/services/marine-turbo-repair/adelaide/)
+[Engine servicing](/services/marine-engine-service/) ·
+[Engine repair](/services/marine-engine-repair/) ·
+[Cylinder head repair](/services/marine-cylinder-head-repair/) ·
+[Head gasket replacement](/services/marine-head-gasket-replacement/) ·
+[Engine rebuild](/services/marine-engine-rebuild/) ·
+[Engine reconditioning](/services/marine-engine-reconditioning/) ·
+[Repower and replacement](/services/marine-engine-repower/) ·
+[Saltwater ingress and hydrolock](/services/saltwater-damage-repair/) ·
+[Turbocharger repair](/services/marine-turbo-repair/)
 
 **Driveline** —
-[Gearbox service](/services/marine-gearbox-service/adelaide/) ·
-[Sterndrive service](/services/sterndrive-service/adelaide/) ·
-[Shaft seal and stern gland](/services/shaft-seal-stern-gland/adelaide/)
+[Gearbox service](/services/marine-gearbox-service/) ·
+[Sterndrive service](/services/sterndrive-service/) ·
+[Shaft seal and stern gland](/services/shaft-seal-stern-gland/)
 
 **Corrosion and electrical** —
-[Anode replacement](/services/anode-replacement/adelaide/) ·
-[Engine electrical and charging](/services/marine-engine-electrical/adelaide/)
+[Anode replacement](/services/anode-replacement/) ·
+[Engine electrical and charging](/services/marine-engine-electrical/)
 
 **Inspection** —
-[Engine survey and pre-purchase inspection](/services/marine-engine-survey/adelaide/)
+[Engine survey and pre-purchase inspection](/services/marine-engine-survey/)
 
 **Attendance** —
-[Mobile marine mechanic](/services/mobile-marine-mechanic/adelaide/) ·
-[Emergency and on-water breakdown](/services/emergency-marine-breakdown/adelaide/)
+[Mobile marine mechanic](/services/mobile-marine-mechanic/) ·
+[Emergency and on-water breakdown](/services/emergency-marine-breakdown/)
 
 **Seasonal** —
-[Winterisation and layup](/services/winterisation-layup/adelaide/) ·
-[Recommissioning after layup](/services/recommissioning-service/adelaide/)
+[Winterisation and layup](/services/winterisation-layup/) ·
+[Recommissioning after layup](/services/recommissioning-service/)
 
 **By vessel type** —
-[Commercial vessel servicing](/services/commercial-vessel-servicing/adelaide/) ·
-[Yacht auxiliary service](/services/yacht-auxiliary-service/adelaide/) ·
-[Slipway and haul-out](/services/slipway-haul-out/adelaide/)
+[Commercial vessel servicing](/services/commercial-vessel-servicing/) ·
+[Yacht auxiliary service](/services/yacht-auxiliary-service/) ·
+[Slipway and haul-out](/services/slipway-haul-out/)
 
 ## Nearby
 
-[Port Lincoln](/marine-mechanics/port-lincoln/) ·
+[Port Lincoln](/) ·
 [Melbourne](/marine-mechanics/melbourne/)
 
 ## Frequently asked questions

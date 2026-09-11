@@ -82,16 +82,16 @@ mistake is starting near the bottom.
 
 ## Find raw water system repair in your city
 
-[Gold Coast](/services/raw-water-system-repair/gold-coast/) ·
-[Sydney](/services/raw-water-system-repair/sydney/) ·
-[Brisbane](/services/raw-water-system-repair/brisbane/) ·
-[Sunshine Coast](/services/raw-water-system-repair/sunshine-coast/) ·
-[Melbourne](/services/raw-water-system-repair/melbourne/) ·
-[Perth](/services/raw-water-system-repair/perth/) ·
-[Whitsundays](/services/raw-water-system-repair/whitsundays/) ·
-[Cairns](/services/raw-water-system-repair/cairns/) ·
-[Port Stephens & Newcastle](/services/raw-water-system-repair/port-stephens/) ·
-[Adelaide](/services/raw-water-system-repair/adelaide/)
+[Gold Coast](/services/raw-water-system-repair/) ·
+[Sydney](/services/raw-water-system-repair/) ·
+[Brisbane](/services/raw-water-system-repair/) ·
+[Sunshine Coast](/services/raw-water-system-repair/) ·
+[Melbourne](/services/raw-water-system-repair/) ·
+[Perth](/services/raw-water-system-repair/) ·
+[Whitsundays](/services/raw-water-system-repair/) ·
+[Cairns](/services/raw-water-system-repair/) ·
+[Port Stephens & Newcastle](/services/raw-water-system-repair/) ·
+[Adelaide](/services/raw-water-system-repair/)
 
 ## Frequently asked questions
 

@@ -94,7 +94,7 @@ gauge, or an infrared thermometer on the thermostat housing.
 Corroded senders and earths cause a disproportionate share of false alarms on
 older boats and anything in tropical salt air.
 
-→ [Marine diesel mechanics in Darwin](/marine-mechanics/darwin/) ·
+→ [Marine diesel mechanics in Darwin](/) ·
 [Marine engine brands](/engine-brands/)
 
 ## Frequently asked questions

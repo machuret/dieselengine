@@ -90,8 +90,8 @@ decided almost entirely by elapsed time.
 Any raw-water-cooled engine with a wet exhaust. Turbocharged engines with
 seawater-cooled aftercoolers add a second route.
 
-→ [Cummins Marine](/engine-brands/cummins-marine/) ·
-[Volvo Penta: saltwater in the engine oil](/engine-brands/volvo-penta/problems/saltwater-in-engine-oil/)
+→ [Cummins Marine](/engine-brands/) ·
+[Volvo Penta: saltwater in the engine oil](/engine-brands/)
 
 ## Frequently asked questions
 

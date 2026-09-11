@@ -62,11 +62,11 @@ possible in a day, and whether they need a tender.
 **Sailing yachts need auxiliary experience.** A small auxiliary that does 30
 hours a year fails from neglect, not wear. The faults are different from a
 powerboat's, and so is the maintenance schedule.
-→ [Yacht auxiliary service](/services/yacht-auxiliary-service/sydney/)
+→ [Yacht auxiliary service](/services/yacht-auxiliary-service/)
 
 **Haul-out is a separate booking.** Sydney's slipways are limited relative to
 the fleet size. Anything below the waterline needs planning.
-→ [Slipway and haul-out engine work](/services/slipway-haul-out/sydney/)
+→ [Slipway and haul-out engine work](/services/slipway-haul-out/)
 
 ## New South Wales rules that affect you
 
@@ -85,57 +85,57 @@ beyond recreational requirements.
 ## Marine engine services in Sydney
 
 **Cooling and raw water** —
-[Impeller replacement](/services/impeller-replacement/sydney/) ·
-[Heat exchanger service](/services/heat-exchanger-service/sydney/) ·
-[Exhaust elbow replacement](/services/exhaust-elbow-replacement/sydney/) ·
-[Aftercooler service](/services/aftercooler-service/sydney/) ·
-[Raw water system repair](/services/raw-water-system-repair/sydney/) ·
-[Cooling system repair](/services/marine-cooling-system-repair/sydney/)
+[Impeller replacement](/services/impeller-replacement/) ·
+[Heat exchanger service](/services/heat-exchanger-service/) ·
+[Exhaust elbow replacement](/services/exhaust-elbow-replacement/) ·
+[Aftercooler service](/services/aftercooler-service/) ·
+[Raw water system repair](/services/raw-water-system-repair/) ·
+[Cooling system repair](/services/marine-cooling-system-repair/)
 
 **Fuel** —
-[Fuel polishing and tank cleaning](/services/fuel-polishing/sydney/) ·
-[Diesel bug treatment](/services/diesel-bug-treatment/sydney/) ·
-[Injector testing and replacement](/services/marine-injector-service/sydney/) ·
-[Fuel pump repair](/services/marine-fuel-pump-repair/sydney/)
+[Fuel polishing and tank cleaning](/services/fuel-polishing/) ·
+[Diesel bug treatment](/services/diesel-bug-treatment/) ·
+[Injector testing and replacement](/services/marine-injector-service/) ·
+[Fuel pump repair](/services/marine-fuel-pump-repair/)
 
 **Engine** —
-[Engine servicing](/services/marine-engine-service/sydney/) ·
-[Engine repair](/services/marine-engine-repair/sydney/) ·
-[Cylinder head repair](/services/marine-cylinder-head-repair/sydney/) ·
-[Head gasket replacement](/services/marine-head-gasket-replacement/sydney/) ·
-[Engine rebuild](/services/marine-engine-rebuild/sydney/) ·
-[Engine reconditioning](/services/marine-engine-reconditioning/sydney/) ·
-[Repower and replacement](/services/marine-engine-repower/sydney/) ·
-[Saltwater ingress and hydrolock](/services/saltwater-damage-repair/sydney/) ·
-[Turbocharger repair](/services/marine-turbo-repair/sydney/)
+[Engine servicing](/services/marine-engine-service/) ·
+[Engine repair](/services/marine-engine-repair/) ·
+[Cylinder head repair](/services/marine-cylinder-head-repair/) ·
+[Head gasket replacement](/services/marine-head-gasket-replacement/) ·
+[Engine rebuild](/services/marine-engine-rebuild/) ·
+[Engine reconditioning](/services/marine-engine-reconditioning/) ·
+[Repower and replacement](/services/marine-engine-repower/) ·
+[Saltwater ingress and hydrolock](/services/saltwater-damage-repair/) ·
+[Turbocharger repair](/services/marine-turbo-repair/)
 
 **Driveline** —
-[Gearbox service](/services/marine-gearbox-service/sydney/) ·
-[Sterndrive service](/services/sterndrive-service/sydney/) ·
-[Shaft seal and stern gland](/services/shaft-seal-stern-gland/sydney/)
+[Gearbox service](/services/marine-gearbox-service/) ·
+[Sterndrive service](/services/sterndrive-service/) ·
+[Shaft seal and stern gland](/services/shaft-seal-stern-gland/)
 
 **Corrosion and electrical** —
-[Anode replacement](/services/anode-replacement/sydney/) ·
-[Engine electrical and charging](/services/marine-engine-electrical/sydney/)
+[Anode replacement](/services/anode-replacement/) ·
+[Engine electrical and charging](/services/marine-engine-electrical/)
 
 **Inspection** —
-[Engine survey and pre-purchase inspection](/services/marine-engine-survey/sydney/)
+[Engine survey and pre-purchase inspection](/services/marine-engine-survey/)
 
 **Attendance** —
-[Mobile marine mechanic](/services/mobile-marine-mechanic/sydney/) ·
-[Emergency and on-water breakdown](/services/emergency-marine-breakdown/sydney/)
+[Mobile marine mechanic](/services/mobile-marine-mechanic/) ·
+[Emergency and on-water breakdown](/services/emergency-marine-breakdown/)
 
 **By vessel type** —
-[Yacht auxiliary service](/services/yacht-auxiliary-service/sydney/) ·
-[Commercial vessel servicing](/services/commercial-vessel-servicing/sydney/) ·
-[Charter fleet servicing](/services/charter-fleet-servicing/sydney/) ·
-[Slipway and haul-out](/services/slipway-haul-out/sydney/)
+[Yacht auxiliary service](/services/yacht-auxiliary-service/) ·
+[Commercial vessel servicing](/services/commercial-vessel-servicing/) ·
+[Charter fleet servicing](/services/charter-fleet-servicing/) ·
+[Slipway and haul-out](/services/slipway-haul-out/)
 
 ## Nearby
 
 [Port Stephens & Newcastle](/marine-mechanics/port-stephens/) ·
-[Wollongong & Shellharbour](/marine-mechanics/wollongong/) ·
-[Batemans Bay & Ulladulla](/marine-mechanics/batemans-bay/)
+[Wollongong & Shellharbour](/) ·
+[Batemans Bay & Ulladulla](/)
 
 ## Frequently asked questions
 

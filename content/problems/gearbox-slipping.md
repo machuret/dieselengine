@@ -80,8 +80,8 @@ prices.
 
 ZF and Twin Disc dominate Australian installations; Hurth on older small craft.
 
-→ [ZF Marine: gearbox slipping](/engine-brands/zf-marine/problems/gearbox-slipping/) ·
-[Twin Disc: gearbox slipping](/engine-brands/twin-disc/problems/gearbox-slipping/)
+→ [ZF Marine: gearbox slipping](/engine-brands/) ·
+[Twin Disc: gearbox slipping](/engine-brands/)
 
 ## Frequently asked questions
 

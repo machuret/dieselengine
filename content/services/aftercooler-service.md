@@ -86,16 +86,16 @@ oil change and inspection to a rebuild.
 
 ## Find aftercooler service in your city
 
-[Gold Coast](/services/aftercooler-service/gold-coast/) ·
-[Sydney](/services/aftercooler-service/sydney/) ·
-[Brisbane](/services/aftercooler-service/brisbane/) ·
-[Sunshine Coast](/services/aftercooler-service/sunshine-coast/) ·
-[Melbourne](/services/aftercooler-service/melbourne/) ·
-[Perth](/services/aftercooler-service/perth/) ·
-[Whitsundays](/services/aftercooler-service/whitsundays/) ·
-[Cairns](/services/aftercooler-service/cairns/) ·
-[Port Stephens & Newcastle](/services/aftercooler-service/port-stephens/) ·
-[Adelaide](/services/aftercooler-service/adelaide/)
+[Gold Coast](/services/aftercooler-service/) ·
+[Sydney](/services/aftercooler-service/) ·
+[Brisbane](/services/aftercooler-service/) ·
+[Sunshine Coast](/services/aftercooler-service/) ·
+[Melbourne](/services/aftercooler-service/) ·
+[Perth](/services/aftercooler-service/) ·
+[Whitsundays](/services/aftercooler-service/) ·
+[Cairns](/services/aftercooler-service/) ·
+[Port Stephens & Newcastle](/services/aftercooler-service/) ·
+[Adelaide](/services/aftercooler-service/)
 
 ## Frequently asked questions
 

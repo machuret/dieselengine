@@ -61,12 +61,12 @@ is the highest-value money you will spend.
 **Hard-run engines need different attention.** Sustained high load means
 aftercoolers, turbos, exhaust systems and oil condition matter more than they
 would on a bay boat.
-→ [Aftercooler service](/services/aftercooler-service/sunshine-coast/) ·
-[Marine turbocharger repair](/services/marine-turbo-repair/sunshine-coast/)
+→ [Aftercooler service](/services/aftercooler-service/) ·
+[Marine turbocharger repair](/services/marine-turbo-repair/)
 
 **Seasonal boats need the opposite.** If yours sits for months, the fuel and
 the impeller are the risks, not wear.
-→ [Fuel polishing and tank cleaning](/services/fuel-polishing/sunshine-coast/)
+→ [Fuel polishing and tank cleaning](/services/fuel-polishing/)
 
 **Noosa river access has constraints.** Depth and bridge access affect where a
 boat can be worked on and hauled. Confirm before committing to a yard.
@@ -88,55 +88,55 @@ obligations well beyond recreational requirements.
 ## Marine engine services in the Sunshine Coast
 
 **Cooling and raw water** —
-[Impeller replacement](/services/impeller-replacement/sunshine-coast/) ·
-[Heat exchanger service](/services/heat-exchanger-service/sunshine-coast/) ·
-[Exhaust elbow replacement](/services/exhaust-elbow-replacement/sunshine-coast/) ·
-[Aftercooler service](/services/aftercooler-service/sunshine-coast/) ·
-[Raw water system repair](/services/raw-water-system-repair/sunshine-coast/) ·
-[Cooling system repair](/services/marine-cooling-system-repair/sunshine-coast/)
+[Impeller replacement](/services/impeller-replacement/) ·
+[Heat exchanger service](/services/heat-exchanger-service/) ·
+[Exhaust elbow replacement](/services/exhaust-elbow-replacement/) ·
+[Aftercooler service](/services/aftercooler-service/) ·
+[Raw water system repair](/services/raw-water-system-repair/) ·
+[Cooling system repair](/services/marine-cooling-system-repair/)
 
 **Fuel** —
-[Fuel polishing and tank cleaning](/services/fuel-polishing/sunshine-coast/) ·
-[Diesel bug treatment](/services/diesel-bug-treatment/sunshine-coast/) ·
-[Injector testing and replacement](/services/marine-injector-service/sunshine-coast/) ·
-[Fuel pump repair](/services/marine-fuel-pump-repair/sunshine-coast/)
+[Fuel polishing and tank cleaning](/services/fuel-polishing/) ·
+[Diesel bug treatment](/services/diesel-bug-treatment/) ·
+[Injector testing and replacement](/services/marine-injector-service/) ·
+[Fuel pump repair](/services/marine-fuel-pump-repair/)
 
 **Engine** —
-[Engine servicing](/services/marine-engine-service/sunshine-coast/) ·
-[Engine repair](/services/marine-engine-repair/sunshine-coast/) ·
-[Cylinder head repair](/services/marine-cylinder-head-repair/sunshine-coast/) ·
-[Head gasket replacement](/services/marine-head-gasket-replacement/sunshine-coast/) ·
-[Engine rebuild](/services/marine-engine-rebuild/sunshine-coast/) ·
-[Engine reconditioning](/services/marine-engine-reconditioning/sunshine-coast/) ·
-[Repower and replacement](/services/marine-engine-repower/sunshine-coast/) ·
-[Saltwater ingress and hydrolock](/services/saltwater-damage-repair/sunshine-coast/) ·
-[Turbocharger repair](/services/marine-turbo-repair/sunshine-coast/)
+[Engine servicing](/services/marine-engine-service/) ·
+[Engine repair](/services/marine-engine-repair/) ·
+[Cylinder head repair](/services/marine-cylinder-head-repair/) ·
+[Head gasket replacement](/services/marine-head-gasket-replacement/) ·
+[Engine rebuild](/services/marine-engine-rebuild/) ·
+[Engine reconditioning](/services/marine-engine-reconditioning/) ·
+[Repower and replacement](/services/marine-engine-repower/) ·
+[Saltwater ingress and hydrolock](/services/saltwater-damage-repair/) ·
+[Turbocharger repair](/services/marine-turbo-repair/)
 
 **Driveline** —
-[Gearbox service](/services/marine-gearbox-service/sunshine-coast/) ·
-[Sterndrive service](/services/sterndrive-service/sunshine-coast/) ·
-[Shaft seal and stern gland](/services/shaft-seal-stern-gland/sunshine-coast/)
+[Gearbox service](/services/marine-gearbox-service/) ·
+[Sterndrive service](/services/sterndrive-service/) ·
+[Shaft seal and stern gland](/services/shaft-seal-stern-gland/)
 
 **Corrosion and electrical** —
-[Anode replacement](/services/anode-replacement/sunshine-coast/) ·
-[Engine electrical and charging](/services/marine-engine-electrical/sunshine-coast/)
+[Anode replacement](/services/anode-replacement/) ·
+[Engine electrical and charging](/services/marine-engine-electrical/)
 
 **Inspection** —
-[Engine survey and pre-purchase inspection](/services/marine-engine-survey/sunshine-coast/)
+[Engine survey and pre-purchase inspection](/services/marine-engine-survey/)
 
 **Attendance** —
-[Mobile marine mechanic](/services/mobile-marine-mechanic/sunshine-coast/) ·
-[Emergency and on-water breakdown](/services/emergency-marine-breakdown/sunshine-coast/)
+[Mobile marine mechanic](/services/mobile-marine-mechanic/) ·
+[Emergency and on-water breakdown](/services/emergency-marine-breakdown/)
 
 **By vessel type** —
-[Charter fleet servicing](/services/charter-fleet-servicing/sunshine-coast/) ·
-[Commercial vessel servicing](/services/commercial-vessel-servicing/sunshine-coast/)
+[Charter fleet servicing](/services/charter-fleet-servicing/) ·
+[Commercial vessel servicing](/services/commercial-vessel-servicing/)
 
 ## Nearby
 
 [Brisbane](/marine-mechanics/brisbane/) ·
 [Gold Coast](/marine-mechanics/gold-coast/) ·
-[Hervey Bay & Bundaberg](/marine-mechanics/hervey-bay/)
+[Hervey Bay & Bundaberg](/)
 
 ## Frequently asked questions
 
@@ -148,7 +148,7 @@ pre-trip inspection is cheaper than a tow.
 **My boat sits for months between trips — what fails?**
 Fuel first, then the impeller and the batteries. Microbial growth and water
 accumulate in a part-full tank and block filters on the first hard run.
-→ [Diesel bug treatment](/services/diesel-bug-treatment/sunshine-coast/)
+→ [Diesel bug treatment](/services/diesel-bug-treatment/)
 
 **Are hard-run game boats harder on engines?**
 They wear differently, not necessarily worse. Regular use at proper load is

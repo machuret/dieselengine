@@ -80,20 +80,20 @@ prevention against expensive failure.
 
 {{PRICE_TABLE:sterndrive-service}}
 
-→ [Sterndrive service cost](/costs/sterndrive-service/)
+→ [Sterndrive service cost](/costs/)
 
 ## Find sterndrive service in your city
 
-[Gold Coast](/services/sterndrive-service/gold-coast/) ·
-[Sydney](/services/sterndrive-service/sydney/) ·
-[Brisbane](/services/sterndrive-service/brisbane/) ·
-[Sunshine Coast](/services/sterndrive-service/sunshine-coast/) ·
-[Melbourne](/services/sterndrive-service/melbourne/) ·
-[Perth](/services/sterndrive-service/perth/) ·
-[Whitsundays](/services/sterndrive-service/whitsundays/) ·
-[Cairns](/services/sterndrive-service/cairns/) ·
-[Port Stephens & Newcastle](/services/sterndrive-service/port-stephens/) ·
-[Adelaide](/services/sterndrive-service/adelaide/)
+[Gold Coast](/services/sterndrive-service/) ·
+[Sydney](/services/sterndrive-service/) ·
+[Brisbane](/services/sterndrive-service/) ·
+[Sunshine Coast](/services/sterndrive-service/) ·
+[Melbourne](/services/sterndrive-service/) ·
+[Perth](/services/sterndrive-service/) ·
+[Whitsundays](/services/sterndrive-service/) ·
+[Cairns](/services/sterndrive-service/) ·
+[Port Stephens & Newcastle](/services/sterndrive-service/) ·
+[Adelaide](/services/sterndrive-service/)
 
 ## Frequently asked questions
 

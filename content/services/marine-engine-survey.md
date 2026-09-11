@@ -87,20 +87,20 @@ Trivial against the cost of the engine problems it finds.
 
 {{PRICE_TABLE:marine-engine-survey}}
 
-→ [Marine engine survey cost](/costs/marine-engine-survey/)
+→ [Marine engine survey cost](/costs/)
 
 ## Find an engine survey in your city
 
-[Gold Coast](/services/marine-engine-survey/gold-coast/) ·
-[Sydney](/services/marine-engine-survey/sydney/) ·
-[Brisbane](/services/marine-engine-survey/brisbane/) ·
-[Sunshine Coast](/services/marine-engine-survey/sunshine-coast/) ·
-[Melbourne](/services/marine-engine-survey/melbourne/) ·
-[Perth](/services/marine-engine-survey/perth/) ·
-[Whitsundays](/services/marine-engine-survey/whitsundays/) ·
-[Cairns](/services/marine-engine-survey/cairns/) ·
-[Port Stephens & Newcastle](/services/marine-engine-survey/port-stephens/) ·
-[Adelaide](/services/marine-engine-survey/adelaide/)
+[Gold Coast](/services/marine-engine-survey/) ·
+[Sydney](/services/marine-engine-survey/) ·
+[Brisbane](/services/marine-engine-survey/) ·
+[Sunshine Coast](/services/marine-engine-survey/) ·
+[Melbourne](/services/marine-engine-survey/) ·
+[Perth](/services/marine-engine-survey/) ·
+[Whitsundays](/services/marine-engine-survey/) ·
+[Cairns](/services/marine-engine-survey/) ·
+[Port Stephens & Newcastle](/services/marine-engine-survey/) ·
+[Adelaide](/services/marine-engine-survey/)
 
 ## Frequently asked questions
 

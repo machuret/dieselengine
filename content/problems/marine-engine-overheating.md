@@ -89,9 +89,9 @@ Exhaust elbow corrosion is a leading cause on older Volvo Penta and Yanmar
 installations. Aftercooler and heat exchanger fouling dominate on the larger
 Cummins and Caterpillar engines in charter and commercial use.
 
-→ [Volvo Penta: marine engine overheating](/engine-brands/volvo-penta/problems/marine-engine-overheating/) ·
-[Cummins Marine](/engine-brands/cummins-marine/) ·
-[Perkins and Sabre](/engine-brands/perkins-sabre/)
+→ [Volvo Penta: marine engine overheating](/engine-brands/) ·
+[Cummins Marine](/engine-brands/) ·
+[Perkins and Sabre](/engine-brands/)
 
 ## Frequently asked questions
 

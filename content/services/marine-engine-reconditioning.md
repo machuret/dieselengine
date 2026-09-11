@@ -85,20 +85,20 @@ goes in:
 
 {{PRICE_TABLE:marine-engine-reconditioning}}
 
-→ [Marine engine reconditioning cost](/costs/marine-engine-reconditioning/)
+→ [Marine engine reconditioning cost](/costs/)
 
 ## Find engine reconditioning in your city
 
-[Gold Coast](/services/marine-engine-reconditioning/gold-coast/) ·
-[Sydney](/services/marine-engine-reconditioning/sydney/) ·
-[Brisbane](/services/marine-engine-reconditioning/brisbane/) ·
-[Sunshine Coast](/services/marine-engine-reconditioning/sunshine-coast/) ·
-[Melbourne](/services/marine-engine-reconditioning/melbourne/) ·
-[Perth](/services/marine-engine-reconditioning/perth/) ·
-[Whitsundays](/services/marine-engine-reconditioning/whitsundays/) ·
-[Cairns](/services/marine-engine-reconditioning/cairns/) ·
-[Port Stephens & Newcastle](/services/marine-engine-reconditioning/port-stephens/) ·
-[Adelaide](/services/marine-engine-reconditioning/adelaide/)
+[Gold Coast](/services/marine-engine-reconditioning/) ·
+[Sydney](/services/marine-engine-reconditioning/) ·
+[Brisbane](/services/marine-engine-reconditioning/) ·
+[Sunshine Coast](/services/marine-engine-reconditioning/) ·
+[Melbourne](/services/marine-engine-reconditioning/) ·
+[Perth](/services/marine-engine-reconditioning/) ·
+[Whitsundays](/services/marine-engine-reconditioning/) ·
+[Cairns](/services/marine-engine-reconditioning/) ·
+[Port Stephens & Newcastle](/services/marine-engine-reconditioning/) ·
+[Adelaide](/services/marine-engine-reconditioning/)
 
 ## Frequently asked questions
 

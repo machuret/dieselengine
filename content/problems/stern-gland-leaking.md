@@ -97,7 +97,7 @@ Shaft-drive inboards of every brand. Saildrives use a different arrangement with
 its own diaphragm interval.
 
 → [Yacht auxiliary engine service](/services/yacht-auxiliary-service/) ·
-[Yanmar and Volvo saildrives](/engine-brands/yanmar-saildrive/)
+[Yanmar and Volvo saildrives](/engine-brands/)
 
 ## Frequently asked questions
 

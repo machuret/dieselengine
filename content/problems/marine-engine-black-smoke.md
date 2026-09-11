@@ -79,7 +79,7 @@ rather than replaced on suspicion.
 
 Turbocharged engines add the aftercooler and turbo as air-side causes.
 
-→ [Cummins Marine: black smoke](/engine-brands/cummins-marine/problems/marine-engine-black-smoke/) ·
+→ [Cummins Marine: black smoke](/engine-brands/) ·
 [Marine engine brands](/engine-brands/)
 
 ## Frequently asked questions

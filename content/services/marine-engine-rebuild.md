@@ -89,20 +89,20 @@ the shaft, and run in properly.
 
 {{PRICE_TABLE:marine-engine-rebuild}}
 
-→ [Marine engine rebuild cost](/costs/marine-engine-rebuild/)
+→ [Marine engine rebuild cost](/costs/)
 
 ## Find an engine rebuild in your city
 
-[Gold Coast](/services/marine-engine-rebuild/gold-coast/) ·
-[Sydney](/services/marine-engine-rebuild/sydney/) ·
-[Brisbane](/services/marine-engine-rebuild/brisbane/) ·
-[Sunshine Coast](/services/marine-engine-rebuild/sunshine-coast/) ·
-[Melbourne](/services/marine-engine-rebuild/melbourne/) ·
-[Perth](/services/marine-engine-rebuild/perth/) ·
-[Whitsundays](/services/marine-engine-rebuild/whitsundays/) ·
-[Cairns](/services/marine-engine-rebuild/cairns/) ·
-[Port Stephens & Newcastle](/services/marine-engine-rebuild/port-stephens/) ·
-[Adelaide](/services/marine-engine-rebuild/adelaide/)
+[Gold Coast](/services/marine-engine-rebuild/) ·
+[Sydney](/services/marine-engine-rebuild/) ·
+[Brisbane](/services/marine-engine-rebuild/) ·
+[Sunshine Coast](/services/marine-engine-rebuild/) ·
+[Melbourne](/services/marine-engine-rebuild/) ·
+[Perth](/services/marine-engine-rebuild/) ·
+[Whitsundays](/services/marine-engine-rebuild/) ·
+[Cairns](/services/marine-engine-rebuild/) ·
+[Port Stephens & Newcastle](/services/marine-engine-rebuild/) ·
+[Adelaide](/services/marine-engine-rebuild/)
 
 ## Frequently asked questions
 

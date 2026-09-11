@@ -85,20 +85,20 @@ corroded exhaust elbow, fails again.
 
 {{PRICE_TABLE:marine-cylinder-head-repair}}
 
-→ [Marine cylinder head repair cost](/costs/marine-cylinder-head-repair/)
+→ [Marine cylinder head repair cost](/costs/)
 
 ## Find cylinder head repair in your city
 
-[Gold Coast](/services/marine-cylinder-head-repair/gold-coast/) ·
-[Sydney](/services/marine-cylinder-head-repair/sydney/) ·
-[Brisbane](/services/marine-cylinder-head-repair/brisbane/) ·
-[Sunshine Coast](/services/marine-cylinder-head-repair/sunshine-coast/) ·
-[Melbourne](/services/marine-cylinder-head-repair/melbourne/) ·
-[Perth](/services/marine-cylinder-head-repair/perth/) ·
-[Whitsundays](/services/marine-cylinder-head-repair/whitsundays/) ·
-[Cairns](/services/marine-cylinder-head-repair/cairns/) ·
-[Port Stephens & Newcastle](/services/marine-cylinder-head-repair/port-stephens/) ·
-[Adelaide](/services/marine-cylinder-head-repair/adelaide/)
+[Gold Coast](/services/marine-cylinder-head-repair/) ·
+[Sydney](/services/marine-cylinder-head-repair/) ·
+[Brisbane](/services/marine-cylinder-head-repair/) ·
+[Sunshine Coast](/services/marine-cylinder-head-repair/) ·
+[Melbourne](/services/marine-cylinder-head-repair/) ·
+[Perth](/services/marine-cylinder-head-repair/) ·
+[Whitsundays](/services/marine-cylinder-head-repair/) ·
+[Cairns](/services/marine-cylinder-head-repair/) ·
+[Port Stephens & Newcastle](/services/marine-cylinder-head-repair/) ·
+[Adelaide](/services/marine-cylinder-head-repair/)
 
 ## Frequently asked questions
 

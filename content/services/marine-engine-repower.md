@@ -84,20 +84,20 @@ A quote for an engine is not a quote for a repower.
 
 {{PRICE_TABLE:marine-engine-repower}}
 
-→ [Marine repower cost](/costs/marine-engine-repower/)
+→ [Marine repower cost](/costs/)
 
 ## Find a marine repower in your city
 
-[Gold Coast](/services/marine-engine-repower/gold-coast/) ·
-[Sydney](/services/marine-engine-repower/sydney/) ·
-[Brisbane](/services/marine-engine-repower/brisbane/) ·
-[Sunshine Coast](/services/marine-engine-repower/sunshine-coast/) ·
-[Melbourne](/services/marine-engine-repower/melbourne/) ·
-[Perth](/services/marine-engine-repower/perth/) ·
-[Whitsundays](/services/marine-engine-repower/whitsundays/) ·
-[Cairns](/services/marine-engine-repower/cairns/) ·
-[Port Stephens & Newcastle](/services/marine-engine-repower/port-stephens/) ·
-[Adelaide](/services/marine-engine-repower/adelaide/)
+[Gold Coast](/services/marine-engine-repower/) ·
+[Sydney](/services/marine-engine-repower/) ·
+[Brisbane](/services/marine-engine-repower/) ·
+[Sunshine Coast](/services/marine-engine-repower/) ·
+[Melbourne](/services/marine-engine-repower/) ·
+[Perth](/services/marine-engine-repower/) ·
+[Whitsundays](/services/marine-engine-repower/) ·
+[Cairns](/services/marine-engine-repower/) ·
+[Port Stephens & Newcastle](/services/marine-engine-repower/) ·
+[Adelaide](/services/marine-engine-repower/)
 
 ## Frequently asked questions
 

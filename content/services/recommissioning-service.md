@@ -82,13 +82,13 @@ the tank offshore.
 
 {{PRICE_TABLE:recommissioning-service}}
 
-→ [Recommissioning cost](/costs/recommissioning-service/)
+→ [Recommissioning cost](/costs/)
 
 ## Find recommissioning in your city
 
-[Melbourne](/services/recommissioning-service/melbourne/) ·
-[Perth](/services/recommissioning-service/perth/) ·
-[Adelaide](/services/recommissioning-service/adelaide/)
+[Melbourne](/services/recommissioning-service/) ·
+[Perth](/services/recommissioning-service/) ·
+[Adelaide](/services/recommissioning-service/)
 
 ## Frequently asked questions
 

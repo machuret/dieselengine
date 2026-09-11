@@ -85,20 +85,20 @@ prices.
 
 {{PRICE_TABLE:marine-gearbox-service}}
 
-→ [Marine gearbox service cost](/costs/marine-gearbox-service/)
+→ [Marine gearbox service cost](/costs/)
 
 ## Find marine gearbox service in your city
 
-[Gold Coast](/services/marine-gearbox-service/gold-coast/) ·
-[Sydney](/services/marine-gearbox-service/sydney/) ·
-[Brisbane](/services/marine-gearbox-service/brisbane/) ·
-[Sunshine Coast](/services/marine-gearbox-service/sunshine-coast/) ·
-[Melbourne](/services/marine-gearbox-service/melbourne/) ·
-[Perth](/services/marine-gearbox-service/perth/) ·
-[Whitsundays](/services/marine-gearbox-service/whitsundays/) ·
-[Cairns](/services/marine-gearbox-service/cairns/) ·
-[Port Stephens & Newcastle](/services/marine-gearbox-service/port-stephens/) ·
-[Adelaide](/services/marine-gearbox-service/adelaide/)
+[Gold Coast](/services/marine-gearbox-service/) ·
+[Sydney](/services/marine-gearbox-service/) ·
+[Brisbane](/services/marine-gearbox-service/) ·
+[Sunshine Coast](/services/marine-gearbox-service/) ·
+[Melbourne](/services/marine-gearbox-service/) ·
+[Perth](/services/marine-gearbox-service/) ·
+[Whitsundays](/services/marine-gearbox-service/) ·
+[Cairns](/services/marine-gearbox-service/) ·
+[Port Stephens & Newcastle](/services/marine-gearbox-service/) ·
+[Adelaide](/services/marine-gearbox-service/)
 
 ## Frequently asked questions
 

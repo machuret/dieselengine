@@ -94,17 +94,17 @@ require.
 
 {{PRICE_TABLE:commercial-vessel-servicing}}
 
-→ [Commercial vessel servicing cost](/costs/commercial-vessel-servicing/)
+→ [Commercial vessel servicing cost](/costs/)
 
 ## Find commercial vessel servicing in your city
 
-[Sydney](/services/commercial-vessel-servicing/sydney/) ·
-[Brisbane](/services/commercial-vessel-servicing/brisbane/) ·
-[Perth](/services/commercial-vessel-servicing/perth/) ·
-[Whitsundays](/services/commercial-vessel-servicing/whitsundays/) ·
-[Cairns](/services/commercial-vessel-servicing/cairns/) ·
-[Port Stephens & Newcastle](/services/commercial-vessel-servicing/port-stephens/) ·
-[Adelaide](/services/commercial-vessel-servicing/adelaide/)
+[Sydney](/services/commercial-vessel-servicing/) ·
+[Brisbane](/services/commercial-vessel-servicing/) ·
+[Perth](/services/commercial-vessel-servicing/) ·
+[Whitsundays](/services/commercial-vessel-servicing/) ·
+[Cairns](/services/commercial-vessel-servicing/) ·
+[Port Stephens & Newcastle](/services/commercial-vessel-servicing/) ·
+[Adelaide](/services/commercial-vessel-servicing/)
 
 ## Frequently asked questions
 

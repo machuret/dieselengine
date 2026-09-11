@@ -89,16 +89,16 @@ on schedule rather than run to failure, and that is not overservicing.
 
 ## Find a marine diesel mechanic in your city
 
-[Gold Coast](/services/marine-diesel-mechanic/gold-coast/) ·
-[Sydney](/services/marine-diesel-mechanic/sydney/) ·
-[Brisbane](/services/marine-diesel-mechanic/brisbane/) ·
-[Sunshine Coast](/services/marine-diesel-mechanic/sunshine-coast/) ·
-[Melbourne](/services/marine-diesel-mechanic/melbourne/) ·
-[Perth](/services/marine-diesel-mechanic/perth/) ·
-[Whitsundays](/services/marine-diesel-mechanic/whitsundays/) ·
-[Cairns](/services/marine-diesel-mechanic/cairns/) ·
-[Port Stephens & Newcastle](/services/marine-diesel-mechanic/port-stephens/) ·
-[Adelaide](/services/marine-diesel-mechanic/adelaide/)
+[Gold Coast](/services/marine-diesel-mechanic/) ·
+[Sydney](/services/marine-diesel-mechanic/) ·
+[Brisbane](/services/marine-diesel-mechanic/) ·
+[Sunshine Coast](/services/marine-diesel-mechanic/) ·
+[Melbourne](/services/marine-diesel-mechanic/) ·
+[Perth](/services/marine-diesel-mechanic/) ·
+[Whitsundays](/services/marine-diesel-mechanic/) ·
+[Cairns](/services/marine-diesel-mechanic/) ·
+[Port Stephens & Newcastle](/services/marine-diesel-mechanic/) ·
+[Adelaide](/services/marine-diesel-mechanic/)
 
 ## Frequently asked questions
 

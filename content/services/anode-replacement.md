@@ -84,20 +84,20 @@ a haul-out.
 
 {{PRICE_TABLE:anode-replacement}}
 
-→ [Anode replacement cost](/costs/anode-replacement/)
+→ [Anode replacement cost](/costs/)
 
 ## Find anode replacement in your city
 
-[Gold Coast](/services/anode-replacement/gold-coast/) ·
-[Sydney](/services/anode-replacement/sydney/) ·
-[Brisbane](/services/anode-replacement/brisbane/) ·
-[Sunshine Coast](/services/anode-replacement/sunshine-coast/) ·
-[Melbourne](/services/anode-replacement/melbourne/) ·
-[Perth](/services/anode-replacement/perth/) ·
-[Whitsundays](/services/anode-replacement/whitsundays/) ·
-[Cairns](/services/anode-replacement/cairns/) ·
-[Port Stephens & Newcastle](/services/anode-replacement/port-stephens/) ·
-[Adelaide](/services/anode-replacement/adelaide/)
+[Gold Coast](/services/anode-replacement/) ·
+[Sydney](/services/anode-replacement/) ·
+[Brisbane](/services/anode-replacement/) ·
+[Sunshine Coast](/services/anode-replacement/) ·
+[Melbourne](/services/anode-replacement/) ·
+[Perth](/services/anode-replacement/) ·
+[Whitsundays](/services/anode-replacement/) ·
+[Cairns](/services/anode-replacement/) ·
+[Port Stephens & Newcastle](/services/anode-replacement/) ·
+[Adelaide](/services/anode-replacement/)
 
 ## Frequently asked questions
 

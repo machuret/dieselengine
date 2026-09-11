@@ -86,20 +86,20 @@ addressing the tank means replacing it again.
 
 {{PRICE_TABLE:marine-fuel-pump-repair}}
 
-→ [Marine fuel pump repair cost](/costs/marine-fuel-pump-repair/)
+→ [Marine fuel pump repair cost](/costs/)
 
 ## Find fuel pump repair in your city
 
-[Gold Coast](/services/marine-fuel-pump-repair/gold-coast/) ·
-[Sydney](/services/marine-fuel-pump-repair/sydney/) ·
-[Brisbane](/services/marine-fuel-pump-repair/brisbane/) ·
-[Sunshine Coast](/services/marine-fuel-pump-repair/sunshine-coast/) ·
-[Melbourne](/services/marine-fuel-pump-repair/melbourne/) ·
-[Perth](/services/marine-fuel-pump-repair/perth/) ·
-[Whitsundays](/services/marine-fuel-pump-repair/whitsundays/) ·
-[Cairns](/services/marine-fuel-pump-repair/cairns/) ·
-[Port Stephens & Newcastle](/services/marine-fuel-pump-repair/port-stephens/) ·
-[Adelaide](/services/marine-fuel-pump-repair/adelaide/)
+[Gold Coast](/services/marine-fuel-pump-repair/) ·
+[Sydney](/services/marine-fuel-pump-repair/) ·
+[Brisbane](/services/marine-fuel-pump-repair/) ·
+[Sunshine Coast](/services/marine-fuel-pump-repair/) ·
+[Melbourne](/services/marine-fuel-pump-repair/) ·
+[Perth](/services/marine-fuel-pump-repair/) ·
+[Whitsundays](/services/marine-fuel-pump-repair/) ·
+[Cairns](/services/marine-fuel-pump-repair/) ·
+[Port Stephens & Newcastle](/services/marine-fuel-pump-repair/) ·
+[Adelaide](/services/marine-fuel-pump-repair/)
 
 ## Frequently asked questions
 

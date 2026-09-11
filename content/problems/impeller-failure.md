@@ -82,7 +82,7 @@ one means the pump housing itself is worn.
 
 {{PRICE_TABLE:impeller-failure}}
 
-→ [Impeller replacement cost](/costs/impeller-replacement/)
+→ [Impeller replacement cost](/costs/)
 
 ## Common on these engines
 
@@ -90,9 +90,9 @@ Every raw-water-cooled marine diesel. It shows up soonest on engines that sit �
 yacht auxiliaries and seasonal boats, where the impeller takes a set rather than
 wearing out.
 
-→ [Yanmar: impeller failure](/engine-brands/yanmar/problems/impeller-failure/) ·
-[Beta Marine: impeller failure](/engine-brands/beta-marine/problems/impeller-failure/) ·
-[Nanni: impeller failure](/engine-brands/nanni/problems/impeller-failure/)
+→ [Yanmar: impeller failure](/engine-brands/) ·
+[Beta Marine: impeller failure](/engine-brands/) ·
+[Nanni: impeller failure](/engine-brands/)
 
 ## Frequently asked questions
 

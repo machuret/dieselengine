@@ -20,8 +20,10 @@ function walk(dir, ext = '.md') {
   });
 }
 
+const bodies = new Map();
 const pages = walk('content').map((file) => {
   const { data, body } = parseFrontMatter(readFileSync(file, 'utf8'));
+  bodies.set(file, body);
   return toPage(data, body, file);
 });
 
@@ -34,6 +36,33 @@ for (const p of pages) {
 for (const p of pages) {
   if (p.parent !== '/' && !seen.has(p.parent)) {
     errors.push(`${p.file}: parent ${p.parent} does not exist yet`);
+  }
+}
+
+/**
+ * Every internal link in a markdown BODY must resolve to a page that exists.
+ *
+ * This check was missing, and it cost 795 dead links in production — 58% of
+ * every internal link on the site. The front-matter check validated `parent`
+ * and the sweep below validated .astro templates, so both ends were covered
+ * and the middle, where nearly all the linking actually happens, was not.
+ *
+ * Links were being written against the *planned* URL structure rather than the
+ * built one: /services/impeller-replacement/adelaide/ reads perfectly well in a
+ * draft and 404s until that page is generated. Nothing caught the difference.
+ */
+const known = new Set([...seen.keys(), ...STATIC_ROUTES, ...GENERATED]);
+for (const [file, body] of bodies) {
+  const bad = [];
+  for (const [, href] of body.matchAll(/\]\((\/[^)#?\s]*)\)/g)) {
+    if (!known.has(href)) bad.push(href);
+  }
+  if (bad.length) {
+    const shown = [...new Set(bad)].slice(0, 3).join(', ');
+    errors.push(
+      `${file}: ${bad.length} link(s) to pages that do not exist — ${shown}` +
+        (bad.length > 3 ? ` +${bad.length - 3} more` : '')
+    );
   }
 }
 

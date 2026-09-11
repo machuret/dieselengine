@@ -89,20 +89,20 @@ Access is the dominant variable on a boat.
 
 {{PRICE_TABLE:marine-head-gasket-replacement}}
 
-→ [Marine head gasket replacement cost](/costs/marine-head-gasket-replacement/)
+→ [Marine head gasket replacement cost](/costs/)
 
 ## Find head gasket replacement in your city
 
-[Gold Coast](/services/marine-head-gasket-replacement/gold-coast/) ·
-[Sydney](/services/marine-head-gasket-replacement/sydney/) ·
-[Brisbane](/services/marine-head-gasket-replacement/brisbane/) ·
-[Sunshine Coast](/services/marine-head-gasket-replacement/sunshine-coast/) ·
-[Melbourne](/services/marine-head-gasket-replacement/melbourne/) ·
-[Perth](/services/marine-head-gasket-replacement/perth/) ·
-[Whitsundays](/services/marine-head-gasket-replacement/whitsundays/) ·
-[Cairns](/services/marine-head-gasket-replacement/cairns/) ·
-[Port Stephens & Newcastle](/services/marine-head-gasket-replacement/port-stephens/) ·
-[Adelaide](/services/marine-head-gasket-replacement/adelaide/)
+[Gold Coast](/services/marine-head-gasket-replacement/) ·
+[Sydney](/services/marine-head-gasket-replacement/) ·
+[Brisbane](/services/marine-head-gasket-replacement/) ·
+[Sunshine Coast](/services/marine-head-gasket-replacement/) ·
+[Melbourne](/services/marine-head-gasket-replacement/) ·
+[Perth](/services/marine-head-gasket-replacement/) ·
+[Whitsundays](/services/marine-head-gasket-replacement/) ·
+[Cairns](/services/marine-head-gasket-replacement/) ·
+[Port Stephens & Newcastle](/services/marine-head-gasket-replacement/) ·
+[Adelaide](/services/marine-head-gasket-replacement/)
 
 ## Frequently asked questions
 

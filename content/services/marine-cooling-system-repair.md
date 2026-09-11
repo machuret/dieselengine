@@ -80,16 +80,16 @@ both should happen before anyone quotes to remove a head.
 
 ## Find cooling system repair in your city
 
-[Gold Coast](/services/marine-cooling-system-repair/gold-coast/) ·
-[Sydney](/services/marine-cooling-system-repair/sydney/) ·
-[Brisbane](/services/marine-cooling-system-repair/brisbane/) ·
-[Sunshine Coast](/services/marine-cooling-system-repair/sunshine-coast/) ·
-[Melbourne](/services/marine-cooling-system-repair/melbourne/) ·
-[Perth](/services/marine-cooling-system-repair/perth/) ·
-[Whitsundays](/services/marine-cooling-system-repair/whitsundays/) ·
-[Cairns](/services/marine-cooling-system-repair/cairns/) ·
-[Port Stephens & Newcastle](/services/marine-cooling-system-repair/port-stephens/) ·
-[Adelaide](/services/marine-cooling-system-repair/adelaide/)
+[Gold Coast](/services/marine-cooling-system-repair/) ·
+[Sydney](/services/marine-cooling-system-repair/) ·
+[Brisbane](/services/marine-cooling-system-repair/) ·
+[Sunshine Coast](/services/marine-cooling-system-repair/) ·
+[Melbourne](/services/marine-cooling-system-repair/) ·
+[Perth](/services/marine-cooling-system-repair/) ·
+[Whitsundays](/services/marine-cooling-system-repair/) ·
+[Cairns](/services/marine-cooling-system-repair/) ·
+[Port Stephens & Newcastle](/services/marine-cooling-system-repair/) ·
+[Adelaide](/services/marine-cooling-system-repair/)
 
 ## Frequently asked questions
 

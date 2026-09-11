@@ -88,7 +88,7 @@ Modest per sample — one of the cheapest diagnostics available on a marine engi
 
 ## Find oil analysis in your city
 
-[Whitsundays](/services/marine-engine-oil-analysis/whitsundays/)
+[Whitsundays](/services/marine-engine-oil-analysis/)
 
 ## Frequently asked questions
 

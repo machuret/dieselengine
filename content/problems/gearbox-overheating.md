@@ -73,8 +73,8 @@ promptly, because it destroys bearings.
 ZF and Twin Disc boxes in commercial and charter service, where sustained high
 load leaves no thermal margin for a partly blocked cooler.
 
-→ [ZF Marine: gearbox overheating](/engine-brands/zf-marine/problems/gearbox-overheating/) ·
-[Twin Disc: gearbox overheating](/engine-brands/twin-disc/problems/gearbox-overheating/)
+→ [ZF Marine: gearbox overheating](/engine-brands/) ·
+[Twin Disc: gearbox overheating](/engine-brands/)
 
 ## Frequently asked questions
 

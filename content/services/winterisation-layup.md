@@ -81,13 +81,13 @@ recommissioning before the first trip, not on it.
 
 {{PRICE_TABLE:winterisation-layup}}
 
-→ [Winterisation and layup cost](/costs/winterisation-layup/)
+→ [Winterisation and layup cost](/costs/)
 
 ## Find winterisation and layup in your city
 
-[Melbourne](/services/winterisation-layup/melbourne/) ·
-[Perth](/services/winterisation-layup/perth/) ·
-[Adelaide](/services/winterisation-layup/adelaide/)
+[Melbourne](/services/winterisation-layup/) ·
+[Perth](/services/winterisation-layup/) ·
+[Adelaide](/services/winterisation-layup/)
 
 ## Frequently asked questions
 

@@ -84,8 +84,8 @@ white smoke means call now rather than after another top-up.
 Heat exchanger tube perforation is a normal end-of-life mode on any engine with
 years of seawater through it, and arrives sooner in warm tropical water.
 
-→ [Perkins and Sabre: coolant loss](/engine-brands/perkins-sabre/problems/coolant-loss-marine/) ·
-[John Deere Marine: coolant loss](/engine-brands/john-deere-marine/problems/coolant-loss-marine/)
+→ [Perkins and Sabre: coolant loss](/engine-brands/) ·
+[John Deere Marine: coolant loss](/engine-brands/)
 
 ## Frequently asked questions
 

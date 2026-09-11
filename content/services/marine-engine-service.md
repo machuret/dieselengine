@@ -90,20 +90,20 @@ Driven by engine size, service level and access.
 
 {{PRICE_TABLE:marine-engine-service}}
 
-→ [Marine engine service cost](/costs/marine-engine-service/)
+→ [Marine engine service cost](/costs/)
 
 ## Find marine engine servicing in your city
 
-[Gold Coast](/services/marine-engine-service/gold-coast/) ·
-[Sydney](/services/marine-engine-service/sydney/) ·
-[Brisbane](/services/marine-engine-service/brisbane/) ·
-[Sunshine Coast](/services/marine-engine-service/sunshine-coast/) ·
-[Melbourne](/services/marine-engine-service/melbourne/) ·
-[Perth](/services/marine-engine-service/perth/) ·
-[Whitsundays](/services/marine-engine-service/whitsundays/) ·
-[Cairns](/services/marine-engine-service/cairns/) ·
-[Port Stephens & Newcastle](/services/marine-engine-service/port-stephens/) ·
-[Adelaide](/services/marine-engine-service/adelaide/)
+[Gold Coast](/services/marine-engine-service/) ·
+[Sydney](/services/marine-engine-service/) ·
+[Brisbane](/services/marine-engine-service/) ·
+[Sunshine Coast](/services/marine-engine-service/) ·
+[Melbourne](/services/marine-engine-service/) ·
+[Perth](/services/marine-engine-service/) ·
+[Whitsundays](/services/marine-engine-service/) ·
+[Cairns](/services/marine-engine-service/) ·
+[Port Stephens & Newcastle](/services/marine-engine-service/) ·
+[Adelaide](/services/marine-engine-service/)
 
 ## Frequently asked questions
 

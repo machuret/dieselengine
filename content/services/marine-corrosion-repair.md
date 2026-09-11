@@ -86,7 +86,7 @@ Entirely dependent on what has corroded and how far.
 
 ## Find corrosion repair in your city
 
-[Darwin](/services/marine-corrosion-repair/darwin/)
+[Darwin](/services/marine-corrosion-repair/)
 
 ## Frequently asked questions
 

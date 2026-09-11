@@ -86,20 +86,20 @@ inconvenience.
 
 {{PRICE_TABLE:impeller-replacement}}
 
-→ [Impeller replacement cost](/costs/impeller-replacement/)
+→ [Impeller replacement cost](/costs/)
 
 ## Find impeller replacement in your city
 
-[Gold Coast](/services/impeller-replacement/gold-coast/) ·
-[Sydney](/services/impeller-replacement/sydney/) ·
-[Brisbane](/services/impeller-replacement/brisbane/) ·
-[Sunshine Coast](/services/impeller-replacement/sunshine-coast/) ·
-[Melbourne](/services/impeller-replacement/melbourne/) ·
-[Perth](/services/impeller-replacement/perth/) ·
-[Whitsundays](/services/impeller-replacement/whitsundays/) ·
-[Cairns](/services/impeller-replacement/cairns/) ·
-[Port Stephens & Newcastle](/services/impeller-replacement/port-stephens/) ·
-[Adelaide](/services/impeller-replacement/adelaide/)
+[Gold Coast](/services/impeller-replacement/) ·
+[Sydney](/services/impeller-replacement/) ·
+[Brisbane](/services/impeller-replacement/) ·
+[Sunshine Coast](/services/impeller-replacement/) ·
+[Melbourne](/services/impeller-replacement/) ·
+[Perth](/services/impeller-replacement/) ·
+[Whitsundays](/services/impeller-replacement/) ·
+[Cairns](/services/impeller-replacement/) ·
+[Port Stephens & Newcastle](/services/impeller-replacement/) ·
+[Adelaide](/services/impeller-replacement/)
 
 ## Frequently asked questions
 

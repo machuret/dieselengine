@@ -73,15 +73,15 @@ salt water is vulnerable.
 
 ## Engines you will meet
 
-[Yanmar](/engine-brands/yanmar/) (1GM10, 2YM, 3YM, 3JH, 4JH) ·
-[Volvo Penta](/engine-brands/volvo-penta/) (D1, D2) ·
-[Beta Marine](/engine-brands/beta-marine/) ·
-[Nanni](/engine-brands/nanni/) ·
-[Vetus](/engine-brands/vetus/) ·
-[Solé](/engine-brands/sole-diesel/) ·
-[Craftsman](/engine-brands/craftsman-marine/)
+[Yanmar](/engine-brands/) (1GM10, 2YM, 3YM, 3JH, 4JH) ·
+[Volvo Penta](/engine-brands/) (D1, D2) ·
+[Beta Marine](/engine-brands/) ·
+[Nanni](/engine-brands/) ·
+[Vetus](/engine-brands/) ·
+[Solé](/engine-brands/) ·
+[Craftsman](/engine-brands/)
 
-Many are [Kubota](/engine-brands/kubota-marine/) industrial blocks under a marine
+Many are [Kubota](/engine-brands/) industrial blocks under a marine
 cover, which widens parts and service options considerably.
 
 ## What actually helps
@@ -100,17 +100,17 @@ drives the labour.
 
 {{PRICE_TABLE:yacht-auxiliary-service}}
 
-→ [Yacht auxiliary service cost](/costs/yacht-auxiliary-service/)
+→ [Yacht auxiliary service cost](/costs/)
 
 ## Find yacht auxiliary service in your city
 
-[Gold Coast](/services/yacht-auxiliary-service/gold-coast/) ·
-[Sydney](/services/yacht-auxiliary-service/sydney/) ·
-[Brisbane](/services/yacht-auxiliary-service/brisbane/) ·
-[Melbourne](/services/yacht-auxiliary-service/melbourne/) ·
-[Perth](/services/yacht-auxiliary-service/perth/) ·
-[Port Stephens & Newcastle](/services/yacht-auxiliary-service/port-stephens/) ·
-[Adelaide](/services/yacht-auxiliary-service/adelaide/)
+[Gold Coast](/services/yacht-auxiliary-service/) ·
+[Sydney](/services/yacht-auxiliary-service/) ·
+[Brisbane](/services/yacht-auxiliary-service/) ·
+[Melbourne](/services/yacht-auxiliary-service/) ·
+[Perth](/services/yacht-auxiliary-service/) ·
+[Port Stephens & Newcastle](/services/yacht-auxiliary-service/) ·
+[Adelaide](/services/yacht-auxiliary-service/)
 
 ## Frequently asked questions
 

@@ -98,20 +98,20 @@ addressed.
 
 {{PRICE_TABLE:saltwater-damage-repair}}
 
-→ [Saltwater damage repair cost](/costs/saltwater-damage-repair/)
+→ [Saltwater damage repair cost](/costs/)
 
 ## Find saltwater ingress repair in your city
 
-[Gold Coast](/services/saltwater-damage-repair/gold-coast/) ·
-[Sydney](/services/saltwater-damage-repair/sydney/) ·
-[Brisbane](/services/saltwater-damage-repair/brisbane/) ·
-[Sunshine Coast](/services/saltwater-damage-repair/sunshine-coast/) ·
-[Melbourne](/services/saltwater-damage-repair/melbourne/) ·
-[Perth](/services/saltwater-damage-repair/perth/) ·
-[Whitsundays](/services/saltwater-damage-repair/whitsundays/) ·
-[Cairns](/services/saltwater-damage-repair/cairns/) ·
-[Port Stephens & Newcastle](/services/saltwater-damage-repair/port-stephens/) ·
-[Adelaide](/services/saltwater-damage-repair/adelaide/)
+[Gold Coast](/services/saltwater-damage-repair/) ·
+[Sydney](/services/saltwater-damage-repair/) ·
+[Brisbane](/services/saltwater-damage-repair/) ·
+[Sunshine Coast](/services/saltwater-damage-repair/) ·
+[Melbourne](/services/saltwater-damage-repair/) ·
+[Perth](/services/saltwater-damage-repair/) ·
+[Whitsundays](/services/saltwater-damage-repair/) ·
+[Cairns](/services/saltwater-damage-repair/) ·
+[Port Stephens & Newcastle](/services/saltwater-damage-repair/) ·
+[Adelaide](/services/saltwater-damage-repair/)
 
 ## Frequently asked questions
 

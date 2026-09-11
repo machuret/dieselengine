@@ -26,66 +26,66 @@ Find the engine plate on the rocker cover or block. It will read something like
 
 ## Inboard and sterndrive
 
-- **[Volvo Penta](/engine-brands/volvo-penta/)** — the dominant marine diesel
+- **[Volvo Penta](/engine-brands/)** — the dominant marine diesel
   brand in Australia. D1 and D2 for sailing yachts, D3 to D8 for planing craft,
   D11 and D13 above that, plus IPS pod drives and sterndrives.
-- **[Yanmar](/engine-brands/yanmar/)** — the sailboat auxiliary standard.
+- **[Yanmar](/engine-brands/)** — the sailboat auxiliary standard.
   1GM10, 2YM and 3YM in yachts; 3JH, 4JH, 4LV and 6LY in powerboats.
-- **[Mercruiser and Mercury Diesel](/engine-brands/mercruiser/)** — sterndrive
+- **[Mercruiser and Mercury Diesel](/engine-brands/)** — sterndrive
   diesel packages, TDI 3.0 and 4.2.
-- **[Perkins and Sabre Marine](/engine-brands/perkins-sabre/)** — long-serving
+- **[Perkins and Sabre Marine](/engine-brands/)** — long-serving
   in older Australian boats; still very well supported.
-- **[Isuzu Marine](/engine-brands/isuzu-marine/)** ·
-  **[Iveco / FPT Marine](/engine-brands/iveco-fpt-marine/)** ·
-  **[Hyundai SeasAll](/engine-brands/hyundai-seasall/)**
+- **[Isuzu Marine](/engine-brands/)** ·
+  **[Iveco / FPT Marine](/engine-brands/)** ·
+  **[Hyundai SeasAll](/engine-brands/)**
 
 ## Sailing yacht auxiliaries
 
 Small, lightly loaded, and typically damaged by neglect rather than use.
 
-- **[Beta Marine](/engine-brands/beta-marine/)** — Kubota-based; a very common
+- **[Beta Marine](/engine-brands/)** — Kubota-based; a very common
   repower choice for cruising yachts.
-- **[Nanni Diesel](/engine-brands/nanni/)** — Kubota-based.
-- **[Craftsman Marine](/engine-brands/craftsman-marine/)** ·
-  **[Solé Diesel](/engine-brands/sole-diesel/)** ·
-  **[Vetus](/engine-brands/vetus/)** ·
-  **[Lombardini / Kohler](/engine-brands/lombardini-kohler/)** ·
-  **[Steyr Motors](/engine-brands/steyr-motors/)** ·
-  **[Bukh](/engine-brands/bukh/)**
-- **[Kubota marine base engines](/engine-brands/kubota-marine/)** — the block
+- **[Nanni Diesel](/engine-brands/)** — Kubota-based.
+- **[Craftsman Marine](/engine-brands/)** ·
+  **[Solé Diesel](/engine-brands/)** ·
+  **[Vetus](/engine-brands/)** ·
+  **[Lombardini / Kohler](/engine-brands/)** ·
+  **[Steyr Motors](/engine-brands/)** ·
+  **[Bukh](/engine-brands/)**
+- **[Kubota marine base engines](/engine-brands/)** — the block
   under many of the above. Start here if your badge has no parts support.
-- **[Saildrives](/engine-brands/yanmar-saildrive/)** — Yanmar SD and Volvo
+- **[Saildrives](/engine-brands/)** — Yanmar SD and Volvo
   Penta 130S legs, with their own seal and anode regime.
 
 ## Commercial, charter and large craft
 
-- **[Cummins Marine](/engine-brands/cummins-marine/)** — QSB 6.7, QSC 8.3,
+- **[Cummins Marine](/engine-brands/)** — QSB 6.7, QSC 8.3,
   QSL 9, QSM 11 and the older 6BTA. Dominant in charter and workboats.
-- **[Caterpillar Marine](/engine-brands/caterpillar-marine/)** — C7 through C32
+- **[Caterpillar Marine](/engine-brands/)** — C7 through C32
   and the long-lived 3208.
-- **[John Deere Marine](/engine-brands/john-deere-marine/)** — a repower
+- **[John Deere Marine](/engine-brands/)** — a repower
   favourite for workboats and ferries.
-- **[Scania Marine](/engine-brands/scania-marine/)** ·
-  **[MAN Marine](/engine-brands/man-marine/)** ·
-  **[MTU and Detroit Diesel](/engine-brands/mtu-detroit/)** ·
-  **[Doosan Marine](/engine-brands/doosan-marine/)** ·
-  **[Deutz Marine](/engine-brands/deutz-marine/)** ·
-  **[Lugger and Northern Lights](/engine-brands/lugger-northern-lights/)**
+- **[Scania Marine](/engine-brands/)** ·
+  **[MAN Marine](/engine-brands/)** ·
+  **[MTU and Detroit Diesel](/engine-brands/)** ·
+  **[Doosan Marine](/engine-brands/)** ·
+  **[Deutz Marine](/engine-brands/)** ·
+  **[Lugger and Northern Lights](/engine-brands/)**
 
 ## Gearboxes
 
 Not engines, and not serviced by the same people. A gearbox fault is frequently
 misdiagnosed as an engine fault.
 
-- **[ZF Marine](/engine-brands/zf-marine/)** — the most common gearbox in
+- **[ZF Marine](/engine-brands/)** — the most common gearbox in
   Australian boats.
-- **[Twin Disc](/engine-brands/twin-disc/)** — commercial and large pleasure
+- **[Twin Disc](/engine-brands/)** — commercial and large pleasure
   craft.
-- **[Hurth](/engine-brands/hurth/)** — legacy small-craft boxes, now ZF.
+- **[Hurth](/engine-brands/)** — legacy small-craft boxes, now ZF.
 
 ## Generator sets
 
-- **[Marine generator sets](/engine-brands/marine-gensets/)** — Onan, Northern
+- **[Marine generator sets](/engine-brands/)** — Onan, Northern
   Lights, Fischer Panda, Kohler. Their own failure profile, mostly caused by
   running at very light load.
 

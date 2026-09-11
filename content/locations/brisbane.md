@@ -60,7 +60,7 @@ it changes the maintenance advice as well as the travel time.
 **Use the river's commercial capability for major work.** Yards set up for
 workboats and commercial vessels have the lifting equipment, machining
 relationships and repower experience that a small marina operator does not.
-→ [Marine engine repower](/services/marine-engine-repower/brisbane/)
+→ [Marine engine repower](/services/marine-engine-repower/)
 
 **Ask about raw water intervals specifically** if you berth upriver. The
 standard impeller and heat exchanger schedule assumes cleaner water than the
@@ -87,56 +87,56 @@ obligations well beyond recreational requirements.
 ## Marine engine services in Brisbane
 
 **Cooling and raw water** —
-[Impeller replacement](/services/impeller-replacement/brisbane/) ·
-[Heat exchanger service](/services/heat-exchanger-service/brisbane/) ·
-[Exhaust elbow replacement](/services/exhaust-elbow-replacement/brisbane/) ·
-[Aftercooler service](/services/aftercooler-service/brisbane/) ·
-[Raw water system repair](/services/raw-water-system-repair/brisbane/) ·
-[Cooling system repair](/services/marine-cooling-system-repair/brisbane/)
+[Impeller replacement](/services/impeller-replacement/) ·
+[Heat exchanger service](/services/heat-exchanger-service/) ·
+[Exhaust elbow replacement](/services/exhaust-elbow-replacement/) ·
+[Aftercooler service](/services/aftercooler-service/) ·
+[Raw water system repair](/services/raw-water-system-repair/) ·
+[Cooling system repair](/services/marine-cooling-system-repair/)
 
 **Fuel** —
-[Fuel polishing and tank cleaning](/services/fuel-polishing/brisbane/) ·
-[Diesel bug treatment](/services/diesel-bug-treatment/brisbane/) ·
-[Injector testing and replacement](/services/marine-injector-service/brisbane/) ·
-[Fuel pump repair](/services/marine-fuel-pump-repair/brisbane/)
+[Fuel polishing and tank cleaning](/services/fuel-polishing/) ·
+[Diesel bug treatment](/services/diesel-bug-treatment/) ·
+[Injector testing and replacement](/services/marine-injector-service/) ·
+[Fuel pump repair](/services/marine-fuel-pump-repair/)
 
 **Engine** —
-[Engine servicing](/services/marine-engine-service/brisbane/) ·
-[Engine repair](/services/marine-engine-repair/brisbane/) ·
-[Cylinder head repair](/services/marine-cylinder-head-repair/brisbane/) ·
-[Head gasket replacement](/services/marine-head-gasket-replacement/brisbane/) ·
-[Engine rebuild](/services/marine-engine-rebuild/brisbane/) ·
-[Engine reconditioning](/services/marine-engine-reconditioning/brisbane/) ·
-[Repower and replacement](/services/marine-engine-repower/brisbane/) ·
-[Saltwater ingress and hydrolock](/services/saltwater-damage-repair/brisbane/) ·
-[Turbocharger repair](/services/marine-turbo-repair/brisbane/)
+[Engine servicing](/services/marine-engine-service/) ·
+[Engine repair](/services/marine-engine-repair/) ·
+[Cylinder head repair](/services/marine-cylinder-head-repair/) ·
+[Head gasket replacement](/services/marine-head-gasket-replacement/) ·
+[Engine rebuild](/services/marine-engine-rebuild/) ·
+[Engine reconditioning](/services/marine-engine-reconditioning/) ·
+[Repower and replacement](/services/marine-engine-repower/) ·
+[Saltwater ingress and hydrolock](/services/saltwater-damage-repair/) ·
+[Turbocharger repair](/services/marine-turbo-repair/)
 
 **Driveline** —
-[Gearbox service](/services/marine-gearbox-service/brisbane/) ·
-[Sterndrive service](/services/sterndrive-service/brisbane/) ·
-[Shaft seal and stern gland](/services/shaft-seal-stern-gland/brisbane/)
+[Gearbox service](/services/marine-gearbox-service/) ·
+[Sterndrive service](/services/sterndrive-service/) ·
+[Shaft seal and stern gland](/services/shaft-seal-stern-gland/)
 
 **Corrosion and electrical** —
-[Anode replacement](/services/anode-replacement/brisbane/) ·
-[Engine electrical and charging](/services/marine-engine-electrical/brisbane/)
+[Anode replacement](/services/anode-replacement/) ·
+[Engine electrical and charging](/services/marine-engine-electrical/)
 
 **Inspection** —
-[Engine survey and pre-purchase inspection](/services/marine-engine-survey/brisbane/)
+[Engine survey and pre-purchase inspection](/services/marine-engine-survey/)
 
 **Attendance** —
-[Mobile marine mechanic](/services/mobile-marine-mechanic/brisbane/) ·
-[Emergency and on-water breakdown](/services/emergency-marine-breakdown/brisbane/)
+[Mobile marine mechanic](/services/mobile-marine-mechanic/) ·
+[Emergency and on-water breakdown](/services/emergency-marine-breakdown/)
 
 **By vessel type** —
-[Commercial vessel servicing](/services/commercial-vessel-servicing/brisbane/) ·
-[Yacht auxiliary service](/services/yacht-auxiliary-service/brisbane/) ·
-[Slipway and haul-out](/services/slipway-haul-out/brisbane/)
+[Commercial vessel servicing](/services/commercial-vessel-servicing/) ·
+[Yacht auxiliary service](/services/yacht-auxiliary-service/) ·
+[Slipway and haul-out](/services/slipway-haul-out/)
 
 ## Nearby
 
 [Gold Coast](/marine-mechanics/gold-coast/) ·
 [Sunshine Coast](/marine-mechanics/sunshine-coast/) ·
-[Hervey Bay & Bundaberg](/marine-mechanics/hervey-bay/)
+[Hervey Bay & Bundaberg](/)
 
 ## Frequently asked questions
 

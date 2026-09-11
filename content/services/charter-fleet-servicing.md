@@ -82,16 +82,16 @@ availability and response as much as labour.
 
 {{PRICE_TABLE:charter-fleet-servicing}}
 
-→ [Charter fleet servicing cost](/costs/charter-fleet-servicing/)
+→ [Charter fleet servicing cost](/costs/)
 
 ## Find charter fleet servicing in your city
 
-[Gold Coast](/services/charter-fleet-servicing/gold-coast/) ·
-[Sydney](/services/charter-fleet-servicing/sydney/) ·
-[Sunshine Coast](/services/charter-fleet-servicing/sunshine-coast/) ·
-[Whitsundays](/services/charter-fleet-servicing/whitsundays/) ·
-[Cairns](/services/charter-fleet-servicing/cairns/) ·
-[Port Stephens & Newcastle](/services/charter-fleet-servicing/port-stephens/)
+[Gold Coast](/services/charter-fleet-servicing/) ·
+[Sydney](/services/charter-fleet-servicing/) ·
+[Sunshine Coast](/services/charter-fleet-servicing/) ·
+[Whitsundays](/services/charter-fleet-servicing/) ·
+[Cairns](/services/charter-fleet-servicing/) ·
+[Port Stephens & Newcastle](/services/charter-fleet-servicing/)
 
 ## Frequently asked questions
 

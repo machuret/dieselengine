@@ -91,16 +91,16 @@ whether the studs come out.
 
 ## Find exhaust elbow replacement in your city
 
-[Gold Coast](/services/exhaust-elbow-replacement/gold-coast/) ·
-[Sydney](/services/exhaust-elbow-replacement/sydney/) ·
-[Brisbane](/services/exhaust-elbow-replacement/brisbane/) ·
-[Sunshine Coast](/services/exhaust-elbow-replacement/sunshine-coast/) ·
-[Melbourne](/services/exhaust-elbow-replacement/melbourne/) ·
-[Perth](/services/exhaust-elbow-replacement/perth/) ·
-[Whitsundays](/services/exhaust-elbow-replacement/whitsundays/) ·
-[Cairns](/services/exhaust-elbow-replacement/cairns/) ·
-[Port Stephens & Newcastle](/services/exhaust-elbow-replacement/port-stephens/) ·
-[Adelaide](/services/exhaust-elbow-replacement/adelaide/)
+[Gold Coast](/services/exhaust-elbow-replacement/) ·
+[Sydney](/services/exhaust-elbow-replacement/) ·
+[Brisbane](/services/exhaust-elbow-replacement/) ·
+[Sunshine Coast](/services/exhaust-elbow-replacement/) ·
+[Melbourne](/services/exhaust-elbow-replacement/) ·
+[Perth](/services/exhaust-elbow-replacement/) ·
+[Whitsundays](/services/exhaust-elbow-replacement/) ·
+[Cairns](/services/exhaust-elbow-replacement/) ·
+[Port Stephens & Newcastle](/services/exhaust-elbow-replacement/) ·
+[Adelaide](/services/exhaust-elbow-replacement/)
 
 ## Frequently asked questions
 

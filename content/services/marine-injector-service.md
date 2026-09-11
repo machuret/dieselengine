@@ -93,20 +93,20 @@ need addressing as part of the job.
 
 {{PRICE_TABLE:marine-injector-service}}
 
-→ [Marine injector service cost](/costs/marine-injector-service/)
+→ [Marine injector service cost](/costs/)
 
 ## Find injector testing and replacement in your city
 
-[Gold Coast](/services/marine-injector-service/gold-coast/) ·
-[Sydney](/services/marine-injector-service/sydney/) ·
-[Brisbane](/services/marine-injector-service/brisbane/) ·
-[Sunshine Coast](/services/marine-injector-service/sunshine-coast/) ·
-[Melbourne](/services/marine-injector-service/melbourne/) ·
-[Perth](/services/marine-injector-service/perth/) ·
-[Whitsundays](/services/marine-injector-service/whitsundays/) ·
-[Cairns](/services/marine-injector-service/cairns/) ·
-[Port Stephens & Newcastle](/services/marine-injector-service/port-stephens/) ·
-[Adelaide](/services/marine-injector-service/adelaide/)
+[Gold Coast](/services/marine-injector-service/) ·
+[Sydney](/services/marine-injector-service/) ·
+[Brisbane](/services/marine-injector-service/) ·
+[Sunshine Coast](/services/marine-injector-service/) ·
+[Melbourne](/services/marine-injector-service/) ·
+[Perth](/services/marine-injector-service/) ·
+[Whitsundays](/services/marine-injector-service/) ·
+[Cairns](/services/marine-injector-service/) ·
+[Port Stephens & Newcastle](/services/marine-injector-service/) ·
+[Adelaide](/services/marine-injector-service/)
 
 ## Frequently asked questions
 

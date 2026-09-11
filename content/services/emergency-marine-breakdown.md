@@ -95,20 +95,20 @@ Attendance premium plus labour, varying with conditions, distance and access.
 
 {{PRICE_TABLE:emergency-marine-breakdown}}
 
-→ [Emergency breakdown cost](/costs/emergency-marine-breakdown/)
+→ [Emergency breakdown cost](/costs/)
 
 ## Find emergency breakdown repair in your city
 
-[Gold Coast](/services/emergency-marine-breakdown/gold-coast/) ·
-[Sydney](/services/emergency-marine-breakdown/sydney/) ·
-[Brisbane](/services/emergency-marine-breakdown/brisbane/) ·
-[Sunshine Coast](/services/emergency-marine-breakdown/sunshine-coast/) ·
-[Melbourne](/services/emergency-marine-breakdown/melbourne/) ·
-[Perth](/services/emergency-marine-breakdown/perth/) ·
-[Whitsundays](/services/emergency-marine-breakdown/whitsundays/) ·
-[Cairns](/services/emergency-marine-breakdown/cairns/) ·
-[Port Stephens & Newcastle](/services/emergency-marine-breakdown/port-stephens/) ·
-[Adelaide](/services/emergency-marine-breakdown/adelaide/)
+[Gold Coast](/services/emergency-marine-breakdown/) ·
+[Sydney](/services/emergency-marine-breakdown/) ·
+[Brisbane](/services/emergency-marine-breakdown/) ·
+[Sunshine Coast](/services/emergency-marine-breakdown/) ·
+[Melbourne](/services/emergency-marine-breakdown/) ·
+[Perth](/services/emergency-marine-breakdown/) ·
+[Whitsundays](/services/emergency-marine-breakdown/) ·
+[Cairns](/services/emergency-marine-breakdown/) ·
+[Port Stephens & Newcastle](/services/emergency-marine-breakdown/) ·
+[Adelaide](/services/emergency-marine-breakdown/)
 
 ## Frequently asked questions
 

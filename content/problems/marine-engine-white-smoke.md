@@ -82,7 +82,7 @@ are more common culprits and much cheaper.
 Exhaust elbow corrosion is the marine-specific route that has no automotive
 equivalent, and it is common on older Volvo Penta and Yanmar installations.
 
-→ [Perkins and Sabre: white smoke](/engine-brands/perkins-sabre/problems/marine-engine-white-smoke/)
+→ [Perkins and Sabre: white smoke](/engine-brands/)
 
 ## Frequently asked questions
 

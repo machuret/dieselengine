@@ -95,20 +95,20 @@ Pressure testing distinguishes them. Insist on it before anyone pulls a head.
 
 {{PRICE_TABLE:heat-exchanger-service}}
 
-→ [Heat exchanger service cost](/costs/heat-exchanger-service/)
+→ [Heat exchanger service cost](/costs/)
 
 ## Find heat exchanger service in your city
 
-[Gold Coast](/services/heat-exchanger-service/gold-coast/) ·
-[Sydney](/services/heat-exchanger-service/sydney/) ·
-[Brisbane](/services/heat-exchanger-service/brisbane/) ·
-[Sunshine Coast](/services/heat-exchanger-service/sunshine-coast/) ·
-[Melbourne](/services/heat-exchanger-service/melbourne/) ·
-[Perth](/services/heat-exchanger-service/perth/) ·
-[Whitsundays](/services/heat-exchanger-service/whitsundays/) ·
-[Cairns](/services/heat-exchanger-service/cairns/) ·
-[Port Stephens & Newcastle](/services/heat-exchanger-service/port-stephens/) ·
-[Adelaide](/services/heat-exchanger-service/adelaide/)
+[Gold Coast](/services/heat-exchanger-service/) ·
+[Sydney](/services/heat-exchanger-service/) ·
+[Brisbane](/services/heat-exchanger-service/) ·
+[Sunshine Coast](/services/heat-exchanger-service/) ·
+[Melbourne](/services/heat-exchanger-service/) ·
+[Perth](/services/heat-exchanger-service/) ·
+[Whitsundays](/services/heat-exchanger-service/) ·
+[Cairns](/services/heat-exchanger-service/) ·
+[Port Stephens & Newcastle](/services/heat-exchanger-service/) ·
+[Adelaide](/services/heat-exchanger-service/)
 
 ## Frequently asked questions
 

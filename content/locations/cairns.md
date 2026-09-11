@@ -62,7 +62,7 @@ Port Douglas to the north.
 **Shorten your raw water intervals.** This is the single most useful local
 adjustment. Strainer checks, impeller replacement and heat exchanger cleaning all
 need to happen more often in the tropics than the manual assumes.
-→ [Heat exchanger service](/services/heat-exchanger-service/cairns/)
+→ [Heat exchanger service](/services/heat-exchanger-service/)
 
 **Watch cooling margin, not just temperature.** An engine that runs slightly
 warm in winter will overheat in November. Cooling problems here reveal themselves
@@ -70,7 +70,7 @@ seasonally.
 
 **Corrosion runs faster.** Warm, saline water accelerates galvanic activity, so
 anodes waste more quickly. Check them on a shorter cycle.
-→ [Anode inspection and replacement](/services/anode-replacement/cairns/)
+→ [Anode inspection and replacement](/services/anode-replacement/)
 
 **Use the commercial capability.** Operators servicing the reef and game fleets
 work to survey standards, and they apply the same rigour to private vessels.
@@ -95,55 +95,55 @@ forms part of your compliance position.
 ## Marine engine services in Cairns
 
 **Cooling and raw water** —
-[Impeller replacement](/services/impeller-replacement/cairns/) ·
-[Heat exchanger service](/services/heat-exchanger-service/cairns/) ·
-[Exhaust elbow replacement](/services/exhaust-elbow-replacement/cairns/) ·
-[Aftercooler service](/services/aftercooler-service/cairns/) ·
-[Raw water system repair](/services/raw-water-system-repair/cairns/) ·
-[Cooling system repair](/services/marine-cooling-system-repair/cairns/)
+[Impeller replacement](/services/impeller-replacement/) ·
+[Heat exchanger service](/services/heat-exchanger-service/) ·
+[Exhaust elbow replacement](/services/exhaust-elbow-replacement/) ·
+[Aftercooler service](/services/aftercooler-service/) ·
+[Raw water system repair](/services/raw-water-system-repair/) ·
+[Cooling system repair](/services/marine-cooling-system-repair/)
 
 **Fuel** —
-[Fuel polishing and tank cleaning](/services/fuel-polishing/cairns/) ·
-[Diesel bug treatment](/services/diesel-bug-treatment/cairns/) ·
-[Injector testing and replacement](/services/marine-injector-service/cairns/) ·
-[Fuel pump repair](/services/marine-fuel-pump-repair/cairns/)
+[Fuel polishing and tank cleaning](/services/fuel-polishing/) ·
+[Diesel bug treatment](/services/diesel-bug-treatment/) ·
+[Injector testing and replacement](/services/marine-injector-service/) ·
+[Fuel pump repair](/services/marine-fuel-pump-repair/)
 
 **Engine** —
-[Engine servicing](/services/marine-engine-service/cairns/) ·
-[Engine repair](/services/marine-engine-repair/cairns/) ·
-[Cylinder head repair](/services/marine-cylinder-head-repair/cairns/) ·
-[Head gasket replacement](/services/marine-head-gasket-replacement/cairns/) ·
-[Engine rebuild](/services/marine-engine-rebuild/cairns/) ·
-[Engine reconditioning](/services/marine-engine-reconditioning/cairns/) ·
-[Repower and replacement](/services/marine-engine-repower/cairns/) ·
-[Saltwater ingress and hydrolock](/services/saltwater-damage-repair/cairns/) ·
-[Turbocharger repair](/services/marine-turbo-repair/cairns/)
+[Engine servicing](/services/marine-engine-service/) ·
+[Engine repair](/services/marine-engine-repair/) ·
+[Cylinder head repair](/services/marine-cylinder-head-repair/) ·
+[Head gasket replacement](/services/marine-head-gasket-replacement/) ·
+[Engine rebuild](/services/marine-engine-rebuild/) ·
+[Engine reconditioning](/services/marine-engine-reconditioning/) ·
+[Repower and replacement](/services/marine-engine-repower/) ·
+[Saltwater ingress and hydrolock](/services/saltwater-damage-repair/) ·
+[Turbocharger repair](/services/marine-turbo-repair/)
 
 **Driveline** —
-[Gearbox service](/services/marine-gearbox-service/cairns/) ·
-[Sterndrive service](/services/sterndrive-service/cairns/) ·
-[Shaft seal and stern gland](/services/shaft-seal-stern-gland/cairns/)
+[Gearbox service](/services/marine-gearbox-service/) ·
+[Sterndrive service](/services/sterndrive-service/) ·
+[Shaft seal and stern gland](/services/shaft-seal-stern-gland/)
 
 **Corrosion and electrical** —
-[Anode replacement](/services/anode-replacement/cairns/) ·
-[Engine electrical and charging](/services/marine-engine-electrical/cairns/)
+[Anode replacement](/services/anode-replacement/) ·
+[Engine electrical and charging](/services/marine-engine-electrical/)
 
 **Inspection** —
-[Engine survey and pre-purchase inspection](/services/marine-engine-survey/cairns/)
+[Engine survey and pre-purchase inspection](/services/marine-engine-survey/)
 
 **Attendance** —
-[Mobile marine mechanic](/services/mobile-marine-mechanic/cairns/) ·
-[Emergency and on-water breakdown](/services/emergency-marine-breakdown/cairns/)
+[Mobile marine mechanic](/services/mobile-marine-mechanic/) ·
+[Emergency and on-water breakdown](/services/emergency-marine-breakdown/)
 
 **By vessel type** —
-[Commercial vessel servicing](/services/commercial-vessel-servicing/cairns/) ·
-[Charter fleet servicing](/services/charter-fleet-servicing/cairns/) ·
-[Workboat and ferry servicing](/services/workboat-ferry-servicing/cairns/) ·
-[Slipway and haul-out](/services/slipway-haul-out/cairns/)
+[Commercial vessel servicing](/services/commercial-vessel-servicing/) ·
+[Charter fleet servicing](/services/charter-fleet-servicing/) ·
+[Workboat and ferry servicing](/services/workboat-ferry-servicing/) ·
+[Slipway and haul-out](/services/slipway-haul-out/)
 
 ## Nearby
 
-[Townsville](/marine-mechanics/townsville/) ·
+[Townsville](/) ·
 [Whitsundays](/marine-mechanics/whitsundays/)
 
 ## Frequently asked questions

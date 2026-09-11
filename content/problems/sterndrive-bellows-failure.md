@@ -84,8 +84,8 @@ same time — if the bellows has been leaking, they have been getting wet.
 All sterndrive installations. Mercruiser and Volvo Penta sterndrives dominate in
 Australia.
 
-→ [Mercruiser: sterndrive bellows failure](/engine-brands/mercruiser/problems/sterndrive-bellows-failure/) ·
-[Volvo Penta: sterndrive bellows failure](/engine-brands/volvo-penta/problems/sterndrive-bellows-failure/)
+→ [Mercruiser: sterndrive bellows failure](/engine-brands/) ·
+[Volvo Penta: sterndrive bellows failure](/engine-brands/)
 
 ## Frequently asked questions
 

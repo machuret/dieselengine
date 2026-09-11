@@ -90,8 +90,8 @@ Every engine that sits. Most pronounced on yacht auxiliaries and on southern
 boats with a genuine winter layup.
 
 → [Winterisation and seasonal layup](/services/winterisation-layup/) ·
-[Yanmar: hard starting after layup](/engine-brands/yanmar/problems/hard-starting-after-layup/) ·
-[Beta Marine: hard starting after layup](/engine-brands/beta-marine/problems/hard-starting-after-layup/)
+[Yanmar: hard starting after layup](/engine-brands/) ·
+[Beta Marine: hard starting after layup](/engine-brands/)
 
 ## Frequently asked questions
 

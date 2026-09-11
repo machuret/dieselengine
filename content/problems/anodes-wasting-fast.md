@@ -99,8 +99,8 @@ corrosion survey and an electrical check.
 Aluminium saildrive legs are particularly vulnerable and need correct isolation.
 Tropical berths consume anodes faster on every vessel.
 
-→ [Yanmar and Volvo saildrives](/engine-brands/yanmar-saildrive/) ·
-[Marine diesel mechanics in Darwin](/marine-mechanics/darwin/)
+→ [Yanmar and Volvo saildrives](/engine-brands/) ·
+[Marine diesel mechanics in Darwin](/)
 
 ## Frequently asked questions
 

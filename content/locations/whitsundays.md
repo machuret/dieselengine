@@ -59,8 +59,8 @@ belts on the shelf is worth more than one who is cheaper and two weeks away.
 **Use the charter fleet's maintenance model.** Oil analysis and scheduled
 replacement are normal here and genuinely worthwhile — they catch failures
 before they strand you somewhere without a road.
-→ [Marine engine oil analysis](/services/marine-engine-oil-analysis/whitsundays/) ·
-[Charter fleet servicing](/services/charter-fleet-servicing/whitsundays/)
+→ [Marine engine oil analysis](/services/marine-engine-oil-analysis/) ·
+[Charter fleet servicing](/services/charter-fleet-servicing/)
 
 **Plan around the season.** The dry season is peak charter operation and peak
 demand. Major work happens in the wet season for a reason.
@@ -89,57 +89,57 @@ forms part of your compliance position.
 ## Marine engine services in the Whitsundays
 
 **Cooling and raw water** —
-[Impeller replacement](/services/impeller-replacement/whitsundays/) ·
-[Heat exchanger service](/services/heat-exchanger-service/whitsundays/) ·
-[Exhaust elbow replacement](/services/exhaust-elbow-replacement/whitsundays/) ·
-[Aftercooler service](/services/aftercooler-service/whitsundays/) ·
-[Raw water system repair](/services/raw-water-system-repair/whitsundays/) ·
-[Cooling system repair](/services/marine-cooling-system-repair/whitsundays/)
+[Impeller replacement](/services/impeller-replacement/) ·
+[Heat exchanger service](/services/heat-exchanger-service/) ·
+[Exhaust elbow replacement](/services/exhaust-elbow-replacement/) ·
+[Aftercooler service](/services/aftercooler-service/) ·
+[Raw water system repair](/services/raw-water-system-repair/) ·
+[Cooling system repair](/services/marine-cooling-system-repair/)
 
 **Fuel** —
-[Fuel polishing and tank cleaning](/services/fuel-polishing/whitsundays/) ·
-[Diesel bug treatment](/services/diesel-bug-treatment/whitsundays/) ·
-[Injector testing and replacement](/services/marine-injector-service/whitsundays/) ·
-[Fuel pump repair](/services/marine-fuel-pump-repair/whitsundays/)
+[Fuel polishing and tank cleaning](/services/fuel-polishing/) ·
+[Diesel bug treatment](/services/diesel-bug-treatment/) ·
+[Injector testing and replacement](/services/marine-injector-service/) ·
+[Fuel pump repair](/services/marine-fuel-pump-repair/)
 
 **Engine** —
-[Engine servicing](/services/marine-engine-service/whitsundays/) ·
-[Engine repair](/services/marine-engine-repair/whitsundays/) ·
-[Cylinder head repair](/services/marine-cylinder-head-repair/whitsundays/) ·
-[Head gasket replacement](/services/marine-head-gasket-replacement/whitsundays/) ·
-[Engine rebuild](/services/marine-engine-rebuild/whitsundays/) ·
-[Engine reconditioning](/services/marine-engine-reconditioning/whitsundays/) ·
-[Repower and replacement](/services/marine-engine-repower/whitsundays/) ·
-[Saltwater ingress and hydrolock](/services/saltwater-damage-repair/whitsundays/) ·
-[Turbocharger repair](/services/marine-turbo-repair/whitsundays/)
+[Engine servicing](/services/marine-engine-service/) ·
+[Engine repair](/services/marine-engine-repair/) ·
+[Cylinder head repair](/services/marine-cylinder-head-repair/) ·
+[Head gasket replacement](/services/marine-head-gasket-replacement/) ·
+[Engine rebuild](/services/marine-engine-rebuild/) ·
+[Engine reconditioning](/services/marine-engine-reconditioning/) ·
+[Repower and replacement](/services/marine-engine-repower/) ·
+[Saltwater ingress and hydrolock](/services/saltwater-damage-repair/) ·
+[Turbocharger repair](/services/marine-turbo-repair/)
 
 **Driveline** —
-[Gearbox service](/services/marine-gearbox-service/whitsundays/) ·
-[Sterndrive service](/services/sterndrive-service/whitsundays/) ·
-[Shaft seal and stern gland](/services/shaft-seal-stern-gland/whitsundays/)
+[Gearbox service](/services/marine-gearbox-service/) ·
+[Sterndrive service](/services/sterndrive-service/) ·
+[Shaft seal and stern gland](/services/shaft-seal-stern-gland/)
 
 **Corrosion and electrical** —
-[Anode replacement](/services/anode-replacement/whitsundays/) ·
-[Engine electrical and charging](/services/marine-engine-electrical/whitsundays/)
+[Anode replacement](/services/anode-replacement/) ·
+[Engine electrical and charging](/services/marine-engine-electrical/)
 
 **Inspection** —
-[Engine survey and pre-purchase inspection](/services/marine-engine-survey/whitsundays/)
+[Engine survey and pre-purchase inspection](/services/marine-engine-survey/)
 
 **Attendance** —
-[Mobile marine mechanic](/services/mobile-marine-mechanic/whitsundays/) ·
-[Emergency and on-water breakdown](/services/emergency-marine-breakdown/whitsundays/)
+[Mobile marine mechanic](/services/mobile-marine-mechanic/) ·
+[Emergency and on-water breakdown](/services/emergency-marine-breakdown/)
 
 **By vessel type** —
-[Charter fleet servicing](/services/charter-fleet-servicing/whitsundays/) ·
-[Commercial vessel servicing](/services/commercial-vessel-servicing/whitsundays/) ·
-[Workboat and ferry servicing](/services/workboat-ferry-servicing/whitsundays/) ·
-[Engine oil analysis](/services/marine-engine-oil-analysis/whitsundays/) ·
-[Slipway and haul-out](/services/slipway-haul-out/whitsundays/)
+[Charter fleet servicing](/services/charter-fleet-servicing/) ·
+[Commercial vessel servicing](/services/commercial-vessel-servicing/) ·
+[Workboat and ferry servicing](/services/workboat-ferry-servicing/) ·
+[Engine oil analysis](/services/marine-engine-oil-analysis/) ·
+[Slipway and haul-out](/services/slipway-haul-out/)
 
 ## Nearby
 
-[Mackay](/marine-mechanics/mackay/) ·
-[Townsville](/marine-mechanics/townsville/) ·
+[Mackay](/) ·
+[Townsville](/) ·
 [Cairns](/marine-mechanics/cairns/)
 
 ## Frequently asked questions

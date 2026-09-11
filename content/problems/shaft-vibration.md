@@ -93,7 +93,7 @@ of vibration and they compound.
 Driveline rather than engine-specific, though gearbox output bearing wear shows
 up on high-hour ZF and Twin Disc installations.
 
-→ [ZF Marine: shaft vibration](/engine-brands/zf-marine/problems/shaft-vibration/)
+→ [ZF Marine: shaft vibration](/engine-brands/)
 
 ## Frequently asked questions
 

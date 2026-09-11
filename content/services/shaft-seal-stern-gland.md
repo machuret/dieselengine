@@ -81,20 +81,20 @@ unevenly and causes vibration.
 
 {{PRICE_TABLE:shaft-seal-stern-gland}}
 
-→ [Shaft seal and stern gland cost](/costs/shaft-seal-stern-gland/)
+→ [Shaft seal and stern gland cost](/costs/)
 
 ## Find stern gland service in your city
 
-[Gold Coast](/services/shaft-seal-stern-gland/gold-coast/) ·
-[Sydney](/services/shaft-seal-stern-gland/sydney/) ·
-[Brisbane](/services/shaft-seal-stern-gland/brisbane/) ·
-[Sunshine Coast](/services/shaft-seal-stern-gland/sunshine-coast/) ·
-[Melbourne](/services/shaft-seal-stern-gland/melbourne/) ·
-[Perth](/services/shaft-seal-stern-gland/perth/) ·
-[Whitsundays](/services/shaft-seal-stern-gland/whitsundays/) ·
-[Cairns](/services/shaft-seal-stern-gland/cairns/) ·
-[Port Stephens & Newcastle](/services/shaft-seal-stern-gland/port-stephens/) ·
-[Adelaide](/services/shaft-seal-stern-gland/adelaide/)
+[Gold Coast](/services/shaft-seal-stern-gland/) ·
+[Sydney](/services/shaft-seal-stern-gland/) ·
+[Brisbane](/services/shaft-seal-stern-gland/) ·
+[Sunshine Coast](/services/shaft-seal-stern-gland/) ·
+[Melbourne](/services/shaft-seal-stern-gland/) ·
+[Perth](/services/shaft-seal-stern-gland/) ·
+[Whitsundays](/services/shaft-seal-stern-gland/) ·
+[Cairns](/services/shaft-seal-stern-gland/) ·
+[Port Stephens & Newcastle](/services/shaft-seal-stern-gland/) ·
+[Adelaide](/services/shaft-seal-stern-gland/)
 
 ## Frequently asked questions
 

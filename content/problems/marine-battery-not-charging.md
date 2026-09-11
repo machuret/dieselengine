@@ -88,7 +88,7 @@ fail early on boats.
 Not brand-specific — corrosion and battery age dominate everywhere, and
 disproportionately on boats that sit.
 
-→ [Mercruiser: battery not charging](/engine-brands/mercruiser/problems/marine-battery-not-charging/) ·
+→ [Mercruiser: battery not charging](/engine-brands/) ·
 [Marine engine brands](/engine-brands/)
 
 ## Frequently asked questions

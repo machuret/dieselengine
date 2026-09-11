@@ -92,8 +92,8 @@ a gasket, which decides the size of the job.
 Bore glazing on lightly used yacht auxiliaries; genuine ring and bore wear on
 high-hour commercial and charter engines.
 
-→ [Cummins Marine: excessive blow-by](/engine-brands/cummins-marine/problems/marine-excessive-blowby/) ·
-[Caterpillar Marine: excessive blow-by](/engine-brands/caterpillar-marine/problems/marine-excessive-blowby/)
+→ [Cummins Marine: excessive blow-by](/engine-brands/) ·
+[Caterpillar Marine: excessive blow-by](/engine-brands/)
 
 ## Frequently asked questions
 

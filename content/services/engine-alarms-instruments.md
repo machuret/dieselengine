@@ -92,7 +92,7 @@ routine.
 
 ## Find engine alarms and instrumentation in your city
 
-[Gold Coast](/services/engine-alarms-instruments/gold-coast/)
+[Gold Coast](/services/engine-alarms-instruments/)
 
 ## Frequently asked questions
 
