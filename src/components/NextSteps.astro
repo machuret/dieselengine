@@ -10,23 +10,28 @@ const common = {
   schedule: { url: '/guides/marine-engine-service-schedule/', title: 'Review the service schedule' },
   buying: { url: '/buy-marine-diesel-engine/', title: 'Compare buying and repower options' },
   resources: { url: '/resources/', title: 'Open manuals and authority resources' },
+  maintenance: { url: '/guides/marine-diesel-maintenance-checklist/', title: 'Use the maintenance checklist' },
+  inspection: { url: '/guides/marine-engine-room-inspection-checklist/', title: 'Run the engine-room inspection' },
+  parts: { url: '/guides/marine-diesel-parts-explained/', title: 'Learn the parts around the engine' },
+  hours: { url: '/guides/marine-engine-hours-explained/', title: 'Understand engine hours and condition' },
+  emergency: { url: '/guides/emergency-engine-shutdown/', title: 'Know when to shut the engine down' },
 };
 
 let links = [];
 if (page.pageType === 'service-national') {
-  links = [common.symptoms, common.costs, common.mechanic, common.resources];
+  links = [common.maintenance, common.costs, common.mechanic, common.resources];
 } else if (page.pageType === 'brand-hub' || page.pageType === 'distributor') {
   links = [common.identify, common.schedule, common.buying, common.mechanic];
 } else if (page.pageType === 'symptom') {
-  links = [common.services, common.mechanic, common.resources];
+  links = [common.emergency, common.parts, common.services, common.mechanic];
 } else if (page.pageType === 'howto') {
-  links = [common.symptoms, common.services, common.resources];
+  links = [common.inspection, common.symptoms, common.services, common.resources];
 } else if (page.geo) {
-  links = [common.mechanic, common.costs, common.services, common.buying];
+  links = [common.inspection, common.costs, common.services, common.mechanic];
 } else if (page.pageType === 'boat-brand') {
-  links = [common.identify, common.buying, common.schedule, common.mechanic];
+  links = [common.identify, common.hours, common.buying, common.schedule];
 } else if (page.pageType === 'decision') {
-  links = [common.costs, common.services, common.mechanic, common.resources];
+  links = [common.maintenance, common.inspection, common.costs, common.resources];
 }
 
 links = links.filter((link) => link.url !== page.url);

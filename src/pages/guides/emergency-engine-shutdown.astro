@@ -1,0 +1,60 @@
+---
+import Page from '../../layouts/Page.astro';
+import GuideGraphic from '../../components/GuideGraphic.astro';
+import SourcePanel from '../../components/SourcePanel.astro';
+import site from '../../../site.config.json' with { type: 'json' };
+
+const headings = [
+  { depth: 2, slug: 'stop-now', text: 'When to stop now' },
+  { depth: 2, slug: 'immediate-priorities', text: 'Immediate priorities' },
+  { depth: 2, slug: 'do-not-restart', text: 'Do not restart to test it' },
+  { depth: 2, slug: 'before-next-trip', text: 'Prepare before the next trip' },
+];
+const page = {
+  url: '/guides/emergency-engine-shutdown/', title: 'Emergency Marine Engine Shutdown Guide',
+  seoTitle: 'Emergency Marine Engine Shutdown Guide', pageType: 'decision', status: 'ready',
+  author: site.defaultAuthor, reviewer: null, needsReviewer: false, parent: '/marine-diesel-engines/',
+  parentTitle: 'Marine Diesel Engines', schema: ['TechArticle', 'BreadcrumbList'], updated: site.legalUpdated,
+  indexable: true, blockers: [], headings, faqs: [],
+  description: 'Know when to stop a marine diesel engine and how to prioritise people, fire, flooding and vessel control before investigating the fault.',
+  image: '/images/exhaust-elbow-corrosion-comparison.jpg', imageWidth: 1400, imageHeight: 933,
+  imageAlt: 'Corroded marine exhaust elbow beside a clean replacement component',
+};
+const sources = [
+  { title: 'Australian Maritime Safety Authority', url: 'https://www.amsa.gov.au/' },
+  { title: 'State and territory marine safety agencies', url: 'https://www.amsa.gov.au/about/who-we-are/marine-safety-agencies' },
+  { title: 'Bureau of Meteorology marine warnings', url: 'https://www.bom.gov.au/weather-and-climate/specialised-forecasts-and-observations/coasts-and-oceans/marine-weather-safety/marine-weather-hazards-and-warnings' },
+];
+---
+<Page page={page}>
+  <p class="kicker">Safety first</p>
+  <h1>Emergency marine engine shutdown</h1>
+  <div class="safety" role="note">
+    <p><strong>This is general preparation guidance, not a substitute for your vessel’s emergency plan or engine manual.</strong> Conditions differ. Information can be incomplete or wrong for your installation. If life or the vessel is at risk, contact the appropriate emergency or marine rescue service.</p>
+  </div>
+
+  <GuideGraphic variant="emergency" />
+
+  <h2 id="stop-now">When to stop now</h2>
+  <p>Shut down when continued operation may turn an engine fault into fire, flooding, major mechanical damage or loss of control. Strong stop signals include loss of cooling water at the exhaust, an oil-pressure alarm, rapidly rising temperature, fuel or oil spraying onto hot surfaces, smoke inside the boat, a burning electrical smell, violent vibration, an uncontrolled seawater leak or a sudden heavy mechanical knock.</p>
+  <p>The safe way to stop depends on where the boat is. Before removing propulsion, consider traffic, a lee shore, surf, weather and whether another system controls steering or hydraulics. Alert everyone aboard and prepare the alternative means of control—sail, anchor, second engine or assistance—as the situation permits.</p>
+
+  <h2 id="immediate-priorities">Immediate priorities</h2>
+  <ol>
+    <li><strong>Protect people.</strong> Account for everyone, put on lifejackets when appropriate and keep people away from smoke, belts, hot coolant and pressurised fuel.</li>
+    <li><strong>Control the vessel.</strong> Reduce collision, grounding and drift risk using the equipment and procedures appropriate to the boat.</li>
+    <li><strong>Identify fire or flooding.</strong> These take priority over saving the engine. Raise the alarm and use the vessel’s emergency equipment and training.</li>
+    <li><strong>Isolate only when safe and correct.</strong> Fuel, electrical and seawater isolation arrangements vary. Do not guess at valves or switches in smoke, darkness or moving machinery.</li>
+    <li><strong>Communicate early.</strong> Give position, people aboard, nature of the problem and assistance required. Do not wait for a manageable situation to become an emergency.</li>
+  </ol>
+
+  <h2 id="do-not-restart">Do not restart to test it</h2>
+  <p>An alarm going silent after shutdown does not mean the cause has disappeared. Restarting without checks can circulate contaminated oil, feed a fire, worsen flooding, destroy an impeller or force seawater into a cylinder. Record the instrument readings, alarm sequence, smoke colour, smell, rpm, weather and what changed immediately before the event.</p>
+  <p>If the engine overheated, allow it to cool naturally. Do not open a pressurised coolant cap while hot. If cooling-water flow stopped, inspect the <a href="/marine-engine-problems/no-water-from-exhaust/">no-water diagnostic path</a> only when the vessel is secure and the engine cannot start unexpectedly.</p>
+
+  <h2 id="before-next-trip">Prepare before the next trip</h2>
+  <p>Label the correct fuel, battery and seawater controls. Keep the engine manual, emergency contacts and a waterproof shutdown card where crew can find them. Practise how the vessel will be controlled without the engine. Ensure extinguishers, fire ports, bilge pumps, anchors, radios and distress equipment match the vessel and local requirements.</p>
+  <p>After an event, have the cause diagnosed—not merely the alarm reset. The <a href="/guides/marine-engine-room-inspection-checklist/">engine-room inspection checklist</a> helps establish a normal baseline for future trips.</p>
+
+  <SourcePanel links={sources} />
+</Page>

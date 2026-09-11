@@ -1,0 +1,85 @@
+---
+const { variant } = Astro.props;
+
+const graphics = {
+  maintenance: {
+    eyebrow: 'Maintenance rhythm',
+    title: 'The calendar and the hour meter both matter',
+    note: 'Use the earlier limit in the manual for your exact engine.',
+    items: [
+      ['Every start', 'Oil · coolant · bilge · belt · seacock'],
+      ['First service', 'Initial oil, filter and adjustment checks'],
+      ['Annual / hour interval', 'Fluids · filters · impeller · anodes'],
+      ['Manual-defined major work', 'Heat exchanger · valves · mounts · drive'],
+    ],
+  },
+  inspection: {
+    eyebrow: 'Five-minute scan',
+    title: 'Inspect from clean and dry to hot and moving',
+    note: 'Do the stopped-engine checks first. Keep clear of belts and hot surfaces after starting.',
+    items: [
+      ['Look low', 'Bilge fluid, drip trails and loose absorbent pads'],
+      ['Look around', 'Hoses, clamps, wiring, mounts and exhaust'],
+      ['Check levels', 'Engine oil, coolant, gearbox and fuel'],
+      ['Start and listen', 'Alarm test, cranking speed and unusual vibration'],
+      ['Confirm flow', 'Cooling water at the exhaust and stable temperature'],
+    ],
+  },
+  parts: {
+    eyebrow: 'System map',
+    title: 'Name the system before ordering the part',
+    note: 'The engine model, serial number and installation determine the correct specification.',
+    items: [
+      ['Fuel', 'Primary filter · lift pump · secondary filter · injectors'],
+      ['Cooling', 'Seacock · strainer · impeller · exchanger · thermostat'],
+      ['Exhaust', 'Mixing elbow · hose · waterlock · outlet'],
+      ['Electrical', 'Battery · starter · alternator · loom · alarms'],
+      ['Drive', 'Gearbox · coupling · shaft or saildrive · propeller'],
+    ],
+  },
+  hours: {
+    eyebrow: 'Condition equation',
+    title: 'Hours are one input, not the verdict',
+    note: 'A documented, regularly loaded engine can be healthier than a low-hour engine left idle.',
+    items: [
+      ['Hours', 'How much it has run'],
+      ['Calendar age', 'How long corrosion and seals have had to work'],
+      ['Load history', 'Whether it reached proper operating temperature'],
+      ['Service evidence', 'What was done, when, and with which parts'],
+      ['Installation', 'Cooling, exhaust, alignment and access quality'],
+    ],
+  },
+  emergency: {
+    eyebrow: 'Stop–stabilise–verify',
+    title: 'Protect people and the vessel before the engine',
+    note: 'Use the vessel’s emergency plan and call marine rescue or emergency services when required.',
+    items: [
+      ['Recognise', 'Alarm · smoke · steam · lost cooling · fuel or oil spray'],
+      ['Stop safely', 'Reduce load, shut down and control the vessel'],
+      ['Stabilise', 'Check fire, flooding, drift and collision risk'],
+      ['Isolate if safe', 'Fuel, battery or seacock only when the correct action is known'],
+      ['Verify before restart', 'Find the cause; never restart simply because the alarm stopped'],
+    ],
+  },
+};
+
+const graphic = graphics[variant];
+---
+{graphic && (
+  <figure class:list={['guide-graphic', `guide-graphic--${variant}`]}>
+    <figcaption>
+      <span>{graphic.eyebrow}</span>
+      <strong>{graphic.title}</strong>
+    </figcaption>
+    <ol>
+      {graphic.items.map(([title, detail], index) => (
+        <li>
+          <span aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
+          <strong>{title}</strong>
+          <small>{detail}</small>
+        </li>
+      ))}
+    </ol>
+    <p>{graphic.note}</p>
+  </figure>
+)}

@@ -1,0 +1,13 @@
+---
+const { title = 'Primary sources', links = [] } = Astro.props;
+---
+{links.length > 0 && (
+  <aside class="source-panel" aria-label={title}>
+    <p>{title}</p>
+    <ul>
+      {links.map((link) => (
+        <li><a href={link.url} rel={link.url.startsWith('http') ? 'external noopener' : undefined}>{link.title}<span aria-hidden="true">{link.url.startsWith('http') ? '↗' : '→'}</span></a></li>
+      ))}
+    </ul>
+  </aside>
+)}
