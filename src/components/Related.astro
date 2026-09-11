@@ -51,6 +51,16 @@ if (page.pageType === 'service-national' && page.cluster) {
   );
   crossLink = counterpart ?? null;
   related = nearby;
+} else if (page.pageType === 'brand-hub' || page.pageType === 'distributor') {
+  // A brand hub and its distributor page are the two halves of one subject:
+  // what the engine is, and who supports it here. Same slug, so the pairing is
+  // derived rather than hand-maintained.
+  const slug = page.url.replace(/\/$/, '').split('/').pop();
+  const other = page.pageType === 'brand-hub' ? 'distributor' : 'brand-hub';
+  crossLink = published.find(
+    (p) => p.pageType === other && p.url.replace(/\/$/, '').split('/').pop() === slug
+  ) ?? null;
+  related = published.filter((p) => p.pageType === page.pageType).slice(0, 5);
 } else if (page.cluster) {
   // Same-cluster siblings first, then the rest of the family. Used by guides,
   // boat brands and distributor pages alike.

@@ -63,7 +63,7 @@ A marinised industrial engine — many Beta, Nanni, Solé and Vetus units are
 Kubota-based — has two identities: the marinizer's model and the underlying
 base engine. Knowing both is worth real money, because base engine parts often
 come through a much wider network. See
-[Kubota marine base engines and parts](/distributors/kubota-marine/).
+[Kubota marine base engines and parts](/engine-brands/kubota-marine/).
 
 ## Why this matters more than owners expect
 

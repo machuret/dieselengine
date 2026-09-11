@@ -213,7 +213,10 @@ for bb in boats:
 # One distributor page per engine brand with a real Australian network. These
 # explain how the brand's network is structured rather than listing dealers we
 # have not verified.
-for eb in [e for e in brands if int(e["au_relevance"]) >= 3]:
+# Kubota is excluded deliberately: it has no marine distribution network, which
+# is the whole point of its brand hub. A distributor page for it duplicated that
+# page at 43% and was removed.
+for eb in [e for e in brands if int(e["au_relevance"]) >= 3 and e["brand_slug"] != "kubota-marine"]:
     add(3, "distributor", f"/distributors/{eb['brand_slug']}/",
         f"{eb['brand']} Distributors In Australia",
         f"{eb['brand'].lower()} distributors australia",

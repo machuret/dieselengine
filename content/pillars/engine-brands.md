@@ -26,32 +26,32 @@ Find the engine plate on the rocker cover or block. It will read something like
 
 ## Inboard and sterndrive
 
-- **Volvo Penta** — the dominant marine diesel
+- **[Volvo Penta](/engine-brands/volvo-penta/)** — the dominant marine diesel
   brand in Australia. D1 and D2 for sailing yachts, D3 to D8 for planing craft,
   D11 and D13 above that, plus IPS pod drives and sterndrives.
-- **Yanmar** — the sailboat auxiliary standard.
+- **[Yanmar](/engine-brands/yanmar/)** — the sailboat auxiliary standard.
   1GM10, 2YM and 3YM in yachts; 3JH, 4JH, 4LV and 6LY in powerboats.
 - **Mercruiser and Mercury Diesel** — sterndrive
   diesel packages, TDI 3.0 and 4.2.
 - **Perkins and Sabre Marine** — long-serving
   in older Australian boats; still very well supported.
-- **Isuzu Marine** ·
-  **Iveco / FPT Marine** ·
-  **Hyundai SeasAll**
+- **[Isuzu Marine](/engine-brands/isuzu-marine/)** ·
+  **[Iveco / FPT Marine](/engine-brands/iveco-fpt-marine/)** ·
+  **[Hyundai SeasAll](/engine-brands/hyundai-seasall/)**
 
 ## Sailing yacht auxiliaries
 
 Small, lightly loaded, and typically damaged by neglect rather than use.
 
-- **Beta Marine** — Kubota-based; a very common
+- **[Beta Marine](/engine-brands/beta-marine/)** — Kubota-based; a very common
   repower choice for cruising yachts.
-- **Nanni Diesel** — Kubota-based.
-- **Craftsman Marine** ·
-  **Solé Diesel** ·
-  **Vetus** ·
+- **[Nanni Diesel](/engine-brands/nanni/)** — Kubota-based.
+- **[Craftsman Marine](/engine-brands/craftsman-marine/)** ·
+  **[Solé Diesel](/engine-brands/sole-diesel/)** ·
+  **[Vetus](/engine-brands/vetus/)** ·
   **Lombardini / Kohler** ·
-  **Steyr Motors** ·
-  **Bukh**
+  **[Steyr Motors](/engine-brands/steyr-motors/)** ·
+  **[Bukh](/engine-brands/bukh/)**
 - **Kubota marine base engines** — the block
   under many of the above. Start here if your badge has no parts support.
 - **Saildrives** — Yanmar SD and Volvo
@@ -59,17 +59,17 @@ Small, lightly loaded, and typically damaged by neglect rather than use.
 
 ## Commercial, charter and large craft
 
-- **Cummins Marine** — QSB 6.7, QSC 8.3,
+- **[Cummins Marine](/engine-brands/cummins-marine/)** — QSB 6.7, QSC 8.3,
   QSL 9, QSM 11 and the older 6BTA. Dominant in charter and workboats.
-- **Caterpillar Marine** — C7 through C32
+- **[Caterpillar Marine](/engine-brands/caterpillar-marine/)** — C7 through C32
   and the long-lived 3208.
-- **John Deere Marine** — a repower
+- **[John Deere Marine](/engine-brands/john-deere-marine/)** — a repower
   favourite for workboats and ferries.
-- **Scania Marine** ·
-  **MAN Marine** ·
+- **[Scania Marine](/engine-brands/scania-marine/)** ·
+  **[MAN Marine](/engine-brands/man-marine/)** ·
   **MTU and Detroit Diesel** ·
-  **Doosan Marine** ·
-  **Deutz Marine** ·
+  **[Doosan Marine](/engine-brands/doosan-marine/)** ·
+  **[Deutz Marine](/engine-brands/deutz-marine/)** ·
   **Lugger and Northern Lights**
 
 ## Gearboxes

@@ -93,7 +93,7 @@ for (const f of files) {
  */
 const WARN_AT = 0.25;
 const FAIL_AT = 0.4;
-const GEO_SECTIONS = [/^marine-diesel\//, /^marine-mechanics\//, /^buy-marine-diesel-engine\//, /^how\//, /^guides\//];
+const GEO_SECTIONS = [/^marine-diesel\//, /^marine-mechanics\//, /^buy-marine-diesel-engine\//, /^how\//, /^guides\//, /^engine-brands\//, /^distributors\//];
 
 function prose(html) {
   const body = html
@@ -161,7 +161,9 @@ const bySlug = new Map();
 for (const f of files) {
   if (!f.endsWith('index.html')) continue;
   const rel = relative(DIST, f);
-  const m = /^(marine-diesel|marine-mechanics|buy-marine-diesel-engine)\/([^/]+)\/index\.html$/.exec(rel);
+  const m =
+    /^(marine-diesel|marine-mechanics|buy-marine-diesel-engine)\/([^/]+)\/index\.html$/.exec(rel) ??
+    /^(engine-brands|distributors)\/([^/]+)\/index\.html$/.exec(rel);
   if (!m) continue;
   const t = trigrams(prose(readFileSync(f, 'utf8')));
   if (t.size < 200) continue;
@@ -181,7 +183,7 @@ for (const [, pages] of bySlug) {
       if (jac >= FAIL_AT) {
         errors.push(
           `${pages[i].rel} and ${pages[j].rel} are ${(jac * 100).toFixed(0)}% identical ` +
-            `by trigram. Same city, different sections: these will compete for the ` +
+            `by trigram. Same subject, different sections: these will compete for the ` +
             `same queries instead of covering different intents.`
         );
       }
@@ -195,7 +197,7 @@ for (const [, pages] of bySlug) {
 if (crossPair) {
   const note = crossWorst >= WARN_AT ? '  <- review, intents are converging' : '';
   console.log(
-    `postbuild: same-city cross-section max overlap ${(crossWorst * 100).toFixed(1)}%` +
+    `postbuild: same-subject cross-section max overlap ${(crossWorst * 100).toFixed(1)}%` +
       ` (${crossPair[0]} / ${crossPair[1]})${note}`
   );
 }
