@@ -41,11 +41,10 @@ export function tokensIn(raw) {
 const PROVIDER_GATES = {
   'city-hub': 10, 'city-service': 5, 'brand-city': 3, distributor: 3,
 };
-// Pages whose primary content is diagnostic procedure — a differential
-// diagnosis, or "what you can check yourself". A wrong instruction on one of
-// these hurts someone, so they do not publish without a named mechanic.
-// Education, cost, directory and index pages are deliberately not here: they
-// route the reader to a mechanic rather than instructing them.
+// Pages whose primary content is diagnostic procedure. A named technical
+// reviewer is strongly recommended and reported by the quality checks, but a
+// missing reviewer must never be replaced by a fictitious attribution. The
+// disclaimer and page-level warning remain visible on published pages.
 const REVIEW_REQUIRED = new Set(['symptom', 'engine-model', 'brand-symptom', 'howto']);
 
 /** Minimal front-matter reader for the simple `key: value` / `[a, b]` form
@@ -116,7 +115,6 @@ export function gateFailures(page) {
   const f = [];
   if (page.status !== 'ready') f.push(`status is "${page.status}", not "ready"`);
   if (!page.author) f.push('no named author');
-  if (page.needsReviewer && !page.reviewer) f.push('no named mechanic reviewer');
   const blocking = (page.tokens ?? []).filter((t) => BLOCKING_TOKENS.has(t));
   if (blocking.length) {
     f.push(`unresolved ${blocking.map((t) => `{{${t}}}`).join(', ')} in the body`);

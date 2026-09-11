@@ -50,8 +50,8 @@ const socialImage = new URL(site.socialImage, site.domain).href;
 const jsonld = {
   '@context': 'https://schema.org',
   '@graph': [
-    { '@type': 'Organization', '@id': `${site.domain}/#publisher`, name: site.name, url: site.domain, description: site.description },
-    { '@type': 'WebSite', url: canonical, name: site.name, inLanguage: site.locale, publisher: { '@id': `${site.domain}/#publisher` } },
+    { '@type': 'Organization', '@id': `${site.domain}/#publisher`, name: site.name, url: site.domain, description: site.description, logo: { '@type': 'ImageObject', url: new URL('/favicon.svg', site.domain).href }, creator: { '@type': 'Organization', name: 'YouSail.com.au' } },
+    { '@type': 'WebSite', url: canonical, name: site.name, inLanguage: site.locale, image: socialImage, publisher: { '@id': `${site.domain}/#publisher` }, creator: { '@type': 'Organization', name: 'YouSail.com.au' } },
   ],
 };
 ---
@@ -63,6 +63,7 @@ const jsonld = {
     <title>{seoTitle({ seoTitle: 'Marine Diesel Engine Guides, Costs & Mechanics Australia' }, site.shortName)}</title>
     <meta name="description" content={site.description} />
     <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <meta name="robots" content={ready > 0 ? 'index, follow' : 'noindex, follow'} />
     <meta name="theme-color" content="#0d6273" />
     <meta property="og:title" content={site.name} />
@@ -178,6 +179,21 @@ const jsonld = {
             <span class="feature-copy"><span class="kicker">Before you book</span><strong>Get a useful diagnosis</strong><span>What to record, what to ask and which marine trade you actually need.</span></span>
           </a>
         </div>
+      </section>
+
+      <section class="system-map wrap" aria-labelledby="system-map-h">
+        <div class="system-map-copy">
+          <p class="kicker">Engine system map</p>
+          <h2 id="system-map-h">Follow the fault, not the guess</h2>
+          <p>A marine diesel is a chain of connected systems. Start where the symptom appears, then move one system at a time.</p>
+        </div>
+        <ol>
+          <li><a href="/marine-engine-problems/marine-fuel-starvation/"><span>01</span><strong>Fuel</strong><small>Tank → filters → pump</small></a></li>
+          <li><a href="/marine-engine-problems/marine-engine-black-smoke/"><span>02</span><strong>Air & combustion</strong><small>Intake → cylinders → load</small></a></li>
+          <li><a href="/guides/how-marine-diesel-cooling-works/"><span>03</span><strong>Cooling</strong><small>Seacock → pump → exchanger</small></a></li>
+          <li><a href="/marine-engine-problems/blocked-exhaust-elbow/"><span>04</span><strong>Wet exhaust</strong><small>Elbow → waterlock → outlet</small></a></li>
+          <li><a href="/services/marine-gearbox-service/"><span>05</span><strong>Drive</strong><small>Gearbox → shaft → propeller</small></a></li>
+        </ol>
       </section>
 
       <h2 class="section-head">Find a marine mechanic</h2>

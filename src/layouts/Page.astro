@@ -8,11 +8,21 @@ import Children from '../components/Children.astro';
 import ServiceIndex from '../components/ServiceIndex.astro';
 import StateRules from '../components/StateRules.astro';
 import HowToFor from '../components/HowToFor.astro';
+import NextSteps from '../components/NextSteps.astro';
 
 const { page } = Astro.props;
 const canonical = new URL(page.url, site.domain).href;
 const description = page.description || site.description;
 const socialImage = new URL(site.socialImage, site.domain).href;
+const schemaType = page.schema.includes('TechArticle')
+  ? 'TechArticle'
+  : page.schema.includes('ContactPage')
+    ? 'ContactPage'
+    : page.schema.includes('CollectionPage')
+      ? 'CollectionPage'
+      : page.schema.includes('WebPage')
+        ? 'WebPage'
+        : 'Article';
 const headings = page.headings ?? [];
 const showToc = headings.length >= 4;
 
@@ -28,11 +38,13 @@ const jsonld = {
   '@context': 'https://schema.org',
   '@graph': [
     {
-      '@type': page.schema.includes('TechArticle') ? 'TechArticle' : 'Article',
+      '@type': schemaType,
       '@id': `${canonical}#article`,
-      headline: page.title,
+      name: page.title,
+      ...(['Article', 'TechArticle'].includes(schemaType) ? { headline: page.title } : {}),
       description,
       url: canonical,
+      image: socialImage,
       inLanguage: site.locale,
       isAccessibleForFree: true,
       ...(page.updated ? { dateModified: page.updated } : {}),
@@ -68,6 +80,8 @@ const jsonld = {
       name: site.name,
       url: site.domain,
       description: site.description,
+      logo: { '@type': 'ImageObject', url: new URL('/favicon.svg', site.domain).href },
+      creator: { '@type': 'Organization', name: 'YouSail.com.au' },
     },
     // A location hub is about a place; say so in a way a machine can read.
     ...(page.geo
@@ -120,6 +134,7 @@ const jsonld = {
     <title>{page.seoTitleTag ?? seoTitle(page, site.shortName)}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     {page.indexable
       ? <meta name="robots" content="index, follow, max-image-preview:large" />
       : <meta name="robots" content="noindex, follow" />}
@@ -174,6 +189,7 @@ const jsonld = {
           {page.pageType === 'city-hub' && <ServiceIndex city={page.geo?.city} />}
           <HowToFor page={page} />
           <Children page={page} />
+          <NextSteps page={page} />
           <Related page={page} />
           <footer class="byline">
             {page.author
@@ -181,6 +197,7 @@ const jsonld = {
               : <p>Author not yet assigned.</p>}
             {page.updated && <p>Last updated {page.updated}.</p>}
             <p>We are an independent resource. We do not work on boats.</p>
+            <p><strong>Important:</strong> General information can be incomplete or wrong. Read our <a href="/disclaimer/">full disclaimer</a>.</p>
           </footer>
         </article>
 

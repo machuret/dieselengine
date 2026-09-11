@@ -43,6 +43,16 @@ diagnostic time may be longer and your own records are worth more than usual.
 time: a conventional replacement of the same output may not fit the space the
 Steyr occupies.
 
+## Record the installation envelope
+
+Before planning repairs or a replacement, photograph access panels, mounts,
+exhaust route, cooling connections and the clearance around service items.
+Measure the available height, width and length rather than comparing advertised
+engine dimensions alone. A replacement still needs room for the gearbox,
+coupling, hoses and maintenance access. For an electronic fault, retain the
+displayed code and operating conditions so a suitably equipped workshop can
+prepare before travelling.
+
 ## Frequently asked questions
 
 **Is Steyr well supported in Australia?** The network is small. Confirm parts holding and diagnostic access before committing to work.

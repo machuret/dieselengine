@@ -42,6 +42,16 @@ territory to the workshops that know these engines.
 **Confirm local support before buying.** The network is smaller than the volume
 brands', and that is the practical consideration rather than engine quality.
 
+## Identify the cooling arrangement first
+
+Do not begin with a generic marine cooling checklist until you know whether the
+engine is air-cooled or liquid-cooled and how the installation moves heat out
+of the compartment. Photograph the data plate, ventilation ducting and every
+cooling connection. On a commercial vessel, give the workshop the operating
+profile as well as the hours: prolonged low-load running and sustained rated
+load are different diagnostic contexts. Confirm the exact engine family before
+ordering filters, sensors or cooling components.
+
 ## Frequently asked questions
 
 **Are some Deutz engines air-cooled?** Older units in the fleet are. They behave differently from a heat-exchanger engine, and installation ventilation matters. Establish which you have.

@@ -6,9 +6,9 @@
   "description": "Independent Australian guides to marine diesel engines, faults, service costs and how to find a marine mechanic. We do not sell repairs.",
   "locale": "en-AU",
   "country": "AU",
-  "_comment_publishing": "defaultAuthor is the publishing organisation and is a legitimate byline. defaultReviewer must be a real, named, licensed marine mechanic \u2014 never a placeholder. Until it is set, pillars and symptom/engine pages stay noindex and out of the sitemap, because those carry direct diagnostic and safety advice. Service pages publish on the author byline alone.",
+  "_comment_publishing": "defaultAuthor is the publishing organisation and is a legitimate byline. defaultReviewer must be a real, named marine mechanic whose review can be substantiated \u2014 never a placeholder, nickname or unrelated business. Leave it null until that person has reviewed the material.",
   "defaultAuthor": "The Marine Diesel Engine editorial team",
-  "defaultReviewer": "Mr Boat Mechanic",
+  "defaultReviewer": null,
   "sections": [
     {
       "id": "pages",
@@ -99,6 +99,21 @@
       "priority": "0.3"
     },
     {
+      "url": "/disclaimer/",
+      "section": "pages",
+      "priority": "0.5"
+    },
+    {
+      "url": "/contact/",
+      "section": "pages",
+      "priority": "0.5"
+    },
+    {
+      "url": "/resources/",
+      "section": "pages",
+      "priority": "0.7"
+    },
+    {
       "url": "/sitemap/",
       "section": "pages",
       "priority": "0.4"
@@ -116,8 +131,8 @@
     "caption": "Know what you are looking at before you start troubleshooting. Our guides explain the systems around the engine as well as the engine itself."
   },
   "socialImage": "/images/marine-diesel-engine-bay.jpg",
-  "_comment_heroFigure": "Set to {src, alt, caption} to show a technical figure under the homepage hero. src must be a file in public/ \u2014 prebuild-check enforces that, because a hero that 404s is worse than no hero. alt carries the labelled part names, which are otherwise unreadable to a search engine or a screen reader in a raster drawing.",
-  "contactEmail": "gabriel@marinedieselengine.com.au",
+  "_comment_heroFigure": "Set to {src, alt, caption} to show a figure under the homepage hero. src must be a file in public/ \u2014 prebuild-check enforces that, because a hero that 404s is worse than no hero. alt should describe the useful visual details for search engines and screen readers.",
+  "contactEmail": "gabriel@yousail.com.au",
   "legalUpdated": "2026-09-09",
   "_comment_contact": "Used on the privacy and terms pages. Point this at a mailbox that is actually monitored \u2014 both pages invite corrections and listing removal requests, and the privacy page commits to responding."
 }

@@ -1,0 +1,41 @@
+---
+const { page } = Astro.props;
+
+const common = {
+  symptoms: { url: '/marine-engine-problems/', title: 'Start from an engine symptom' },
+  services: { url: '/services/', title: 'Understand the repair or service' },
+  costs: { url: '/costs/', title: 'Check Australian cost guidance' },
+  mechanic: { url: '/find-a-marine-mechanic/', title: 'Prepare to find a marine mechanic' },
+  identify: { url: '/how/how-to-identify-your-marine-engine/', title: 'Identify your engine and serial number' },
+  schedule: { url: '/guides/marine-engine-service-schedule/', title: 'Review the service schedule' },
+  buying: { url: '/buy-marine-diesel-engine/', title: 'Compare buying and repower options' },
+  resources: { url: '/resources/', title: 'Open manuals and authority resources' },
+};
+
+let links = [];
+if (page.pageType === 'service-national') {
+  links = [common.symptoms, common.costs, common.mechanic, common.resources];
+} else if (page.pageType === 'brand-hub' || page.pageType === 'distributor') {
+  links = [common.identify, common.schedule, common.buying, common.mechanic];
+} else if (page.pageType === 'symptom') {
+  links = [common.services, common.mechanic, common.resources];
+} else if (page.pageType === 'howto') {
+  links = [common.symptoms, common.services, common.resources];
+} else if (page.geo) {
+  links = [common.mechanic, common.costs, common.services, common.buying];
+} else if (page.pageType === 'boat-brand') {
+  links = [common.identify, common.buying, common.schedule, common.mechanic];
+} else if (page.pageType === 'decision') {
+  links = [common.costs, common.services, common.mechanic, common.resources];
+}
+
+links = links.filter((link) => link.url !== page.url);
+---
+{links.length > 0 && (
+  <nav class="next-steps" aria-label="Useful next steps">
+    <p class="next-label">Useful next steps</p>
+    <ul>
+      {links.map((link) => <li><a href={link.url}>{link.title}<span aria-hidden="true">→</span></a></li>)}
+    </ul>
+  </nav>
+)}

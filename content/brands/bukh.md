@@ -44,6 +44,15 @@ the whole installation is worth continuing to support, not whether the engine
 will keep going. It probably will. See
 [repower or rebuild](/guides/repower-vs-rebuild/).
 
+## Assess the whole installation
+
+Record cold-start behaviour, oil pressure, exhaust water flow and the rpm the
+engine reaches under load. Then inspect the systems around it: flexible mounts,
+shaft alignment, wiring, fuel hoses, seacock and wet exhaust. On an older Bukh,
+a sound compression test does not make a cracked exhaust hose or corroded loom
+young again. A useful quote separates work needed to keep the engine from work
+needed to make the entire propulsion installation dependable.
+
 ## Frequently asked questions
 
 **Are Bukh parts still available in Australia?** The network is thin and some parts come from Europe. Confirm availability and lead time before booking work.

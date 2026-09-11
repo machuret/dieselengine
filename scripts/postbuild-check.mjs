@@ -25,6 +25,93 @@ function walk(dir) {
 
 const files = walk(DIST);
 const errors = [];
+let schemaBlockCount = 0;
+let schemaPageCount = 0;
+
+/**
+ * Validate the structured data we actually ship, not just the source object.
+ * This catches malformed JSON and the most common required-property mistakes
+ * before search crawlers see them.
+ */
+function validateSchema(node, page, label) {
+  if (!node || typeof node !== 'object' || Array.isArray(node)) {
+    errors.push(`${page} ${label} is not a JSON object`);
+    return;
+  }
+  if (!node['@type']) errors.push(`${page} ${label} is missing @type`);
+
+  if (node['@type'] === 'BreadcrumbList') {
+    if (!Array.isArray(node.itemListElement) || node.itemListElement.length < 1) {
+      errors.push(`${page} BreadcrumbList has no items`);
+    } else {
+      node.itemListElement.forEach((item, index) => {
+        if (item?.['@type'] !== 'ListItem' || item.position !== index + 1 || !item.name || !item.item) {
+          errors.push(`${page} BreadcrumbList item ${index + 1} is incomplete or out of order`);
+        }
+      });
+    }
+  }
+
+  if (node['@type'] === 'FAQPage') {
+    if (!Array.isArray(node.mainEntity) || node.mainEntity.length < 1) {
+      errors.push(`${page} FAQPage has no questions`);
+    } else {
+      node.mainEntity.forEach((item, index) => {
+        if (item?.['@type'] !== 'Question' || !item.name ||
+            item.acceptedAnswer?.['@type'] !== 'Answer' || !item.acceptedAnswer?.text) {
+          errors.push(`${page} FAQPage question ${index + 1} is incomplete`);
+        }
+      });
+    }
+  }
+
+  if (node['@type'] === 'HowTo') {
+    if (!node.name || !Array.isArray(node.step) || node.step.length < 1) {
+      errors.push(`${page} HowTo is missing its name or steps`);
+    } else {
+      node.step.forEach((step, index) => {
+        if (step?.['@type'] !== 'HowToStep' || !step.name || !step.text) {
+          errors.push(`${page} HowTo step ${index + 1} is incomplete`);
+        }
+      });
+    }
+  }
+}
+
+for (const f of files) {
+  if (!f.endsWith('.html')) continue;
+  const page = relative(DIST, f);
+  const html = readFileSync(f, 'utf8');
+  const blocks = [...html.matchAll(/<script\b[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)];
+  if (blocks.length) schemaPageCount++;
+  if (f.endsWith('index.html') && !page.endsWith('404/index.html') && blocks.length === 0) {
+    errors.push(`${page} has no JSON-LD structured data`);
+  }
+  blocks.forEach((match, index) => {
+    schemaBlockCount++;
+    let data;
+    try {
+      data = JSON.parse(match[1]);
+    } catch (error) {
+      errors.push(`${page} JSON-LD block ${index + 1} is invalid JSON: ${error.message}`);
+      return;
+    }
+    if (data['@context'] !== 'https://schema.org') {
+      errors.push(`${page} JSON-LD block ${index + 1} has an invalid @context`);
+    }
+    if (data['@graph'] !== undefined) {
+      if (!Array.isArray(data['@graph']) || data['@graph'].length < 1) {
+        errors.push(`${page} JSON-LD block ${index + 1} has an empty or invalid @graph`);
+      } else {
+        data['@graph'].forEach((node, nodeIndex) =>
+          validateSchema(node, page, `JSON-LD graph node ${nodeIndex + 1}`)
+        );
+      }
+    } else {
+      validateSchema(data, page, `JSON-LD block ${index + 1}`);
+    }
+  });
+}
 
 // Every route that renders a page, and whether it asks to be indexed.
 const routes = new Map();
@@ -55,6 +142,41 @@ for (const [url, indexable] of routes) {
 }
 for (const url of listed) {
   if (!routes.has(url)) errors.push(`${url} is in a sitemap but was not built`);
+}
+
+// Internal navigation and local image assets must resolve in the built site.
+// This turns the expanded cross-linking into a checked site graph rather than
+// a collection of links that can quietly rot as slugs change.
+let internalLinkCount = 0;
+let localImageCount = 0;
+for (const f of files) {
+  if (!f.endsWith('.html')) continue;
+  const page = relative(DIST, f);
+  const html = readFileSync(f, 'utf8');
+
+  for (const [, href] of html.matchAll(/<a\b[^>]*\bhref=["']([^"']+)["'][^>]*>/gi)) {
+    if (!href.startsWith('/') || href.startsWith('//')) continue;
+    internalLinkCount++;
+    const pathname = decodeURIComponent(href.split(/[?#]/, 1)[0]);
+    const targetExists = pathname.endsWith('/')
+      ? routes.has(pathname)
+      : existsSync(join(DIST, pathname.replace(/^\//, '')));
+    if (!targetExists) errors.push(`${page} links to missing internal target ${href}`);
+  }
+
+  for (const match of html.matchAll(/<img\b([^>]*)>/gi)) {
+    const attrs = match[1];
+    if (!/\balt=["'][^"']*["']/i.test(attrs)) {
+      errors.push(`${page} contains an image without alt text`);
+    }
+    const src = /\bsrc=["']([^"']+)["']/i.exec(attrs)?.[1];
+    if (!src || !src.startsWith('/') || src.startsWith('//')) continue;
+    localImageCount++;
+    const pathname = decodeURIComponent(src.split(/[?#]/, 1)[0]);
+    if (!existsSync(join(DIST, pathname.replace(/^\//, '')))) {
+      errors.push(`${page} references missing image ${src}`);
+    }
+  }
 }
 
 // The sitemap index must point only at sitemaps that exist and are non-empty.
@@ -205,6 +327,12 @@ if (crossPair) {
 const indexableCount = [...routes.values()].filter(Boolean).length;
 console.log(
   `postbuild: ${routes.size} routes, ${indexableCount} indexable, ${listed.size} in sitemaps`
+);
+console.log(
+  `postbuild: validated ${schemaBlockCount} JSON-LD blocks across ${schemaPageCount} pages`
+);
+console.log(
+  `postbuild: checked ${internalLinkCount} internal links and ${localImageCount} local images`
 );
 if (errors.length) {
   console.error('\npostbuild FAILED:\n' + errors.map((e) => '  x ' + e).join('\n'));
