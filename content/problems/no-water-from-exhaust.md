@@ -89,7 +89,7 @@ within the first hour because the diagnostic order is short and cheap.
 
 {{PRICE_TABLE:no-water-from-exhaust}}
 
-→ [What marine engine work costs](/costs/)
+→ [What marine engine work costs in Australia](/costs/)
 
 ## Common on these engines
 
@@ -97,10 +97,10 @@ Any raw-water-cooled marine diesel can do this, but impellers and strainers
 cause it disproportionately on engines that sit between uses — yacht
 auxiliaries and seasonal boats especially.
 
-→ [Yanmar](/engine-brands/) ·
-[Volvo Penta](/engine-brands/) ·
-[Beta Marine](/engine-brands/) ·
-[Marine engine brands](/engine-brands/)
+→ Yanmar ·
+Volvo Penta ·
+Beta Marine ·
+Marine engine brands
 
 ## Frequently asked questions
 

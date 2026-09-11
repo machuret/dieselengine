@@ -91,7 +91,7 @@ is what an established case needs — is not.
 
 {{PRICE_TABLE:diesel-bug-treatment}}
 
-→ [Diesel bug treatment cost](/costs/)
+→ [What marine engine work costs in Australia](/costs/)
 
 ## Find diesel bug treatment in your city
 

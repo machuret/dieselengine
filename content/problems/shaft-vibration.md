@@ -86,14 +86,14 @@ of vibration and they compound.
 
 {{PRICE_TABLE:shaft-vibration}}
 
-→ [What marine engine work costs](/costs/)
+→ [What marine engine work costs in Australia](/costs/)
 
 ## Common on these engines
 
 Driveline rather than engine-specific, though gearbox output bearing wear shows
 up on high-hour ZF and Twin Disc installations.
 
-→ [ZF Marine: shaft vibration](/engine-brands/)
+→ ZF Marine: shaft vibration
 
 ## Frequently asked questions
 

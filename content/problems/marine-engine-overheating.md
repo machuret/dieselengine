@@ -81,7 +81,7 @@ if the oil looks milky — those point at the expensive end.
 
 {{PRICE_TABLE:marine-engine-overheating}}
 
-→ [What marine engine work costs](/costs/)
+→ [What marine engine work costs in Australia](/costs/)
 
 ## Common on these engines
 
@@ -89,9 +89,9 @@ Exhaust elbow corrosion is a leading cause on older Volvo Penta and Yanmar
 installations. Aftercooler and heat exchanger fouling dominate on the larger
 Cummins and Caterpillar engines in charter and commercial use.
 
-→ [Volvo Penta: marine engine overheating](/engine-brands/) ·
-[Cummins Marine](/engine-brands/) ·
-[Perkins and Sabre](/engine-brands/)
+→ Volvo Penta: marine engine overheating ·
+Cummins Marine ·
+Perkins and Sabre
 
 ## Frequently asked questions
 

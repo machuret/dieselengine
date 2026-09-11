@@ -73,14 +73,14 @@ replacing the set on suspicion.
 
 {{PRICE_TABLE:marine-rough-idle}}
 
-→ [What marine engine work costs](/costs/)
+→ [What marine engine work costs in Australia](/costs/)
 
 ## Common on these engines
 
 Air leaks and filter restriction dominate across all brands, especially after a
 filter change or on boats that sit.
 
-→ [Marine engine brands](/engine-brands/)
+→ Marine engine brands
 
 ## Frequently asked questions
 

@@ -89,7 +89,7 @@ Driven by tank size, access, and whether physical cleaning is required.
 
 {{PRICE_TABLE:fuel-polishing}}
 
-→ [Fuel polishing cost](/costs/)
+→ [What marine engine work costs in Australia](/costs/)
 
 ## Find fuel polishing and tank cleaning in your city
 

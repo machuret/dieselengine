@@ -73,14 +73,14 @@ rather than replaced on suspicion.
 
 {{PRICE_TABLE:marine-engine-black-smoke}}
 
-→ [What marine engine work costs](/costs/)
+→ [What marine engine work costs in Australia](/costs/)
 
 ## Common on these engines
 
 Turbocharged engines add the aftercooler and turbo as air-side causes.
 
-→ [Cummins Marine: black smoke](/engine-brands/) ·
-[Marine engine brands](/engine-brands/)
+→ Cummins Marine: black smoke ·
+Marine engine brands
 
 ## Frequently asked questions
 

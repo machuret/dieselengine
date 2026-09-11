@@ -73,7 +73,7 @@ alternative involves beds, controls, shaft and instruments.
 
 {{PRICE_TABLE:marine-engine-repair}}
 
-→ [Marine engine repair cost](/costs/)
+→ [What marine engine work costs in Australia](/costs/)
 
 ## Find marine engine repair in your city
 

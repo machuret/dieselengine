@@ -73,7 +73,7 @@ figure — it narrows the diagnosis substantially.
 
 {{PRICE_TABLE:marine-engine-loses-power}}
 
-→ [What marine engine work costs](/costs/)
+→ [What marine engine work costs in Australia](/costs/)
 
 ## Common on these engines
 
@@ -81,7 +81,7 @@ Fuel starvation dominates on boats with tanks that sit; overload dominates on
 boats due for antifouling.
 
 → [Fuel polishing and tank cleaning](/services/fuel-polishing/) ·
-[Marine engine brands](/engine-brands/)
+Marine engine brands
 
 ## Frequently asked questions
 

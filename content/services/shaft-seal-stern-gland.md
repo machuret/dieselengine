@@ -81,7 +81,7 @@ unevenly and causes vibration.
 
 {{PRICE_TABLE:shaft-seal-stern-gland}}
 
-→ [Shaft seal and stern gland cost](/costs/)
+→ [What marine engine work costs in Australia](/costs/)
 
 ## Find stern gland service in your city
 

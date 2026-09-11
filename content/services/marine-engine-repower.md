@@ -84,7 +84,7 @@ A quote for an engine is not a quote for a repower.
 
 {{PRICE_TABLE:marine-engine-repower}}
 
-→ [Marine repower cost](/costs/)
+→ [What marine engine work costs in Australia](/costs/)
 
 ## Find a marine repower in your city
 

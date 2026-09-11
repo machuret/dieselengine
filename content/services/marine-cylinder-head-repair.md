@@ -85,7 +85,7 @@ corroded exhaust elbow, fails again.
 
 {{PRICE_TABLE:marine-cylinder-head-repair}}
 
-→ [Marine cylinder head repair cost](/costs/)
+→ [What marine engine work costs in Australia](/costs/)
 
 ## Find cylinder head repair in your city
 

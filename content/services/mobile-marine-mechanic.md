@@ -86,7 +86,7 @@ Attendance plus labour, with attendance varying substantially by access.
 
 {{PRICE_TABLE:mobile-marine-mechanic}}
 
-→ [Mobile marine mechanic cost](/costs/)
+→ [What marine engine work costs in Australia](/costs/)
 
 ## Find a mobile marine mechanic in your city
 

@@ -81,15 +81,15 @@ fail early on boats.
 
 {{PRICE_TABLE:marine-battery-not-charging}}
 
-→ [What marine engine work costs](/costs/)
+→ [What marine engine work costs in Australia](/costs/)
 
 ## Common on these engines
 
 Not brand-specific — corrosion and battery age dominate everywhere, and
 disproportionately on boats that sit.
 
-→ [Mercruiser: battery not charging](/engine-brands/) ·
-[Marine engine brands](/engine-brands/)
+→ Mercruiser: battery not charging ·
+Marine engine brands
 
 ## Frequently asked questions
 

@@ -88,7 +88,7 @@ Most common on yacht auxiliaries and any boat used only for short trips in and
 out of a berth, regardless of brand.
 
 → [Yacht auxiliary engine service](/services/yacht-auxiliary-service/) ·
-[Marine engine brands](/engine-brands/)
+Marine engine brands
 
 ## Frequently asked questions
 

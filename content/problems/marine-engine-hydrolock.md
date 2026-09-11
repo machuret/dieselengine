@@ -101,8 +101,8 @@ Any raw-water-cooled marine diesel with a wet exhaust — which is nearly all of
 them. Risk rises sharply with elbow age and with a marginal exhaust
 installation.
 
-→ [Volvo Penta: saltwater in the engine oil](/engine-brands/) ·
-[Marine engine brands](/engine-brands/)
+→ Volvo Penta: saltwater in the engine oil ·
+Marine engine brands
 
 ## Frequently asked questions
 

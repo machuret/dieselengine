@@ -94,7 +94,7 @@ require.
 
 {{PRICE_TABLE:commercial-vessel-servicing}}
 
-→ [Commercial vessel servicing cost](/costs/)
+→ [What marine engine work costs in Australia](/costs/)
 
 ## Find commercial vessel servicing in your city
 

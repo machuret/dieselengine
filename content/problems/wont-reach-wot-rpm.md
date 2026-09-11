@@ -77,7 +77,7 @@ RPM. Bring the actual number and the conditions you measured it in.
 
 {{PRICE_TABLE:wont-reach-wot-rpm}}
 
-→ [What marine engine work costs](/costs/)
+→ [What marine engine work costs in Australia](/costs/)
 
 ## Common on these engines
 
@@ -85,7 +85,7 @@ Propeller mismatch is especially common after a repower, where the old propeller
 was carried over to a new engine with different power and rated RPM.
 
 → [Marine engine repower](/services/marine-engine-repower/) ·
-[Marine engine brands](/engine-brands/)
+Marine engine brands
 
 ## Frequently asked questions
 

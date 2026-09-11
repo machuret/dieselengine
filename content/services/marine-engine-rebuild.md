@@ -89,7 +89,7 @@ the shaft, and run in properly.
 
 {{PRICE_TABLE:marine-engine-rebuild}}
 
-→ [Marine engine rebuild cost](/costs/)
+→ [What marine engine work costs in Australia](/costs/)
 
 ## Find an engine rebuild in your city
 

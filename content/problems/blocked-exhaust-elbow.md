@@ -102,8 +102,8 @@ Elbow corrosion is a well-known item on older Volvo Penta and Yanmar
 installations, and on any engine in warm tropical water where corrosion runs
 faster.
 
-→ [Volvo Penta: blocked exhaust elbow](/engine-brands/) ·
-[Yanmar: blocked exhaust elbow](/engine-brands/)
+→ Volvo Penta: blocked exhaust elbow ·
+Yanmar: blocked exhaust elbow
 
 ## Frequently asked questions
 

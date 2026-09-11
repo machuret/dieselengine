@@ -86,7 +86,7 @@ addressing the tank means replacing it again.
 
 {{PRICE_TABLE:marine-fuel-pump-repair}}
 
-→ [Marine fuel pump repair cost](/costs/)
+→ [What marine engine work costs in Australia](/costs/)
 
 ## Find fuel pump repair in your city
 

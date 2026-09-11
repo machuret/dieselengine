@@ -76,7 +76,7 @@ and watching.
 
 {{PRICE_TABLE:marine-low-oil-pressure}}
 
-→ [What marine engine work costs](/costs/)
+→ [What marine engine work costs in Australia](/costs/)
 
 ## Common on these engines
 
@@ -84,8 +84,8 @@ Sender and connection failures dominate on older boats in salt air. Genuine
 pressure loss is most often an oil condition problem before it is a wear
 problem.
 
-→ [Cummins Marine: low oil pressure](/engine-brands/) ·
-[Caterpillar Marine: low oil pressure](/engine-brands/)
+→ Cummins Marine: low oil pressure ·
+Caterpillar Marine: low oil pressure
 
 ## Frequently asked questions
 

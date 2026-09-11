@@ -629,3 +629,36 @@ footer.site nav a:hover { color: var(--accent); text-decoration: underline; }
 @media (prefers-reduced-motion: no-preference) {
   .blueprint-frame { scroll-behavior: smooth; }
 }
+
+/* ---- Service index on city hubs ---------------------------------------- */
+.svc-index {
+  max-width: var(--measure); margin: 3.5rem 0 0;
+  padding-top: 1.75rem; border-top: 1px solid var(--rule);
+}
+.svc-index h2 {
+  margin: 0; font-size: 1.25rem; font-weight: 700; letter-spacing: -.02em;
+  color: var(--ink);
+}
+.svc-note { margin: .5rem 0 1.75rem; color: var(--muted); font-size: .95rem; }
+.svc-group { margin-top: 1.4rem; }
+.svc-group:first-of-type { margin-top: 0; }
+.svc-label {
+  display: flex; align-items: center; gap: .7rem; margin: 0 0 .55rem;
+  font-family: var(--mono); font-size: .68rem; font-weight: 500;
+  letter-spacing: .13em; text-transform: uppercase; color: var(--muted);
+}
+.svc-label::after { content: ""; flex: 1; height: 1px; background: var(--hair); }
+.svc-index ul {
+  list-style: none; margin: 0; padding: 0;
+  display: flex; flex-wrap: wrap; gap: .4rem .5rem;
+}
+.svc-index li { margin: 0; }
+.svc-index a {
+  display: block; padding: .3rem .6rem; border-radius: var(--r-sm);
+  border: 1px solid var(--hair); background: var(--surface);
+  font-size: .87rem; color: var(--ink-2); text-decoration: none;
+  transition: border-color .15s, color .15s, background-color .15s;
+}
+.svc-index a:hover, .svc-index a:focus-visible {
+  border-color: var(--accent); color: var(--accent); background: var(--wash);
+}

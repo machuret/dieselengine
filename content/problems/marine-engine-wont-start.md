@@ -89,7 +89,7 @@ can diagnose at the berth.
 Batteries and corroded connections dominate across every brand, and
 disproportionately on boats that sit.
 
-→ [Mercruiser: battery not charging](/engine-brands/)
+→ Mercruiser: battery not charging
 
 ## Frequently asked questions
 

@@ -75,7 +75,7 @@ pump, the tank pickup and the injection pump.
 
 {{PRICE_TABLE:marine-fuel-starvation}}
 
-→ [What marine engine work costs](/costs/)
+→ [What marine engine work costs in Australia](/costs/)
 
 ## Common on these engines
 

@@ -81,7 +81,7 @@ recommissioning before the first trip, not on it.
 
 {{PRICE_TABLE:winterisation-layup}}
 
-→ [Winterisation and layup cost](/costs/)
+→ [What marine engine work costs in Australia](/costs/)
 
 ## Find winterisation and layup in your city
 

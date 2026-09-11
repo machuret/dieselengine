@@ -89,7 +89,7 @@ Access is the dominant variable on a boat.
 
 {{PRICE_TABLE:marine-head-gasket-replacement}}
 
-→ [Marine head gasket replacement cost](/costs/)
+→ [What marine engine work costs in Australia](/costs/)
 
 ## Find head gasket replacement in your city
 

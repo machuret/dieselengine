@@ -85,7 +85,7 @@ goes in:
 
 {{PRICE_TABLE:marine-engine-reconditioning}}
 
-→ [Marine engine reconditioning cost](/costs/)
+→ [What marine engine work costs in Australia](/costs/)
 
 ## Find engine reconditioning in your city
 

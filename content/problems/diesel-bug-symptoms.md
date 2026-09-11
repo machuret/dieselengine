@@ -81,7 +81,7 @@ removing the biomass from a tank with baffles is not.
 
 {{PRICE_TABLE:diesel-bug-symptoms}}
 
-→ [What marine engine work costs](/costs/)
+→ [What marine engine work costs in Australia](/costs/)
 
 ## Common on these engines
 

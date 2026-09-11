@@ -87,7 +87,7 @@ Corroded senders and earths cause a disproportionate share of false alarms on
 older boats and on anything in tropical salt air.
 
 → [Marine engine electrical](/services/marine-engine-electrical/) ·
-[Marine engine brands](/engine-brands/)
+Marine engine brands
 
 ## Frequently asked questions
 

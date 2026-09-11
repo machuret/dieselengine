@@ -86,7 +86,7 @@ inconvenience.
 
 {{PRICE_TABLE:impeller-replacement}}
 
-→ [Impeller replacement cost](/costs/)
+→ [What marine engine work costs in Australia](/costs/)
 
 ## Find impeller replacement in your city
 

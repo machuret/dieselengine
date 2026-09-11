@@ -86,7 +86,7 @@ cooler produces the same symptom for a fraction of the cost.
 Oil cooler and aftercooler perforation is a normal end-of-life mode on any
 engine with years of seawater through it.
 
-→ [Marine engine brands](/engine-brands/)
+→ Marine engine brands
 
 ## Frequently asked questions
 

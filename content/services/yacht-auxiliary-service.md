@@ -73,15 +73,15 @@ salt water is vulnerable.
 
 ## Engines you will meet
 
-[Yanmar](/engine-brands/) (1GM10, 2YM, 3YM, 3JH, 4JH) ·
-[Volvo Penta](/engine-brands/) (D1, D2) ·
-[Beta Marine](/engine-brands/) ·
-[Nanni](/engine-brands/) ·
-[Vetus](/engine-brands/) ·
-[Solé](/engine-brands/) ·
-[Craftsman](/engine-brands/)
+Yanmar (1GM10, 2YM, 3YM, 3JH, 4JH) ·
+Volvo Penta (D1, D2) ·
+Beta Marine ·
+Nanni ·
+Vetus ·
+Solé ·
+Craftsman
 
-Many are [Kubota](/engine-brands/) industrial blocks under a marine
+Many are Kubota industrial blocks under a marine
 cover, which widens parts and service options considerably.
 
 ## What actually helps
@@ -100,7 +100,7 @@ drives the labour.
 
 {{PRICE_TABLE:yacht-auxiliary-service}}
 
-→ [Yacht auxiliary service cost](/costs/)
+→ [What marine engine work costs in Australia](/costs/)
 
 ## Find yacht auxiliary service in your city
 

@@ -98,7 +98,7 @@ addressed.
 
 {{PRICE_TABLE:saltwater-damage-repair}}
 
-→ [Saltwater damage repair cost](/costs/)
+→ [What marine engine work costs in Australia](/costs/)
 
 ## Find saltwater ingress repair in your city
 

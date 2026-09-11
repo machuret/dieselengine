@@ -82,7 +82,7 @@ follows skipping it.
 
 {{PRICE_TABLE:hard-starting-after-layup}}
 
-→ [What marine engine work costs](/costs/)
+→ [What marine engine work costs in Australia](/costs/)
 
 ## Common on these engines
 
@@ -90,8 +90,8 @@ Every engine that sits. Most pronounced on yacht auxiliaries and on southern
 boats with a genuine winter layup.
 
 → [Winterisation and seasonal layup](/services/winterisation-layup/) ·
-[Yanmar: hard starting after layup](/engine-brands/) ·
-[Beta Marine: hard starting after layup](/engine-brands/)
+Yanmar: hard starting after layup ·
+Beta Marine: hard starting after layup
 
 ## Frequently asked questions
 

@@ -85,7 +85,7 @@ prices.
 
 {{PRICE_TABLE:marine-gearbox-service}}
 
-→ [Marine gearbox service cost](/costs/)
+→ [What marine engine work costs in Australia](/costs/)
 
 ## Find marine gearbox service in your city
 

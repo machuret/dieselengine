@@ -93,7 +93,7 @@ need addressing as part of the job.
 
 {{PRICE_TABLE:marine-injector-service}}
 
-→ [Marine injector service cost](/costs/)
+→ [What marine engine work costs in Australia](/costs/)
 
 ## Find injector testing and replacement in your city
 

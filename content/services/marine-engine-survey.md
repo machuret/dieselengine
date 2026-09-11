@@ -87,7 +87,7 @@ Trivial against the cost of the engine problems it finds.
 
 {{PRICE_TABLE:marine-engine-survey}}
 
-→ [Marine engine survey cost](/costs/)
+→ [What marine engine work costs in Australia](/costs/)
 
 ## Find an engine survey in your city
 

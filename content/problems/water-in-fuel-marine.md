@@ -75,7 +75,7 @@ the tank is the problem.
 
 {{PRICE_TABLE:water-in-fuel-marine}}
 
-→ [What marine engine work costs](/costs/)
+→ [What marine engine work costs in Australia](/costs/)
 
 ## Common on these engines
 

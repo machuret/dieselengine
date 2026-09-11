@@ -66,15 +66,15 @@ promptly, because it destroys bearings.
 
 {{PRICE_TABLE:gearbox-overheating}}
 
-→ [What marine engine work costs](/costs/)
+→ [What marine engine work costs in Australia](/costs/)
 
 ## Common on these engines
 
 ZF and Twin Disc boxes in commercial and charter service, where sustained high
 load leaves no thermal margin for a partly blocked cooler.
 
-→ [ZF Marine: gearbox overheating](/engine-brands/) ·
-[Twin Disc: gearbox overheating](/engine-brands/)
+→ ZF Marine: gearbox overheating ·
+Twin Disc: gearbox overheating
 
 ## Frequently asked questions
 

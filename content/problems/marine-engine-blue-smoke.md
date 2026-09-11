@@ -73,7 +73,7 @@ before committing to anything major — it separates a turbo job from a rebuild.
 
 {{PRICE_TABLE:marine-engine-blue-smoke}}
 
-→ [What marine engine work costs](/costs/)
+→ [What marine engine work costs in Australia](/costs/)
 
 ## Common on these engines
 
@@ -81,7 +81,7 @@ Turbo seals on turbocharged engines; bore glazing on lightly used yacht
 auxiliaries of any brand.
 
 → [Yacht auxiliary engine service](/services/yacht-auxiliary-service/) ·
-[Marine engine brands](/engine-brands/)
+Marine engine brands
 
 ## Frequently asked questions
 

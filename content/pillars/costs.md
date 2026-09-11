@@ -52,52 +52,52 @@ labour rate is rarely the dominant cost. Availability is.
 ## Costs by job
 
 **Cooling and raw water**
-[Impeller replacement](/costs/) ·
-[Heat exchanger service](/costs/) ·
-[Exhaust elbow replacement](/costs/) ·
-[Aftercooler service](/costs/) ·
-[Raw water system repair](/costs/) ·
-[Cooling system repair](/costs/)
+[Impeller replacement](/services/impeller-replacement/) ·
+[Heat exchanger service](/services/heat-exchanger-service/) ·
+[Exhaust elbow replacement](/services/exhaust-elbow-replacement/) ·
+[Aftercooler service](/services/aftercooler-service/) ·
+[Raw water system repair](/services/raw-water-system-repair/) ·
+[Cooling system repair](/services/marine-cooling-system-repair/)
 
 **Fuel**
-[Fuel polishing and tank cleaning](/costs/) ·
-[Diesel bug treatment](/costs/) ·
-[Injector testing and replacement](/costs/) ·
-[Fuel pump repair](/costs/)
+[Fuel polishing and tank cleaning](/services/fuel-polishing/) ·
+[Diesel bug treatment](/services/diesel-bug-treatment/) ·
+[Injector testing and replacement](/services/marine-injector-service/) ·
+[Fuel pump repair](/services/marine-fuel-pump-repair/)
 
 **Engine**
-[Marine engine service](/costs/) ·
-[Engine repair](/costs/) ·
-[Cylinder head repair](/costs/) ·
-[Head gasket replacement](/costs/) ·
-[Engine rebuild](/costs/) ·
-[Engine reconditioning](/costs/) ·
-[Repower and replacement](/costs/) ·
-[Saltwater ingress and hydrolock repair](/costs/) ·
-[Turbocharger repair](/costs/)
+[Marine engine service](/services/marine-engine-service/) ·
+[Engine repair](/services/marine-engine-repair/) ·
+[Cylinder head repair](/services/marine-cylinder-head-repair/) ·
+[Head gasket replacement](/services/marine-head-gasket-replacement/) ·
+[Engine rebuild](/services/marine-engine-rebuild/) ·
+[Engine reconditioning](/services/marine-engine-reconditioning/) ·
+[Repower and replacement](/services/marine-engine-repower/) ·
+[Saltwater ingress and hydrolock repair](/services/saltwater-damage-repair/) ·
+[Turbocharger repair](/services/marine-turbo-repair/)
 
 **Driveline**
-[Gearbox service](/costs/) ·
-[Sterndrive service](/costs/) ·
-[Shaft seal and stern gland](/costs/)
+[Gearbox service](/services/marine-gearbox-service/) ·
+[Sterndrive service](/services/sterndrive-service/) ·
+[Shaft seal and stern gland](/services/shaft-seal-stern-gland/)
 
 **Corrosion and electrical**
-[Anode replacement](/costs/) ·
-[Engine electrical and charging](/costs/)
+[Anode replacement](/services/anode-replacement/) ·
+[Engine electrical and charging](/services/marine-engine-electrical/)
 
 **Inspection and seasonal**
-[Engine survey and pre-purchase inspection](/costs/) ·
-[Winterisation and layup](/costs/) ·
-[Recommissioning](/costs/)
+[Engine survey and pre-purchase inspection](/services/marine-engine-survey/) ·
+[Winterisation and layup](/services/winterisation-layup/) ·
+[Recommissioning](/services/recommissioning-service/)
 
 **Attendance**
-[Mobile marine mechanic](/costs/) ·
-[Emergency and on-water breakdown](/costs/)
+[Mobile marine mechanic](/services/mobile-marine-mechanic/) ·
+[Emergency and on-water breakdown](/services/emergency-marine-breakdown/)
 
 **By vessel type**
-[Commercial vessel servicing](/costs/) ·
-[Charter fleet servicing](/costs/) ·
-[Yacht auxiliary service](/costs/)
+[Commercial vessel servicing](/services/commercial-vessel-servicing/) ·
+[Charter fleet servicing](/services/charter-fleet-servicing/) ·
+[Yacht auxiliary service](/services/yacht-auxiliary-service/)
 
 ## How to read a marine quote
 

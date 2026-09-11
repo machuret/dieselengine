@@ -127,7 +127,7 @@ atmosphere that attacks every connection.
 Fault patterns follow the engine, not the boat's badge. Many Australian yachts
 carry a Kubota industrial block under a Beta, Nanni, Craftsman or Solé cover.
 
-→ [Marine diesel engine brands in Australia](/engine-brands/)
+→ Marine diesel engine brands in Australia
 
 ## Something wrong right now?
 
@@ -135,7 +135,7 @@ Start from the symptom, not the part.
 → [Marine engine problems and symptoms](/marine-engine-problems/)
 
 Know what you need and want to know what it should cost?
-→ [What marine engine work costs](/costs/)
+→ [What marine engine work costs in Australia](/costs/)
 
 Ready to hand it to someone?
 → [Find a marine diesel mechanic](/find-a-marine-mechanic/)

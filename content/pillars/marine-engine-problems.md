@@ -117,7 +117,7 @@ Some faults are characteristic of a particular engine rather than marine diesels
 generally — a known exhaust elbow design, a known aftercooler, a known
 saildrive seal.
 
-→ [Marine diesel engine brands](/engine-brands/)
+→ Marine diesel engine brands
 
 ## A note on diagnosis
 

@@ -95,7 +95,7 @@ Attendance premium plus labour, varying with conditions, distance and access.
 
 {{PRICE_TABLE:emergency-marine-breakdown}}
 
-→ [Emergency breakdown cost](/costs/)
+→ [What marine engine work costs in Australia](/costs/)
 
 ## Find emergency breakdown repair in your city
 

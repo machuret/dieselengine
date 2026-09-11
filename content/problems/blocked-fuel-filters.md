@@ -78,7 +78,7 @@ cleaning, and polishing alone gives a temporary result.
 
 {{PRICE_TABLE:blocked-fuel-filters}}
 
-→ [What marine engine work costs](/costs/)
+→ [What marine engine work costs in Australia](/costs/)
 
 ## Common on these engines
 

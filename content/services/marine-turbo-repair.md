@@ -90,7 +90,7 @@ Fitting a turbo without that list is how owners buy two.
 
 {{PRICE_TABLE:marine-turbo-repair}}
 
-→ [Marine turbo repair cost](/costs/)
+→ [What marine engine work costs in Australia](/costs/)
 
 ## Find turbocharger repair in your city
 

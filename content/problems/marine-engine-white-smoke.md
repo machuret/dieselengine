@@ -75,14 +75,14 @@ are more common culprits and much cheaper.
 
 {{PRICE_TABLE:marine-engine-white-smoke}}
 
-→ [What marine engine work costs](/costs/)
+→ [What marine engine work costs in Australia](/costs/)
 
 ## Common on these engines
 
 Exhaust elbow corrosion is the marine-specific route that has no automotive
 equivalent, and it is common on older Volvo Penta and Yanmar installations.
 
-→ [Perkins and Sabre: white smoke](/engine-brands/)
+→ Perkins and Sabre: white smoke
 
 ## Frequently asked questions
 

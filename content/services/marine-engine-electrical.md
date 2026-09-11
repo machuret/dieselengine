@@ -81,7 +81,7 @@ much faster than they used to, an electrical investigation is warranted.
 
 {{PRICE_TABLE:marine-engine-electrical}}
 
-→ [Marine engine electrical cost](/costs/)
+→ [What marine engine work costs in Australia](/costs/)
 
 ## Find marine engine electrical in your city
 

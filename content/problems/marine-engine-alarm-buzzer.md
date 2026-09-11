@@ -87,15 +87,14 @@ gauge, or an infrared thermometer on the thermostat housing.
 
 {{PRICE_TABLE:marine-engine-alarm-buzzer}}
 
-→ [What marine engine work costs](/costs/)
+→ [What marine engine work costs in Australia](/costs/)
 
 ## Common on these installations
 
 Corroded senders and earths cause a disproportionate share of false alarms on
 older boats and anything in tropical salt air.
 
-→ [Marine diesel mechanics in Darwin](/) ·
-[Marine engine brands](/engine-brands/)
+→ Marine engine brands
 
 ## Frequently asked questions
 

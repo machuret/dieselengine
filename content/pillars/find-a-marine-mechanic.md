@@ -143,7 +143,7 @@ needing factory software or a software update.
 **How do I find someone for an engine nobody has heard of?**
 Start from the base engine. Many yacht auxiliaries are Kubota industrial blocks
 under a marine cover, which widens your options considerably.
-→ [Marine diesel engine brands](/engine-brands/)
+→ Marine diesel engine brands
 
 **Can a truck diesel mechanic work on my boat?**
 For the fuel injection side, sometimes — the hardware overlaps. For cooling,

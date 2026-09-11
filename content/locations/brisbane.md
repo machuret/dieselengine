@@ -84,59 +84,11 @@ obligations well beyond recreational requirements.
 
 **Your rights.** → [Repair rights under Australian Consumer Law](/guides/marine-repair-warranty-rights-australia/)
 
-## Marine engine services in Brisbane
-
-**Cooling and raw water** —
-[Impeller replacement](/services/impeller-replacement/) ·
-[Heat exchanger service](/services/heat-exchanger-service/) ·
-[Exhaust elbow replacement](/services/exhaust-elbow-replacement/) ·
-[Aftercooler service](/services/aftercooler-service/) ·
-[Raw water system repair](/services/raw-water-system-repair/) ·
-[Cooling system repair](/services/marine-cooling-system-repair/)
-
-**Fuel** —
-[Fuel polishing and tank cleaning](/services/fuel-polishing/) ·
-[Diesel bug treatment](/services/diesel-bug-treatment/) ·
-[Injector testing and replacement](/services/marine-injector-service/) ·
-[Fuel pump repair](/services/marine-fuel-pump-repair/)
-
-**Engine** —
-[Engine servicing](/services/marine-engine-service/) ·
-[Engine repair](/services/marine-engine-repair/) ·
-[Cylinder head repair](/services/marine-cylinder-head-repair/) ·
-[Head gasket replacement](/services/marine-head-gasket-replacement/) ·
-[Engine rebuild](/services/marine-engine-rebuild/) ·
-[Engine reconditioning](/services/marine-engine-reconditioning/) ·
-[Repower and replacement](/services/marine-engine-repower/) ·
-[Saltwater ingress and hydrolock](/services/saltwater-damage-repair/) ·
-[Turbocharger repair](/services/marine-turbo-repair/)
-
-**Driveline** —
-[Gearbox service](/services/marine-gearbox-service/) ·
-[Sterndrive service](/services/sterndrive-service/) ·
-[Shaft seal and stern gland](/services/shaft-seal-stern-gland/)
-
-**Corrosion and electrical** —
-[Anode replacement](/services/anode-replacement/) ·
-[Engine electrical and charging](/services/marine-engine-electrical/)
-
-**Inspection** —
-[Engine survey and pre-purchase inspection](/services/marine-engine-survey/)
-
-**Attendance** —
-[Mobile marine mechanic](/services/mobile-marine-mechanic/) ·
-[Emergency and on-water breakdown](/services/emergency-marine-breakdown/)
-
-**By vessel type** —
-[Commercial vessel servicing](/services/commercial-vessel-servicing/) ·
-[Yacht auxiliary service](/services/yacht-auxiliary-service/) ·
-[Slipway and haul-out](/services/slipway-haul-out/)
 
 ## Nearby
 
 [Gold Coast](/marine-mechanics/gold-coast/) ·
-[Sunshine Coast](/marine-mechanics/sunshine-coast/) ·
-[Hervey Bay & Bundaberg](/)
+[Sunshine Coast](/marine-mechanics/sunshine-coast/)
 
 ## Frequently asked questions
 

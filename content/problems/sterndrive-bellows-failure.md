@@ -77,15 +77,15 @@ same time — if the bellows has been leaking, they have been getting wet.
 
 {{PRICE_TABLE:sterndrive-bellows-failure}}
 
-→ [What marine engine work costs](/costs/)
+→ [What marine engine work costs in Australia](/costs/)
 
 ## Common on these drives
 
 All sterndrive installations. Mercruiser and Volvo Penta sterndrives dominate in
 Australia.
 
-→ [Mercruiser: sterndrive bellows failure](/engine-brands/) ·
-[Volvo Penta: sterndrive bellows failure](/engine-brands/)
+→ Mercruiser: sterndrive bellows failure ·
+Volvo Penta: sterndrive bellows failure
 
 ## Frequently asked questions
 

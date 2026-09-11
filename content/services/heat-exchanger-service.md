@@ -95,7 +95,7 @@ Pressure testing distinguishes them. Insist on it before anyone pulls a head.
 
 {{PRICE_TABLE:heat-exchanger-service}}
 
-→ [Heat exchanger service cost](/costs/)
+→ [What marine engine work costs in Australia](/costs/)
 
 ## Find heat exchanger service in your city
 

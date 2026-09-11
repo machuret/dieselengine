@@ -69,14 +69,14 @@ appeared suddenly rather than building up.
 
 {{PRICE_TABLE:soot-on-transom}}
 
-→ [What marine engine work costs](/costs/)
+→ [What marine engine work costs in Australia](/costs/)
 
 ## Common on these engines
 
 Any diesel used mostly at low load. Turbocharged engines soot noticeably when
 boost is low.
 
-→ [Marine engine brands](/engine-brands/)
+→ Marine engine brands
 
 ## Frequently asked questions
 

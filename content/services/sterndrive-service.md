@@ -80,7 +80,7 @@ prevention against expensive failure.
 
 {{PRICE_TABLE:sterndrive-service}}
 
-→ [Sterndrive service cost](/costs/)
+→ [What marine engine work costs in Australia](/costs/)
 
 ## Find sterndrive service in your city
 

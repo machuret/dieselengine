@@ -85,15 +85,15 @@ a gasket, which decides the size of the job.
 
 {{PRICE_TABLE:marine-excessive-blowby}}
 
-→ [What marine engine work costs](/costs/)
+→ [What marine engine work costs in Australia](/costs/)
 
 ## Common on these engines
 
 Bore glazing on lightly used yacht auxiliaries; genuine ring and bore wear on
 high-hour commercial and charter engines.
 
-→ [Cummins Marine: excessive blow-by](/engine-brands/) ·
-[Caterpillar Marine: excessive blow-by](/engine-brands/)
+→ Cummins Marine: excessive blow-by ·
+Caterpillar Marine: excessive blow-by
 
 ## Frequently asked questions
 

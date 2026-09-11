@@ -47,16 +47,16 @@ makes cooling capacity and exhaust temperature the limiting factors.
 
 ## Engines
 
-[Cummins Marine](/engine-brands/) ·
-[Caterpillar Marine](/engine-brands/) ·
-[John Deere Marine](/engine-brands/) ·
-[Scania Marine](/engine-brands/) ·
-[Doosan](/engine-brands/) ·
-[Isuzu Marine](/engine-brands/) ·
-[MTU and Detroit](/engine-brands/)
+Cummins Marine ·
+Caterpillar Marine ·
+John Deere Marine ·
+Scania Marine ·
+Doosan ·
+Isuzu Marine ·
+MTU and Detroit
 
-Gearboxes are typically [Twin Disc](/engine-brands/) or
-[ZF](/engine-brands/), and on working vessels they take loads that make
+Gearboxes are typically Twin Disc or
+ZF, and on working vessels they take loads that make
 gearbox maintenance as important as engine maintenance.
 
 ## Maintenance that fits a commercial operation

@@ -75,7 +75,7 @@ pump, injection pump, injectors and compression, which need proper testing.
 
 {{PRICE_TABLE:cranks-but-wont-fire-marine}}
 
-→ [What marine engine work costs](/costs/)
+→ [What marine engine work costs in Australia](/costs/)
 
 ## Common on these engines
 
@@ -83,7 +83,7 @@ Fuel system air and filter blockage dominate across every brand, especially on
 boats that sit and on any tank with a microbial problem.
 
 → [Diesel bug treatment](/services/diesel-bug-treatment/) ·
-[Marine engine brands](/engine-brands/)
+Marine engine brands
 
 ## Frequently asked questions
 

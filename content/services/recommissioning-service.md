@@ -82,7 +82,7 @@ the tank offshore.
 
 {{PRICE_TABLE:recommissioning-service}}
 
-→ [Recommissioning cost](/costs/)
+→ [What marine engine work costs in Australia](/costs/)
 
 ## Find recommissioning in your city
 

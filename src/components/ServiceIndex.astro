@@ -1,0 +1,55 @@
+---
+import { allPages } from '../lib/content.js';
+
+/**
+ * The full service index, rendered on city hubs.
+ *
+ * This lived as ~34 hand-written markdown links in each of the ten location
+ * files. It was the single largest block on every page, near-identical between
+ * them, and it drove those pages to 22% trigram overlap with one another while
+ * the rest of the site sits at 5-7%. It also went stale invisibly: every one of
+ * those links pointed at a city-service page that does not exist yet.
+ *
+ * It is navigation, so it belongs in a <nav> derived from the route table
+ * rather than in prose — maintained once, never stale, and correctly excluded
+ * from the page's readable content.
+ */
+const { city } = Astro.props;
+
+const LABELS = {
+  core: 'Start here',
+  cooling: 'Cooling and raw water',
+  'fuel-system': 'Fuel',
+  'engine-internals': 'Engine',
+  'forced-induction': 'Forced induction',
+  driveline: 'Driveline',
+  corrosion: 'Corrosion',
+  electrical: 'Electrical',
+  inspection: 'Inspection',
+  'delivery-mode': 'How they attend',
+  seasonal: 'Seasonal',
+  'vessel-class': 'By vessel type',
+};
+const ORDER = Object.keys(LABELS);
+
+const services = allPages.filter((p) => p.pageType === 'service-national' && p.indexable);
+const groups = ORDER
+  .map((k) => [k, services.filter((s) => s.cluster === k)])
+  .filter(([, v]) => v.length);
+const strip = (t) => t.replace(' in Australia', '');
+---
+{groups.length > 0 && (
+  <nav class="svc-index" aria-label={`Marine engine services${city ? ` for ${city} owners` : ''}`}>
+    <h2>Every job, explained</h2>
+    <p class="svc-note">
+      What each job actually involves, and how to tell a complete quote from a
+      cheap one. National guidance — the local part is above.
+    </p>
+    {groups.map(([key, items]) => (
+      <div class="svc-group">
+        <p class="svc-label">{LABELS[key]}</p>
+        <ul>{items.map((s) => <li><a href={s.url}>{strip(s.title)}</a></li>)}</ul>
+      </div>
+    ))}
+  </nav>
+)}

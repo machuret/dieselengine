@@ -92,15 +92,14 @@ corrosion survey and an electrical check.
 
 {{PRICE_TABLE:anodes-wasting-fast}}
 
-→ [What marine engine work costs](/costs/)
+→ [What marine engine work costs in Australia](/costs/)
 
 ## Common on these installations
 
 Aluminium saildrive legs are particularly vulnerable and need correct isolation.
 Tropical berths consume anodes faster on every vessel.
 
-→ [Yanmar and Volvo saildrives](/engine-brands/) ·
-[Marine diesel mechanics in Darwin](/)
+→ Yanmar and Volvo saildrives
 
 ## Frequently asked questions
 

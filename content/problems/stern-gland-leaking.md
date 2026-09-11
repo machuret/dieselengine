@@ -89,7 +89,7 @@ is sensibly combined with the cutless bearing and alignment.
 
 {{PRICE_TABLE:stern-gland-leaking}}
 
-→ [What marine engine work costs](/costs/)
+→ [What marine engine work costs in Australia](/costs/)
 
 ## Common on these installations
 
@@ -97,7 +97,7 @@ Shaft-drive inboards of every brand. Saildrives use a different arrangement with
 its own diaphragm interval.
 
 → [Yacht auxiliary engine service](/services/yacht-auxiliary-service/) ·
-[Yanmar and Volvo saildrives](/engine-brands/)
+Yanmar and Volvo saildrives
 
 ## Frequently asked questions
 

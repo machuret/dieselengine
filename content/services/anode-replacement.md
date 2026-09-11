@@ -84,7 +84,7 @@ a haul-out.
 
 {{PRICE_TABLE:anode-replacement}}
 
-→ [Anode replacement cost](/costs/)
+→ [What marine engine work costs in Australia](/costs/)
 
 ## Find anode replacement in your city
 

@@ -82,7 +82,7 @@ availability and response as much as labour.
 
 {{PRICE_TABLE:charter-fleet-servicing}}
 
-→ [Charter fleet servicing cost](/costs/)
+→ [What marine engine work costs in Australia](/costs/)
 
 ## Find charter fleet servicing in your city
 

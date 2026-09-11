@@ -74,14 +74,14 @@ prices.
 
 {{PRICE_TABLE:gearbox-slipping}}
 
-→ [What marine engine work costs](/costs/)
+→ [What marine engine work costs in Australia](/costs/)
 
 ## Common on these engines
 
 ZF and Twin Disc dominate Australian installations; Hurth on older small craft.
 
-→ [ZF Marine: gearbox slipping](/engine-brands/) ·
-[Twin Disc: gearbox slipping](/engine-brands/)
+→ ZF Marine: gearbox slipping ·
+Twin Disc: gearbox slipping
 
 ## Frequently asked questions
 

@@ -90,7 +90,7 @@ Driven by engine size, service level and access.
 
 {{PRICE_TABLE:marine-engine-service}}
 
-→ [Marine engine service cost](/costs/)
+→ [What marine engine work costs in Australia](/costs/)
 
 ## Find marine engine servicing in your city
 
