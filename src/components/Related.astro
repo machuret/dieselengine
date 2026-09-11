@@ -44,7 +44,9 @@ if (page.pageType === 'service-national' && page.cluster) {
   // The two place families answer different halves of the same question —
   // where to buy an engine here, and who can fit it — so each links across to
   // its counterpart for the same region before listing neighbours.
-  const counterpart = published.find(
+  // A region hub already lists every page for its region in the routing block
+  // above, so repeating one of them here is noise.
+  const counterpart = page.pageType === 'region-hub' ? null : published.find(
     (p) => p.geo?.slug === page.geo.slug && p.pageType !== page.pageType
   );
   crossLink = counterpart ?? null;

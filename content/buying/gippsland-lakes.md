@@ -37,22 +37,23 @@ the fallback for anything unusual. Local capability for servicing, repowers and
 slipping is genuinely good, because the fleet here is large and lives on the
 water year-round.
 
-## Fresh, brackish and salt — the anode question
+## Ask what drive suits the water you actually use
 
-Salinity in the lakes varies enormously: fresher at the western end and up the
-rivers, brackish through the middle, close to sea water near the Entrance. It
-also changes with rainfall and with the state of the Entrance itself.
+The lakes hold boats that never cross the bar and boats that go outside
+regularly, and the two should not be specified the same way.
 
-For engine and drive protection that matters more than owners realise:
+For a lakes-only boat, shallow draft and low-load cruising dominate, and a
+saildrive leg living permanently in brackish water is a different corrosion
+proposition from one in the open sea.
 
-- **Magnesium anodes are for fresh water only** and waste rapidly in salt
-- **Zinc performs poorly in fresh water**, becoming passivated
-- **Aluminium works across a wider range** and is the usual answer for a boat
-  that moves between them
+For a boat crossing the Entrance, specify as you would for any bar-entrance
+fleet: adequate power margin, reliable fuel delivery under motion, and cooling
+that copes with sustained load at low boat speed.
 
-A boat kept at Paynesville that runs down to the Entrance regularly is moving
-through a changing electrolyte. Have the alloy chosen deliberately — see
-[why anodes matter](/guides/why-anodes-matter/).
+Either way, the alloy your anodes are made of is a decision here rather than a
+default — the water changes along the system. Our page on
+[marine diesel in the Gippsland Lakes](/marine-diesel/gippsland-lakes/)
+covers what that means for maintenance.
 
 ## The Entrance
 
@@ -94,10 +95,10 @@ that when sizing an engine is worthwhile.
 Paynesville is the recreational service centre and Lakes Entrance carries the
 commercial engineering, with Melbourne three to four hours away for breadth.
 
-**What anodes should I use in the Gippsland Lakes?**
-Aluminium is the usual answer for a boat moving between fresh, brackish and
-salt water. Magnesium is fresh water only and zinc performs poorly in fresh.
-Have it chosen for your specific berth and use.
+**Does the water affect what drive I should buy?**
+It affects how a saildrive leg lives: permanently brackish water is a different
+corrosion environment from open sea. Factor it into the drive decision rather
+than only into the antifouling.
 
 **Does the Entrance affect what engine I should buy?**
 If you cross it, yes — power margin, fuel filtration and cooling under

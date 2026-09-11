@@ -39,5 +39,8 @@ pages are for the times you do not.
 
 ## Coverage
 
-Ten tier-one boating regions are live, covering the largest concentrations of
-marine diesel activity in Australia. The remaining regions follow.
+All twenty-five Australian boating regions are covered, from the Coomera
+corridor to the Kimberley. Ten are the major metropolitan and industry centres;
+the other fifteen are the regional ports where the answers most often differ
+from the capitals — because the supply chain is thinner, the water is harder, or
+the fleet is commercial.
