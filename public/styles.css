@@ -37,6 +37,26 @@
   --signal-ink: #7d2a06;
   --signal-wash:#fdeee6;
 
+  /* ---- The deep layer -------------------------------------------------
+     The old palette lived entirely between 92% and 100% lightness, so the
+     page had no anchor and no depth — every surface was the same value as
+     every other. This is the counterweight: marine chart navy, the ground
+     that engineering drawings are printed on, and the same family as the
+     blueprint figure so the two belong to one another.
+
+     Measured against --deep: on-deep 14.45:1, on-deep-2 8.53:1,
+     on-deep-3 6.27:1, signal 6.20:1, accent 8.80:1. All clear AA at any
+     size, and the two dimmest are still AA-large-safe as body text. */
+  --deep:       #07233a;
+  --deep-2:     #0c3050;
+  --deep-rule:  #1b4067;
+  --deep-hair:  #12314e;
+  --on-deep:    #eef4f9;
+  --on-deep-2:  #a9c0d4;
+  --on-deep-3:  #8ba5bd;
+  --signal-hot: #ff7a45;
+  --accent-hot: #5fd3bd;
+
   --measure: 37rem;
   --gutter: clamp(1.25rem, 5vw, 2.5rem);
   --font: "Figtree", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -50,7 +70,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --paper:#0b1416; --surface:#101d1f; --sunk:#16272a;
+    --paper:#07100f; --surface:#0f1b1d; --sunk:#152426;
     --ink:#e7eeec; --ink-2:#b7c7c6; --muted:#8b9fa0;
     --rule:#233538; --hair:#1a2b2e;
     --accent:#5ecdb9; --accent-2:#8fe0d0; --wash:#0f2d2c;
@@ -58,7 +78,7 @@
   }
 }
 :root[data-theme="dark"] {
-  --paper:#0b1416; --surface:#101d1f; --sunk:#16272a;
+  --paper:#07100f; --surface:#0f1b1d; --sunk:#152426;
   --ink:#e7eeec; --ink-2:#b7c7c6; --muted:#8b9fa0;
   --rule:#233538; --hair:#1a2b2e;
   --accent:#5ecdb9; --accent-2:#8fe0d0; --wash:#0f2d2c;
@@ -102,23 +122,27 @@ header.site {
   position: sticky; top: 0; z-index: 20;
   display: flex; align-items: center; gap: .5rem 2rem;
   padding: .9rem var(--gutter);
-  background: color-mix(in srgb, var(--paper) 82%, transparent);
-  backdrop-filter: saturate(1.6) blur(14px);
-  border-bottom: 1px solid var(--hair);
+  background: color-mix(in srgb, var(--deep) 88%, transparent);
+  backdrop-filter: saturate(1.5) blur(14px);
+  border-bottom: 1px solid var(--deep-hair);
 }
 .brand {
   display: inline-flex; align-items: center; gap: .55rem;
   font-weight: 700; font-size: 1.02rem; letter-spacing: -.02em;
-  color: var(--ink); text-decoration: none; margin-right: auto;
+  color: var(--on-deep); text-decoration: none; margin-right: auto;
 }
-.brand svg { flex: none; color: var(--accent); }
+.brand svg { flex: none; color: var(--accent-hot); }
 header.site nav { display: flex; gap: .15rem; }
 header.site nav a {
-  color: var(--muted); text-decoration: none; font-size: .9rem; font-weight: 500;
+  color: var(--on-deep-2); text-decoration: none; font-size: .9rem; font-weight: 500;
   padding: .4rem .7rem; border-radius: var(--r-sm); white-space: nowrap;
   transition: color .15s, background-color .15s;
 }
-header.site nav a:hover { color: var(--ink); background: var(--sunk); }
+header.site nav a:hover, header.site nav a:focus-visible {
+  color: var(--on-deep);
+  background: color-mix(in srgb, var(--on-deep) 10%, transparent);
+}
+header.site :focus-visible { outline-color: var(--accent-hot); }
 
 @media (max-width: 60rem) {
   header.site { gap: .75rem; padding-inline: 0; }
@@ -135,6 +159,10 @@ main { padding: 0 var(--gutter) 5rem; }
 .wrap { max-width: 72rem; margin: 0 auto; }
 
 .layout { display: grid; gap: 3rem; max-width: 72rem; margin: 0 auto; }
+/* The article + contents pair was left-aligned inside a 72rem wrap, leaving a
+   dead strip to the right of the contents at wide viewports. Centre the pair
+   on its own width instead. */
+@media (min-width: 64rem) { .layout { max-width: 60rem; } }
 @media (min-width: 64rem) {
   .layout {
     grid-template-columns: minmax(0, var(--measure)) 16rem;
@@ -142,15 +170,19 @@ main { padding: 0 var(--gutter) 5rem; }
   }
 }
 
+/* The breadcrumb is the page's eyebrow — it already names the section, so a
+   second element saying the same thing directly beneath it was noise. This one
+   carries the technical register instead, and the rule gives the article a
+   starting edge. */
 .breadcrumb {
-  max-width: 72rem; margin: 0 auto; padding: 1.5rem 0 .25rem;
-  font-size: .85rem; color: var(--muted);
-}
-@media (min-width: 64rem) {
-  .breadcrumb { max-width: calc(var(--measure) + 16rem + 5rem); }
+  max-width: 60rem; margin: 0 auto; padding: 1.75rem 0 .9rem;
+  margin-bottom: 1.5rem; border-bottom: 1px solid var(--hair);
+  font-family: var(--mono); font-size: .68rem; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--muted);
 }
 .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; gap: .4rem; margin: 0; padding: 0; }
-.breadcrumb li:not(:last-child)::after { content: "/"; margin-left: .4rem; color: var(--rule); }
+.breadcrumb ol { gap: .5rem; }
+.breadcrumb li:not(:last-child)::after { content: "/"; margin-left: .5rem; color: var(--rule); }
 .breadcrumb a { color: var(--muted); text-decoration: none; }
 .breadcrumb a:hover { color: var(--accent); text-decoration: underline; }
 
@@ -265,7 +297,11 @@ main { padding: 0 var(--gutter) 5rem; }
   .side::-webkit-scrollbar { width: 5px; }
   .side::-webkit-scrollbar-thumb { background: var(--rule); border-radius: 3px; }
 }
-.toc-title { font-size: .9rem; font-weight: 650; color: var(--ink); margin: 0 0 .7rem; }
+.toc-title {
+  display: flex; align-items: center; gap: .6rem; margin: 0 0 .85rem;
+  font-family: var(--mono); font-size: .68rem; font-weight: 500;
+  letter-spacing: .13em; text-transform: uppercase; color: var(--muted);
+}
 .toc ul { list-style: none; margin: 0; padding: 0; border-left: 2px solid var(--hair); }
 .toc a {
   display: block; padding: .3rem 0 .3rem .9rem; margin-left: -2px;
@@ -306,66 +342,188 @@ main { padding: 0 var(--gutter) 5rem; }
    reach the thing that helps them. `display: contents` lifts the copy's
    children into the flex flow so they can be ordered around the panel. */
 .hero {
-  max-width: 72rem; margin: 0 auto; padding: clamp(2.5rem, 7vw, 5rem) 0 1.5rem;
-  display: flex; flex-direction: column; gap: 1.4rem;
+  /* Runs straight up under the sticky header, which shares its ground.
+     Full-bleed deep band. main carries a gutter, so the band breaks out of it
+     to the viewport edge and re-applies its own padding inside. */
+  margin: 0 calc(var(--gutter) * -1);
+  padding: 0 var(--gutter);
+  background: var(--deep);
+  background-image:
+    radial-gradient(120% 90% at 78% 0%, var(--deep-2) 0%, transparent 60%);
+  border-bottom: 1px solid var(--deep-rule);
+}
+.hero-inner {
+  max-width: 72rem; margin: 0 auto;
+  padding: clamp(2.75rem, 7vw, 5.25rem) 0 clamp(2.5rem, 6vw, 4rem);
+  display: flex; flex-direction: column; gap: 1.6rem;
 }
 .hero-main { display: contents; }
+.hero .eyebrow { order: 0; }
 .hero h1 { order: 1; }
 .hero-lede { order: 2; }
 .triage { order: 3; }
 .hero-note { order: 4; }
 
 @media (min-width: 60rem) {
-  .hero {
+  .hero-inner {
     display: grid; grid-template-columns: 1.05fr .95fr;
-    gap: 0 4rem; align-items: start;
+    gap: 0 4.5rem; align-items: start;
   }
-  /* Back to a normal block, so the disclaimer sits directly under the copy
-     rather than in a row sized by the taller triage column. */
   .hero-main { display: block; grid-column: 1; grid-row: 1; }
   .triage { grid-column: 2; grid-row: 1; }
 }
 
-/* Triage panel: the site's actual job, placed where the eye lands first. */
+/* Technical eyebrow: mono, wide-tracked, with a dimension-line dash. The
+   register the subject already speaks in — data plates and drawing sheets. */
+.eyebrow {
+  display: flex; align-items: center; gap: .7rem;
+  margin: 0 0 1.25rem; font-family: var(--mono);
+  font-size: .72rem; letter-spacing: .13em; text-transform: uppercase;
+  color: var(--on-deep-3);
+}
+.rule-dash {
+  width: 2.25rem; height: 1px; background: currentColor; opacity: .55; flex: none;
+}
+.toc-title .rule-dash { width: 1.1rem; }
+
+
+.hero h1 {
+  font-size: clamp(2.3rem, 1.3rem + 3.9vw, 3.9rem); line-height: 1.0;
+  letter-spacing: -.045em; font-weight: 800; color: var(--on-deep);
+  margin: 0; max-width: 14ch;
+}
+.hero p { max-width: 34rem; margin: 1.4rem 0 0; line-height: 1.6; }
+.hero-lede {
+  font-size: clamp(1.08rem, 1rem + .4vw, 1.24rem); color: var(--on-deep-2);
+}
+.hero-note {
+  max-width: 32rem; font-size: .95rem; color: var(--on-deep-2);
+  padding-top: 1.4rem; border-top: 1px solid var(--deep-hair);
+}
+
+/* ---- Triage panel -------------------------------------------------------
+   The site's actual job, so it gets the strongest surface on the page: a
+   raised plate on the deep ground rather than a white card on near-white.
+   Severity comes from data-sev, not from row position. */
 .triage {
   align-self: start;
-  background: var(--surface); border: 1px solid var(--hair);
-  border-radius: var(--r-lg); padding: 1.4rem 1.4rem 1.1rem;
-  box-shadow: 0 1px 2px rgb(14 28 30 / .04), 0 18px 40px -28px rgb(14 28 30 / .35);
+  background: color-mix(in srgb, var(--deep-2) 72%, #000 6%);
+  border: 1px solid var(--deep-rule);
+  border-radius: var(--r-lg);
+  padding: 1.15rem 1.15rem .9rem;
+  box-shadow: 0 24px 60px -30px rgb(0 0 0 / .75);
 }
 .triage h2 {
-  margin: 0 0 .9rem; font-size: 1rem; font-weight: 650; color: var(--ink);
-  letter-spacing: -.01em;
+  display: flex; align-items: center; gap: .7rem;
+  margin: 0 .35rem .55rem; font-family: var(--mono);
+  font-size: .72rem; font-weight: 500; letter-spacing: .13em;
+  text-transform: uppercase; color: var(--on-deep-3);
 }
-.triage ul { list-style: none; margin: 0; padding: 0; display: grid; gap: .3rem; }
-.triage li { margin: 0; }
+.triage h2::after {
+  content: ""; flex: 1; height: 1px; background: var(--deep-rule);
+}
+.triage ul { list-style: none; margin: 0; padding: 0; display: grid; }
+.triage li { margin: 0; border-top: 1px solid var(--deep-hair); }
+.triage li:first-child { border-top: 0; }
 .triage a {
   display: flex; align-items: baseline; justify-content: space-between; gap: 1rem;
-  padding: .65rem .8rem; border-radius: var(--r-md);
-  text-decoration: none; border: 1px solid transparent;
-  transition: background-color .15s, border-color .15s;
+  padding: .72rem .8rem; border-radius: var(--r-sm);
+  text-decoration: none;
+  transition: background-color .14s ease, transform .14s ease;
 }
-.triage a:hover { background: var(--wash); border-color: color-mix(in srgb, var(--accent) 30%, transparent); }
-.triage .q { font-weight: 600; color: var(--ink); font-size: .95rem; line-height: 1.35; }
-.triage .a { font-size: .8rem; color: var(--muted); text-align: right; flex: none; white-space: nowrap; }
-/* The two "shut down now" rows are the only place the signal colour appears
-   outside a safety callout, and they are the reason someone lands here. */
-.triage li:nth-child(-n+2) .a { color: var(--signal-text); font-weight: 650; }
-.triage .all { margin: .9rem 0 0; padding-left: .8rem; font-size: .92rem; }
-.triage .all a { display: inline; padding: 0; font-weight: 500; border: 0; }
+.triage a:hover, .triage a:focus-visible {
+  background: color-mix(in srgb, var(--on-deep) 8%, transparent);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .triage a:hover { transform: translateX(2px); }
+}
+.triage .q {
+  font-weight: 600; color: var(--on-deep); font-size: .97rem; line-height: 1.35;
+}
+.triage .a {
+  font-family: var(--mono); font-size: .7rem; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--on-deep-3);
+  text-align: right; flex: none; white-space: nowrap;
+}
+/* Telling someone to stop the engine is the most consequential thing this
+   site does, so it is the only element allowed to shout. */
+.triage [data-sev="stop"] .a {
+  color: var(--signal-hot); font-weight: 600;
+}
+.triage [data-sev="stop"] .a::before {
+  content: ""; display: inline-block; vertical-align: .1em;
+  width: .42rem; height: .42rem; margin-right: .45rem;
+  border-radius: 50%; background: var(--signal-hot);
+}
+.triage [data-sev="urgent"] .a { color: var(--on-deep-2); font-weight: 600; }
+.triage .all {
+  margin: .75rem 0 0; padding: .75rem .8rem 0;
+  border-top: 1px solid var(--deep-hair); font-size: .9rem;
+}
+.triage .all a {
+  display: inline; padding: 0; font-weight: 600; color: var(--accent-hot);
+  text-decoration: none;
+}
+.triage .all a:hover { text-decoration: underline; }
 @media (max-width: 26rem) {
-  /* Narrow phones: stack the row rather than squeezing both halves. */
-  .triage a { flex-direction: column; align-items: flex-start; gap: .1rem; }
+  .triage a { flex-direction: column; align-items: flex-start; gap: .25rem; }
   .triage .a { text-align: left; }
 }
 
-.hero h1 {
-  font-size: clamp(2.2rem, 1.4rem + 3.4vw, 3.5rem); line-height: 1.04;
-  letter-spacing: -.04em; font-weight: 800; color: var(--ink);
-  margin: 0; max-width: 15ch;
+/* ---- Numbered register --------------------------------------------------
+   Replaces a 2-up grid of six identical cards. Rows, hairlines and a mono
+   sheet number, so the first entries can carry weight and the whole thing
+   reads as an index rather than as six equivalent buttons. */
+.register {
+  list-style: none; margin: clamp(2.5rem, 5vw, 3.75rem) auto 0; padding: 0;
+  border-top: 1px solid var(--rule);
 }
-.hero-note { max-width: 32rem; font-size: 1rem; }
-.hero p { max-width: 32rem; font-size: clamp(1.05rem, 1rem + .35vw, 1.2rem); color: var(--muted); margin: 1.35rem 0 0; line-height: 1.6; }
+.register li { margin: 0; border-bottom: 1px solid var(--hair); }
+.register a {
+  display: grid; grid-template-columns: 2.75rem 1fr auto;
+  align-items: baseline; gap: 0 1rem;
+  padding: 1.35rem .25rem; text-decoration: none; color: inherit;
+  transition: background-color .15s ease;
+}
+.register a:hover, .register a:focus-visible {
+  background: color-mix(in srgb, var(--accent) 6%, transparent);
+}
+.register .n {
+  font-family: var(--mono); font-size: .78rem; color: var(--muted);
+  letter-spacing: .04em;
+}
+.register .t {
+  display: block; font-size: 1.18rem; font-weight: 700; color: var(--ink);
+  letter-spacing: -.02em;
+}
+.register .d {
+  display: block; margin-top: .3rem; max-width: 56ch;
+  color: var(--muted); font-size: .97rem; line-height: 1.55;
+}
+.register .go {
+  font-size: 1.1rem; color: var(--rule);
+  transition: color .15s ease, transform .15s ease;
+}
+.register a:hover .go { color: var(--accent); }
+@media (prefers-reduced-motion: no-preference) {
+  .register a:hover .go { transform: translateX(3px); }
+}
+@media (min-width: 62rem) {
+  .register a {
+    grid-template-columns: 3rem minmax(0, 19rem) minmax(0, 1fr) 2rem;
+    align-items: start; gap: 0 2.5rem; padding: 1.6rem .25rem;
+  }
+  .register .body { display: contents; }
+  .register .d { margin-top: .12rem; max-width: 62ch; }
+  .register .go { justify-self: end; }
+}
+/* The first two entries are why most people are here. */
+.register li:nth-child(-n+2) .t { font-size: 1.34rem; }
+@media (max-width: 34rem) {
+  .register a { grid-template-columns: 2rem 1fr; padding: 1.1rem .1rem; }
+  .register .go { display: none; }
+  .register li:nth-child(-n+2) .t { font-size: 1.2rem; }
+}
 
 .section-head {
   max-width: 72rem; margin: 4.5rem auto .35rem;

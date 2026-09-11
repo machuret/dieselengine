@@ -9,19 +9,22 @@ const canonical = `${site.domain}/`;
 const ready = allPages.filter((p) => p.indexable).length;
 
 // Ordered by urgency, then by how often people arrive with them.
+// Severity is data, not a CSS nth-child guess. Getting this wrong is the one
+// thing on this site that could hurt someone, so the page that renders it
+// should not be inferring urgency from row order.
 const TRIAGE = [
   { url: '/marine-engine-problems/no-water-from-exhaust/',
-    q: 'No water from the exhaust', a: 'Shut down now' },
+    q: 'No water from the exhaust', a: 'Shut down now', sev: 'stop' },
   { url: '/marine-engine-problems/marine-engine-overheating/',
-    q: 'Running hot or overheating', a: 'Shut down now' },
-  { url: '/marine-engine-problems/marine-engine-wont-start/',
-    q: "Won't start", a: 'Batteries or fuel' },
-  { url: '/marine-engine-problems/marine-engine-loses-power/',
-    q: 'Loses power under load', a: 'Often the hull' },
-  { url: '/marine-engine-problems/marine-engine-black-smoke/',
-    q: 'Blowing black smoke', a: 'Usually overloaded' },
+    q: 'Running hot or overheating', a: 'Shut down now', sev: 'stop' },
   { url: '/marine-engine-problems/saltwater-in-engine-oil/',
-    q: 'Saltwater in the oil', a: 'Act within hours' },
+    q: 'Saltwater in the oil', a: 'Act within hours', sev: 'urgent' },
+  { url: '/marine-engine-problems/marine-engine-loses-power/',
+    q: 'Loses power under load', a: 'Often the hull', sev: 'check' },
+  { url: '/marine-engine-problems/marine-engine-black-smoke/',
+    q: 'Blowing black smoke', a: 'Usually overloaded', sev: 'check' },
+  { url: '/marine-engine-problems/marine-engine-wont-start/',
+    q: "Won't start", a: 'Batteries or fuel', sev: 'check' },
 ];
 
 const PILLARS = [
@@ -75,15 +78,17 @@ const jsonld = {
     <Masthead />
 
     <main id="main">
-      <section class="hero">
+      <section class="hero deep-band">
+       <div class="hero-inner">
         <div class="hero-main">
+          <p class="eyebrow"><span class="rule-dash" aria-hidden="true"></span>Independent · Australia · {ready} pages</p>
           <h1>Something wrong with your engine?</h1>
           <p class="hero-lede">
             Independent Australian guides to marine diesels: what the symptom
             means, what the repair should cost, and how to find a mechanic who
             knows your engine.
           </p>
-          <p class="hero-note muted">
+          <p class="hero-note">
             We don't work on boats and we don't sell parts. Nothing here is
             trying to win your job.
           </p>
@@ -96,7 +101,7 @@ const jsonld = {
           <h2 id="triage-h">Start with the symptom</h2>
           <ul>
             {TRIAGE.map((t) => (
-              <li>
+              <li data-sev={t.sev}>
                 <a href={t.url}>
                   <span class="q">{t.q}</span>
                   <span class="a">{t.a}</span>
@@ -104,8 +109,9 @@ const jsonld = {
               </li>
             ))}
           </ul>
-          <p class="all"><a href="/marine-engine-problems/">All 35 symptoms</a></p>
+          <p class="all"><a href="/marine-engine-problems/">All 35 symptoms <span aria-hidden="true">&rarr;</span></a></p>
         </aside>
+       </div>
       </section>
 
       {site.heroFigure && (
@@ -126,16 +132,25 @@ const jsonld = {
         </figure>
       )}
 
-      <ul class="cards wrap">
-        {PILLARS.map((p) => (
+      {/* Six identical rounded cards in a 2-up grid was the most generic thing
+          on this page, and it flattened urgency: "Something is wrong" looked
+          exactly like "How marine diesels work". A numbered register borrows
+          the drawing-sheet index the subject already uses, and lets the first
+          two entries carry visible weight. */}
+      <ol class="register wrap">
+        {PILLARS.map((p, i) => (
           <li>
-            <a class="card" href={p.url}>
-              <span class="t">{p.t}</span>
-              <span class="d">{p.d}</span>
+            <a href={p.url}>
+              <span class="n" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
+              <span class="body">
+                <span class="t">{p.t}</span>
+                <span class="d">{p.d}</span>
+              </span>
+              <span class="go" aria-hidden="true">&rarr;</span>
             </a>
           </li>
         ))}
-      </ul>
+      </ol>
 
       <h2 class="section-head">Find a marine mechanic</h2>
       <p class="section-sub">
