@@ -93,7 +93,7 @@ for (const f of files) {
  */
 const WARN_AT = 0.25;
 const FAIL_AT = 0.4;
-const GEO_SECTIONS = [/^marine-diesel\//, /^marine-mechanics\//, /^buy-marine-diesel-engine\//];
+const GEO_SECTIONS = [/^marine-diesel\//, /^marine-mechanics\//, /^buy-marine-diesel-engine\//, /^how\//, /^guides\//];
 
 function prose(html) {
   const body = html
