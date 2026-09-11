@@ -1,0 +1,30 @@
+---
+import { allPages } from '../lib/content.js';
+import { brandMarkFor, brandSlug } from '../lib/brand-marks.js';
+import BrandMark from './BrandMark.astro';
+
+const brands = allPages
+  .filter((page) => page.indexable && page.pageType === 'brand-hub')
+  .map((page) => ({ page, mark: brandMarkFor(page.url), slug: brandSlug(page.url) }))
+  .filter(({ mark }) => mark)
+  .sort((a, b) => a.mark.name.localeCompare(b.mark.name));
+---
+<section class="brand-directory" aria-labelledby="brand-directory-title">
+  <div class="brand-directory-head">
+    <p class="kicker">Brand directory</p>
+    <h2 id="brand-directory-title">Find your engine or gearbox</h2>
+    <p>Select the name on the engine plate. Combined pages cover related base engines, legacy names and drive systems.</p>
+  </div>
+  <ul>
+    {brands.map(({ page, mark, slug }) => (
+      <li>
+        <a href={page.url} aria-label={`Open the ${mark.name} guide`}>
+          <BrandMark slug={slug} compact={true} />
+          <span>{mark.name}</span>
+          <span aria-hidden="true">→</span>
+        </a>
+      </li>
+    ))}
+  </ul>
+  <p class="brand-trademark-note">Manufacturer marks are shown for identification. Each mark remains the property of its respective owner.</p>
+</section>

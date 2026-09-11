@@ -9,6 +9,8 @@ import ServiceIndex from '../components/ServiceIndex.astro';
 import StateRules from '../components/StateRules.astro';
 import HowToFor from '../components/HowToFor.astro';
 import NextSteps from '../components/NextSteps.astro';
+import BrandIdentity from '../components/BrandIdentity.astro';
+import BrandDirectory from '../components/BrandDirectory.astro';
 
 const { page } = Astro.props;
 const canonical = new URL(page.url, site.domain).href;
@@ -184,11 +186,14 @@ const jsonld = {
     <main id="main">
       <div class="layout">
         <article class="prose">
+          {(page.pageType === 'brand-hub' || page.pageType === 'distributor') && <BrandIdentity page={page} />}
           <slot />
           {page.pageType === 'city-hub' && <StateRules state={page.geo?.state} />}
           {page.pageType === 'city-hub' && <ServiceIndex city={page.geo?.city} />}
           <HowToFor page={page} />
-          <Children page={page} />
+          {page.url === '/engine-brands/'
+            ? <BrandDirectory />
+            : <Children page={page} />}
           <NextSteps page={page} />
           <Related page={page} />
           <footer class="byline">
