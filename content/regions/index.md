@@ -44,3 +44,18 @@ corridor to the Kimberley. Ten are the major metropolitan and industry centres;
 the other fifteen are the regional ports where the answers most often differ
 from the capitals — because the supply chain is thinner, the water is harder, or
 the fleet is commercial.
+
+## What changes by region
+
+Climate changes the maintenance pattern. Tropical heat and humidity accelerate
+fuel contamination and corrosion; long southern layups create their own fuel,
+battery and cooling problems. Water quality affects strainers and heat
+exchangers, while marina access determines whether a mechanic can attend the
+berth or the vessel must move to a service yard.
+
+The local fleet matters too. A commercial port may have excellent support for
+large mechanical diesels but few technicians for a modern yacht saildrive. A
+cruising centre can be the reverse. Each regional guide separates those issues
+so “nearby” does not get mistaken for “right for this engine”. Before calling,
+record the engine model and serial number, vessel location, berth access and
+whether the boat can move under its own power.

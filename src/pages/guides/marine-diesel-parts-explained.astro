@@ -1,0 +1,68 @@
+---
+import Page from '../../layouts/Page.astro';
+import GuideGraphic from '../../components/GuideGraphic.astro';
+import SourcePanel from '../../components/SourcePanel.astro';
+import site from '../../../site.config.json' with { type: 'json' };
+
+const headings = [
+  { depth: 2, slug: 'fuel-system', text: 'Fuel-system parts' },
+  { depth: 2, slug: 'cooling-system', text: 'Cooling-system parts' },
+  { depth: 2, slug: 'exhaust-system', text: 'Wet-exhaust parts' },
+  { depth: 2, slug: 'electrical-system', text: 'Starting and charging parts' },
+  { depth: 2, slug: 'drivetrain', text: 'Gearbox and drivetrain parts' },
+  { depth: 2, slug: 'order-correctly', text: 'How to order the correct part' },
+];
+const page = {
+  url: '/guides/marine-diesel-parts-explained/', title: 'Marine Diesel Engine Parts Explained',
+  seoTitle: 'Marine Diesel Engine Parts Explained', pageType: 'education', status: 'ready',
+  author: site.defaultAuthor, reviewer: null, needsReviewer: false, parent: '/marine-diesel-engines/',
+  parentTitle: 'Marine Diesel Engines', schema: ['TechArticle', 'BreadcrumbList'], updated: site.legalUpdated,
+  indexable: true, blockers: [], headings, faqs: [],
+  description: 'Understand the fuel, cooling, exhaust, electrical and drivetrain parts surrounding a marine diesel engine before ordering or troubleshooting.',
+  image: '/images/marine-fuel-filter-inspection.jpg', imageWidth: 1400, imageHeight: 933,
+  imageAlt: 'Marine mechanic inspecting a yacht fuel-water separator',
+};
+const sources = [
+  { title: 'Cummins manuals and technical documents', url: 'https://www.cummins.com/parts/manuals-and-technical-documents' },
+  { title: 'YANMAR Marine service and parts', url: 'https://www.yanmar.com/marine/service/service-parts/' },
+  { title: 'Volvo Penta manuals and service information', url: 'https://www.volvopenta.com/connect/login' },
+];
+---
+<Page page={page}>
+  <p class="kicker">Know what you are looking at</p>
+  <h1>Marine diesel engine parts explained</h1>
+  <p class="lead">A marine engine is more than the painted block. Most breakdowns begin in the supporting fuel, cooling, exhaust, electrical or drivetrain installation. Learn the system first, then identify the exact component from the engine plate and manual.</p>
+
+  <GuideGraphic variant="parts" />
+
+  <h2 id="fuel-system">Fuel-system parts</h2>
+  <p>The <strong>primary fuel filter and water separator</strong> is normally installed between the tank and engine. It catches water and larger contamination. The engine-mounted <strong>secondary filter</strong> protects the injection equipment. A mechanical or electric <strong>lift pump</strong> moves low-pressure fuel towards the high-pressure pump or common rail.</p>
+  <p>Fuel hoses, shut-off valves, tank pickup, return line and vent belong to the vessel installation, not necessarily the engine manufacturer. A restriction at any of them can resemble an engine fault. High-pressure injection components are not a casual DIY area: escaping diesel can penetrate skin, and electronic systems require correct test equipment.</p>
+
+  <figure class="editorial-visual">
+    <img src="/images/marine-fuel-filter-inspection.jpg" width="1400" height="933" alt="Gloved mechanic inspecting a clear marine diesel fuel-water separator with a torch." loading="lazy" decoding="async" />
+    <figcaption>A clear bowl can reveal water and contamination, but not every filter is designed to be opened or drained in the same way.</figcaption>
+  </figure>
+
+  <h2 id="cooling-system">Cooling-system parts</h2>
+  <p>The raw-water side usually runs from <strong>seacock</strong> to <strong>strainer</strong>, <strong>impeller pump</strong>, <strong>heat exchanger</strong> and exhaust injection point. The closed side circulates treated coolant through the engine and heat exchanger using a separate pump and thermostat. Mixing the two circuits is a common source of bad diagnosis.</p>
+  <p>The rubber impeller is a service item, but replacing it without finding every missing blade can leave fragments blocking the next cooler. The heat exchanger transfers heat through a tube stack. End-cap seals, anodes and coolant specification vary, so use the drawing for the exact model.</p>
+
+  <h2 id="exhaust-system">Wet-exhaust parts</h2>
+  <p>The <strong>mixing elbow</strong>, also called the exhaust elbow, combines hot exhaust gas with discharged cooling water. Downstream, reinforced exhaust hose carries the mixture to a <strong>waterlock</strong>, riser or gooseneck and hull outlet. Geometry matters because seawater must not drain backwards into the cylinders.</p>
+  <p>External appearance does not prove the elbow is clear internally. Carbon and corrosion can restrict flow while the outside still looks serviceable. See the <a href="/marine-engine-problems/blocked-exhaust-elbow/">blocked exhaust elbow guide</a> for warning signs.</p>
+
+  <h2 id="electrical-system">Starting and charging parts</h2>
+  <p>The start battery, isolation switch, cables, solenoid and starter motor form the cranking circuit. The alternator and regulator replenish the battery after starting. The panel, senders and alarm switches report conditions such as oil pressure and coolant temperature. A poor cable termination can imitate a failed starter; an inaccurate sender can imitate an overheating engine.</p>
+  <p>Do not defeat an alarm without confirming the measured condition independently. On electronically controlled engines, diagnostic codes and networked instruments add another layer that normally requires brand-compatible tools.</p>
+
+  <h2 id="drivetrain">Gearbox and drivetrain parts</h2>
+  <p>A marine gearbox changes direction and reduction ratio. A flexible coupling joins it to the propeller shaft, while engine mounts and alignment keep the rotating line in position. A saildrive combines reduction gearing with a leg through the hull; a sterndrive adds steering and trim. Each arrangement has different oils, seals, anodes and haul-out work.</p>
+  <p>Vibration can come from mounts, alignment, a bent shaft, a fouled or damaged propeller, a worn cutless bearing or the engine itself. Replacing one visible part without measuring the system can move the fault rather than solve it.</p>
+
+  <h2 id="order-correctly">How to order the correct part</h2>
+  <p>Record the complete engine model, serial number, gearbox or drive model, and any separate equipment serial numbers. Photograph the plate and the installed part. Check whether an earlier owner changed the filter housing, alternator, water pump or exhaust installation. Match dimensions and material as well as the nominal part description.</p>
+  <p>Start with <a href="/how/how-to-identify-your-marine-engine/">how to identify your marine engine</a>, then use the manufacturer material below.</p>
+
+  <SourcePanel links={sources} />
+</Page>

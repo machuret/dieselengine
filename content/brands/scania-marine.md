@@ -44,6 +44,15 @@ technician rather than assuming — see
 marine-configuration aftercooler, sea water pump, exhaust arrangement, gearbox
 interface.
 
+## Give the branch the marine context
+
+When booking, provide the engine serial number, duty rating, vessel use and
+whether the fault involves the base engine or its marine systems. A road-engine
+technician may understand the fuel and control platform perfectly while still
+needing a marine colleague for the raw-water, wet-exhaust or gearbox side. For
+a twin installation, record comparable rpm, temperature and load data from
+both engines before the visit.
+
 ## Frequently asked questions
 
 **Are parts easy to get?** Parts logistics are strong because the network exists to keep commercial transport running. Marine-specific componentry is the part to confirm.

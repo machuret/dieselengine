@@ -33,6 +33,28 @@ for (const p of pages) {
   if (seen.has(p.url)) errors.push(`${p.file}: duplicate url ${p.url} (also ${seen.get(p.url)})`);
   seen.set(p.url, p.file);
 }
+
+// A page can be structurally valid and still be too slight to answer its own
+// search intent. This is a floor, not a target: padding every article to the
+// same arbitrary length would be as unhelpful as publishing a stub.
+const MIN_CONTENT_WORDS = 320;
+const thin = [];
+for (const p of pages) {
+  if (!p.indexable) continue;
+  const body = bodies.get(p.file) ?? '';
+  const words = body
+    .replace(/```[\s\S]*?```/g, ' ')
+    .replace(/https?:\/\/\S+/g, ' ')
+    .match(/[A-Za-z0-9][A-Za-z0-9'’/-]*/g)?.length ?? 0;
+  if (words < MIN_CONTENT_WORDS) {
+    errors.push(`${p.file}: only ${words} content words; indexable pages need at least ${MIN_CONTENT_WORDS}`);
+  } else if (words < 500) {
+    thin.push({ url: p.url, words });
+  }
+}
+if (thin.length) {
+  console.log(`Content depth: ${thin.length} pages are between ${MIN_CONTENT_WORDS} and 499 words (review queue, not padded automatically).`);
+}
 for (const p of pages) {
   if (p.parent !== '/' && !seen.has(p.parent)) {
     errors.push(`${p.file}: parent ${p.parent} does not exist yet`);

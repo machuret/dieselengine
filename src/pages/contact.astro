@@ -1,0 +1,72 @@
+---
+import Page from '../layouts/Page.astro';
+import site from '../../site.config.json' with { type: 'json' };
+
+const subject = `${site.name} website enquiry`;
+const page = {
+  url: '/contact/', title: 'Contact Marine Diesel Engine', seoTitle: 'Contact Us',
+  pageType: 'contact', status: 'ready', author: site.defaultAuthor,
+  reviewer: null, needsReviewer: false, parent: '/', parentTitle: 'Home',
+  schema: ['ContactPage', 'BreadcrumbList'], updated: site.legalUpdated,
+  indexable: true, blockers: [], headings: [], faqs: [],
+  description: 'Contact MarineDieselEngine.com.au to report an error, request a listing correction or send editorial feedback.',
+};
+---
+<Page page={page}>
+  <h1>Contact us</h1>
+  <p>
+    Report an error, suggest a useful source, or request a business-listing
+    correction. We cannot diagnose an engine from a message and we do not book
+    repairs.
+  </p>
+
+  <form class="contact-form" id="contact-form"
+        action={`mailto:${site.contactEmail}?subject=${encodeURIComponent(subject)}`}
+        method="get">
+    <div class="form-row">
+      <label>Name <input name="name" autocomplete="name" required /></label>
+      <label>Email <input name="email" type="email" autocomplete="email" required /></label>
+    </div>
+    <label>
+      What is this about?
+      <select name="topic">
+        <option>Report a factual error</option>
+        <option>Business listing correction</option>
+        <option>Suggest an authority resource</option>
+        <option>General editorial feedback</option>
+      </select>
+    </label>
+    <label>
+      Page address <span class="optional">optional</span>
+      <input name="page" type="url" inputmode="url" placeholder="https://www.marinedieselengine.com.au/…" />
+    </label>
+    <label>
+      Message
+      <textarea name="message" rows="7" required></textarea>
+    </label>
+    <button type="submit">Open email to send</button>
+    <p class="form-note">
+      This opens your email app with a message addressed to
+      <strong>{site.contactEmail}</strong> and “{site.name}” in the subject.
+      The form does not store or transmit anything by itself.
+    </p>
+  </form>
+</Page>
+
+<script define:vars={{ recipient: site.contactEmail, siteName: site.name }}>
+  document.querySelector('#contact-form')?.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const form = event.currentTarget;
+    if (!(form instanceof HTMLFormElement) || !form.reportValidity()) return;
+    const data = new FormData(form);
+    const topic = String(data.get('topic') ?? 'Website enquiry');
+    const body = [
+      `Name: ${data.get('name') ?? ''}`,
+      `Email: ${data.get('email') ?? ''}`,
+      `Page: ${data.get('page') || 'Not supplied'}`,
+      '',
+      String(data.get('message') ?? ''),
+    ].join('\n');
+    window.location.href = `mailto:${recipient}?subject=${encodeURIComponent(`[${siteName}] ${topic}`)}&body=${encodeURIComponent(body)}`;
+  });
+</script>

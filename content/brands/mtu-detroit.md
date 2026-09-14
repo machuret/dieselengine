@@ -45,6 +45,15 @@ concentrated where the boats are.
 **High output means less margin** in cooling, fuel and air systems on the modern
 range. Those services are not deferrable.
 
+## Document which era you own
+
+Photograph the engine and gearbox plates, control displays and complete engine
+room before seeking parts or a quote. For a Detroit two-stroke, record cold
+start, smoke, oil use and recent injector work. For a modern MTU, save fault
+messages and operating data without clearing them. A generic “MTU/Detroit” parts
+request is not specific enough: the model, serial number, rating and installed
+controls determine the correct technical path.
+
 ## Frequently asked questions
 
 **Are Detroit Diesel parts still available?** Through specialists, yes. The longer-term consideration is the depth of specialist knowledge rather than availability today.

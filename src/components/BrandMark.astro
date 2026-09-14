@@ -1,0 +1,17 @@
+---
+import { brandMarks } from '../lib/brand-marks.js';
+
+const { slug, compact = false } = Astro.props;
+const mark = brandMarks[slug];
+---
+{mark && (
+  <span
+    class:list={['brand-mark', { compact, 'is-wordmark': !mark.src }]}
+    style={`--brand-colour:${mark.colour};--brand-surface:${mark.surface}`}
+  >
+    {mark.src
+      ? <img src={mark.src} alt={`${mark.name} logo`} loading="lazy" decoding="async" />
+      : <span aria-hidden="true">{mark.short}</span>}
+    {!mark.src && <span class="sr-only">{mark.name} logo</span>}
+  </span>
+)}

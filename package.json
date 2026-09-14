@@ -11,6 +11,7 @@
     "test:sync": "node --test tests/yousail-sync.test.mjs"
   },
   "dependencies": {
-    "astro": "^5.6.1"
+    "@astrojs/markdown-remark": "^7.3.1",
+    "astro": "^7.3.2"
   }
 }

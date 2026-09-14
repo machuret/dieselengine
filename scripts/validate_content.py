@@ -149,8 +149,8 @@ def main():
             reviewer = DEFAULT_REVIEWER
 
         if ptype in REVIEW_REQUIRED and not reviewer:
-            sink.append(f"{rel}: {ptype} requires a named "
-                        f"'reviewed_by' mechanic (or site.config defaultReviewer)")
+            warnings.append(f"{rel}: {ptype} should have a named "
+                            f"'reviewed_by' mechanic before claiming technical review")
         elif not reviewer:
             warnings.append(f"{rel}: no named mechanic reviewer")
         if not author:

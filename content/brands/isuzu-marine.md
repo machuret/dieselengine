@@ -42,6 +42,16 @@ families, which suits independent servicing and remote operation.
 several badges, and the marine parts follow the marinizer rather than Isuzu —
 see [how to identify your marine engine](/how/how-to-identify-your-marine-engine/).
 
+## Separate the engine from the marine package
+
+When sourcing parts, divide the installation into two lists. Oil and fuel
+filters, belts, gaskets and internal engine parts may cross-reference through
+the Isuzu family. The heat exchanger, wet exhaust, raw-water pump, mounts,
+instrument panel and gearbox interface may belong to the marinizer or vessel
+builder. Photograph casting numbers and both data plates before dismantling.
+Ordering solely from the Isuzu engine code is how owners end up with a correct
+industrial part that does not fit the marine installation.
+
 ## Frequently asked questions
 
 **Are Isuzu marine parts easy to get?** Base engine items benefit from a large industrial footprint. Marine componentry comes through the marine channel.

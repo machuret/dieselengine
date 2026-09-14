@@ -41,6 +41,16 @@ engine is any good.
 
 **Carry spares** if the boat works away from a capital.
 
+## Before booking service
+
+Photograph the engine and gearbox data plates, record the running hours, and
+note whether the fault occurs cold, hot, at idle or under load. Ask the workshop
+to confirm experience with the specific Doosan family rather than commercial
+diesels generally. For a working vessel, also provide the duty cycle and survey
+status: those details affect both the diagnosis and which replacement parts are
+appropriate. If downtime matters, agree which likely parts will be checked for
+Australian stock before the vessel is opened up.
+
 ## Frequently asked questions
 
 **Is Doosan well supported in Australia?** The network is smaller than the volume brands\u2019. Confirm parts holding and diagnostic access before committing.

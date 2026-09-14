@@ -1,0 +1,78 @@
+---
+import Page from '../layouts/Page.astro';
+import site from '../../site.config.json' with { type: 'json' };
+
+const page = {
+  url: '/disclaimer/', title: 'Important Information Disclaimer',
+  seoTitle: 'Marine Diesel Information Disclaimer', pageType: 'legal',
+  status: 'ready', author: site.defaultAuthor, reviewer: null,
+  needsReviewer: false, parent: '/', parentTitle: 'Home',
+  schema: ['WebPage', 'BreadcrumbList'], updated: site.legalUpdated,
+  indexable: true, blockers: [], headings: [], faqs: [],
+  description: 'Important limits of the marine diesel information on this site. Advice can be incomplete, out of date or wrong for your vessel.',
+};
+---
+<Page page={page}>
+  <h1>Information disclaimer</h1>
+  <p>
+    This site provides general educational information about marine diesel
+    engines. It is not a diagnosis, a repair instruction for your particular
+    vessel, or a substitute for inspection by a qualified marine professional.
+  </p>
+
+  <section class="safety" role="note">
+    <h2>The advice can be wrong</h2>
+    <p>
+      <strong>Information on this site can be incomplete, out of date,
+      misunderstood or simply wrong.</strong> Engines with similar symptoms can
+      have different faults. Model changes, previous repairs, non-standard
+      installations and the condition of your vessel can make a generally
+      sensible step unsafe in your case.
+    </p>
+    <p>
+      Never use this site as the only basis for a decision involving fire,
+      flooding, fuel, electrical isolation, loss of propulsion or safety at sea.
+    </p>
+  </section>
+
+  <h2>Stop when safety is uncertain</h2>
+  <p>
+    Shut the engine down when a guide says to do so, when an alarm sounds, when
+    cooling water stops, or whenever continued operation may cause harm. If you
+    are underway, put the safety of the people and vessel first and follow your
+    emergency procedures. Contact the appropriate emergency or marine rescue
+    service where necessary.
+  </p>
+
+  <h2>Use the correct manufacturer information</h2>
+  <p>
+    The operator, workshop and installation manuals for your exact engine,
+    gearbox and vessel take priority over a general article. Confirm the model,
+    serial number and installation before ordering parts, selecting fluids,
+    applying torque values or opening a fuel, cooling or electrical system.
+    Our <a href="/resources/">authority resources</a> page explains where to
+    find primary sources.
+  </p>
+
+  <h2>No professional relationship</h2>
+  <p>
+    Reading this site or contacting us does not create a mechanic–customer,
+    engineer–client, surveyor–client or other professional relationship. We do
+    not inspect your vessel, verify the facts you provide or supervise work.
+  </p>
+
+  <h2>Prices, listings and external links</h2>
+  <p>
+    Costs are indicative and may change. Business listings are not endorsements,
+    and you must confirm licences, insurance, experience and availability
+    directly. External sites can change without notice and remain responsible
+    for their own information.
+  </p>
+
+  <h2>Corrections</h2>
+  <p>
+    If you find an error, please <a href="/contact/">tell us</a>. Include the
+    page address, the statement in question and, where possible, a primary
+    source such as a current manufacturer manual or government publication.
+  </p>
+</Page>

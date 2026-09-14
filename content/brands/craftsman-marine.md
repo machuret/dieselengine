@@ -41,6 +41,16 @@ time before committing, and carry spares for anything beyond coastal work.
 **Mechanical simplicity across much of the range** means independent servicing
 is realistic, which matters more the further you are from a capital.
 
+## Before ordering parts
+
+Record both identification plates if the installation has them: the Craftsman
+model identifies the marine package, while the underlying industrial engine
+determines many routine service items. Photograph the existing part before
+removal and compare hose sizes, mounting points and electrical connections.
+An impeller or filter may be easy to cross-reference; a heat exchanger,
+instrument panel or exhaust component usually is not. Confirm return terms
+before ordering a part from overseas.
+
 ## Frequently asked questions
 
 **Is Craftsman Marine supported in Australia?** The network is small. Confirm marine parts availability and lead time before booking work.

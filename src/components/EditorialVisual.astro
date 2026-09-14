@@ -1,0 +1,32 @@
+---
+const { page } = Astro.props;
+const visuals = {
+  '/marine-engine-problems/marine-fuel-starvation/': {
+    src: '/images/marine-fuel-filter-inspection.jpg',
+    alt: 'Gloved mechanic inspecting the clear bowl of a marine diesel fuel and water separator with a torch.',
+    caption: 'A clear primary-filter bowl makes water, sediment and biological contamination easier to spot before opening the fuel system.',
+  },
+  '/marine-engine-problems/blocked-exhaust-elbow/': {
+    src: '/images/exhaust-elbow-corrosion-comparison.jpg',
+    alt: 'Blocked and corroded marine exhaust mixing elbow beside a clean replacement elbow.',
+    caption: 'External condition can hide a severely restricted internal passage. Removal is often the only conclusive inspection.',
+  },
+  '/guides/shaft-vs-sterndrive-vs-ips/': {
+    src: '/images/marine-drivetrain-installation.jpg',
+    alt: 'Compact marine diesel connected to an enclosed drivetrain in a yacht engine compartment.',
+    caption: 'The drive installation changes maintenance access, underwater components and the skills required for service.',
+  },
+  '/guides/marine-engine-service-schedule/': {
+    src: '/images/marine-diesel-service-kit.jpg',
+    alt: 'Marine diesel service parts arranged on a work mat, including filters, impeller, washers, oil and tools.',
+    caption: 'Build the service kit from the model and serial number, then confirm every fluid and part against the current manual.',
+  },
+};
+const visual = visuals[page.url];
+---
+{visual && (
+  <figure class="editorial-visual">
+    <img src={visual.src} alt={visual.alt} width="1400" height="933" loading="lazy" decoding="async" />
+    <figcaption>{visual.caption}</figcaption>
+  </figure>
+)}

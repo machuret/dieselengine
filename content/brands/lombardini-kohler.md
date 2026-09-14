@@ -42,6 +42,16 @@ impeller, anodes and schedule — and the most neglected diesel on most boats. S
 **Confirm parts lead time** before committing to a job. The Australian marine
 network for this brand is modest.
 
+## Plan around access
+
+Before accepting a quote, ask which panels, joinery or generator enclosure must
+be removed to reach the service point. A low parts price can still become an
+expensive job when the raw-water pump or exhaust elbow faces a bulkhead. Take
+wide photographs before anything is moved and record hose routing and belt
+direction. For a generator, label it clearly as a genset rather than propulsion
+engine when requesting parts; similar base engines can use different marine
+cooling and control components.
+
 ## Frequently asked questions
 
 **Where are Lombardini engines used?** Small cruising yacht auxiliaries and generator sets where space is tight.
