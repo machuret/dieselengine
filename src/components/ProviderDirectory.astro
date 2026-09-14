@@ -1,0 +1,27 @@
+---
+import { providers, providerLocation } from '../lib/providers.js';
+---
+{providers.length > 0 && (
+  <section class="provider-directory" aria-labelledby="provider-directory-title">
+    <p class="eyebrow"><span class="rule-dash" aria-hidden="true"></span>Current YouSail directory</p>
+    <h2 id="provider-directory-title">Marine diesel service providers</h2>
+    <p>Every published provider below is supplied by YouSail. Confirm availability, qualifications and engine expertise directly before booking.</p>
+    <div class="provider-grid">
+      {providers.map((provider) => (
+        <article class="provider-card">
+          <a class="provider-card__media" href={`/providers/${provider.slug}/`}>
+            {provider.logoImageUrl
+              ? <img src={provider.logoImageUrl} alt={`${provider.name} logo`} loading="lazy" />
+              : <span aria-hidden="true">{provider.name.charAt(0)}</span>}
+          </a>
+          <div class="provider-card__body">
+            <h3><a href={`/providers/${provider.slug}/`}>{provider.name}</a></h3>
+            {providerLocation(provider) && <p>{providerLocation(provider)}</p>}
+            {provider.services?.length > 0 && <p>{provider.services.slice(0, 3).join(' · ')}</p>}
+            <a href={`/providers/${provider.slug}/`}>View provider <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+)}

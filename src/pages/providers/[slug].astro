@@ -1,0 +1,60 @@
+---
+import site from '../../../site.config.json' with { type: 'json' };
+import Masthead from '../../components/Masthead.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+import { providers, providerLocation } from '../../lib/providers.js';
+
+export function getStaticPaths() {
+  return providers.map((provider) => ({ params: { slug: provider.slug }, props: { provider } }));
+}
+
+const { provider } = Astro.props;
+const canonical = `${site.domain}/providers/${provider.slug}/`;
+const location = providerLocation(provider);
+const image = provider.featureImageUrl || provider.logoImageUrl;
+const jsonld = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  name: provider.name,
+  url: canonical,
+  image,
+  address: location || undefined,
+  telephone: provider.phone || undefined,
+  email: provider.email || undefined,
+  sameAs: [provider.website, provider.yousailUrl].filter(Boolean),
+};
+---
+<!doctype html>
+<html lang="en-AU">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{provider.name} | Marine Diesel Engine</title>
+    <meta name="description" content={`${provider.name}${location ? ` in ${location}` : ''} — marine diesel service details supplied by YouSail.`} />
+    <link rel="canonical" href={canonical} />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#0d6273" />
+    <script type="application/ld+json" set:html={JSON.stringify(jsonld)} />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <Masthead />
+    <main id="main" class="provider-profile wrap">
+      <nav aria-label="Breadcrumb"><a href="/">Home</a> · <a href="/find-a-marine-mechanic/">Find a mechanic</a></nav>
+      <div class="provider-profile__head">
+        {provider.logoImageUrl && <img src={provider.logoImageUrl} alt={`${provider.name} logo`} />}
+        <div><p class="eyebrow">Marine diesel provider</p><h1>{provider.name}</h1>{location && <p>{location}</p>}</div>
+      </div>
+      {provider.services?.length > 0 && <><h2>Services</h2><ul>{provider.services.map((service) => <li>{service}</li>)}</ul></>}
+      <h2>Contact</h2>
+      <p class="provider-actions">
+        {provider.website && <a href={provider.website} rel="noopener noreferrer">Website ↗</a>}
+        {provider.phone && <a href={`tel:${provider.phone}`}>{provider.phone}</a>}
+        {provider.email && <a href={`mailto:${provider.email}`}>{provider.email}</a>}
+      </p>
+      <p class="provider-source">Business facts are maintained by <a href={provider.yousailUrl} rel="noopener noreferrer">YouSail ↗</a>. Confirm current availability and qualifications directly.</p>
+    </main>
+    <SiteFooter />
+  </body>
+</html>

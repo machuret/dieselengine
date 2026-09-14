@@ -23,7 +23,7 @@
     {
       "id": "locations",
       "label": "Locations",
-      "match": "^/marine-mechanics/"
+      "match": "^/(marine-mechanics|providers)/"
     },
     {
       "id": "problems",

@@ -1,5 +1,6 @@
 ---
 import Page from '../layouts/Page.astro';
+import ProviderDirectory from '../components/ProviderDirectory.astro';
 import { allPages } from '../lib/content.js';
 
 export function getStaticPaths() {
@@ -15,4 +16,7 @@ export function getStaticPaths() {
 const { page } = Astro.props;
 const { Content } = page;
 ---
-<Page page={page}><Content /></Page>
+<Page page={page}>
+  <Content />
+  {page.url === '/find-a-marine-mechanic/' && <ProviderDirectory />}
+</Page>

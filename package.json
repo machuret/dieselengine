@@ -6,7 +6,9 @@
     "dev": "astro dev",
     "build": "node scripts/prebuild-check.mjs && astro build && node scripts/postbuild-check.mjs",
     "preview": "astro preview",
-    "check": "python3 scripts/validate_content.py"
+    "check": "python3 scripts/validate_content.py",
+    "sync:yousail": "node scripts/sync-yousail-providers.mjs",
+    "test:sync": "node --test tests/yousail-sync.test.mjs"
   },
   "dependencies": {
     "astro": "^5.6.1"

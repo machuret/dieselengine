@@ -1,0 +1,44 @@
+name: Sync YouSail marine-diesel providers
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "29 */6 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-yousail-marine-diesel-engine
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Replace provider membership from YouSail
+        run: npm run sync:yousail
+        env:
+          YOUSAIL_CONTENT_API_SECRET: ${{ secrets.YOUSAIL_CONTENT_API_SECRET }}
+      - name: Verify sync and site
+        run: npm run test:sync && npm run check && npm run build
+      - name: Commit a changed snapshot
+        run: |
+          if git diff --quiet -- data/yousail-providers.json; then
+            echo "Snapshot already current."
+            exit 0
+          fi
+          git config user.name "yousail-sync[bot]"
+          git config user.email "yousail-sync[bot]@users.noreply.github.com"
+          git add data/yousail-providers.json
+          git commit -m "Sync marine-diesel providers from YouSail"
+          git push origin HEAD:main
