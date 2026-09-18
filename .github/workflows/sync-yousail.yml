@@ -42,3 +42,11 @@ jobs:
           git add data/yousail-providers.json
           git commit -m "Sync marine-diesel providers from YouSail"
           git push origin HEAD:main
+      - name: Mirror main onto the branch Vercel serves production from
+        # Vercel's production branch for this project is not main, so a push to
+        # main alone never reaches marinedieselengine.com.au. Mirroring keeps
+        # production following main until Project Settings > Git > Production
+        # Branch is set to main, at which point delete this step.
+        # Runs unconditionally: the branch can be behind from earlier runs even
+        # when this run changed nothing.
+        run: git push origin HEAD:refs/heads/claude/australia-content-expansion-plan-8u5zil
