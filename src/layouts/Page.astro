@@ -12,6 +12,8 @@ import NextSteps from '../components/NextSteps.astro';
 import BrandIdentity from '../components/BrandIdentity.astro';
 import BrandDirectory from '../components/BrandDirectory.astro';
 import EditorialVisual from '../components/EditorialVisual.astro';
+import GeoBrief from '../components/GeoBrief.astro';
+import EditorialGuideDirectory from '../components/EditorialGuideDirectory.astro';
 
 const { page } = Astro.props;
 const canonical = new URL(page.url, site.domain).href;
@@ -59,7 +61,10 @@ const jsonld = {
       },
       inLanguage: site.locale,
       isAccessibleForFree: true,
+      mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+      ...(page.published ? { datePublished: page.published } : {}),
       ...(page.updated ? { dateModified: page.updated } : {}),
+      ...(page.keywords?.length ? { keywords: page.keywords.join(', ') } : {}),
       ...(page.author ? { author: { '@type': 'Organization', name: page.author } } : {}),
       ...(page.reviewer ? { reviewedBy: { '@type': 'Person', name: page.reviewer } } : {}),
       publisher: { '@id': `${site.domain}/#publisher` },
@@ -135,6 +140,7 @@ const jsonld = {
         item: new URL(c.url, site.domain).href,
       })),
     },
+    ...(page.extraSchema ?? []),
   ],
 };
 ---
@@ -147,6 +153,9 @@ const jsonld = {
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
     {page.indexable
       ? <meta name="robots" content="index, follow, max-image-preview:large" />
       : <meta name="robots" content="noindex, follow" />}
@@ -160,6 +169,10 @@ const jsonld = {
     <meta property="og:image" content={socialImage} />
     <meta property="og:image:alt" content={socialImageAlt} />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={page.title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImage} />
+    <meta name="twitter:image:alt" content={socialImageAlt} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -207,12 +220,14 @@ const jsonld = {
           )}
           <slot />
           <EditorialVisual page={page} />
+          {page.geo && <GeoBrief page={page} />}
           {page.pageType === 'city-hub' && <StateRules state={page.geo?.state} />}
           {page.pageType === 'city-hub' && <ServiceIndex city={page.geo?.city} />}
           <HowToFor page={page} />
           {page.url === '/engine-brands/'
             ? <BrandDirectory />
             : <Children page={page} />}
+          {page.url === '/marine-diesel-engines/' && <EditorialGuideDirectory />}
           <NextSteps page={page} />
           <Related page={page} />
           <footer class="byline">

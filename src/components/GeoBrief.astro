@@ -1,0 +1,31 @@
+---
+const { page } = Astro.props;
+const stateNames = { QLD: 'Queensland', NSW: 'New South Wales', VIC: 'Victoria', WA: 'Western Australia', SA: 'South Australia', TAS: 'Tasmania', NT: 'the Northern Territory', ACT: 'the ACT' };
+const stateAdvice = {
+  QLD: 'Warm water, high humidity and long boating seasons make raw-water fouling, fuel contamination and corrosion control recurring priorities.',
+  NSW: 'Workshop access varies sharply between marina berths, swing moorings and regional slipways, so confirm travel, tender and haul-out arrangements before booking.',
+  VIC: 'Seasonal lay-up and cool-water operation make battery condition, coolant protection and recommissioning checks especially useful.',
+  WA: 'Long distances between service centres make model-specific spares, freight lead times and the provider’s travel radius important parts of a quote.',
+  SA: 'Cooler southern conditions and concentrated marina precincts favour planned annual work, but remote cruising still requires spares and lead-time planning.',
+  TAS: 'Cold starts, seasonal storage and distance from specialist parts support make documentation and a carefully matched spares kit valuable.',
+  NT: 'Heat, humidity, tropical lay-up and remote operation justify shorter inspection cycles and explicit parts and travel planning.',
+};
+const name = page.geo?.city;
+const state = page.geo?.state;
+---
+{name && (
+  <aside class="geo-brief" aria-labelledby="geo-brief-title">
+    <p class="kicker">Local operating context</p>
+    <h2 id="geo-brief-title">Planning marine diesel work around {name}</h2>
+    {page.geo?.notes && <p>{page.geo.notes}</p>}
+    {stateAdvice[state] && <p>{stateAdvice[state]}</p>}
+    <p>When requesting a quote, state the berth or mooring location, engine and gearbox models, access restrictions and whether the vessel can move under its own power. Ask whether travel, marina induction, parking, tender access and haul-out are included.</p>
+    <div class="geo-brief__links">
+      <a href="/guides/how-to-choose-a-marine-mechanic/">Choose a mechanic</a>
+      <a href="/costs/">Compare typical costs</a>
+      <a href="/marine-engine-suppliers/">Find supplier guidance</a>
+      <a href="/resources/">Australian resources</a>
+    </div>
+    <p class="geo-brief__note">Location information is a planning aid, not a claim that every provider covers all of {name}{state ? ` or ${stateNames[state] ?? state}` : ''}.</p>
+  </aside>
+)}

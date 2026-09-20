@@ -1,6 +1,9 @@
 ---
 import Page from '../layouts/Page.astro';
 import { allPages } from '../lib/content.js';
+import { editorialGuides } from '../data/editorial-guides.js';
+import { supplierPages } from '../data/supplier-pages.js';
+import { providers, providerLocation } from '../lib/providers.js';
 
 // A reader-facing index of the whole site. The XML sitemap is for crawlers;
 // this is for people, and it doubles as a hub that puts every page within two
@@ -44,6 +47,22 @@ const page = {
       <li><a href={p.url}>{p.title.replace(' in Australia', '')}</a></li>
     ))}
   </ul>
+
+  <h2>Editorial field guides</h2>
+  <ul class="chips">
+    {editorialGuides.map((guide) => <li><a href={`/guides/${guide.slug}/`}>{guide.title}</a></li>)}
+  </ul>
+
+  <h2>Marine engine supplier guides</h2>
+  <ul class="chips">
+    <li><a href="/marine-engine-suppliers/">Marine engine suppliers in Australia</a></li>
+    {supplierPages.map((supplier) => <li><a href={`/marine-engine-suppliers/${supplier.slug}/`}>{supplier.title}</a></li>)}
+  </ul>
+
+  {providers.length > 0 && <>
+    <h2>Provider profiles</h2>
+    <ul class="chips">{providers.map((provider) => <li><a href={`/providers/${provider.slug}/`}>{provider.name}{providerLocation(provider) ? ` — ${providerLocation(provider)}` : ''}</a></li>)}</ul>
+  </>}
 
   <h2>About this site</h2>
   <ul class="chips">

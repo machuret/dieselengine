@@ -15,23 +15,26 @@ const common = {
   parts: { url: '/guides/marine-diesel-parts-explained/', title: 'Learn the parts around the engine' },
   hours: { url: '/guides/marine-engine-hours-explained/', title: 'Understand engine hours and condition' },
   emergency: { url: '/guides/emergency-engine-shutdown/', title: 'Know when to shut the engine down' },
+  suppliers: { url: '/marine-engine-suppliers/', title: 'Compare engine and parts suppliers' },
+  troubleshooting: { url: '/guides/marine-diesel-troubleshooting-flowchart/', title: 'Use the troubleshooting flowchart' },
+  spares: { url: '/guides/marine-diesel-spares-to-carry/', title: 'Build an engine-specific spares kit' },
 };
 
 let links = [];
 if (page.pageType === 'service-national') {
   links = [common.maintenance, common.costs, common.mechanic, common.resources];
 } else if (page.pageType === 'brand-hub' || page.pageType === 'distributor') {
-  links = [common.identify, common.schedule, common.buying, common.mechanic];
+  links = [common.identify, common.schedule, common.suppliers, common.mechanic];
 } else if (page.pageType === 'symptom') {
-  links = [common.emergency, common.parts, common.services, common.mechanic];
+  links = [common.emergency, common.troubleshooting, common.services, common.mechanic];
 } else if (page.pageType === 'howto') {
   links = [common.inspection, common.symptoms, common.services, common.resources];
 } else if (page.geo) {
   links = [common.inspection, common.costs, common.services, common.mechanic];
 } else if (page.pageType === 'boat-brand') {
-  links = [common.identify, common.hours, common.buying, common.schedule];
+  links = [common.identify, common.hours, common.suppliers, common.schedule];
 } else if (page.pageType === 'decision') {
-  links = [common.maintenance, common.inspection, common.costs, common.resources];
+  links = [common.maintenance, common.spares, common.costs, common.resources];
 }
 
 links = links.filter((link) => link.url !== page.url);

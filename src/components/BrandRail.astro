@@ -1,0 +1,22 @@
+---
+import { brandMarks } from '../lib/brand-marks.js';
+import BrandMark from './BrandMark.astro';
+
+const featured = ['yanmar', 'volvo-penta', 'cummins-marine', 'caterpillar-marine', 'perkins-sabre', 'john-deere-marine', 'scania-marine', 'zf-marine'];
+---
+<section class="brand-rail wrap" aria-labelledby="brand-rail-title">
+  <div>
+    <p class="kicker">Equipment guides</p>
+    <h2 id="brand-rail-title">Find the name on your engine plate</h2>
+  </div>
+  <div class="brand-rail__scroller" tabindex="0" aria-label="Featured marine engine and gearbox brands; scroll horizontally">
+    {featured.map((slug) => (
+      <a href={`/engine-brands/${slug}/`} aria-label={`Open the ${brandMarks[slug].name} guide`}>
+        <BrandMark slug={slug} compact={true} />
+        <span>{brandMarks[slug].name}</span>
+      </a>
+    ))}
+  </div>
+  <p><a href="/engine-brands/">Browse all engine and gearbox brands <span aria-hidden="true">→</span></a></p>
+  <p class="brand-trademark-note">Marks are shown for equipment identification and remain the property of their respective owners.</p>
+</section>

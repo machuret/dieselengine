@@ -5,10 +5,14 @@ import SiteFooter from '../components/SiteFooter.astro';
 import { allPages } from '../lib/content.js';
 import { seoTitle } from '../lib/extract.js';
 import { questionClusters } from '../lib/questions.js';
+import BrandRail from '../components/BrandRail.astro';
+import { editorialGuides } from '../data/editorial-guides.js';
+import { supplierPages } from '../data/supplier-pages.js';
+import { providers } from '../lib/providers.js';
 
 const canonical = `${site.domain}/`;
 const ready = allPages.filter((p) => p.indexable).length;
-const publishedCount = ready + site.staticRoutes.length + questionClusters.length;
+const publishedCount = ready + site.staticRoutes.length + questionClusters.length + editorialGuides.length + supplierPages.length + 1 + providers.length;
 
 // Ordered by urgency, then by how often people arrive with them.
 // Severity is data, not a CSS nth-child guess. Getting this wrong is the one
@@ -66,6 +70,9 @@ const jsonld = {
     <meta name="description" content={site.description} />
     <link rel="canonical" href={canonical} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
     <meta name="robots" content={ready > 0 ? 'index, follow' : 'noindex, follow'} />
     <meta name="theme-color" content="#0d6273" />
     <meta property="og:title" content={site.name} />
@@ -76,6 +83,9 @@ const jsonld = {
     <meta property="og:image" content={socialImage} />
     <meta property="og:image:alt" content="Marine diesel engine installed in a yacht engine bay" />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={site.name} />
+    <meta name="twitter:description" content={site.description} />
+    <meta name="twitter:image" content={socialImage} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" />
@@ -225,6 +235,8 @@ const jsonld = {
           </a>
         </div>
       </section>
+
+      <BrandRail />
 
       <h2 class="section-head">Find a marine mechanic</h2>
       <p class="section-sub">

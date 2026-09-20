@@ -1,0 +1,19 @@
+---
+import { editorialGuides } from '../data/editorial-guides.js';
+---
+<section class="guide-directory" aria-labelledby="guide-directory-title">
+  <div class="brand-directory-head">
+    <p class="kicker">New editorial library</p>
+    <h2 id="guide-directory-title">Practical marine diesel field guides</h2>
+    <p>Evidence-first guides for maintenance, buying, passage preparation and fault diagnosis.</p>
+  </div>
+  <div class="guide-directory__grid">
+    {editorialGuides.map((guide) => (
+      <a href={`/guides/${guide.slug}/`}>
+        <span>{guide.intent}</span>
+        <strong>{guide.title}</strong>
+        <small>{guide.description}</small>
+      </a>
+    ))}
+  </div>
+</section>

@@ -2,6 +2,8 @@ import site from '../../site.config.json' with { type: 'json' };
 import { allPages, sectionOf } from './content.js';
 import { questionClusters } from './questions.js';
 import { providers } from './providers.js';
+import { editorialGuideRoutes } from '../data/editorial-guides.js';
+import { supplierRoutes } from '../data/supplier-pages.js';
 
 /**
  * The single list of everything that should appear in a sitemap: content pages
@@ -36,6 +38,8 @@ export const sitemapRoutes = [
     priority: '0.7',
     updated: provider.sourceUpdatedAt ?? null,
   })),
+  ...editorialGuideRoutes,
+  ...supplierRoutes,
 ].sort((a, b) => a.url.localeCompare(b.url));
 
 export { sectionOf };

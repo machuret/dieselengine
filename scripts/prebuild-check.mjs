@@ -9,7 +9,13 @@ import { parseFrontMatter, toPage, sectionOf } from '../src/lib/gates.js';
 // Routes that exist as .astro pages rather than content files, read from the
 // route table so this check and the sitemap cannot disagree about what exists.
 import site from '../site.config.json' with { type: 'json' };
-const STATIC_ROUTES = new Set((site.staticRoutes ?? []).map((r) => r.url));
+import { editorialGuideRoutes } from '../src/data/editorial-guides.js';
+import { supplierRoutes } from '../src/data/supplier-pages.js';
+const STATIC_ROUTES = new Set([
+  ...(site.staticRoutes ?? []).map((r) => r.url),
+  ...editorialGuideRoutes.map((r) => r.url),
+  ...supplierRoutes.map((r) => r.url),
+]);
 // Endpoints generated at build time rather than served from public/.
 const GENERATED = new Set(['/sitemap.xml', '/robots.txt', '/llms.txt']);
 

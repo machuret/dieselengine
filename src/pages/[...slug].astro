@@ -17,6 +17,13 @@ const { page } = Astro.props;
 const { Content } = page;
 ---
 <Page page={page}>
-  <Content />
-  {page.url === '/find-a-marine-mechanic/' && <ProviderDirectory />}
+  {page.url === '/find-a-marine-mechanic/' ? (
+    <>
+      <p class="kicker">Verified Australian directory</p>
+      <h1>Find a marine diesel mechanic in Australia</h1>
+      <p class="lead">Start with a current provider listing, then use the detailed trade, pricing and booking guide below to choose the right specialist.</p>
+      <ProviderDirectory />
+      <div class="mechanic-details"><Content /></div>
+    </>
+  ) : <Content />}
 </Page>

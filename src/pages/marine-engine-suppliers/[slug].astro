@@ -1,0 +1,42 @@
+---
+import Page from '../../layouts/Page.astro';
+import { supplierPages } from '../../data/supplier-pages.js';
+import site from '../../../site.config.json' with { type: 'json' };
+
+export function getStaticPaths() {
+  return supplierPages.map((supplier) => ({ params: { slug: supplier.slug }, props: { supplier } }));
+}
+const { supplier } = Astro.props;
+const page = {
+  url: `/marine-engine-suppliers/${supplier.slug}/`, title: supplier.title,
+  seoTitle: `${supplier.title} Australia | Buyer’s Guide`, pageType: 'supplier',
+  status: 'ready', author: site.defaultAuthor, reviewer: null, needsReviewer: false,
+  parent: '/marine-engine-suppliers/', parentTitle: 'Marine Engine Suppliers',
+  schema: ['Article', 'BreadcrumbList'], updated: '2026-09-20', published: '2026-09-20',
+  indexable: true, blockers: [],
+  headings: [{ depth: 2, slug: 'what-to-confirm', text: 'What to confirm' }, { depth: 2, slug: 'build-a-comparable-quote', text: 'Build a comparable quote' }, { depth: 2, slug: 'related-guides', text: 'Related guides' }],
+  faqs: [], description: supplier.description,
+  image: '/images/marine-diesel-supplier-workshop.jpg', imageWidth: 1600, imageHeight: 1066,
+  imageAlt: 'Marine diesel engine and service parts prepared in a marina workshop',
+};
+---
+<Page page={page}>
+  <p class="kicker">Independent supplier guide</p>
+  <h1>{supplier.title}</h1>
+  <p class="lead">{supplier.description}</p>
+
+  <h2 id="what-to-confirm">What to confirm</h2>
+  <ul class="check-grid">
+    {supplier.points.map((point) => <li><span aria-hidden="true">✓</span>{point}</li>)}
+  </ul>
+  <p>Compatibility should be confirmed against documented identifiers and the installed system—not appearance, paint colour or boat brochure. Ask whether the item is genuine, <abbr class="term-tip" data-tip="A component made by the original equipment manufacturer, which may be sold under more than one brand.">OEM</abbr> or aftermarket; what is included; what can be returned; and who provides technical support after sale.</p>
+
+  <h2 id="build-a-comparable-quote">Build a comparable quote</h2>
+  <p>Give every supplier the same brief. Include model and serial numbers, clear photographs, vessel location, required delivery date and whether freight, installation, consumables, commissioning and warranty registration are included. Separate optional work so the lowest headline price does not hide an incomplete scope.</p>
+  <p>For safety-critical, below-waterline or high-current components, have suitability and installation checked by the appropriate qualified marine trade. Read our <a href="/disclaimer/">information and safety disclaimer</a> before acting.</p>
+  <aside class="editorial-tip"><p class="kicker">Quote check</p><p>A useful quote names the exact product, included fittings, lead time, freight, tax, warranty party and exclusions. “To suit” is not a compatibility record.</p></aside>
+
+  <h2 id="related-guides">Related guides</h2>
+  <div class="path-cards">{supplier.links.map(([label, url]) => <a href={url}><strong>{label}</strong><span aria-hidden="true">→</span></a>)}</div>
+  <p class="source-note">Manufacturer names and marks are used only to identify equipment. Check current product, warranty and dealer information with the manufacturer or authorised Australian distributor.</p>
+</Page>

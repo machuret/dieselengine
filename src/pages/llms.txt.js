@@ -1,6 +1,9 @@
 import site from '../../site.config.json' with { type: 'json' };
 import { allPages } from '../lib/content.js';
 import { questionClusters, questionCount } from '../lib/questions.js';
+import { editorialGuides } from '../data/editorial-guides.js';
+import { supplierPages } from '../data/supplier-pages.js';
+import { providers } from '../lib/providers.js';
 
 /**
  * /llms.txt — a plain-text map of the site for language models, in the
@@ -45,6 +48,10 @@ referral only.
 
 ${pillars.map(line).join('\n')}
 
+## Editorial field guides (${editorialGuides.length})
+
+${editorialGuides.map((guide) => `- [${guide.title}](${d}/guides/${guide.slug}/): ${guide.description}`).join('\n')}
+
 ## Services (${services.length})
 
 ${services.map(line).join('\n')}
@@ -52,6 +59,15 @@ ${services.map(line).join('\n')}
 ## Marine mechanics by location (${locations.length})
 
 ${locations.map(line).join('\n')}
+
+## Current YouSail provider profiles (${providers.length})
+
+${providers.map((provider) => `- [${provider.name}](${d}/providers/${provider.slug}/): ${[provider.suburb, provider.state].filter(Boolean).join(', ')} — ${(provider.services ?? []).join(', ')}`).join('\n')}
+
+## Marine engine supplier guides (${supplierPages.length})
+
+- [Marine engine suppliers in Australia](${d}/marine-engine-suppliers/): Independent category and quote guidance.
+${supplierPages.map((supplier) => `- [${supplier.title}](${d}/marine-engine-suppliers/${supplier.slug}/): ${supplier.description}`).join('\n')}
 
 ## Questions (${questionCount} answered)
 
@@ -62,6 +78,8 @@ ${questionClusters.map((c) => `- [${c.title}](${d}/questions/${c.slug}/): ${c.bl
 - [Site index](${d}/sitemap/)
 - [Privacy policy](${d}/privacy/)
 - [Terms and conditions](${d}/terms/)
+- [Disclaimer](${d}/disclaimer/)
+- [Authority resources](${d}/resources/)
 - Contact: ${site.contactEmail}
 `;
 

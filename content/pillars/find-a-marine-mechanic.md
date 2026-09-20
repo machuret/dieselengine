@@ -14,12 +14,6 @@ schema: [Article, FAQPage, BreadcrumbList]
 last_updated: 2026-09-09
 ---
 
-# Find a Marine Diesel Mechanic in Australia
-
-We don't work on boats. We list marine workshops and mobile technicians we have
-verified, explain which trade actually does which job, and tell you what the
-work should cost before you ring anyone.
-
 ## Start with your location
 
 **[Gold Coast](/marine-mechanics/gold-coast/) ·

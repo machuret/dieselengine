@@ -1,0 +1,53 @@
+---
+import Page from '../../layouts/Page.astro';
+import { supplierPages } from '../../data/supplier-pages.js';
+import site from '../../../site.config.json' with { type: 'json' };
+
+const page = {
+  url: '/marine-engine-suppliers/', title: 'Marine Engine Suppliers in Australia',
+  seoTitle: 'Marine Engine Suppliers Australia: Engines, Parts & Gearboxes',
+  pageType: 'supplier-hub', status: 'ready', author: site.defaultAuthor, reviewer: null,
+  needsReviewer: false, parent: '/', parentTitle: 'Home', schema: ['CollectionPage', 'BreadcrumbList'],
+  updated: '2026-09-20', published: '2026-09-20', indexable: true, blockers: [],
+  headings: [
+    { depth: 2, slug: 'choose-a-supplier-category', text: 'Choose a supplier category' },
+    { depth: 2, slug: 'before-requesting-a-quote', text: 'Before requesting a quote' },
+    { depth: 2, slug: 'supplier-vs-installer', text: 'Supplier, distributor or installer?' },
+  ], faqs: [],
+  description: 'Independent Australian guide to marine diesel engine, parts, gearbox, saildrive, generator and commercial engine suppliers.',
+  image: '/images/marine-diesel-supplier-workshop.jpg', imageWidth: 1600, imageHeight: 1066,
+  imageAlt: 'Marine diesel engine, filters, belts and impellers in an Australian marina workshop',
+};
+---
+<Page page={page}>
+  <p class="kicker">Australian buyer’s directory</p>
+  <h1>Marine engine suppliers in Australia</h1>
+  <p class="lead">Start with what you need to buy, then verify compatibility from the engine or drive model and serial number. We explain the evidence a credible supplier should provide; we do not rank businesses for payment.</p>
+
+  <figure class="editorial-visual editorial-visual--lead">
+    <img src="/images/marine-diesel-supplier-workshop.jpg" width="1600" height="1066" alt="Marine diesel engine on a stand beside organised filters, impellers and belts in a marina workshop" fetchpriority="high" decoding="async" />
+    <figcaption>Buy to an identified system. A part that looks right can still have the wrong material, rating, spline, thread or calibration.</figcaption>
+  </figure>
+
+  <h2 id="choose-a-supplier-category">Choose a supplier category</h2>
+  <div class="supplier-grid">
+    {supplierPages.map((item) => (
+      <a href={`/marine-engine-suppliers/${item.slug}/`}>
+        <span class="kicker">Buyer guide</span>
+        <strong>{item.title}</strong>
+        <span>{item.description}</span>
+        <em>Open guide →</em>
+      </a>
+    ))}
+  </div>
+
+  <h2 id="before-requesting-a-quote">Before requesting a quote</h2>
+  <p>Send photographs of the engine and gearbox plates, the installed system, connections and available access. State the boat model, use, location and whether the quote should include removal, installation, commissioning and freight. For parts, give the serial number and confirm whether seals, fasteners or fitting kits are included.</p>
+  <p>For a repower, treat the engine as one component of a propulsion system. Gearbox ratio, propeller, shaft, exhaust, cooling, controls, electrical load and service access all need to agree. Our <a href="/guides/marine-diesel-repower-measurement-guide/">repower measurement guide</a> creates a better briefing pack.</p>
+
+  <aside class="editorial-tip"><p class="kicker">Buyer’s tip</p><p>Ask the supplier to state in writing which identifiers they used to confirm compatibility. Keep that reply with the invoice and installation record.</p></aside>
+
+  <h2 id="supplier-vs-installer">Supplier, distributor or installer?</h2>
+  <p>An authorised distributor represents a manufacturer and may handle warranty registration, technical escalation and dealer support. A parts supplier may stock genuine, OEM and aftermarket alternatives. An installer is responsible for how the product works in the boat. One business can fill several roles, but the quote should say who owns design, commissioning and warranty responsibilities.</p>
+  <p>Browse the <a href="/distributors/">brand distributor guides</a>, compare <a href="/engine-brands/">marine engine brands</a>, or use the <a href="/find-a-marine-mechanic/">mechanic directory</a> when installation or diagnosis is the real requirement.</p>
+</Page>

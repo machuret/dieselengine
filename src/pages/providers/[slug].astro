@@ -1,8 +1,7 @@
 ---
-import site from '../../../site.config.json' with { type: 'json' };
-import Masthead from '../../components/Masthead.astro';
-import SiteFooter from '../../components/SiteFooter.astro';
+import Page from '../../layouts/Page.astro';
 import { providers, providerLocation } from '../../lib/providers.js';
+import site from '../../../site.config.json' with { type: 'json' };
 
 export function getStaticPaths() {
   return providers.map((provider) => ({ params: { slug: provider.slug }, props: { provider } }));
@@ -11,50 +10,77 @@ export function getStaticPaths() {
 const { provider } = Astro.props;
 const canonical = `${site.domain}/providers/${provider.slug}/`;
 const location = providerLocation(provider);
-const image = provider.featureImageUrl || provider.logoImageUrl;
-const jsonld = {
-  '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  name: provider.name,
-  url: canonical,
-  image,
-  address: location || undefined,
-  telephone: provider.phone || undefined,
-  email: provider.email || undefined,
+const similar = providers.filter((item) => item.slug !== provider.slug && (item.state === provider.state || item.services?.some((service) => provider.services?.includes(service)))).slice(0, 4);
+const address = {
+  '@type': 'PostalAddress', streetAddress: provider.address || undefined,
+  addressLocality: provider.suburb || undefined, addressRegion: provider.state || undefined,
+  postalCode: provider.postcode || undefined, addressCountry: 'AU',
+};
+const localBusiness = {
+  '@type': 'LocalBusiness', '@id': `${canonical}#business`, name: provider.name, url: canonical,
+  image: provider.featureImageUrl || provider.logoImageUrl || new URL('/images/marine-mechanic-engine-inspection.jpg', site.domain).href,
+  address, telephone: provider.phone || undefined, email: provider.email || undefined,
   sameAs: [provider.website, provider.yousailUrl].filter(Boolean),
+  areaServed: provider.state ? { '@type': 'AdministrativeArea', name: provider.state } : undefined,
+  knowsAbout: provider.services ?? [],
+};
+const page = {
+  url: `/providers/${provider.slug}/`, title: `${provider.name} — Marine Diesel Provider`,
+  seoTitle: `${provider.name} Marine Diesel Service | ${location || 'Australia'}`,
+  pageType: 'provider', status: 'ready', author: 'YouSail directory data', reviewer: null,
+  needsReviewer: false, parent: '/find-a-marine-mechanic/', parentTitle: 'Find a Mechanic',
+  schema: ['WebPage', 'BreadcrumbList'], updated: provider.sourceUpdatedAt?.slice(0, 10),
+  indexable: true, blockers: [], headings: [
+    { depth: 2, slug: 'services', text: 'Services' },
+    { depth: 2, slug: 'contact-and-booking', text: 'Contact and booking' },
+    { depth: 2, slug: 'before-you-book', text: 'Before you book' },
+  ], faqs: [], description: `${provider.name}${location ? ` in ${location}` : ''}: marine diesel services, contact details and booking checks supplied by YouSail.`,
+  image: provider.featureImageUrl || '/images/marine-mechanic-engine-inspection.jpg', imageWidth: 1200, imageHeight: 800,
+  imageAlt: `${provider.name} marine service provider`, extraSchema: [localBusiness],
 };
 ---
-<!doctype html>
-<html lang="en-AU">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{provider.name} | Marine Diesel Engine</title>
-    <meta name="description" content={`${provider.name}${location ? ` in ${location}` : ''} — marine diesel service details supplied by YouSail.`} />
-    <link rel="canonical" href={canonical} />
-    <meta name="robots" content="index, follow" />
-    <meta name="theme-color" content="#0d6273" />
-    <script type="application/ld+json" set:html={JSON.stringify(jsonld)} />
-    <link rel="stylesheet" href="/styles.css" />
-  </head>
-  <body>
-    <a class="skip" href="#main">Skip to content</a>
-    <Masthead />
-    <main id="main" class="provider-profile wrap">
-      <nav aria-label="Breadcrumb"><a href="/">Home</a> · <a href="/find-a-marine-mechanic/">Find a mechanic</a></nav>
-      <div class="provider-profile__head">
-        {provider.logoImageUrl && <img src={provider.logoImageUrl} alt={`${provider.name} logo`} />}
-        <div><p class="eyebrow">Marine diesel provider</p><h1>{provider.name}</h1>{location && <p>{location}</p>}</div>
-      </div>
-      {provider.services?.length > 0 && <><h2>Services</h2><ul>{provider.services.map((service) => <li>{service}</li>)}</ul></>}
-      <h2>Contact</h2>
-      <p class="provider-actions">
-        {provider.website && <a href={provider.website} rel="noopener noreferrer">Website ↗</a>}
-        {provider.phone && <a href={`tel:${provider.phone}`}>{provider.phone}</a>}
-        {provider.email && <a href={`mailto:${provider.email}`}>{provider.email}</a>}
-      </p>
-      <p class="provider-source">Business facts are maintained by <a href={provider.yousailUrl} rel="noopener noreferrer">YouSail ↗</a>. Confirm current availability and qualifications directly.</p>
-    </main>
-    <SiteFooter />
-  </body>
-</html>
+<Page page={page}>
+  <p class="kicker">YouSail provider profile</p>
+  <h1>{provider.name}</h1>
+  <p class="lead">Marine diesel service provider{location ? ` based in ${location}` : ''}. Confirm engine-brand experience, availability, travel and quote scope directly before booking.</p>
+
+  {provider.featureImageUrl && (
+    <figure class="editorial-visual editorial-visual--lead provider-hero">
+      <img src={provider.featureImageUrl} width="1200" height="800" alt={`${provider.name} workshop or marine service team`} fetchpriority="high" decoding="async" />
+      <figcaption>Provider image supplied through the YouSail directory. Confirm current services directly with the business.</figcaption>
+    </figure>
+  )}
+
+  <aside class="provider-facts" aria-label="Provider facts">
+    <div><span>Location</span><strong>{location || 'Contact provider'}</strong></div>
+    <div><span>Coverage</span><strong>{provider.operatingScope === 'local' ? 'Local service area' : provider.operatingScope || 'Confirm directly'}</strong></div>
+    <div><span>Directory checked</span><strong>{provider.sourceUpdatedAt ? new Date(provider.sourceUpdatedAt).toLocaleDateString('en-AU', { day: 'numeric', month: 'short', year: 'numeric' }) : 'See YouSail'}</strong></div>
+  </aside>
+
+  <h2 id="services">Services</h2>
+  {provider.services?.length
+    ? <ul class="check-grid">{provider.services.map((service) => <li><span aria-hidden="true">✓</span>{service}</li>)}</ul>
+    : <p>Current service categories have not been supplied. Ask the provider whether they work on your exact engine, gearbox or drive.</p>}
+
+  <h2 id="contact-and-booking">Contact and booking</h2>
+  <div class="provider-actions">
+    {provider.phone && <a class="primary" href={`tel:${provider.phone}`}>Call {provider.phone}</a>}
+    {provider.email && <a href={`mailto:${provider.email}?subject=${encodeURIComponent(`Marine Diesel Engine enquiry — ${provider.name}`)}`}>Email provider</a>}
+    {provider.website && <a href={provider.website} rel="noopener noreferrer">Visit website ↗</a>}
+  </div>
+
+  <h2 id="before-you-book">Before you book</h2>
+  <p>Have the engine and gearbox model and serial number, vessel location, access details, engine hours and a concise symptom timeline ready. Ask who will attend, whether they regularly work on this model, what the call-out covers and the approval threshold for additional work.</p>
+  <p>For an active fault, record alarms, temperature, rpm, smoke colour and when the symptom occurs. Do not restart an engine after loss of cooling water, oil-pressure alarm, fuel spray or suspected internal water entry.</p>
+
+  {similar.length > 0 && (
+    <section class="related-paths"><h2>Similar providers</h2><div class="path-cards">{similar.map((item) => <a href={`/providers/${item.slug}/`}><strong>{item.name}</strong><span>{providerLocation(item)} →</span></a>)}</div></section>
+  )}
+
+  <div class="path-cards provider-related">
+    <a href="/guides/how-to-choose-a-marine-mechanic/"><strong>How to choose a mechanic</strong><span>→</span></a>
+    <a href="/costs/"><strong>Compare marine diesel costs</strong><span>→</span></a>
+    <a href="/guides/marine-diesel-troubleshooting-flowchart/"><strong>Prepare useful fault evidence</strong><span>→</span></a>
+  </div>
+  <p class="provider-source">Business facts are maintained by <a href={provider.yousailUrl} rel="noopener noreferrer">YouSail ↗</a>. A directory listing is not an endorsement. Confirm qualifications, insurance, availability and scope directly.</p>
+</Page>

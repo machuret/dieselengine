@@ -1,0 +1,75 @@
+---
+import Page from '../../layouts/Page.astro';
+import { editorialGuides } from '../../data/editorial-guides.js';
+import site from '../../../site.config.json' with { type: 'json' };
+
+export function getStaticPaths() {
+  return editorialGuides.map((guide) => ({ params: { slug: guide.slug }, props: { guide } }));
+}
+
+const { guide } = Astro.props;
+const headings = guide.sections.map(([title]) => ({
+  depth: 2,
+  slug: title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''),
+  text: title,
+}));
+headings.push({ depth: 2, slug: 'frequently-asked-questions', text: 'Frequently asked questions' });
+const page = {
+  url: `/guides/${guide.slug}/`, title: guide.title,
+  seoTitle: `${guide.title} | Australian Guide`, pageType: 'guide',
+  status: 'ready', author: site.defaultAuthor, reviewer: null, needsReviewer: false,
+  parent: '/marine-diesel-engines/', parentTitle: 'Marine Diesel Engines',
+  schema: ['TechArticle', 'FAQPage', 'BreadcrumbList'],
+  updated: '2026-09-20', published: '2026-09-20', indexable: true, blockers: [],
+  headings, faqs: guide.faqs.map(([question, answer]) => ({ question, answer })),
+  description: guide.description, image: guide.image, imageWidth: 1600, imageHeight: 1066,
+  imageAlt: guide.imageAlt, keywords: [guide.intent, 'marine diesel', 'Australia'],
+};
+---
+<Page page={page}>
+  <p class="kicker">Editorial field guide · {guide.intent}</p>
+  <h1>{guide.title}</h1>
+  <p class="lead">{guide.intro}</p>
+
+  <figure class="editorial-visual editorial-visual--lead">
+    <img src={guide.image} width="1600" height="1066" alt={guide.imageAlt} fetchpriority="high" decoding="async" />
+    <figcaption>Use the engine manual and model plate as the source of truth. This guide helps you ask better questions and preserve useful evidence.</figcaption>
+  </figure>
+
+  <aside class="guide-scope" aria-label="Guide scope">
+    <div><span>Use case</span><strong>{guide.intent}</strong></div>
+    <div><span>Region</span><strong>Australia</strong></div>
+    <div><span>Safety</span><strong>General information</strong></div>
+  </aside>
+
+  {guide.sections.map(([title, body], index) => (
+    <section>
+      <h2 id={headings[index].slug}>{title}</h2>
+      <p>{body}</p>
+    </section>
+  ))}
+
+  <aside class="editorial-tip" aria-label="Field note">
+    <p class="kicker">Field note</p>
+    <p>{guide.tip}</p>
+  </aside>
+
+  <section class="related-paths" aria-labelledby="related-paths-title">
+    <h2 id="related-paths-title">Continue with the right next step</h2>
+    <div class="path-cards">
+      {guide.links.map(([label, url]) => <a href={url}><strong>{label}</strong><span aria-hidden="true">→</span></a>)}
+    </div>
+  </section>
+
+  <section class="faq-list" aria-labelledby="frequently-asked-questions">
+    <h2 id="frequently-asked-questions">Frequently asked questions</h2>
+    {guide.faqs.map(([question, answer]) => (
+      <details>
+        <summary>{question}</summary>
+        <p>{answer}</p>
+      </details>
+    ))}
+  </section>
+
+  <p class="source-note">Terminology can differ between manufacturers. For definitive specifications and intervals, consult the current manual for the exact engine and the relevant <a href="/resources/">manufacturer or Australian authority resource</a>.</p>
+</Page>
