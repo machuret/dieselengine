@@ -13,16 +13,17 @@ const locations = allPages.filter((p) => p.pageType === 'city-hub');
 const services = allPages.filter((p) => p.pageType === 'service-national');
 
 const page = {
-  url: '/sitemap/', title: 'Site Index', seoTitle: 'Site Index',
+  url: '/sitemap/', title: 'Marine Diesel Site Index', seoTitle: 'Marine Diesel Site Index',
   pageType: 'index', status: 'ready', author: null, reviewer: null,
   needsReviewer: false, parent: '/', parentTitle: 'Home',
   schema: ['Article'], updated: null, indexable: true, blockers: [],
   headings: [], faqs: [],
   description: 'Every page on MarineDieselEngine.com.au — marine engine services, mechanics by location, engine guides, costs and common questions.',
+  primaryKeyword: 'marine diesel site index', searchIntent: 'Navigational',
 };
 ---
 <Page page={page}>
-  <h1>Site index</h1>
+  <h1>Marine diesel site index</h1>
   <p>
     Every page on this site. If you are looking for the machine-readable
     version, it is at <a href="/sitemap.xml">/sitemap.xml</a>.

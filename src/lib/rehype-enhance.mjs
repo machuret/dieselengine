@@ -93,6 +93,11 @@ function transform(children) {
     for (let i = 0; i < children.length; i++) {
       const node = children[i];
 
+      // Markdown pages receive their single, search-targeted H1 from the page
+      // model. Remove the authoring H1 so metadata, breadcrumb labels and the
+      // visible heading cannot drift toward different primary intents.
+      if (node.type === 'element' && node.tagName === 'h1') continue;
+
       // --- tables: wrap for horizontal scroll --------------------------------
       if (node.type === 'element' && node.tagName === 'table') {
         out.push({

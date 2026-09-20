@@ -9,8 +9,8 @@ export function getStaticPaths() {
 const { cluster } = Astro.props;
 const page = {
   url: `/questions/${cluster.slug}/`,
-  title: `${cluster.title}: common questions`,
-  seoTitle: cluster.title,
+  title: `${cluster.title} marine diesel questions`,
+  seoTitle: `${cluster.title} Marine Diesel Questions`,
   pageType: 'questions', status: 'ready', author: null, reviewer: null,
   needsReviewer: false, parent: '/questions/', parentTitle: 'Common Marine Diesel Questions',
   schema: ['Article'], updated: null, indexable: true, blockers: [],
@@ -18,11 +18,13 @@ const page = {
   // Every answer on the page is marked up, so the cluster is eligible for rich
   // results as a whole rather than one question at a time.
   faqs: cluster.items.map((q) => ({ question: q.question, answer: q.answer })),
-  description: `${cluster.items.length} answered questions about ${cluster.title.toLowerCase()} on Australian marine diesel engines.`,
+  description: `${cluster.items.length} marine diesel questions answered about ${cluster.title.toLowerCase()}, with Australian guidance and links to detailed fault, service and cost guides.`,
+  primaryKeyword: `${cluster.title.toLowerCase()} marine diesel questions`,
+  searchIntent: 'Informational FAQ',
 };
 ---
 <Page page={page}>
-  <h1>{cluster.title}</h1>
+  <h1>{cluster.title} marine diesel questions</h1>
   <p>{cluster.blurb}</p>
 
   {cluster.items.map((q, i) => (

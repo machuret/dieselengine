@@ -11,6 +11,8 @@ import { supplierPages } from '../data/supplier-pages.js';
 import { providers } from '../lib/providers.js';
 
 const canonical = `${site.domain}/`;
+const primaryKeyword = 'marine diesel engines Australia';
+const searchIntent = 'Informational and commercial category';
 const ready = allPages.filter((p) => p.indexable).length;
 const publishedCount = ready + site.staticRoutes.length + questionClusters.length + editorialGuides.length + supplierPages.length + 1 + providers.length;
 
@@ -62,11 +64,11 @@ const jsonld = {
 };
 ---
 <!doctype html>
-<html lang="en-AU">
+<html lang="en-AU" data-primary-keyword={primaryKeyword} data-search-intent={searchIntent}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{seoTitle({ seoTitle: 'Marine Diesel Engine Guides, Costs & Mechanics Australia' }, site.shortName)}</title>
+    <title>Marine Diesel Engines Australia | Problems & Mechanics</title>
     <meta name="description" content={site.description} />
     <link rel="canonical" href={canonical} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -101,7 +103,7 @@ const jsonld = {
        <div class="hero-inner">
         <div class="hero-main">
           <p class="eyebrow"><span class="rule-dash" aria-hidden="true"></span>Independent · Australia · {publishedCount} pages</p>
-          <h1>Something wrong with your engine?</h1>
+          <h1>Marine diesel engines in Australia</h1>
           <p class="hero-lede">
             Independent Australian guides to marine diesels: what the symptom
             means, what the repair should cost, and how to find a mechanic who
@@ -117,7 +119,7 @@ const jsonld = {
             most people arrive mid-problem. Let them start from the symptom
             here rather than navigate to it. */}
         <aside class="triage" aria-labelledby="triage-h">
-          <h2 id="triage-h">Start with the symptom</h2>
+          <h2 id="triage-h">Common marine diesel engine problems</h2>
           <ul>
             {TRIAGE.map((t) => (
               <li data-sev={t.sev}>
@@ -177,7 +179,7 @@ const jsonld = {
         <div class="field-notes-head">
           <div>
             <p class="kicker">From the engine bay</p>
-            <h2 id="field-notes-h">Two systems worth checking first</h2>
+            <h2 id="field-notes-h">Marine diesel cooling and condition checks</h2>
           </div>
           <p>Cooling and condition checks prevent a small warning sign becoming a tow, a rebuild or a flooded cylinder.</p>
         </div>
@@ -196,7 +198,7 @@ const jsonld = {
       <section class="system-map wrap" aria-labelledby="system-map-h">
         <div class="system-map-copy">
           <p class="kicker">Engine system map</p>
-          <h2 id="system-map-h">Follow the fault, not the guess</h2>
+          <h2 id="system-map-h">Marine diesel fault diagnosis by system</h2>
           <p>A marine diesel is a chain of connected systems. Start where the symptom appears, then move one system at a time.</p>
         </div>
         <ol>
@@ -212,7 +214,7 @@ const jsonld = {
         <div class="field-notes-head">
           <div>
             <p class="kicker">Practical library</p>
-            <h2 id="workshop-library-h">See the system before touching it</h2>
+            <h2 id="workshop-library-h">Marine diesel maintenance and inspection guides</h2>
           </div>
           <p>Visual guides for maintenance, inspection and the parts that most often create confusion in a marine installation.</p>
         </div>
@@ -238,7 +240,7 @@ const jsonld = {
 
       <BrandRail />
 
-      <h2 class="section-head">Find a marine mechanic</h2>
+      <h2 class="section-head">Marine diesel mechanics by location</h2>
       <p class="section-sub">
         Verified operators by marina and precinct, with the engine brands they
         work on and whether they attend moorings.
@@ -249,7 +251,7 @@ const jsonld = {
         ))}
       </ul>
 
-      <h2 class="section-head">Every job, explained</h2>
+      <h2 class="section-head">Marine diesel services and repairs</h2>
       <p class="section-sub">
         What the work involves, when you need it, and what it should cost.
       </p>

@@ -21,6 +21,8 @@ const description = page.description || site.description;
 const pageImage = page.image ?? site.socialImage;
 const socialImage = new URL(pageImage, site.domain).href;
 const socialImageAlt = page.imageAlt ?? 'Marine diesel engine installed in a yacht engine bay';
+const primaryKeyword = page.primaryKeyword ?? page.keyword ?? page.title;
+const searchIntent = page.searchIntent ?? page.pageType ?? 'Informational';
 const schemaType = page.schema.includes('TechArticle')
   ? 'TechArticle'
   : page.schema.includes('ContactPage')
@@ -145,7 +147,7 @@ const jsonld = {
 };
 ---
 <!doctype html>
-<html lang="en-AU">
+<html lang="en-AU" data-primary-keyword={primaryKeyword} data-search-intent={searchIntent}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />

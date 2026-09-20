@@ -4,16 +4,17 @@ import site from '../../site.config.json' with { type: 'json' };
 
 const subject = `${site.name} website enquiry`;
 const page = {
-  url: '/contact/', title: 'Contact Marine Diesel Engine', seoTitle: 'Contact Us',
+  url: '/contact/', title: 'Contact Marine Diesel Engine', seoTitle: 'Contact MarineDieselEngine.com.au',
   pageType: 'contact', status: 'ready', author: site.defaultAuthor,
   reviewer: null, needsReviewer: false, parent: '/', parentTitle: 'Home',
   schema: ['ContactPage', 'BreadcrumbList'], updated: site.legalUpdated,
   indexable: true, blockers: [], headings: [], faqs: [],
-  description: 'Contact MarineDieselEngine.com.au to report an error, request a listing correction or send editorial feedback.',
+  description: 'Contact MarineDieselEngine.com.au to report technical errors, request a marine business listing correction or send feedback about an engine guide.',
+  primaryKeyword: 'contact MarineDieselEngine.com.au', searchIntent: 'Navigational',
 };
 ---
 <Page page={page}>
-  <h1>Contact us</h1>
+  <h1>Contact MarineDieselEngine.com.au</h1>
   <p>
     Report an error, suggest a useful source, or request a business-listing
     correction. We cannot diagnose an engine from a message and we do not book

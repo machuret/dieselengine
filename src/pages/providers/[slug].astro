@@ -34,7 +34,9 @@ const page = {
     { depth: 2, slug: 'services', text: 'Services' },
     { depth: 2, slug: 'contact-and-booking', text: 'Contact and booking' },
     { depth: 2, slug: 'before-you-book', text: 'Before you book' },
-  ], faqs: [], description: `${provider.name}${location ? ` in ${location}` : ''}: marine diesel services, contact details and booking checks supplied by YouSail.`,
+  ], faqs: [], description: `${provider.name}${location ? ` in ${location}` : ''}: marine diesel services, contact details, service categories and booking checks from the YouSail directory.`,
+  primaryKeyword: `${provider.name} marine diesel service ${provider.suburb || provider.state || 'Australia'}`,
+  searchIntent: 'Local commercial provider',
   image: provider.featureImageUrl || '/images/marine-mechanic-engine-inspection.jpg', imageWidth: 1200, imageHeight: 800,
   imageAlt: `${provider.name} marine service provider`, extraSchema: [localBusiness],
 };

@@ -2,6 +2,7 @@
 import Page from '../../layouts/Page.astro';
 import { editorialGuides } from '../../data/editorial-guides.js';
 import site from '../../../site.config.json' with { type: 'json' };
+import { metaDescription } from '../../lib/extract.js';
 
 export function getStaticPaths() {
   return editorialGuides.map((guide) => ({ params: { slug: guide.slug }, props: { guide } }));
@@ -22,7 +23,9 @@ const page = {
   schema: ['TechArticle', 'FAQPage', 'BreadcrumbList'],
   updated: '2026-09-20', published: '2026-09-20', indexable: true, blockers: [],
   headings, faqs: guide.faqs.map(([question, answer]) => ({ question, answer })),
-  description: guide.description, image: guide.image, imageWidth: 1600, imageHeight: 1066,
+  description: metaDescription(`${guide.description} Includes practical checks, safety limits and related Australian marine diesel service guidance.`, 160),
+  primaryKeyword: guide.title.toLowerCase(), searchIntent: 'Informational guide',
+  image: guide.image, imageWidth: 1600, imageHeight: 1066,
   imageAlt: guide.imageAlt, keywords: [guide.intent, 'marine diesel', 'Australia'],
 };
 ---

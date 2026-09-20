@@ -1,6 +1,7 @@
 import site from '../../site.config.json' with { type: 'json' };
 import { toPage } from './gates.js';
-import { extractFaqs, firstParagraph, howSteps, metaDescription, seoTitle } from './extract.js';
+import { extractFaqs, firstParagraph, howSteps, metaDescription } from './extract.js';
+import { optimisePageSeo } from './seo-targets.js';
 
 // Source data the pages are generated from. Loading it here lets a page know
 // its own service cluster and its location's coordinates, which is what makes
@@ -57,8 +58,7 @@ function build() {
     // Derived metadata. Every page previously served the site-wide description,
     // so all 59 shared one meta description; and every title ran past the ~60
     // characters a search result shows.
-    page.description = page.description || metaDescription(firstParagraph(raw));
-    page.seoTitleTag = seoTitle(page, site.shortName);
+    page.description = page.metaDescription || metaDescription(firstParagraph(raw));
     page.faqs = extractFaqs(raw);
     if (page.pageType === 'howto') page.steps = howSteps(raw);
     const slug = page.url.replace(/\/$/, '').split('/').pop();
@@ -85,9 +85,14 @@ function build() {
     // trawler; a Volvo Penta page by the other volume brands. Both cluster
     // from the source data rather than by whatever sorts first.
     if (page.pageType === 'boat-brand') page.cluster = BOATS[slug]?.category ?? null;
-    if (page.pageType === 'distributor') {
-      page.cluster = distributorCluster(ENGINE_BRANDS[slug]?.segment);
+    if (page.pageType === 'brand-hub' || page.pageType === 'distributor') {
+      page.brand = ENGINE_BRANDS[slug]?.brand ?? null;
+      page.brandSegment = ENGINE_BRANDS[slug]?.segment ?? null;
     }
+    if (page.pageType === 'distributor') {
+      page.cluster = distributorCluster(page.brandSegment);
+    }
+    optimisePageSeo(page, page.description);
     pages.push(page);
   }
 

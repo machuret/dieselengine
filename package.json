@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "astro dev",
-    "build": "node scripts/prebuild-check.mjs && astro build && node scripts/postbuild-check.mjs",
+    "build": "node scripts/prebuild-check.mjs && astro build && node scripts/postbuild-check.mjs && node scripts/seo-audit.mjs",
     "preview": "astro preview",
     "check": "python3 scripts/validate_content.py",
     "sync:yousail": "node scripts/sync-yousail-providers.mjs",

@@ -91,6 +91,11 @@ export function toPage(fm, raw, file) {
     provider_count: fm.provider_count,
     parent: fm.parent ?? '/',
     keyword: fm.primary_keyword,
+    primaryKeyword: fm.primary_keyword,
+    secondaryKeywords: fm.secondary_keywords ?? [],
+    searchIntent: fm.search_intent ?? null,
+    seoTitle: fm.seo_title ?? null,
+    metaDescription: fm.meta_description ?? null,
     // YAML parses an unquoted 2026-09-08 into a Date, whose String() form is a
     // full ISO timestamp. Sitemaps and bylines both want the plain date.
     updated: fm.last_updated ? toDate(fm.last_updated) : null,

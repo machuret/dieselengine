@@ -29,7 +29,8 @@ for (const s of services) {
 const published = services.filter((s) => s.indexable);
 const page = {
   url: '/services/', title: 'Marine Engine Services in Australia', pageType: 'index',
-  seoTitle: 'Marine Engine Services',
+  seoTitle: 'Marine Engine Services Australia', primaryKeyword: 'marine engine services Australia',
+  searchIntent: 'Commercial service category',
   status: 'ready', author: null, reviewer: null, needsReviewer: false,
   parent: '/', parentTitle: 'Home', schema: ['Article'], updated: null,
   headings: [],
@@ -39,7 +40,7 @@ const page = {
 };
 ---
 <Page page={page}>
-  <h1>Marine engine services</h1>
+  <h1>Marine engine services in Australia</h1>
   <p>
     What each job actually involves, when you need it, what it should cost, and
     how to tell a complete quote from a cheap one.

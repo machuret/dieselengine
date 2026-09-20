@@ -40,7 +40,10 @@ export function metaDescription(text, max = 155) {
   if (text.length <= max) return text;
   const window = text.slice(0, max + 1);
   const sentence = window.lastIndexOf('. ');
-  if (sentence > max * 0.55) return window.slice(0, sentence + 1);
+  // A neat first sentence is only useful when it is substantial enough to
+  // describe the page. Very short opening sentences previously produced thin
+  // 3–39 character snippets even when useful qualifying copy followed.
+  if (sentence >= 120) return window.slice(0, sentence + 1);
   return window.slice(0, window.lastIndexOf(' ')).replace(/[,;:—-]$/, '') + '…';
 }
 
@@ -97,14 +100,12 @@ export function slugifyQuestion(q) {
 /**
  * A title tag that survives the SERP. Search results truncate around 60
  * characters, and every title on this site was over it because the full page
- * title plus the brand never fit. Prefer an explicit seo_title, then the page
- * title with the redundant national suffix removed, and only append the brand
- * when there is room for it.
+ * title plus the brand never fit. Prefer an explicit seo_title, preserve
+ * location terms such as Australia when they express search intent, and only
+ * append the site brand when there is room for it.
  */
 export function seoTitle(page, brand, max = 60) {
-  const base = (page.seoTitle || page.title || '')
-    .replace(/\s+in Australia$/i, '')
-    .trim();
+  const base = (page.seoTitle || page.title || '').trim();
   const withBrand = `${base} | ${brand}`;
   if (withBrand.length <= max) return withBrand;
   return base.length <= max ? base : base.slice(0, base.lastIndexOf(' ', max)).trim();

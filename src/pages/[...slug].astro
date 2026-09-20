@@ -20,10 +20,10 @@ const { Content } = page;
   {page.url === '/find-a-marine-mechanic/' ? (
     <>
       <p class="kicker">Verified Australian directory</p>
-      <h1>Find a marine diesel mechanic in Australia</h1>
+      <h1>{page.h1}</h1>
       <p class="lead">Start with a current provider listing, then use the detailed trade, pricing and booking guide below to choose the right specialist.</p>
       <ProviderDirectory />
       <div class="mechanic-details"><Content /></div>
     </>
-  ) : <Content />}
+  ) : <><h1>{page.h1}</h1><Content /></>}
 </Page>

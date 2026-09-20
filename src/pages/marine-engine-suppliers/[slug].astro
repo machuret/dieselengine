@@ -2,6 +2,7 @@
 import Page from '../../layouts/Page.astro';
 import { supplierPages } from '../../data/supplier-pages.js';
 import site from '../../../site.config.json' with { type: 'json' };
+import { metaDescription } from '../../lib/extract.js';
 
 export function getStaticPaths() {
   return supplierPages.map((supplier) => ({ params: { slug: supplier.slug }, props: { supplier } }));
@@ -15,8 +16,10 @@ const page = {
   schema: ['Article', 'BreadcrumbList'], updated: '2026-09-20', published: '2026-09-20',
   indexable: true, blockers: [],
   headings: [{ depth: 2, slug: 'what-to-confirm', text: 'What to confirm' }, { depth: 2, slug: 'build-a-comparable-quote', text: 'Build a comparable quote' }, { depth: 2, slug: 'related-guides', text: 'Related guides' }],
-  faqs: [], description: supplier.description,
+  faqs: [],
   image: '/images/marine-diesel-supplier-workshop.jpg', imageWidth: 1600, imageHeight: 1066,
+  description: metaDescription(`${supplier.description} Compare compatibility evidence, quote scope, warranty, delivery and Australian technical support.`, 160),
+  primaryKeyword: `${supplier.title.toLowerCase()} Australia`, searchIntent: 'Commercial supplier',
   imageAlt: 'Marine diesel engine and service parts prepared in a marina workshop',
 };
 ---
