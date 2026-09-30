@@ -3,7 +3,8 @@ name: Sync YouSail marine-diesel providers
 on:
   workflow_dispatch:
   schedule:
-    - cron: "29 */6 * * *"
+    # Daily check; actual sync is due every five days across month boundaries.
+    - cron: "29 0 * * *"
 
 permissions:
   contents: write
@@ -13,7 +14,30 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  cadence:
+    name: Check five-day cadence
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    permissions: {}
+    outputs:
+      due: ${{ steps.interval.outputs.due }}
+    steps:
+      - name: Check whether the sync is due
+        id: interval
+        run: |
+          node <<'NODE'
+          const fs = require('node:fs');
+          const day = 86400000;
+          const anchor = Date.parse('2026-09-30T00:00:00Z');
+          const elapsedDays = Math.floor((Date.now() - anchor) / day);
+          const due = process.env.GITHUB_EVENT_NAME === 'workflow_dispatch'
+            || (elapsedDays > 0 && elapsedDays % 5 === 0);
+          fs.appendFileSync(process.env.GITHUB_OUTPUT, `due=${due}\n`);
+          console.log(due ? 'Sync is due.' : 'Not due; marina sync skipped.');
+          NODE
   sync:
+    needs: cadence
+    if: needs.cadence.outputs.due == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
