@@ -114,6 +114,21 @@
       "priority": "0.7"
     },
     {
+      "url": "/about/",
+      "section": "pages",
+      "priority": "0.6"
+    },
+    {
+      "url": "/editorial-policy/",
+      "section": "pages",
+      "priority": "0.6"
+    },
+    {
+      "url": "/corrections/",
+      "section": "pages",
+      "priority": "0.5"
+    },
+    {
       "url": "/guides/marine-diesel-maintenance-checklist/",
       "section": "guides",
       "priority": "0.8"

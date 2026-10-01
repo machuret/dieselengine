@@ -120,7 +120,11 @@ for (const f of files) {
   const rel = relative(DIST, f).replace(/index\.html$/, '');
   const url = '/' + rel;
   const html = readFileSync(f, 'utf8');
-  routes.set(url, !/<meta name="robots" content="noindex/.test(html));
+  const indexable = !/<meta name="robots" content="noindex/.test(html);
+  routes.set(url, indexable);
+  if (indexable && /class="pending-note"[^>]*>[\s\S]*?\b(?:being compiled|being verified)\b/i.test(html)) {
+    errors.push(`${url} is indexable while its core directory data is still pending`);
+  }
 }
 
 // Every URL the sitemaps claim.
@@ -142,6 +146,34 @@ for (const [url, indexable] of routes) {
 }
 for (const url of listed) {
   if (!routes.has(url)) errors.push(`${url} is in a sitemap but was not built`);
+}
+
+// Search is intentionally noindex, but its data is a first-class navigation
+// feature and must not deploy as an empty or malformed endpoint.
+const searchIndexPath = join(DIST, 'search-index.json');
+if (!existsSync(searchIndexPath)) {
+  errors.push('search-index.json was not generated');
+} else {
+  try {
+    const searchRecords = JSON.parse(readFileSync(searchIndexPath, 'utf8'));
+    if (!Array.isArray(searchRecords) || searchRecords.length < 100) {
+      errors.push('search-index.json contains fewer than 100 searchable pages');
+    }
+    const searchUrls = new Set();
+    for (const record of searchRecords) {
+      if (!record.url || !record.title || !record.description) {
+        errors.push('search-index.json contains an incomplete record');
+        break;
+      }
+      if (searchUrls.has(record.url)) {
+        errors.push(`search-index.json contains duplicate URL ${record.url}`);
+        break;
+      }
+      searchUrls.add(record.url);
+    }
+  } catch (error) {
+    errors.push(`search-index.json is invalid JSON: ${error.message}`);
+  }
 }
 
 // Internal navigation and local image assets must resolve in the built site.

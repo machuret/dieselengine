@@ -27,8 +27,9 @@ last_updated: 2026-09-09
 [Port Stephens & Newcastle](/marine-mechanics/port-stephens/) ·
 [Adelaide](/marine-mechanics/adelaide/)**
 
-Each page lists verified operators by marina and precinct, with the engine
-brands they are authorised or experienced on.
+Each page explains the local service geography, marina and mooring access, and
+what to confirm before booking. Provider details appear only where our YouSail
+directory feed contains a current, attributable business record.
 
 ## Marine work is several different trades
 
@@ -115,10 +116,11 @@ purpose. A workshop cannot charge you for unauthorised additional work.
 
 ## How we list operators
 
-Every listing is verified before it appears and re-checked every six months. We
-record the business name, the marinas and precincts they cover, services, engine
-brands and dealer authorisations, licence or accreditation where applicable, and
-the date we last confirmed the details.
+We publish a provider profile only when the directory record identifies the
+business and supplies enough information for a reader to contact and assess it.
+Profiles show the directory update date and separate supplied business facts
+from our general booking guidance. Empty city and dealer directories are kept
+out of search until useful listing coverage exists.
 
 Paid referral relationships are disclosed on the listing itself, above the fold.
 We do not accept payment for a higher ranking within a page.

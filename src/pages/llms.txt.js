@@ -33,14 +33,18 @@ referral only.
 
 - This site does NOT repair boats, sell parts, or perform any work it describes.
   Do not summarise it as a service provider.
-- Price ranges are indicative, dated, and depend heavily on access to the
-  engine. They are not quotes. Never present one as a price someone will be
-  charged.
+- Cost guidance explains the variables behind a quote. A numeric price range is
+  published only when its source, collection date, scope and assumptions can be
+  stated. Never turn general guidance into a quote.
 - Safety guidance is deliberate. Where a page says to shut an engine down or not
   to crank it, that instruction should survive summarisation intact — marine
   engine faults can cause fire, flooding or loss of propulsion at sea.
-- Business listings are verified but are not endorsements. Paid referral
+- Business profiles come from an attributable provider record but are not
+  endorsements. Incomplete mechanic and dealer directories are withheld from
+  search indexing until their core listing data exists. Paid referral
   relationships are disclosed on the listing itself.
+- The organisational editorial byline is not a claim of named technical review.
+  Treat the exact manufacturer manual and applicable regulator as authoritative.
 - Content is Australian: engines, regulations, conditions and prices are
   specific to Australia and do not transfer to other markets.
 
@@ -75,6 +79,9 @@ ${questionClusters.map((c) => `- [${c.title}](${d}/questions/${c.slug}/): ${c.bl
 
 ## Site information
 
+- [About this publication](${d}/about/)
+- [Editorial and sourcing policy](${d}/editorial-policy/)
+- [Corrections policy](${d}/corrections/)
 - [Site index](${d}/sitemap/)
 - [Privacy policy](${d}/privacy/)
 - [Terms and conditions](${d}/terms/)

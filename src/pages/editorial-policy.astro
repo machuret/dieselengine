@@ -1,0 +1,92 @@
+---
+import Page from '../layouts/Page.astro';
+import site from '../../site.config.json' with { type: 'json' };
+
+const page = {
+  url: '/editorial-policy/', title: 'Editorial and Sourcing Policy',
+  seoTitle: 'Marine Diesel Editorial & Sourcing Policy', pageType: 'policy',
+  status: 'ready', author: site.defaultAuthor, reviewer: null,
+  needsReviewer: false, parent: '/', parentTitle: 'Home',
+  schema: ['WebPage', 'BreadcrumbList'], updated: site.legalUpdated,
+  indexable: true, blockers: [], faqs: [],
+  headings: [
+    { depth: 2, slug: 'source-hierarchy', text: 'Our source hierarchy' },
+    { depth: 2, slug: 'technical-and-safety-claims', text: 'Technical and safety claims' },
+    { depth: 2, slug: 'prices-and-business-listings', text: 'Prices and business listings' },
+    { depth: 2, slug: 'publishing-tools-and-ai', text: 'Publishing tools and AI' },
+    { depth: 2, slug: 'updates-and-corrections', text: 'Updates and corrections' },
+  ],
+  description: 'How Marine Diesel Engine Australia researches, sources, reviews, updates and corrects marine engine guides, price information and business listings.',
+  primaryKeyword: 'marine diesel editorial policy', searchIntent: 'Informational',
+};
+---
+<Page page={page}>
+  <h1>Editorial and sourcing policy</h1>
+  <p>
+    This policy explains how Marine Diesel Engine Australia selects evidence,
+    handles uncertainty and keeps commercial information separate from general
+    guidance. It applies to articles, guides, business listings and structured
+    data published on this site.
+  </p>
+
+  <h2 id="source-hierarchy">Our source hierarchy</h2>
+  <p>
+    For specifications, procedures and service intervals, the operator,
+    workshop and installation manuals for the exact engine, gearbox or drive
+    take priority. We then prefer Australian government and regulator material,
+    recognised safety organisations, manufacturer technical bulletins and
+    established standards. Secondary sources may help explain a concept but do
+    not override a current primary source.
+  </p>
+  <p>
+    Sources must be relevant to the claim. A general manufacturer page is not
+    evidence for a model-specific torque value, and an overseas price is not an
+    Australian market price without clearly stated conversion and assumptions.
+  </p>
+
+  <h2 id="technical-and-safety-claims">Technical and safety claims</h2>
+  <p>
+    Safety warnings are written conservatively. When a symptom can indicate
+    fire, flooding, fuel spray, loss of lubrication, loss of cooling or internal
+    damage, the guide directs the reader to stop and obtain qualified help.
+    Exact fluids, clearances, torque values and replacement intervals should be
+    checked against the serial-number-specific manual before work begins.
+  </p>
+  <p>
+    We do not describe content as technically reviewed unless a reviewer is
+    identified. The organisational editorial byline is not a substitute for a
+    named credential or an inspection of the reader's vessel.
+  </p>
+
+  <h2 id="prices-and-business-listings">Prices and business listings</h2>
+  <p>
+    A price range should state its geography, collection date, sample or source,
+    inclusions and important assumptions. Until those conditions are met, we
+    explain the variables that shape a quote instead of inventing a number.
+    Business details are published only from an attributable record and may be
+    removed or corrected on request. Inclusion is not an endorsement.
+  </p>
+  <p>
+    Any paid referral or commercial relationship must be disclosed where it can
+    influence a reader's choice. Editorial guidance is not sold as favourable
+    coverage.
+  </p>
+
+  <h2 id="publishing-tools-and-ai">Publishing tools and AI</h2>
+  <p>
+    We may use software and AI-assisted tools for research organisation,
+    drafting, editing, image preparation, internal linking and quality checks.
+    These tools can make confident mistakes. Their output is treated as draft
+    material and is not itself a source. Claims still require an appropriate
+    primary or authoritative reference, and no tool can inspect a vessel.
+  </p>
+
+  <h2 id="updates-and-corrections">Updates and corrections</h2>
+  <p>
+    Pages carry a last-updated date when available. Material changes should be
+    rechecked against current sources; outdated or incomplete directory pages
+    may be withheld from search indexing until their core information is ready.
+    Reports are handled under our <a href="/corrections/">corrections policy</a>.
+    You can also <a href="/contact/">send evidence or feedback</a> directly.
+  </p>
+</Page>

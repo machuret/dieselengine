@@ -23,6 +23,13 @@ function titleCase(slug) {
     .join(' ');
 }
 
+function nodeText(node) {
+  return (node?.children ?? [])
+    .map((child) => child.value ?? '')
+    .join(' ')
+    .trim();
+}
+
 export function remarkStripTokens() {
   return (tree) => {
     const out = [];
@@ -72,7 +79,22 @@ export function remarkStripTokens() {
         continue;
       }
 
-      // PRICE_TABLE and anything else: drop the paragraph.
+      if (name === 'PRICE_TABLE') {
+        // A number of drafts put the token directly below a cost heading. If
+        // the unverified table is removed, that otherwise leaves a visibly
+        // empty section (and a useless jump-link) in the published article.
+        const previous = out.at(-1);
+        if (
+          previous?.type === 'heading' &&
+          previous.depth === 2 &&
+          /\b(cost|costs|price|pricing)\b/i.test(nodeText(previous))
+        ) {
+          out.pop();
+        }
+        continue;
+      }
+
+      // Unknown placeholders are dropped rather than exposed to readers.
     }
     tree.children = out;
   };

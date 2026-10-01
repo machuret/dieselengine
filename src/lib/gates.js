@@ -23,7 +23,12 @@ export const TOKEN = /\{\{([A-Z][A-Z0-9_]*)(?::([A-Za-z0-9_.-]+))?\}\}/g;
  * section is stripped at render and counted in the build report so it is never
  * silently forgotten.
  */
-export const BLOCKING_TOKENS = new Set();
+// Directory pages exist to return verified businesses. Publishing them in
+// search before the promised provider/dealer data exists creates an intent
+// mismatch and a doorway-page risk. They remain accessible to readers, with
+// an honest coverage note, but are noindex and excluded from sitemaps until
+// the feed supplies the listings.
+export const BLOCKING_TOKENS = new Set(['PROVIDERS', 'DEALERS']);
 
 /** Strip placeholders that are omitted rather than blocking, plus the "→ cost
  *  page" line that immediately follows a price table and would dangle. */

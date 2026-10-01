@@ -16,8 +16,11 @@ const STATIC_ROUTES = new Set([
   ...editorialGuideRoutes.map((r) => r.url),
   ...supplierRoutes.map((r) => r.url),
 ]);
+// Useful routes that deliberately remain outside the sitemap. Search results
+// are navigational, query-dependent pages rather than landing pages.
+const UTILITY_ROUTES = new Set(['/search/']);
 // Endpoints generated at build time rather than served from public/.
-const GENERATED = new Set(['/sitemap.xml', '/robots.txt', '/llms.txt']);
+const GENERATED = new Set(['/sitemap.xml', '/robots.txt', '/llms.txt', '/search-index.json']);
 
 function walk(dir, ext = '.md') {
   return readdirSync(dir).flatMap((entry) => {
@@ -79,7 +82,7 @@ for (const p of pages) {
  * built one: /services/impeller-replacement/adelaide/ reads perfectly well in a
  * draft and 404s until that page is generated. Nothing caught the difference.
  */
-const known = new Set([...seen.keys(), ...STATIC_ROUTES, ...GENERATED]);
+const known = new Set([...seen.keys(), ...STATIC_ROUTES, ...UTILITY_ROUTES, ...GENERATED]);
 
 // relates_to drives the reverse index that puts "do it yourself" links on
 // symptom and service pages. A typo there produces no error and no link — the
@@ -133,7 +136,7 @@ for (const file of templateFiles) {
       if (!existsSync(join('public', href))) {
         errors.push(`${file}: references ${href}, which is not in public/`);
       }
-    } else if (!seen.has(href) && !STATIC_ROUTES.has(href)) {
+    } else if (!seen.has(href) && !STATIC_ROUTES.has(href) && !UTILITY_ROUTES.has(href)) {
       errors.push(`${file}: links to ${href}, which is not a route`);
     }
   }

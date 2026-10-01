@@ -17,10 +17,10 @@ last_updated: 2026-09-09
 
 # What Marine Engine Work Costs in Australia
 
-Every price on this site is a range collected from Australian marine workshops,
-dated, and split into parts and labour. We tell you what the number assumes,
-because a marine quote without its assumptions is close to meaningless — the
-same nominal job varies by a factor of several depending on access.
+Verified national price ranges are not yet published. This page explains the
+parts, labour, access, attendance and haul-out variables that make two quotes
+for the same nominal job materially different. We will publish a range only
+when its workshop sample, date, inclusions and assumptions can be stated.
 
 > **Data collection in progress.** Price ranges are being sourced from marine
 > workshops across the ten locations on this site. Figures publish only once a
@@ -137,12 +137,13 @@ sometimes the exhaust system.
 ## Frequently asked questions
 
 **What do marine mechanics charge per hour in Australia?**
-Rates run above automotive, and vary by location and by whether attendance is at
-a berth, on a mooring or on the water. Each location page carries the local band.
+There is no verified national rate on this site yet. Ask for the labour rate,
+minimum attendance, travel, marina access and on-water surcharge separately so
+quotes can be compared on the same basis.
 
-**Why is my quote so much higher than the range here?**
-Usually access. A range assumes reasonable engine bay access; a boxed-in engine
-under a saloon sole can multiply the labour. Ask for the hours to be itemised.
+**Why can two quotes for the same job be very different?**
+Usually access, diagnostic scope, included parts or haul-out assumptions. Ask
+for hours, parts, attendance, consumables and exclusions to be itemised.
 
 **Is haul-out included in these prices?**
 No. Slipway and haul-out are quoted separately, often by a different supplier.
@@ -151,5 +152,6 @@ No. Slipway and haul-out are quoted separately, often by a different supplier.
 Yes — diagnostic time is work performed. Many operators credit it against the
 repair if you go ahead. Confirm at booking.
 
-**Are these prices GST inclusive?**
-Yes, unless a page says otherwise.
+**Should a marine repair quote include GST?**
+The quote should state this clearly. Do not assume a verbal or headline figure
+includes GST, freight, consumables, attendance or haul-out.

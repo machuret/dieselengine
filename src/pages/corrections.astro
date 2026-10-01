@@ -1,0 +1,60 @@
+---
+import Page from '../layouts/Page.astro';
+import site from '../../site.config.json' with { type: 'json' };
+
+const page = {
+  url: '/corrections/', title: 'Corrections Policy',
+  seoTitle: 'Corrections Policy | Marine Diesel Engine', pageType: 'policy',
+  status: 'ready', author: site.defaultAuthor, reviewer: null,
+  needsReviewer: false, parent: '/', parentTitle: 'Home',
+  schema: ['WebPage', 'BreadcrumbList'], updated: site.legalUpdated,
+  indexable: true, blockers: [], faqs: [],
+  headings: [
+    { depth: 2, slug: 'report-an-error', text: 'Report an error' },
+    { depth: 2, slug: 'what-happens-next', text: 'What happens next' },
+    { depth: 2, slug: 'business-listings', text: 'Business listings' },
+  ],
+  description: 'How to report factual errors, outdated marine diesel information or business-listing changes and how Marine Diesel Engine Australia handles corrections.',
+  primaryKeyword: 'Marine Diesel Engine corrections policy', searchIntent: 'Navigational',
+};
+---
+<Page page={page}>
+  <h1>Corrections policy</h1>
+  <p>
+    We want factual errors, outdated specifications and misleading wording to be
+    corrected promptly. A correction request does not need to be formal, but
+    enough detail to locate and verify the issue helps us act faster.
+  </p>
+
+  <h2 id="report-an-error">Report an error</h2>
+  <p>
+    Use the <a href="/contact/">contact form</a> and include the page address,
+    the wording or data in question, why it appears wrong and the best available
+    evidence. For model-specific claims, a current manufacturer manual,
+    technical bulletin or regulator publication is more useful than a forum or
+    an unattributed summary.
+  </p>
+
+  <h2 id="what-happens-next">What happens next</h2>
+  <p>
+    We compare the report with the page's sources and any current primary
+    material. Clear errors are corrected; claims that cannot yet be verified may
+    be qualified, removed or held from indexing. A substantial change should
+    update the page date. Minor spelling, formatting and broken-link repairs may
+    be made without a separate correction note.
+  </p>
+  <p>
+    We cannot promise a particular outcome when sources conflict. In that case,
+    the page should explain the uncertainty and direct readers to the manual or
+    authority governing their specific engine, installation or operation.
+  </p>
+
+  <h2 id="business-listings">Business listings</h2>
+  <p>
+    Owners and authorised representatives can request changes to business names,
+    contact details, service areas or listing status. Please identify your
+    relationship to the business and provide a current public source where
+    possible. We may remove a listing while disputed details are checked.
+    Inclusion remains informational and is not an endorsement.
+  </p>
+</Page>

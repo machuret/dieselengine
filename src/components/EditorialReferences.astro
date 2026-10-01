@@ -1,0 +1,37 @@
+---
+import SourcePanel from './SourcePanel.astro';
+
+const { page } = Astro.props;
+const stateGuidance = page.geo
+  ? { title: 'State and territory marine safety agencies — AMSA directory', url: 'https://www.amsa.gov.au/about/who-we-are/marine-safety-agencies' }
+  : null;
+
+const references = {
+  safety: { title: 'Australian Maritime Safety Authority', url: 'https://www.amsa.gov.au/' },
+  manuals: { title: 'Engine manuals and manufacturer technical information', url: '/resources/#manuals-and-technical-information' },
+  consumer: { title: 'Consumer rights and guarantees — ACCC', url: 'https://www.accc.gov.au/consumers/buying-products-and-services/consumer-rights-and-guarantees' },
+  policy: { title: 'Our research and editorial policy', url: '/editorial-policy/' },
+};
+
+let links = [];
+if (['symptom', 'howto'].includes(page.pageType)) {
+  links = [references.manuals, references.safety, references.policy];
+} else if (['service-national', 'city-hub', 'region-hub', 'precinct'].includes(page.pageType)) {
+  links = [references.manuals, stateGuidance, references.consumer, references.policy].filter(Boolean);
+} else if (['buying-city', 'boat-brand', 'brand-hub', 'distributor', 'decision'].includes(page.pageType)) {
+  links = [references.manuals, references.consumer, references.policy];
+} else if (page.pageType === 'pillar') {
+  links = [references.manuals, references.safety, references.consumer, references.policy];
+}
+---
+{links.length > 0 && (
+  <section class="verification-references" aria-labelledby="verification-references-title">
+    <h2 id="verification-references-title">Sources and verification</h2>
+    <p>
+      This page provides general Australian guidance. The current manual for
+      the exact engine, gearbox or drive remains the authority for procedures,
+      specifications and service intervals.
+    </p>
+    <SourcePanel title="Verification references" links={links} />
+  </section>
+)}

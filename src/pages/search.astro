@@ -1,0 +1,132 @@
+---
+import Page from '../layouts/Page.astro';
+import site from '../../site.config.json' with { type: 'json' };
+
+const page = {
+  url: '/search/', title: 'Search Marine Diesel Guides',
+  seoTitle: 'Search Marine Diesel Engine Guides', pageType: 'search',
+  status: 'ready', author: site.defaultAuthor, reviewer: null,
+  needsReviewer: false, parent: '/', parentTitle: 'Home',
+  schema: ['WebPage', 'BreadcrumbList'], updated: site.legalUpdated,
+  indexable: false, blockers: [], headings: [], faqs: [],
+  description: 'Search Australian marine diesel engine guides by symptom, service, engine brand, location, maintenance task or buying question.',
+  primaryKeyword: 'search marine diesel guides', searchIntent: 'Navigational',
+};
+---
+<Page page={page}>
+  <h1>Search marine diesel guides</h1>
+  <p>
+    Search the full library by symptom, job, engine brand, location or question.
+    Try a specific phrase such as “black smoke”, “heat exchanger”, “Yanmar” or
+    “Gold Coast mechanic”.
+  </p>
+
+  <form class="site-search" role="search" action="/search/" method="get">
+    <label for="site-search-query">What do you need help with?</label>
+    <div>
+      <input id="site-search-query" name="q" type="search" autocomplete="off"
+             enterkeyhint="search" placeholder="Search 300+ marine diesel pages" />
+      <button type="submit">Search</button>
+    </div>
+  </form>
+
+  <div class="search-status" id="search-status" role="status" aria-live="polite">
+    Enter a symptom, service, engine brand or location to begin.
+  </div>
+  <ol class="search-results" id="search-results" aria-label="Search results"></ol>
+
+  <noscript>
+    <p class="pending-note">
+      Site search needs JavaScript. You can browse the
+      <a href="/sitemap/">complete site index</a> instead.
+    </p>
+  </noscript>
+</Page>
+
+<script>
+  const form = document.querySelector<HTMLFormElement>('.site-search');
+  const input = document.querySelector<HTMLInputElement>('#site-search-query');
+  const status = document.querySelector<HTMLElement>('#search-status');
+  const list = document.querySelector<HTMLOListElement>('#search-results');
+
+  const normalise = (value: string) => value
+    .toLocaleLowerCase('en-AU')
+    .normalize('NFKD')
+    .replace(/[^a-z0-9\s-]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+
+  const render = async (rawQuery: string) => {
+    if (!input || !status || !list) return;
+    const query = normalise(rawQuery);
+    input.value = rawQuery;
+    list.replaceChildren();
+    if (query.length < 2) {
+      status.textContent = rawQuery
+        ? 'Enter at least two characters to search.'
+        : 'Enter a symptom, service, engine brand or location to begin.';
+      return;
+    }
+
+    status.textContent = 'Searching…';
+    try {
+      const response = await fetch('/search-index.json');
+      if (!response.ok) throw new Error('Search index unavailable');
+      const records = await response.json();
+      const terms = query.split(' ').filter(Boolean);
+      const matches = records
+        .map((record: Record<string, unknown>) => {
+          const title = normalise(String(record.title ?? ''));
+          const description = normalise(String(record.description ?? ''));
+          const keywords = normalise((record.keywords as string[] ?? []).join(' '));
+          if (!terms.every((term) => `${title} ${description} ${keywords}`.includes(term))) return null;
+          const score = terms.reduce((total, term) =>
+            total + (title.includes(term) ? 8 : 0) + (keywords.includes(term) ? 3 : 0) + (description.includes(term) ? 1 : 0), 0);
+          return { record, score };
+        })
+        .filter(Boolean)
+        .sort((a: any, b: any) => b.score - a.score || String(a.record.title).localeCompare(String(b.record.title)))
+        .slice(0, 40);
+
+      status.textContent = matches.length === 1
+        ? `1 result for “${rawQuery}”`
+        : `${matches.length} results for “${rawQuery}”`;
+
+      for (const match of matches as any[]) {
+        const item = document.createElement('li');
+        const link = document.createElement('a');
+        const type = document.createElement('span');
+        const title = document.createElement('strong');
+        const description = document.createElement('small');
+        link.href = match.record.url;
+        type.className = 'kicker';
+        type.textContent = String(match.record.type ?? 'Guide').replace(/-/g, ' ');
+        title.textContent = match.record.title;
+        description.textContent = match.record.description;
+        link.append(type, title, description);
+        item.append(link);
+        list.append(item);
+      }
+    } catch {
+      status.textContent = 'Search is temporarily unavailable. Use the complete site index below.';
+      const item = document.createElement('li');
+      const link = document.createElement('a');
+      link.href = '/sitemap/';
+      link.textContent = 'Browse the complete site index';
+      item.append(link);
+      list.append(item);
+    }
+  };
+
+  form?.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const query = input?.value.trim() ?? '';
+    const url = new URL(window.location.href);
+    query ? url.searchParams.set('q', query) : url.searchParams.delete('q');
+    window.history.replaceState({}, '', url);
+    render(query);
+  });
+
+  const initial = new URLSearchParams(window.location.search).get('q') ?? '';
+  render(initial);
+</script>

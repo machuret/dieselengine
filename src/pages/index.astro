@@ -38,8 +38,8 @@ const TRIAGE = [
 const PILLARS = [
   { url: '/marine-engine-problems/', t: 'Something is wrong',
     d: 'Start from the symptom. Likely causes ranked by how often they turn out to be the answer — and whether it is safe to keep going.' },
-  { url: '/costs/', t: 'What it should cost',
-    d: 'Real Australian price ranges, split into parts and labour, with the access assumption stated. Know the number before you call.' },
+  { url: '/costs/', t: 'What drives the cost',
+    d: 'Understand the labour, access, haul-out and parts variables behind a quote. We publish price ranges only after documenting their sources and assumptions.' },
   { url: '/services/', t: 'What the job involves',
     d: 'Impellers, heat exchangers, exhaust elbows, gearboxes, repowers. What each job actually is and how to tell a complete quote from a cheap one.' },
   { url: '/marine-diesel-engines/', t: 'How marine diesels work',
@@ -47,7 +47,7 @@ const PILLARS = [
   { url: '/engine-brands/', t: 'Your engine',
     d: 'Volvo Penta, Yanmar, Cummins, Caterpillar — and the Kubota blocks under Beta, Nanni and Solé.' },
   { url: '/find-a-marine-mechanic/', t: 'Find a mechanic',
-    d: 'Which trade does which job, what to ask before booking, and verified operators by marina.' },
+    d: 'Which trade does which job, what to ask before booking, and provider details where the current directory feed confirms them.' },
 ];
 
 const locations = allPages.filter((p) => p.pageType === 'city-hub');
@@ -58,8 +58,8 @@ const socialImage = new URL(site.socialImage, site.domain).href;
 const jsonld = {
   '@context': 'https://schema.org',
   '@graph': [
-    { '@type': 'Organization', '@id': `${site.domain}/#publisher`, name: site.name, url: site.domain, description: site.description, logo: { '@type': 'ImageObject', url: new URL('/favicon.svg', site.domain).href }, creator: { '@type': 'Organization', name: 'YouSail.com.au' } },
-    { '@type': 'WebSite', url: canonical, name: site.name, inLanguage: site.locale, image: socialImage, publisher: { '@id': `${site.domain}/#publisher` }, creator: { '@type': 'Organization', name: 'YouSail.com.au' } },
+    { '@type': 'Organization', '@id': `${site.domain}/#publisher`, name: site.name, url: site.domain, description: site.description, logo: { '@type': 'ImageObject', url: new URL('/favicon.svg', site.domain).href }, creator: { '@type': 'Organization', name: 'YouSail.com.au' }, publishingPrinciples: `${site.domain}/editorial-policy/` },
+    { '@type': 'WebSite', '@id': `${site.domain}/#website`, url: canonical, name: site.name, inLanguage: site.locale, image: socialImage, publisher: { '@id': `${site.domain}/#publisher` }, creator: { '@type': 'Organization', name: 'YouSail.com.au' }, potentialAction: { '@type': 'SearchAction', target: { '@type': 'EntryPoint', urlTemplate: `${site.domain}/search/?q={search_term_string}` }, 'query-input': 'required name=search_term_string' } },
   ],
 };
 ---
@@ -88,9 +88,6 @@ const jsonld = {
     <meta name="twitter:title" content={site.name} />
     <meta name="twitter:description" content={site.description} />
     <meta name="twitter:image" content={socialImage} />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" />
     <script type="application/ld+json" set:html={JSON.stringify(jsonld)} />
     <link rel="stylesheet" href="/styles.css" />
   </head>
@@ -106,8 +103,8 @@ const jsonld = {
           <h1>Marine diesel engines in Australia</h1>
           <p class="hero-lede">
             Independent Australian guides to marine diesels: what the symptom
-            means, what the repair should cost, and how to find a mechanic who
-            knows your engine.
+            means, what shapes the repair scope and cost, and how to find a
+            mechanic who knows your engine.
           </p>
           <p class="hero-note">
             We don't work on boats and we don't sell parts. Nothing here is
@@ -151,7 +148,7 @@ const jsonld = {
 
       <section class="trust-strip wrap" aria-label="What you will find here">
         <p><strong>Independent advice</strong><span>No repair shop, parts sales or hidden pitch.</span></p>
-        <p><strong>Australian context</strong><span>Local labour, marina access and price ranges.</span></p>
+        <p><strong>Australian context</strong><span>Local labour, marina access and pricing variables.</span></p>
         <p><strong>Safety first</strong><span>Clear stop-now warnings before troubleshooting.</span></p>
       </section>
 
@@ -240,10 +237,10 @@ const jsonld = {
 
       <BrandRail />
 
-      <h2 class="section-head">Marine diesel mechanics by location</h2>
+      <h2 class="section-head">Marine diesel mechanic guides by location</h2>
       <p class="section-sub">
-        Verified operators by marina and precinct, with the engine brands they
-        work on and whether they attend moorings.
+        Compare local access, marina and mooring conditions, then use verified
+        provider details where our directory feed has confirmed them.
       </p>
       <ul class="chips wrap">
         {locations.map((p) => (
