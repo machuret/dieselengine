@@ -1,0 +1,23 @@
+---
+import { providers, providerLocation } from '../lib/providers.js';
+const { page } = Astro.props;
+const state = page.geo?.state;
+const text = `${page.title} ${page.primaryKeyword ?? ''}`.toLowerCase();
+const matches = providers.filter((provider) => {
+  if (state && provider.state === state) return true;
+  if (page.pageType === 'service-national') return provider.services?.some((service) => text.includes(service.toLowerCase().replace('marine diesel ', '').replace('engine ', '')));
+  const slug = page.url.match(/^\/engine-brands\/([^/]+)\/$/)?.[1];
+  return slug && provider.brands?.some((brand) => brand.toLowerCase().replaceAll(' ', '-') === slug);
+}).slice(0, 3);
+const eligible = Boolean(state || page.pageType === 'service-national' || page.pageType === 'brand-hub');
+---
+{eligible && (
+  <section class="provider-matches" aria-labelledby="provider-matches-title">
+    <p class="eyebrow">Provider directory</p>
+    <h2 id="provider-matches-title">{matches.length ? 'Potentially relevant providers' : 'Find an appropriately matched provider'}</h2>
+    {matches.length
+      ? <div class="path-cards">{matches.map((provider) => <a href={`/providers/${provider.slug}/`}><strong>{provider.name}</strong><span>{providerLocation(provider)}</span><small>Matched by {state && provider.state === state ? 'service area' : 'listed service'}—confirm exact model capability →</small></a>)}</div>
+      : <p>We do not yet have enough verified listing detail to claim a direct match for this page. Search the directory, then confirm the exact engine model, work scope, qualifications, insurance and travel area with the business.</p>}
+    <p><a class="text-cta" href="/find-a-marine-mechanic/">Open the marine mechanic directory →</a></p>
+  </section>
+)}

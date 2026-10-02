@@ -1,0 +1,29 @@
+---
+import { comparisonsForBrand } from '../data/engine-comparisons.js';
+const { page } = Astro.props;
+const slug = page.url.match(/^\/engine-brands\/([^/]+)\/$/)?.[1];
+const comparisons = slug ? comparisonsForBrand(slug) : [];
+const models = [];
+for (const comparison of comparisons) {
+  const side = comparison.left.slug === slug ? 'left' : 'right';
+  const model = comparison.modelMatchup?.[side];
+  if (model && !models.some((item) => item.model.model === model.model)) {
+    const source = comparison.modelMatchup.sources?.[side === 'left' ? 0 : 1];
+    models.push({ model, comparison, sources: source ? [source] : [] });
+  }
+}
+---
+{models.length > 0 && (
+  <section class="model-evidence" aria-labelledby="model-evidence-title">
+    <p class="eyebrow">Model-level evidence</p>
+    <h2 id="model-evidence-title">Published marine engine specifications</h2>
+    <p>These are reference points from current manufacturer material, not a complete range catalogue. Ratings, dry weight and supplied equipment use different conventions; verify the exact Australian package and serial-number-specific documentation before purchase or repower design.</p>
+    <div class="table-scroll" tabindex="0" role="region" aria-label="Marine engine model specifications">
+      <table>
+        <thead><tr><th>Marine engine model</th><th>Output</th><th>Rated speed</th><th>Configuration</th><th>Displacement</th><th>Published weight</th><th>Rating / driveline</th></tr></thead>
+        <tbody>{models.map(({ model }) => <tr><th>{model.model}</th><td>{model.output}</td><td>{model.rpm}</td><td>{model.cylinders}</td><td>{model.displacement}</td><td>{model.weight}</td><td>{model.rating}<br /><small>{model.driveline}</small></td></tr>)}</tbody>
+      </table>
+    </div>
+    <ul class="source-chips">{models.flatMap(({ sources }) => sources).filter((source, i, all) => all.findIndex((item) => item.url === source.url) === i).map((source) => <li><a href={source.url} rel="external noopener">Official source: {source.title} ↗</a></li>)}</ul>
+  </section>
+)}

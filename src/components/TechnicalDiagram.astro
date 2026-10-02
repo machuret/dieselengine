@@ -1,0 +1,24 @@
+---
+const { page } = Astro.props;
+const definitions = [
+  [/cool|overheat|raw-water|impeller/i, 'Raw-water cooling path', ['Seacock', 'Strainer', 'Pump & impeller', 'Heat exchanger', 'Exhaust outlet']],
+  [/fuel|bleed|inject/i, 'Marine diesel fuel path', ['Tank pickup', 'Primary filter', 'Lift pump', 'Secondary filter', 'Injection system']],
+  [/electrical|alternator|battery|start/i, 'Starting and charging chain', ['Battery bank', 'Isolation & fuses', 'Starter circuit', 'Alternator', 'Panel & alarms']],
+  [/exhaust|smoke|elbow/i, 'Wet-exhaust path', ['Dry exhaust', 'Mixing elbow', 'Waterlock', 'Hose rise', 'Hull outlet']],
+  [/saildrive/i, 'Saildrive inspection chain', ['Engine mounts', 'Coupling', 'Diaphragm', 'Gear leg', 'Propeller']],
+  [/shaft|alignment|vibration|gearbox/i, 'Driveline load path', ['Flywheel', 'Marine gear', 'Coupling', 'Shaft & bearings', 'Propeller']],
+  [/repower|buy-marine|engine-comparison/i, 'Repower measurement chain', ['Engine envelope', 'Mount centres', 'Shaft height', 'Service zones', 'Removal path']],
+  [/identify|serial|model/i, 'Identification evidence', ['Engine plate', 'Block number', 'Gear plate', 'Drive plate', 'Control generation']],
+  [/maintenance|service-schedule|oil-change/i, 'Maintenance evidence loop', ['Manual interval', 'Engine hours', 'Parts & fluids', 'Readings', 'Service record']],
+  [/inspection|pre-purchase|used-engine/i, 'Inspection evidence chain', ['Cold condition', 'Cold start', 'Loaded run', 'Leak & heat check', 'Records match']],
+  [/alarm|shutdown|emergency/i, 'Emergency response sequence', ['Reduce load', 'Read alarm', 'Shut down safely', 'Control hazard', 'Record evidence']],
+  [/troubleshoot|problem|symptom/i, 'Fault-isolation sequence', ['Describe symptom', 'Check stop conditions', 'Verify basics', 'Test one system', 'Record result']],
+];
+const selected = definitions.find(([pattern]) => pattern.test(`${page.url} ${page.title}`));
+---
+{selected && (
+  <figure class="technical-diagram">
+    <figcaption><strong>{selected[1]}</strong><span>Simplified editorial diagram—not a substitute for the exact engine and vessel manuals.</span></figcaption>
+    <ol>{selected[2].map((label, index) => <li><span>{index + 1}</span><strong>{label}</strong></li>)}</ol>
+  </figure>
+)}

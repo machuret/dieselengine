@@ -8,7 +8,12 @@ import Children from '../components/Children.astro';
 import ServiceIndex from '../components/ServiceIndex.astro';
 import StateRules from '../components/StateRules.astro';
 import HowToFor from '../components/HowToFor.astro';
-import NextSteps from '../components/NextSteps.astro';
+import JourneyLinks from '../components/JourneyLinks.astro';
+import GuideActionSummary from '../components/GuideActionSummary.astro';
+import ReviewStatus from '../components/ReviewStatus.astro';
+import TechnicalDiagram from '../components/TechnicalDiagram.astro';
+import BrandModelEvidence from '../components/BrandModelEvidence.astro';
+import ContextualProviders from '../components/ContextualProviders.astro';
 import BrandIdentity from '../components/BrandIdentity.astro';
 import BrandDirectory from '../components/BrandDirectory.astro';
 import EditorialVisual from '../components/EditorialVisual.astro';
@@ -226,10 +231,13 @@ const jsonld = {
             </details>
           )}
           <slot />
+          <GuideActionSummary page={page} />
           <EngineProfile page={page} />
+          {page.pageType === 'brand-hub' && <BrandModelEvidence page={page} />}
           <EngineComparisons page={page} />
           <EditorialReferences page={page} />
           <EditorialVisual page={page} />
+          <TechnicalDiagram page={page} />
           {page.geo && <GeoBrief page={page} />}
           {page.pageType === 'city-hub' && <StateRules state={page.geo?.state} />}
           {page.pageType === 'city-hub' && <ServiceIndex city={page.geo?.city} />}
@@ -238,8 +246,10 @@ const jsonld = {
             ? <BrandDirectory />
             : <Children page={page} />}
           {page.url === '/marine-diesel-engines/' && <EditorialGuideDirectory />}
-          <NextSteps page={page} />
+          <ContextualProviders page={page} />
+          <JourneyLinks page={page} />
           <Related page={page} />
+          <ReviewStatus page={page} />
           <footer class="byline">
             {page.author
               ? <p>Editorially prepared by <a href={page.authorUrl ?? '/about/#editorial-team'}>{page.author}</a>{page.reviewer ? `. Technically reviewed by ${page.reviewer}.` : ''}</p>

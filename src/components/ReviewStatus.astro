@@ -1,0 +1,13 @@
+---
+const { page } = Astro.props;
+const technical = ['symptom', 'service-national', 'howto', 'engine-model', 'brand-hub', 'engine-comparison'].includes(page.pageType);
+---
+{technical && (
+  <aside class={`review-status ${page.reviewer ? 'is-reviewed' : 'is-pending'}`} aria-label="Content review status">
+    <strong>{page.reviewer ? 'Technically reviewed' : 'Editorially checked · technical review pending'}</strong>
+    <p>{page.reviewer
+      ? `This guide was technically reviewed by ${page.reviewer}.`
+      : 'Sources and internal consistency have been checked, but no named marine mechanic has signed off this page. Treat specifications and procedures as a starting point and verify them against the exact engine manual.'}</p>
+    <a href="/editorial-policy/">See our review and corrections process →</a>
+  </aside>
+)}

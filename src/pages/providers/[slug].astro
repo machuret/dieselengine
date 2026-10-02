@@ -18,7 +18,7 @@ const address = {
 };
 const localBusiness = {
   '@type': 'LocalBusiness', '@id': `${canonical}#business`, name: provider.name, url: canonical,
-  image: provider.featureImageUrl || provider.logoImageUrl || new URL('/images/marine-mechanic-engine-inspection.jpg', site.domain).href,
+  image: provider.featureImageUrl || provider.logoImageUrl || new URL('/images/marine-diesel-workshop-editorial.jpg', site.domain).href,
   address, telephone: provider.phone || undefined, email: provider.email || undefined,
   sameAs: [provider.website, provider.yousailUrl].filter(Boolean),
   areaServed: provider.state ? { '@type': 'AdministrativeArea', name: provider.state } : undefined,
@@ -26,7 +26,7 @@ const localBusiness = {
 };
 const page = {
   url: `/providers/${provider.slug}/`, title: `${provider.name} — Marine Diesel Provider`,
-  seoTitle: `${provider.name} Marine Diesel Service | ${location || 'Australia'}`,
+  seoTitle: `${provider.name} | Marine Diesel Service ${location || 'Australia'}`,
   pageType: 'provider', status: 'ready', author: 'YouSail directory data', reviewer: null,
   needsReviewer: false, parent: '/find-a-marine-mechanic/', parentTitle: 'Find a Mechanic',
   schema: ['WebPage', 'BreadcrumbList'], updated: provider.sourceUpdatedAt?.slice(0, 10),
@@ -37,7 +37,7 @@ const page = {
   ], faqs: [], description: `${provider.name}${location ? ` in ${location}` : ''}: marine diesel services, contact details, service categories and booking checks from the YouSail directory.`,
   primaryKeyword: `${provider.name} marine diesel service ${provider.suburb || provider.state || 'Australia'}`,
   searchIntent: 'Local commercial provider',
-  image: provider.featureImageUrl || '/images/marine-mechanic-engine-inspection.jpg', imageWidth: 1200, imageHeight: 800,
+  image: provider.featureImageUrl || '/images/marine-diesel-workshop-editorial.jpg', imageWidth: 1200, imageHeight: 800,
   imageAlt: `${provider.name} marine service provider`, extraSchema: [localBusiness],
 };
 ---
@@ -46,17 +46,20 @@ const page = {
   <h1>{provider.name}</h1>
   <p class="lead">Marine diesel service provider{location ? ` based in ${location}` : ''}. Confirm engine-brand experience, availability, travel and quote scope directly before booking.</p>
 
-  {provider.featureImageUrl && (
+  {provider.logoImageUrl && <div class="provider-logo"><img src={provider.logoImageUrl} width="240" height="120" alt={`${provider.name} logo`} decoding="async" /><span>Directory-supplied business logo</span></div>}
+
+  {provider.featureImageUrl ? (
     <figure class="editorial-visual editorial-visual--lead provider-hero">
-      <img src={provider.featureImageUrl} width="1200" height="800" alt={`${provider.name} workshop or marine service team`} fetchpriority="high" decoding="async" />
-      <figcaption>Provider image supplied through the YouSail directory. Confirm current services directly with the business.</figcaption>
+      <img src={provider.featureImageUrl} width="1200" height="800" alt={`Image supplied by ${provider.name}`} fetchpriority="high" decoding="async" />
+      <figcaption>Image supplied through the YouSail directory. Confirm current services directly with the business.</figcaption>
     </figure>
-  )}
+  ) : <figure class="editorial-visual editorial-visual--lead provider-hero"><img src="/images/marine-diesel-workshop-editorial.jpg" width="1400" height="933" alt="Marine diesel mechanic working in a clean boat workshop" fetchpriority="high" decoding="async" /><figcaption>Editorial illustration—not this provider’s premises or staff.</figcaption></figure>}
 
   <aside class="provider-facts" aria-label="Provider facts">
     <div><span>Location</span><strong>{location || 'Contact provider'}</strong></div>
     <div><span>Coverage</span><strong>{provider.operatingScope === 'local' ? 'Local service area' : provider.operatingScope || 'Confirm directly'}</strong></div>
     <div><span>Directory checked</span><strong>{provider.sourceUpdatedAt ? new Date(provider.sourceUpdatedAt).toLocaleDateString('en-AU', { day: 'numeric', month: 'short', year: 'numeric' }) : 'See YouSail'}</strong></div>
+    <div><span>Qualifications</span><strong>Confirm directly</strong></div>
   </aside>
 
   <h2 id="services">Services</h2>
@@ -85,4 +88,6 @@ const page = {
     <a href="/guides/marine-diesel-troubleshooting-flowchart/"><strong>Prepare useful fault evidence</strong><span>→</span></a>
   </div>
   <p class="provider-source">Business facts are maintained by <a href={provider.yousailUrl} rel="noopener noreferrer">YouSail ↗</a>. A directory listing is not an endorsement. Confirm qualifications, insurance, availability and scope directly.</p>
+
+  {(provider.phone || provider.email || provider.website) && <nav class="provider-mobile-actions" aria-label="Provider contact actions">{provider.phone && <a href={`tel:${provider.phone}`}>Call</a>}{provider.email && <a href={`mailto:${provider.email}?subject=${encodeURIComponent(`Marine Diesel Engine enquiry — ${provider.name}`)}`}>Email</a>}{provider.website && <a href={provider.website} rel="noopener noreferrer">Website</a>}</nav>}
 </Page>

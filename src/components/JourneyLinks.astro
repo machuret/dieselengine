@@ -1,0 +1,11 @@
+---
+const { page } = Astro.props;
+let journey = [];
+if (page.pageType === 'symptom') journey = [['Understand', '/marine-engine-problems/', 'Check the symptom family'], ['Check', '/guides/marine-diesel-troubleshooting-flowchart/', 'Follow a safe fault path'], ['Prepare', '/tools/#fault-record', 'Build a fault record'], ['Get help', '/find-a-marine-mechanic/', 'Find a marine mechanic']];
+else if (page.pageType === 'service-national') journey = [['Understand', '/services/', 'Confirm service scope'], ['Budget', '/costs/', 'Review Australian costs'], ['Prepare', '/tools/#quote-comparator', 'Compare written quotes'], ['Get help', '/find-a-marine-mechanic/', 'Find a marine mechanic']];
+else if (page.pageType === 'brand-hub') journey = [['Identify', '/how/how-to-identify-your-marine-engine/', 'Record model and serial'], ['Compare', '/marine-diesel-engine-comparisons/', 'Compare marine engines'], ['Source', '/marine-engine-suppliers/', 'Find suppliers'], ['Support', '/find-a-marine-mechanic/', 'Find a mechanic']];
+else if (['decision', 'engine-comparison'].includes(page.pageType)) journey = [['Compare', '/marine-diesel-engine-comparisons/', 'Match equivalent engines'], ['Measure', '/tools/#repower-worksheet', 'Record repower dimensions'], ['Price', '/tools/#quote-comparator', 'Compare installed scope'], ['Source', '/marine-engine-suppliers/', 'Find suppliers']];
+else if (page.geo) journey = [['Learn', page.url, 'Read the local guide'], ['Budget', '/costs/', 'Review typical costs'], ['Prepare', '/tools/#fault-record', 'Prepare the job brief'], ['Find', '/find-a-marine-mechanic/', 'Search providers']];
+journey = journey.filter(([, url]) => url !== page.url);
+---
+{journey.length > 0 && <nav class="journey" aria-label="Recommended path"><p class="eyebrow">Recommended path</p><ol>{journey.map(([step, url, label]) => <li><span>{step}</span><a href={url}>{label} →</a></li>)}</ol></nav>}

@@ -26,17 +26,11 @@ import site from '../../site.config.json' with { type: 'json' };
   <div class="nav-menu">
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Menu</button>
     <nav id="primary-nav" aria-label="Primary">
-      <a href="/marine-engine-problems/">Problems</a>
-      <a href="/services/">Services</a>
-      <a href="/costs/">Costs</a>
-      <a href="/marine-diesel-engines/">Engines</a>
-      <a href="/how/">How to</a>
-      <a href="/buy-marine-diesel-engine/">Buying</a>
-      <a href="/marine-engine-suppliers/">Suppliers</a>
-      <a href="/marine-diesel/">By region</a>
-      <a href="/about/">About us</a>
-      <a href="/resources/">Resources</a>
-      <a class="nav-search" href="/search/" aria-label="Search this site">Search</a>
+      <details class="nav-group"><summary>Diagnose</summary><div><a href="/marine-engine-problems/">Engine problems</a><a href="/guides/marine-diesel-troubleshooting-flowchart/">Troubleshooting flowchart</a><a href="/guides/emergency-engine-shutdown/">Emergency shutdown</a></div></details>
+      <details class="nav-group"><summary>Maintain</summary><div><a href="/services/">Services</a><a href="/how/">How-to guides</a><a href="/costs/">Costs</a><a href="/guides/marine-diesel-maintenance-checklist/">Maintenance checklist</a></div></details>
+      <details class="nav-group"><summary>Engines</summary><div><a href="/marine-diesel-engines/">Engine guides</a><a href="/engine-brands/">Engine brands</a><a href="/marine-diesel-engine-comparisons/">Engine comparisons</a><a href="/buy-marine-diesel-engine/">Buying and repower</a></div></details>
+      <details class="nav-group"><summary>Find help</summary><div><a href="/find-a-marine-mechanic/">Marine mechanics</a><a href="/marine-engine-suppliers/">Engine suppliers</a><a href="/marine-diesel/">Guides by region</a></div></details>
+      <details class="nav-group"><summary>Learn</summary><div><a href="/tools/">Owner tools</a><a href="/resources/">Authority resources</a><a href="/questions/">Questions</a><a href="/about/">About us</a><a href="/search/">Search</a></div></details>
       <a class="nav-cta" href="/find-a-marine-mechanic/">Find a mechanic</a>
     </nav>
   </div>
@@ -55,5 +49,13 @@ import site from '../../site.config.json' with { type: 'json' };
       toggle?.setAttribute('aria-expanded', 'false');
       toggle?.focus();
     }
+  });
+  document.querySelectorAll<HTMLDetailsElement>('.nav-group').forEach((group) => {
+    group.addEventListener('toggle', () => {
+      if (!group.open || window.matchMedia('(max-width: 82rem)').matches) return;
+      document.querySelectorAll<HTMLDetailsElement>('.nav-group[open]').forEach((other) => {
+        if (other !== group) other.open = false;
+      });
+    });
   });
 </script>

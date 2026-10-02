@@ -1,0 +1,45 @@
+---
+const { page } = Astro.props;
+let title = '';
+let items = [];
+if (page.pageType === 'symptom') {
+  title = 'Use this fault guide safely';
+  items = [
+    ['Stop now', 'Shut down for oil-pressure alarms, overheating, fuel spray, smoke in the engine space or loss of cooling-water flow.'],
+    ['Check safely', 'Start with visible leaks, strainers, fluid levels, alarms and loose connections—only when the machinery is safe and isolated.'],
+    ['Record evidence', 'Note rpm, temperature, smoke colour, alarm text, sea state and exactly when the symptom began.'],
+    ['Escalate', 'Give the evidence and engine model to a qualified marine mechanic; avoid repeated restart attempts.'],
+  ];
+} else if (page.pageType === 'service-national') {
+  title = 'Define the service before requesting quotes';
+  items = [
+    ['Scope', 'State the engine, drive, hours, service history and exact work you want priced.'],
+    ['Evidence', 'Attach identification-plate photos, fault history and clear engine-space access photos.'],
+    ['Compare', 'Separate parts, labour, travel, haul-out, testing and approval limits.'],
+    ['Handover', 'Request replaced parts, readings, test results and the next due work in writing.'],
+  ];
+} else if (page.pageType === 'howto') {
+  title = 'Before you start';
+  items = [
+    ['Confirm', 'Match the procedure, fluid and part numbers to the exact model and serial number.'],
+    ['Isolate', 'Secure the vessel and isolate starting, electrical, fuel and seawater systems as the manual requires.'],
+    ['Stop conditions', 'Stop if the job needs specialist tools, calibration, lifting or work on a hot or pressurised system.'],
+    ['Record', 'Log dates, hours, parts, fluids, readings and anything that changed after the work.'],
+  ];
+} else if (['decision', 'engine-comparison'].includes(page.pageType)) {
+  title = 'Make the comparison decision-ready';
+  items = [
+    ['Compare like with like', 'Align duty rating, output, driveline, emissions basis and included equipment.'],
+    ['Verify fit', 'Check dimensions, mounts, shaft height, cooling, exhaust, ventilation and service access.'],
+    ['Price installed', 'Include controls, gearbox or drive, propeller work, labour, commissioning and haul-out.'],
+    ['Choose support', 'Name the Australian warranty party, commissioning technician and parts route before ordering.'],
+  ];
+}
+---
+{items.length > 0 && (
+  <section class="action-summary" aria-labelledby="action-summary-title">
+    <p class="eyebrow">Practical summary</p>
+    <h2 id="action-summary-title">{title}</h2>
+    <div>{items.map(([label, text]) => <article><h3>{label}</h3><p>{text}</p></article>)}</div>
+  </section>
+)}
