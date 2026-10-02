@@ -12,7 +12,7 @@ const staticRecords = [
   ['/services/', 'Marine Diesel Engine Services', 'Understand common marine diesel service and repair jobs, their scope and the questions to ask before approving work.', 'Services'],
   ['/resources/', 'Marine Diesel Authority Resources', 'Official manufacturer manuals, Australian regulators, safety organisations and consumer resources for marine engine owners.', 'Resources'],
   ['/marine-diesel-engine-types/', 'Marine Diesel Engine Types in Australia', 'Compare yacht auxiliaries, planing inboards, sterndrives, pod systems, commercial engines, marinised base engines and generator sets.', 'Engine comparison'],
-  ['/marine-diesel-engine-comparisons/', 'Marine Diesel Engine Comparisons Australia', 'Compare Yanmar vs Volvo Penta, Beta vs Nanni, Cummins vs Caterpillar, John Deere vs Scania and large-yacht engine alternatives.', 'Engine comparison'],
+  ['/marine-diesel-engine-comparisons/', 'Marine Diesel Engine Comparisons Australia', 'Explore 15 research-based marine engine comparisons for Australian yacht repowers, commercial workboats and high-output motor yachts.', 'Engine comparison'],
   ['/about/', 'About Marine Diesel Engine Australia', 'Who publishes this independent marine engine information site and what its editorial team does and does not do.', 'About'],
   ['/editorial-policy/', 'Editorial and Sourcing Policy', 'How the site researches, sources, reviews, updates and corrects marine diesel information.', 'Policy'],
   ['/disclaimer/', 'Marine Diesel Information Disclaimer', 'Important limits of general marine diesel information and when to use qualified professional help.', 'Safety'],

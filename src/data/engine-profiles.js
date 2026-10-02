@@ -116,6 +116,9 @@ export const officialEngineSources = {
   'john-deere-marine': { title: 'John Deere — marine engine selection guide', url: 'https://www.deere.com/assets/pdfs/common/industries/engines-and-drivetrain/brochures/marine-selection-guide-dswt59.pdf' },
   'man-marine': { title: 'MAN — current yacht and sport-fishing engines', url: 'https://www.man.eu/engines/en/products/marine/yacht-engines/yacht.html' },
   'scania-marine': { title: 'Scania — marine engine range', url: 'https://www.scania.com/us/en/home/products/marine-engines.html' },
+  vetus: { title: 'VETUS — current marine diesel engine range', url: 'https://webshop.vetus.com/en/products/engines' },
+  'iveco-fpt-marine': { title: 'FPT Industrial — marine pleasure engine range', url: 'https://www.fptindustrial.com/en/engines/marine/pleasure?sc_lang=en' },
+  'mtu-detroit': { title: 'mtu — yacht propulsion systems and engine range', url: 'https://www.mtu-solutions.com/content/dam/mtu/download/applications/commercial-marine/brochures/16120026-mtu-yachtbroschuere-low.pdf/_jcr_content/renditions/original./16120026-mtu-yachtbroschuere-low.pdf' },
 };
 
 export function engineProfileFor(segment) {

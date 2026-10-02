@@ -41,6 +41,10 @@ const page = {
   parent: '/marine-diesel-engine-comparisons/', parentTitle: 'Engine Comparisons',
   schema: ['Article', 'FAQPage', 'BreadcrumbList'], updated: '2026-10-02',
   description: metaDescription(`${comparison.title} in Australia: compare applications, duty, installation, driveline, ownership, used-engine checks and quote scope.`, 160),
+  image: comparison.image,
+  imageAlt: comparison.imageAlt,
+  imageWidth: 1536,
+  imageHeight: 1024,
   primaryKeyword: `${comparison.shortTitle} Australia`,
   searchIntent: 'Commercial investigation', faqs,
   headings: [
@@ -55,13 +59,22 @@ const page = {
 };
 
 const sources = comparison.sourceSlugs.map((slug) => officialEngineSources[slug]).filter(Boolean);
-const otherComparisons = engineComparisons.filter((item) => item.slug !== comparison.slug);
+const sameGroupComparisons = engineComparisons.filter((item) => item.slug !== comparison.slug && item.comparisonGroup === comparison.comparisonGroup);
+const otherComparisons = [
+  ...sameGroupComparisons,
+  ...engineComparisons.filter((item) => item.slug !== comparison.slug && item.comparisonGroup !== comparison.comparisonGroup),
+].slice(0, 6);
 const marineEngineName = (brand) => /\bMarine$/i.test(brand) ? `${brand} Engine` : `${brand} Marine Engine`;
 ---
 <Page page={page}>
   <p class="kicker">Independent engine comparison</p>
   <h1>{comparison.title}</h1>
   <p class="lead">{comparison.category}. This guide compares real selection and ownership factors for Australian boats rather than declaring a winner from headline horsepower.</p>
+
+  <figure class="comparison-hero">
+    <img src={comparison.image} width="1536" height="1024" alt={comparison.imageAlt} loading="eager" fetchpriority="high" />
+    <figcaption>{comparison.imageCaption}</figcaption>
+  </figure>
 
   <aside class="editorial-tip">
     <p class="kicker">Before comparing</p>

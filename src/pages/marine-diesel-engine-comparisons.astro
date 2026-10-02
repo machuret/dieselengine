@@ -25,7 +25,9 @@ const page = {
   searchIntent: 'Commercial investigation', faqs,
   headings: [
     { depth: 2, slug: 'comparison-matrix', text: 'Marine engine comparison matrix' },
-    ...engineComparisons.map((item) => ({ depth: 2, slug: item.slug, text: item.shortTitle })),
+    { depth: 2, slug: 'yacht-repower-comparisons', text: 'Yacht and repower comparisons' },
+    { depth: 2, slug: 'commercial-engine-comparisons', text: 'Commercial marine engine comparisons' },
+    { depth: 2, slug: 'performance-engine-comparisons', text: 'Performance marine engine comparisons' },
     { depth: 2, slug: 'compare-an-engine-quote', text: 'How to compare engine quotes' },
     { depth: 2, slug: 'frequently-asked-questions', text: 'Frequently asked questions' },
   ],
@@ -36,14 +38,27 @@ const page = {
     numberOfItems: engineComparisons.length,
     itemListElement: engineComparisons.map((item, index) => ({
       '@type': 'ListItem', position: index + 1, name: item.shortTitle,
-      url: `${site.domain}/marine-diesel-engine-comparisons/#${item.slug}`,
+      url: `${site.domain}/marine-diesel-engine-comparisons/${item.slug}/`,
     })),
   }],
 };
 
-const sourceSlugs = ['yanmar', 'volvo-penta', 'cummins-marine', 'caterpillar-marine', 'john-deere-marine', 'scania-marine', 'man-marine'];
+const sourceSlugs = ['yanmar', 'beta-marine', 'nanni', 'vetus', 'volvo-penta', 'cummins-marine', 'caterpillar-marine', 'john-deere-marine', 'scania-marine', 'man-marine', 'mtu-detroit', 'iveco-fpt-marine'];
 const sources = sourceSlugs.map((slug) => officialEngineSources[slug]).filter(Boolean);
-const marineEngineName = (brand) => /\bMarine$/i.test(brand) ? `${brand} Engine` : `${brand} Marine Engine`;
+const comparisonGroups = [
+  {
+    key: 'yacht', id: 'yacht-repower-comparisons', title: 'Yacht and repower Marine Engine comparisons',
+    intro: 'Compact auxiliary and repower comparisons for sailing yachts, launches and displacement boats. Fit, access, driveline and local parts pathways usually decide more than a small horsepower difference.',
+  },
+  {
+    key: 'commercial', id: 'commercial-engine-comparisons', title: 'Commercial Marine Engine comparisons',
+    intro: 'Workboat, charter, ferry and fishing-vessel comparisons built around duty rating, annual hours, cooling, commissioning evidence and field support.',
+  },
+  {
+    key: 'performance', id: 'performance-engine-comparisons', title: 'Performance Marine Engine comparisons',
+    intro: 'High-output motor-yacht and sportfishing comparisons where power density, driveline integration, ventilation, controls and lifecycle support form one propulsion decision.',
+  },
+];
 ---
 <Page page={page}>
   <h1>Marine diesel engine comparisons in Australia</h1>
@@ -77,33 +92,21 @@ const marineEngineName = (brand) => /\bMarine$/i.test(brand) ? `${brand} Engine`
     </table>
   </div>
 
-  {engineComparisons.map((item) => (
-    <section class="head-to-head" id={item.slug} aria-labelledby={`${item.slug}-title`}>
-      <div class="head-to-head__heading">
-        <p class="kicker">Engine vs engine</p>
-        <h2 id={`${item.slug}-title`}>{item.title}</h2>
-        <p>{item.category}</p>
+  {comparisonGroups.map((group) => (
+    <section class="comparison-library" aria-labelledby={group.id}>
+      <p class="kicker">Choose by operating profile</p>
+      <h2 id={group.id}>{group.title}</h2>
+      <p>{group.intro}</p>
+      <div class="comparison-library-grid">
+        {engineComparisons.filter((item) => item.comparisonGroup === group.key).map((item) => (
+          <article class="comparison-library-card" id={item.slug}>
+            <p class="eyebrow">{item.category}</p>
+            <h3><a href={`/marine-diesel-engine-comparisons/${item.slug}/`}>{item.shortTitle}</a></h3>
+            <p>{item.validWhen}</p>
+            <p class="comparison-card-link"><a href={`/marine-diesel-engine-comparisons/${item.slug}/`}>Compare these Marine Engines <span aria-hidden="true">→</span></a></p>
+          </article>
+        ))}
       </div>
-      <p class="comparison-scope"><strong>This comparison is valid when:</strong> {item.validWhen}</p>
-      <div class="head-to-head__sides">
-        <article>
-          <span class="versus-label">Option A</span>
-          <h3><a href={`/engine-brands/${item.left.slug}/`}>{marineEngineName(item.left.name)}</a></h3>
-          <p>{item.leftCase}</p>
-        </article>
-        <span class="versus" aria-hidden="true">VS</span>
-        <article>
-          <span class="versus-label">Option B</span>
-          <h3><a href={`/engine-brands/${item.right.slug}/`}>{marineEngineName(item.right.name)}</a></h3>
-          <p>{item.rightCase}</p>
-        </article>
-      </div>
-      <div class="head-to-head__checks">
-        <h3>Compare these before choosing</h3>
-        <ul>{item.compare.map((point) => <li>{point}</li>)}</ul>
-      </div>
-      <p class="decision-note"><strong>Decision rule:</strong> {item.decision}</p>
-      <p class="section-more"><a href={`/marine-diesel-engine-comparisons/${item.slug}/`}>Read the complete {item.shortTitle} guide <span aria-hidden="true">→</span></a></p>
     </section>
   ))}
 
