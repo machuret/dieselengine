@@ -33,7 +33,7 @@
     {
       "id": "engines",
       "label": "Engines",
-      "match": "^/engine-brands/."
+      "match": "^/(engine-brands|marine-diesel-engine-comparisons)/."
     },
     {
       "id": "guides",

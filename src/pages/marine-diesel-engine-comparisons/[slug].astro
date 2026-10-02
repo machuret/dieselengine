@@ -1,0 +1,179 @@
+---
+import Page from '../../layouts/Page.astro';
+import SourcePanel from '../../components/SourcePanel.astro';
+import { engineComparisons } from '../../data/engine-comparisons.js';
+import { officialEngineSources } from '../../data/engine-profiles.js';
+import { metaDescription } from '../../lib/extract.js';
+import site from '../../../site.config.json' with { type: 'json' };
+
+export function getStaticPaths() {
+  return engineComparisons.map((comparison) => ({
+    params: { slug: comparison.slug }, props: { comparison },
+  }));
+}
+
+const { comparison } = Astro.props;
+const faqs = [
+  {
+    question: `Which is better: ${comparison.left.name} or ${comparison.right.name}?`,
+    answer: `Neither brand wins every installation. Compare exact models with equivalent duty ratings, then choose the complete package that fits the vessel, driveline, operating profile and available Australian support.`,
+  },
+  {
+    question: `Can I replace ${comparison.left.name} with ${comparison.right.name}?`,
+    answer: 'Potentially, but it is not a like-for-like swap until mounts, shaft height, gearbox or drive, controls, exhaust, cooling, electrical system, service clearance, propeller match and removal path have been checked.',
+  },
+  {
+    question: 'What should an engine comparison quote include?',
+    answer: 'It should name the exact engine model, output, rpm and duty rating plus the gearbox or drive, controls, mounts, cooling and exhaust changes, installation labour, propeller work, commissioning, sea trial, warranty party and exclusions.',
+  },
+  {
+    question: 'Are the model families in this guide all sold new in Australia?',
+    answer: 'Not necessarily. Australian boats contain current and legacy engines. Confirm current supply, specification, certification, warranty and dealer support with the manufacturer or authorised Australian distributor.',
+  },
+];
+
+const page = {
+  url: `/marine-diesel-engine-comparisons/${comparison.slug}/`,
+  title: comparison.title,
+  seoTitle: `${comparison.title} Australia`,
+  pageType: 'engine-comparison', status: 'ready', author: site.defaultAuthor,
+  reviewer: null, needsReviewer: false, indexable: true, blockers: [],
+  parent: '/marine-diesel-engine-comparisons/', parentTitle: 'Engine Comparisons',
+  schema: ['Article', 'FAQPage', 'BreadcrumbList'], updated: '2026-10-02',
+  description: metaDescription(`${comparison.title} in Australia: compare applications, duty, installation, driveline, ownership, used-engine checks and quote scope.`, 160),
+  primaryKeyword: `${comparison.shortTitle} Australia`,
+  searchIntent: 'Commercial investigation', faqs,
+  headings: [
+    { depth: 2, slug: 'real-comparison', text: 'Where this comparison is valid' },
+    { depth: 2, slug: 'differences', text: 'Key marine engine differences' },
+    { depth: 2, slug: 'ownership', text: 'Maintenance and ownership' },
+    { depth: 2, slug: 'used-engines', text: 'Comparing used engines' },
+    { depth: 2, slug: 'quote-checklist', text: 'Quote checklist' },
+    { depth: 2, slug: 'decision', text: 'Which marine engine should you choose?' },
+    { depth: 2, slug: 'frequently-asked-questions', text: 'Frequently asked questions' },
+  ],
+};
+
+const sources = comparison.sourceSlugs.map((slug) => officialEngineSources[slug]).filter(Boolean);
+const otherComparisons = engineComparisons.filter((item) => item.slug !== comparison.slug);
+const marineEngineName = (brand) => /\bMarine$/i.test(brand) ? `${brand} Engine` : `${brand} Marine Engine`;
+---
+<Page page={page}>
+  <p class="kicker">Independent engine comparison</p>
+  <h1>{comparison.title}</h1>
+  <p class="lead">{comparison.category}. This guide compares real selection and ownership factors for Australian boats rather than declaring a winner from headline horsepower.</p>
+
+  <aside class="editorial-tip">
+    <p class="kicker">Before comparing</p>
+    <p><strong>Use exact models.</strong> A brand name does not identify power, duty rating, engine generation, controls or driveline. Current and legacy equipment can have materially different specifications.</p>
+  </aside>
+
+  <h2 id="real-comparison">Where this marine engine comparison is valid</h2>
+  <p>{comparison.validWhen}</p>
+  {comparison.overview.map((paragraph) => <p>{paragraph}</p>)}
+  <div class="head-to-head__sides comparison-options">
+    <article>
+      <span class="versus-label">Option A</span>
+      <h3><a href={`/engine-brands/${comparison.left.slug}/`}>{marineEngineName(comparison.left.name)}</a></h3>
+      <p>{comparison.leftCase}</p>
+    </article>
+    <span class="versus" aria-hidden="true">VS</span>
+    <article>
+      <span class="versus-label">Option B</span>
+      <h3><a href={`/engine-brands/${comparison.right.slug}/`}>{marineEngineName(comparison.right.name)}</a></h3>
+      <p>{comparison.rightCase}</p>
+    </article>
+  </div>
+
+  <h2 id="differences">Key marine engine differences</h2>
+  <p class="table-hint" id="model-comparison-hint">On a phone, swipe across the table to compare both marine engine options.</p>
+  <div class="comparison-table engine-detail-table" role="region" aria-label={`${comparison.shortTitle} detailed comparison`} aria-describedby="model-comparison-hint" tabindex="0">
+    <table>
+      <thead><tr><th>Decision factor</th><th>{comparison.left.name}</th><th>{comparison.right.name}</th></tr></thead>
+      <tbody>
+        {comparison.comparisonRows.map(([factor, left, right]) => (
+          <tr><th>{factor}</th><td>{left}</td><td>{right}</td></tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+  <p>
+    For both candidates, also compare {comparison.compare.join('; ').toLowerCase()}.
+    Never treat a higher intermittent or recreational output as equivalent to a
+    lower continuous or commercial rating without reading the manufacturer’s
+    rating definition.
+  </p>
+
+  <h2 id="ownership">Maintenance and ownership in Australia</h2>
+  <p>{comparison.ownership}</p>
+  <p>
+    Ask who will commission the installation, who can access model-specific
+    diagnostics, where routine parts are physically stocked and what the plan is
+    if the boat operates outside a capital city. “Available in Australia” is not
+    the same as a part being available near the vessel when it is immobilised.
+  </p>
+  <p>
+    Keep the engine model, serial number, gearbox or drive identity, control
+    generation and specification sheet together in the vessel record. This
+    prevents future parts orders from being based on appearance or a boat
+    builder’s brochure.
+  </p>
+
+  <h2 id="used-engines">Comparing used marine engines</h2>
+  <p>
+    A used engine is a condition-and-installation purchase, not a brand vote.
+    Hours without load history, calendar age, cooling maintenance and oil
+    evidence say little. Inspect the cold engine and retain photographs and
+    readings from the trial.
+  </p>
+  <ul class="check-grid comparison-checks">
+    {comparison.usedChecks.map((point) => <li><span aria-hidden="true">✓</span>{point}</li>)}
+  </ul>
+  <p>
+    For a high-value purchase, arrange an independent inspection and consider
+    oil analysis, cooling-system pressure testing and electronic history where
+    supported. Read the <a href="/guides/pre-purchase-marine-engine-checklist/">pre-purchase engine checklist</a>
+    and <a href="/guides/marine-engine-sea-trial-evidence-guide/">sea-trial evidence guide</a>.
+  </p>
+
+  <h2 id="quote-checklist">Marine engine quote checklist</h2>
+  <p>Give both suppliers the same vessel data and require these items in writing:</p>
+  <ol class="decision-steps comparison-quote-list">
+    {comparison.quoteProof.map((point) => <li>{point}</li>)}
+    <li>Removal, installation, freight, haul-out, fluids, exclusions and tax</li>
+    <li>Commissioning values, sea-trial acceptance criteria and warranty party</li>
+  </ol>
+  <p>
+    Compare the installed total, not an engine crate against a complete package.
+    Use the <a href="/guides/marine-diesel-repower-measurement-guide/">repower measurement guide</a>
+    and <a href="/how/how-to-get-a-marine-engine-quote-you-can-compare/">comparable engine quote guide</a>.
+  </p>
+
+  <h2 id="decision">Which marine engine should you choose?</h2>
+  <p class="decision-note"><strong>Decision rule:</strong> {comparison.decision}</p>
+  <p>
+    Score the two exact proposals against non-negotiables first: correct duty,
+    physical fit, driveline compatibility, safe service access and credible
+    commissioning. Only then compare price, noise, controls and preferences.
+    If either supplier cannot document the rating or installation, the proposal
+    is not ready to compare.
+  </p>
+
+  <section class="faq-list" aria-labelledby="frequently-asked-questions">
+    <h2 id="frequently-asked-questions">Frequently asked questions</h2>
+    {faqs.map((faq) => <details><summary>{faq.question}</summary><p>{faq.answer}</p></details>)}
+  </section>
+
+  <SourcePanel title="Official manufacturer sources" links={sources} />
+
+  <section class="more-comparisons" aria-labelledby="more-comparisons-title">
+    <h2 id="more-comparisons-title">More marine engine comparisons</h2>
+    <div class="path-cards">
+      {otherComparisons.map((item) => (
+        <a href={`/marine-diesel-engine-comparisons/${item.slug}/`}>
+          <strong>{item.shortTitle}</strong><span aria-hidden="true">→</span>
+        </a>
+      ))}
+    </div>
+  </section>
+</Page>

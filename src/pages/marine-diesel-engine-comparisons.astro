@@ -43,6 +43,7 @@ const page = {
 
 const sourceSlugs = ['yanmar', 'volvo-penta', 'cummins-marine', 'caterpillar-marine', 'john-deere-marine', 'scania-marine', 'man-marine'];
 const sources = sourceSlugs.map((slug) => officialEngineSources[slug]).filter(Boolean);
+const marineEngineName = (brand) => /\bMarine$/i.test(brand) ? `${brand} Engine` : `${brand} Marine Engine`;
 ---
 <Page page={page}>
   <h1>Marine diesel engine comparisons in Australia</h1>
@@ -67,7 +68,7 @@ const sources = sourceSlugs.map((slug) => officialEngineSources[slug]).filter(Bo
       <tbody>
         {engineComparisons.map((item) => (
           <tr>
-            <th><a href={`#${item.slug}`}>{item.shortTitle}</a></th>
+            <th><a href={`/marine-diesel-engine-comparisons/${item.slug}/`}>{item.shortTitle}</a></th>
             <td>{item.category}</td>
             <td>{item.compare[0]}</td>
           </tr>
@@ -87,13 +88,13 @@ const sources = sourceSlugs.map((slug) => officialEngineSources[slug]).filter(Bo
       <div class="head-to-head__sides">
         <article>
           <span class="versus-label">Option A</span>
-          <h3><a href={`/engine-brands/${item.left.slug}/`}>{item.left.name}</a></h3>
+          <h3><a href={`/engine-brands/${item.left.slug}/`}>{marineEngineName(item.left.name)}</a></h3>
           <p>{item.leftCase}</p>
         </article>
         <span class="versus" aria-hidden="true">VS</span>
         <article>
           <span class="versus-label">Option B</span>
-          <h3><a href={`/engine-brands/${item.right.slug}/`}>{item.right.name}</a></h3>
+          <h3><a href={`/engine-brands/${item.right.slug}/`}>{marineEngineName(item.right.name)}</a></h3>
           <p>{item.rightCase}</p>
         </article>
       </div>
@@ -102,6 +103,7 @@ const sources = sourceSlugs.map((slug) => officialEngineSources[slug]).filter(Bo
         <ul>{item.compare.map((point) => <li>{point}</li>)}</ul>
       </div>
       <p class="decision-note"><strong>Decision rule:</strong> {item.decision}</p>
+      <p class="section-more"><a href={`/marine-diesel-engine-comparisons/${item.slug}/`}>Read the complete {item.shortTitle} guide <span aria-hidden="true">→</span></a></p>
     </section>
   ))}
 

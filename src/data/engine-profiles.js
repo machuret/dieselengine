@@ -107,6 +107,8 @@ const profiles = {
 };
 
 export const officialEngineSources = {
+  'beta-marine': { title: 'Beta Marine — seagoing propulsion and saildrive range', url: 'https://betamarine.co.uk/' },
+  nanni: { title: 'Nanni — current marine propulsion engine catalogue', url: 'https://nannienergy.com/products/engines/' },
   'volvo-penta': { title: 'Volvo Penta — current marine engine range', url: 'https://www.volvopenta.com/marine/all-marine-engines/' },
   yanmar: { title: 'Yanmar — current and legacy marine engine finder', url: 'https://www.yanmar.com/marine/products/engines/search-engines/' },
   'cummins-marine': { title: 'Cummins — QSB marine engine information', url: 'https://www.cummins.com/en-na/engines/products/qsb67qsb7' },

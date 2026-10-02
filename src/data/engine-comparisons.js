@@ -1,8 +1,8 @@
 export const engineComparisons = [
   {
     slug: 'yanmar-vs-volvo-penta',
-    title: 'Yanmar vs Volvo Penta marine engines',
-    shortTitle: 'Yanmar vs Volvo Penta',
+    title: 'Yanmar Marine Engine vs Volvo Penta Marine Engine',
+    shortTitle: 'Yanmar Marine Engine vs Volvo Penta Marine Engine',
     left: { name: 'Yanmar', slug: 'yanmar' },
     right: { name: 'Volvo Penta', slug: 'volvo-penta' },
     category: 'Sailing yachts and compact leisure craft',
@@ -16,11 +16,25 @@ export const engineComparisons = [
       'Local commissioning, warranty and common-parts support',
     ],
     decision: 'The better choice is normally the package that fits the existing installation with fewer compromises and has stronger support where the boat is kept—not the badge with the highest brochure output.',
+    overview: [
+      'This is one of the most relevant comparisons for an Australian sailing-yacht repower because both names appear across production yachts, shaft-drive auxiliaries and saildrive installations. The meaningful comparison is not every Yanmar against every Volvo Penta; it is the two exact packages that fit the same hull, power calculation and driveline.',
+      'Yanmar’s official finder separates current and legacy engines and lets buyers narrow by application. Volvo Penta presents engines as part of a wider propulsion range that includes sailboat, shaft, sterndrive and IPS categories. That difference makes exact model and drive identification the first job, particularly on a used boat where the engine and drive may not be the same generation.',
+    ],
+    comparisonRows: [
+      ['Range context', 'Compact yacht auxiliaries plus larger marine families; current and legacy identities must be separated.', 'Compact auxiliaries sit within a broader engine, drive, controls and instrument ecosystem.'],
+      ['Repower fit', 'Check mounts, service side, sump, exhaust outlet and compatibility with the proposed gearbox or Yanmar drive.', 'Check mounts, shaft or saildrive generation, panel, loom and whether existing instruments can remain.'],
+      ['Driveline', 'A shaft gearbox and a saildrive are different scopes even when attached to the same engine family.', 'A shaft, saildrive, Aquamatic or IPS proposal must be priced as its specific complete system.'],
+      ['Service evidence', 'Model, serial number, engine hours, cooling history and exact drive record.', 'Engine and drive histories, control generation, diagnostic record and time-based drive work.'],
+    ],
+    ownership: 'For low-hour yachts, calendar maintenance can dominate: exhaust elbows, impellers, coolant, hoses, saildrive seals and corrosion still age while the boat is idle. Compare access to these parts inside the actual engine compartment. A filter mounted against a bulkhead or an impeller hidden behind cabinetry changes every future service.',
+    usedChecks: ['Photograph the engine, gearbox or saildrive and control-panel identification plates', 'Confirm whether the drive was supplied with the engine or retained from an earlier installation', 'Check cold-start behaviour, exhaust-water flow, charging voltage and loaded maximum rpm', 'Inspect exhaust elbow history, engine mounts, seawater leaks and saildrive service records where fitted'],
+    quoteProof: ['Dimensioned installation drawing and confirmed service clearances', 'Engine plus gearbox or saildrive model and ratio', 'Panel, loom, controls, alternator and instrument inclusions', 'Propeller review, commissioning, sea trial and warranty registration'],
+    sourceSlugs: ['yanmar', 'volvo-penta'],
   },
   {
     slug: 'beta-marine-vs-nanni',
-    title: 'Beta Marine vs Nanni diesel engines',
-    shortTitle: 'Beta Marine vs Nanni',
+    title: 'Beta Marine Engine vs Nanni Marine Engine',
+    shortTitle: 'Beta Marine Engine vs Nanni Marine Engine',
     left: { name: 'Beta Marine', slug: 'beta-marine' },
     right: { name: 'Nanni', slug: 'nanni' },
     category: 'Yacht repowers and marinised engine packages',
@@ -34,11 +48,25 @@ export const engineComparisons = [
       'Stocked service parts and support for the exact model in Australia',
     ],
     decision: 'Compare the complete installed package. Sharing an industrial base-engine family does not make the marinisation, dimensions, warranty or parts channels interchangeable.',
+    overview: [
+      'Beta Marine and Nanni are often considered for yacht repowers where owners want a compact marinised diesel rather than an engine-and-drive ecosystem tied to the original boat builder. Both deserve comparison as complete marine products, not as painted versions of an industrial block.',
+      'Beta Marine describes its seagoing range as UK-engineered and based on Kubota diesels, with shaft and saildrive solutions. Nanni’s current catalogue spans several propulsion arrangements and lets buyers filter by shaft line, saildrive, sterndrive, waterjet and surface drive. The base-engine label therefore does not establish equivalent dimensions, cooling, controls, output rating or included equipment.',
+    ],
+    comparisonRows: [
+      ['Range context', 'Kubota-based seagoing packages, including shaft and saildrive applications.', 'A wider propulsion catalogue covering multiple drive arrangements and base-engine relationships.'],
+      ['Repower fit', 'Special mounting-foot options can matter, but measurements still need to be taken from the exact drawing.', 'Compare the exact model drawing, sump, service side, exhaust outlet and gearbox or drive options.'],
+      ['Parts identity', 'Separate Kubota base-engine consumables from Beta-specific heat-exchanger, exhaust, panel and mount parts.', 'Record both the Nanni marine model and confirmed base engine; order marine-system parts through the correct identity.'],
+      ['Quote scope', 'Check gearbox, feet, panel, loom, alternator, exhaust and commissioning line by line.', 'Check engine, selected driveline, controls, mounting system, cooling hardware and commissioning line by line.'],
+    ],
+    ownership: 'The useful ownership question is who can identify and supply both layers of parts: the base engine and the marinisation. A generic filter may cross over; a heat-exchanger end cap, raw-water pump bracket, exhaust elbow or control panel may not. Ask the Australian supplier which routine and major-service parts are stocked for the exact proposed model.',
+    usedChecks: ['Match marine model and base-engine plates rather than relying on paint colour', 'Inspect the mariniser-specific cooling stack, exhaust elbow, brackets and wiring for corrosion or modification', 'Confirm gearbox model and ratio and whether mounts were altered during installation', 'Check that manuals and parts records refer to the marine model actually installed'],
+    quoteProof: ['Exact model, base-engine identity and current specification revision', 'Dimensioned drawing with mount-centre and shaft-height comparison', 'Gearbox, coupling, controls, panel, loom and alternator schedule', 'Australian warranty party, commissioning responsibility and stocked-parts list'],
+    sourceSlugs: ['beta-marine', 'nanni'],
   },
   {
     slug: 'cummins-vs-caterpillar',
-    title: 'Cummins vs Caterpillar marine engines',
-    shortTitle: 'Cummins vs Caterpillar',
+    title: 'Cummins Marine Engine vs Caterpillar Marine Engine',
+    shortTitle: 'Cummins Marine Engine vs Caterpillar Marine Engine',
     left: { name: 'Cummins Marine', slug: 'cummins-marine' },
     right: { name: 'Caterpillar Marine', slug: 'caterpillar-marine' },
     category: 'Planing craft, sportfishing boats and commercial vessels',
@@ -52,11 +80,25 @@ export const engineComparisons = [
       'Gearbox rating, propeller calculation and loaded maximum rpm',
     ],
     decision: 'Do not compare a high-output recreational rating with a lower-output commercial rating as if horsepower were the only difference. Match the operating profile first.',
+    overview: [
+      'Cummins versus Caterpillar becomes a real comparison on planing motor yachts, sportfishing boats and commercial craft only after the duty category is aligned. Both manufacturers publish multiple marine applications and ratings. A recreational high-output engine and a commercial propulsion engine can share similar displacement yet be approved for very different annual hours and load factors.',
+      'Cummins’ marine QSB material distinguishes variable-speed propulsion ratings and application classes. Caterpillar separates commercial propulsion from high-performance propulsion and publishes configuration details such as cooling options on model pages. Use those manufacturer definitions—not a sales listing’s horsepower field—as the starting evidence.',
+    ],
+    comparisonRows: [
+      ['Rating evidence', 'Record the exact rating name, rated rpm, emissions certification and application restrictions.', 'Record commercial or high-performance category, rating letter or definition, rpm and emissions configuration.'],
+      ['Cooling and air', 'Confirm heat-exchanger arrangement, aftercooler circuit, seawater plumbing and engine-room air demand.', 'Confirm heat-exchanger or keel-cooling option, aftercooler circuit, exhaust option and ventilation requirement.'],
+      ['Controls', 'Check ECM generation, display, harness, sensors and access to marine diagnostic tooling.', 'Check ECM and display generation, event history, monitoring integration and authorised diagnostic access.'],
+      ['Loaded performance', 'Proposal must include gearbox ratio and propeller calculation for the loaded vessel.', 'Proposal must include matching rating, gear ratio, propeller calculation and commissioning data.'],
+    ],
+    ownership: 'Aftercooler condition, seawater-side maintenance, fuel cleanliness and correct loading are major evidence points on either brand. On a twin-engine boat, compare both engines’ data rather than accepting that similar hours mean similar condition. A persistent rpm, temperature or fuel-rate difference can expose propeller, cooling or engine issues.',
+    usedChecks: ['Obtain ECM hours by load band and fault history where available', 'Inspect aftercooler and heat-exchanger service evidence, not only invoices labelled annual service', 'Confirm both engines reach the specified loaded rpm with normal fuel, water and cruising load', 'Sample engine and gearbox oils and record coolant condition before purchase'],
+    quoteProof: ['Exact model, power, rpm, duty rating and emissions configuration', 'Gearbox model, ratio, controls and display package', 'Cooling, exhaust, fuel-return and ventilation engineering', 'Commissioning report with loaded rpm, temperatures, pressures and warranty registration'],
+    sourceSlugs: ['cummins-marine', 'caterpillar-marine'],
   },
   {
     slug: 'john-deere-vs-scania',
-    title: 'John Deere vs Scania marine engines',
-    shortTitle: 'John Deere vs Scania',
+    title: 'John Deere Marine Engine vs Scania Marine Engine',
+    shortTitle: 'John Deere Marine Engine vs Scania Marine Engine',
     left: { name: 'John Deere Marine', slug: 'john-deere-marine' },
     right: { name: 'Scania Marine', slug: 'scania-marine' },
     category: 'Workboats, ferries and high-hour commercial craft',
@@ -70,11 +112,25 @@ export const engineComparisons = [
       'Survey documentation, service intervals and regional field support',
     ],
     decision: 'For a working boat, downtime support, correct rating and maintainable installation usually matter more than a small difference in headline power.',
+    overview: [
+      'This comparison belongs in a commercial operating plan, not a leisure-engine popularity contest. Workboats, ferries and fishing vessels need an engine selected against annual hours, average load, time at full output, survey obligations and the cost of downtime. A lower published output may be the correct long-life rating.',
+      'John Deere’s marine selection material explicitly separates rating categories by operating profile. Scania’s marine range is likewise applied across propulsion and auxiliary duties. For an Australian operator, the shortlist should combine the factory rating with local field-service response, parts logistics, vessel access and the technician capability available in the operating region.',
+    ],
+    comparisonRows: [
+      ['Operating profile', 'Map annual hours and load factor to the applicable Deere marine rating definition.', 'Map propulsion duty, annual operation and required output to the proposed Scania rating.'],
+      ['Installation', 'Confirm cooling circuit, exhaust, PTO loads, alternator demand and service-side access.', 'Confirm cooling and exhaust package, controls, auxiliary drives, ventilation and removal path.'],
+      ['Survey record', 'Retain rating sheet, emissions documents, installation data and commissioning results.', 'Retain model specification, certification, installation approval and commissioning results.'],
+      ['Support plan', 'Name the field technician, parts source and contingency for the vessel’s route.', 'Name the field technician, parts source, diagnostic access and response plan for the vessel’s route.'],
+    ],
+    ownership: 'Commercial maintenance should be planned around uptime, not only service intervals. Compare access time for filters, belts, coolers, valve checks and major components. Ask what condition data the controls retain, how oil-analysis trends will be managed, and which critical spares should live onboard or at the operating base.',
+    usedChecks: ['Reconcile displayed hours with service, oil-analysis and operating records', 'Inspect keel-cooling or heat-exchanger circuits and confirm the installed configuration matches documentation', 'Review load history, overheating events, oil consumption and repeated fault codes', 'Confirm gearbox, shaft and propeller are rated for the proposed continuous torque'],
+    quoteProof: ['Written duty-cycle calculation and selected manufacturer rating', 'Survey, class and emissions documents applicable to the vessel', 'Cooling, exhaust, PTO, alternator and monitoring configuration', 'Field-service commitment, critical-spares recommendation and commissioning baseline'],
+    sourceSlugs: ['john-deere-marine', 'scania-marine'],
   },
   {
     slug: 'man-vs-volvo-penta',
-    title: 'MAN vs Volvo Penta marine engines',
-    shortTitle: 'MAN vs Volvo Penta',
+    title: 'MAN Marine Engine vs Volvo Penta Marine Engine',
+    shortTitle: 'MAN Marine Engine vs Volvo Penta Marine Engine',
     left: { name: 'MAN Marine', slug: 'man-marine' },
     right: { name: 'Volvo Penta', slug: 'volvo-penta' },
     category: 'Large motor yachts and performance applications',
@@ -88,9 +144,28 @@ export const engineComparisons = [
       'Major-service access, regional technicians and parts lead times',
     ],
     decision: 'This is a system-level decision. Compare the engine, driveline, controls, installation engineering and support contract together.',
+    overview: [
+      'MAN versus Volvo Penta is most useful for a large motor-yacht or performance-vessel project where the naval architect, builder or repower engineer is comparing complete propulsion concepts. The decision can involve conventional shafts and gearboxes on either side, while a Volvo Penta proposal may also centre on an integrated IPS architecture.',
+      'MAN’s current yacht material presents high-output engines for yacht and sportfishing applications. Volvo Penta’s range spans inboard shaft and integrated drive categories with matched controls. Because driveline architecture changes tankage, engine-room layout, exhaust, controls, underwater gear and handling, an engine-only price comparison is not meaningful.',
+    ],
+    comparisonRows: [
+      ['System boundary', 'Define engine, gearbox, controls, displays and any vessel integration included in the MAN proposal.', 'Define whether the proposal is shaft or IPS and list engines, drives, controls, steering and displays.'],
+      ['Engine room', 'Check installed weight, ventilation, exhaust back-pressure, service sides and major-component removal.', 'Check the complete package envelope, drive access, ventilation, exhaust and removal strategy.'],
+      ['Commissioning', 'Require recorded pressures, temperatures, loaded rpm, control setup and sea-trial results.', 'Require engine-and-drive commissioning, software configuration, calibration and sea-trial results.'],
+      ['Lifecycle', 'Price scheduled major work, technician travel, haul-out dependencies and parts lead times.', 'Price engine and drive maintenance, haul-outs, seals, software support and parts logistics.'],
+    ],
+    ownership: 'Large-yacht ownership cost is shaped by access and integration. A job that requires removing saloon joinery, lifting a deck section or hauling the vessel is not represented by the parts price. Review the builder’s removal paths, lifting points, service clearances and maintenance plan before the machinery space is finalised.',
+    usedChecks: ['Download engine and drive event histories and verify displayed hours', 'Review cooling-system, aftercooler, injector, turbo and major-service records', 'Inspect shaft alignment and gearboxes or, for pods, the underwater gear and scheduled seal work', 'Confirm control, display and software generations remain supported by the service network'],
+    quoteProof: ['Complete propulsion architecture and performance prediction', 'Dimensioned engine-room, ventilation, exhaust and removal plan', 'Controls, displays, steering, monitoring and software scope', 'Commissioning, crew handover, scheduled maintenance and regional support agreement'],
+    sourceSlugs: ['man-marine', 'volvo-penta'],
   },
 ];
 
 export function comparisonsForBrand(slug) {
   return engineComparisons.filter((item) => item.left.slug === slug || item.right.slug === slug);
 }
+
+export const engineComparisonRoutes = engineComparisons.map((item) => ({
+  url: `/marine-diesel-engine-comparisons/${item.slug}/`,
+  pageType: 'engine-comparison', priority: '0.78', updated: '2026-10-02',
+}));

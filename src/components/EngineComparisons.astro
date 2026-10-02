@@ -5,6 +5,7 @@ import { comparisonsForBrand } from '../data/engine-comparisons.js';
 const { page } = Astro.props;
 const slug = brandSlug(page.url);
 const comparisons = page.pageType === 'brand-hub' ? comparisonsForBrand(slug) : [];
+const marineEngineName = (brand) => /\bMarine$/i.test(brand) ? `${brand} Engine` : `${brand} Marine Engine`;
 ---
 {comparisons.length > 0 && (
   <section class="profile-comparisons" aria-labelledby="profile-comparisons-title">
@@ -15,10 +16,10 @@ const comparisons = page.pageType === 'brand-hub' ? comparisonsForBrand(slug) : 
       {comparisons.map((comparison) => {
         const rival = comparison.left.slug === slug ? comparison.right : comparison.left;
         return (
-          <a href={`/marine-diesel-engine-comparisons/#${comparison.slug}`}>
+          <a href={`/marine-diesel-engine-comparisons/${comparison.slug}/`}>
             <span>{comparison.shortTitle}</span>
             <small>{comparison.category}</small>
-            <strong>Compare with {rival.name} <span aria-hidden="true">→</span></strong>
+            <strong>Compare with {marineEngineName(rival.name)} <span aria-hidden="true">→</span></strong>
           </a>
         );
       })}

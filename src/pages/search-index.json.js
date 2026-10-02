@@ -2,6 +2,7 @@ import { allPages } from '../lib/content.js';
 import { questionClusters } from '../lib/questions.js';
 import { editorialGuides } from '../data/editorial-guides.js';
 import { supplierPages } from '../data/supplier-pages.js';
+import { engineComparisons } from '../data/engine-comparisons.js';
 import site from '../../site.config.json' with { type: 'json' };
 
 export const prerender = true;
@@ -33,6 +34,13 @@ function records() {
     ...supplierPages.map((page) => ({
       url: `/marine-engine-suppliers/${page.slug}/`, title: page.title,
       description: page.description, type: 'Supplier guide', keywords: page.points,
+    })),
+    ...engineComparisons.map((comparison) => ({
+      url: `/marine-diesel-engine-comparisons/${comparison.slug}/`,
+      title: comparison.title,
+      description: `${comparison.category}. Compare exact marine engine packages, installation, duty, maintenance, used-engine evidence and quote scope.`,
+      type: 'Engine comparison',
+      keywords: [comparison.shortTitle, comparison.left.name, comparison.right.name],
     })),
     ...questionClusters.map((cluster) => ({
       url: `/questions/${cluster.slug}/`, title: `${cluster.title} questions`,

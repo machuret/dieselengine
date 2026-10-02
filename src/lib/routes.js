@@ -4,6 +4,7 @@ import { questionClusters } from './questions.js';
 import { providers } from './providers.js';
 import { editorialGuideRoutes } from '../data/editorial-guides.js';
 import { supplierRoutes } from '../data/supplier-pages.js';
+import { engineComparisonRoutes } from '../data/engine-comparisons.js';
 
 /**
  * The single list of everything that should appear in a sitemap: content pages
@@ -40,6 +41,7 @@ export const sitemapRoutes = [
   })),
   ...editorialGuideRoutes,
   ...supplierRoutes,
+  ...engineComparisonRoutes,
 ].sort((a, b) => a.url.localeCompare(b.url));
 
 export { sectionOf };

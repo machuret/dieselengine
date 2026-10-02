@@ -1110,6 +1110,12 @@ footer.site nav a:hover { color: var(--accent); text-decoration: underline; }
   content: "✓"; position: absolute; left: .65rem; color: var(--accent); font-weight: 800;
 }
 .decision-note { margin: 1.15rem 0 0; color: var(--ink-2); font-size: .92rem; }
+.comparison-options { margin: 1.4rem 0 2rem; }
+.engine-detail-table table { min-width: 54rem; }
+.comparison-checks { margin-top: 1rem; }
+.comparison-quote-list { margin-top: 1rem; }
+.more-comparisons { margin-top: 3.5rem; padding-top: 2rem; border-top: 1px solid var(--rule); }
+.more-comparisons > h2 { margin-top: 0; }
 .profile-comparisons {
   max-width: none; margin: 1rem 0 0; padding: clamp(1.1rem, 4vw, 1.5rem);
   border: 1px solid var(--rule); border-radius: var(--r-lg); background: var(--sunk);
