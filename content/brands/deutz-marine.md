@@ -1,10 +1,10 @@
 ---
 url: /engine-brands/deutz-marine/
-title: Deutz Marine Marine Engines In Australia
+title: Deutz Marine Engines In Australia
 page_type: brand-hub
 wave: 3
-primary_keyword: deutz marine marine engine
-secondary_keywords: [deutz marine marine parts australia, deutz marine marine service]
+primary_keyword: deutz marine engines australia
+secondary_keywords: [deutz marine parts australia, deutz marine service]
 priority: P1
 parent: /engine-brands/
 status: ready

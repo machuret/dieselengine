@@ -52,6 +52,8 @@ referral only.
 
 ${pillars.map(line).join('\n')}
 
+- [Marine diesel engine types compared](${d}/marine-diesel-engine-types/): Compare yacht auxiliaries, planing inboards, sterndrives, pods, commercial engines, base-engine platforms and generator sets.
+
 ## Editorial field guides (${editorialGuides.length})
 
 ${editorialGuides.map((guide) => `- [${guide.title}](${d}/guides/${guide.slug}/): ${guide.description}`).join('\n')}

@@ -1,9 +1,9 @@
 ---
 url: /engine-brands/hurth/
-title: Hurth Gearboxes Marine Engines In Australia
+title: Hurth Marine Gearboxes In Australia
 page_type: brand-hub
 wave: 3
-primary_keyword: hurth gearboxes marine engine
+primary_keyword: hurth marine gearboxes australia
 secondary_keywords: [hurth gearboxes marine parts australia, hurth gearboxes marine service]
 priority: P1
 parent: /engine-brands/

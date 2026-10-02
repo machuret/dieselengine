@@ -1,0 +1,227 @@
+---
+import Page from '../layouts/Page.astro';
+import SourcePanel from '../components/SourcePanel.astro';
+import site from '../../site.config.json' with { type: 'json' };
+
+const faqs = [
+  { question: 'What type of marine diesel engine is best for a sailing yacht?', answer: 'Most displacement sailing yachts use a compact inboard auxiliary with a shaft or saildrive. The correct choice depends on installed dimensions, displacement, propeller match, charging needs, service access and local support—not brand alone.' },
+  { question: 'Is a sterndrive a type of engine?', answer: 'No. A sterndrive is the steerable drive behind the engine. Engine and drive are sold as a matched propulsion package, but the drive has separate corrosion, bellows, oil and haul-out requirements.' },
+  { question: 'What is the difference between recreational and commercial marine engine ratings?', answer: 'The rating states the permitted load factor, annual hours and time at high output. Two versions of the same engine family can carry different ratings, so maximum horsepower alone cannot establish suitability.' },
+  { question: 'Are marinised industrial engines suitable for boats?', answer: 'Yes when the complete marinisation and duty rating suit the vessel. The base engine may be industrial, while the mariniser supplies the heat exchanger, wet exhaust, mounts, controls and other marine-specific systems.' },
+  { question: 'Should I compare engines by horsepower?', answer: 'Horsepower is only one input. Compare duty rating, torque and propeller match, installed dimensions, weight, gearbox ratio, cooling and exhaust requirements, electrical integration, service access and Australian support.' },
+];
+
+const page = {
+  url: '/marine-diesel-engine-types/', title: 'Marine Diesel Engine Types in Australia',
+  seoTitle: 'Marine Diesel Engine Types Compared Australia', pageType: 'comparison',
+  status: 'ready', author: site.defaultAuthor, reviewer: null,
+  needsReviewer: false, parent: '/marine-diesel-engines/', parentTitle: 'Marine Diesel Engines',
+  schema: ['Article', 'FAQPage', 'BreadcrumbList'], updated: '2026-10-02',
+  indexable: true, blockers: [], faqs,
+  headings: [
+    { depth: 2, slug: 'quick-comparison', text: 'Marine engine types: quick comparison' },
+    { depth: 2, slug: 'yacht-auxiliary', text: 'Compact yacht auxiliary engines' },
+    { depth: 2, slug: 'planing-inboard', text: 'High-speed planing-craft inboards' },
+    { depth: 2, slug: 'sterndrive-and-pod', text: 'Sterndrive and pod-drive packages' },
+    { depth: 2, slug: 'commercial-duty', text: 'Commercial-duty and workboat engines' },
+    { depth: 2, slug: 'marinised-base-engines', text: 'Marinised industrial base engines' },
+    { depth: 2, slug: 'generator-sets', text: 'Marine generator sets' },
+    { depth: 2, slug: 'shortlist', text: 'How to build an engine shortlist' },
+    { depth: 2, slug: 'frequently-asked-questions', text: 'Frequently asked questions' },
+  ],
+  description: 'Compare marine diesel engine types sold and supported in Australia, including yacht auxiliaries, planing inboards, sterndrives and commercial engines.',
+  primaryKeyword: 'marine diesel engine types Australia', searchIntent: 'Commercial investigation',
+  extraSchema: [{
+    '@type': 'ItemList',
+    '@id': `${site.domain}/marine-diesel-engine-types/#engine-types`,
+    name: 'Marine diesel engine types compared',
+    numberOfItems: 7,
+    itemListElement: [
+      ['Compact yacht auxiliary', '#yacht-auxiliary'],
+      ['High-speed planing-craft inboard', '#planing-inboard'],
+      ['Sterndrive package', '#sterndrive-and-pod'],
+      ['Pod-drive package', '#sterndrive-and-pod'],
+      ['Commercial-duty inboard', '#commercial-duty'],
+      ['Marinised industrial base engine', '#marinised-base-engines'],
+      ['Marine generator set', '#generator-sets'],
+    ].map(([name, anchor], index) => ({
+      '@type': 'ListItem', position: index + 1, name,
+      url: `${site.domain}/marine-diesel-engine-types/${anchor}`,
+    })),
+  }],
+};
+
+const sources = [
+  { title: 'Volvo Penta — current marine engine range', url: 'https://www.volvopenta.com/marine/all-marine-engines/' },
+  { title: 'Yanmar — current and legacy marine engine finder', url: 'https://www.yanmar.com/marine/products/engines/search-engines/' },
+  { title: 'Cummins — QSB marine engine information', url: 'https://www.cummins.com/en-na/engines/products/qsb67qsb7' },
+  { title: 'John Deere — marine engine rating selection guide', url: 'https://www.deere.com/assets/pdfs/common/industries/engines-and-drivetrain/brochures/marine-selection-guide-dswt59.pdf' },
+  { title: 'Caterpillar — commercial propulsion engine ratings', url: 'https://www.cat.com/en_US/products/new/power-systems/marine-power-systems/commercial-propulsion-engines/1000015283.html' },
+];
+---
+<Page page={page}>
+  <h1>Marine diesel engine types in Australia</h1>
+  <p>
+    A marine diesel engine should be compared by the work it is rated to do,
+    the drive it must turn and the systems needed to install and support it.
+    “Diesel” is not one category: a compact yacht auxiliary, a high-speed
+    planing engine and a continuous-duty workboat engine solve different
+    problems even when their headline power looks similar.
+  </p>
+  <p>
+    This guide separates propulsion engines from drives, transmissions and
+    generator sets. Use it to choose a category, then compare the
+    <a href="/engine-brands/">engine brands encountered in Australia</a> and
+    obtain an installation-specific proposal from a supplier.
+  </p>
+
+  <h2 id="quick-comparison">Marine engine types: quick comparison</h2>
+  <p class="table-hint" id="engine-table-hint">On a phone, swipe across the table to see advantages and ownership constraints.</p>
+  <div class="comparison-table" role="region" aria-label="Marine diesel engine type comparison" aria-describedby="engine-table-hint" tabindex="0">
+    <table>
+      <thead><tr><th>Type</th><th>Typical vessel</th><th>Main advantage</th><th>Main ownership constraint</th></tr></thead>
+      <tbody>
+        <tr><th>Compact yacht auxiliary</th><td>Displacement yacht or catamaran</td><td>Simple, compact and efficient at modest output</td><td>Access, calendar-age maintenance and light loading</td></tr>
+        <tr><th>High-speed planing inboard</th><td>Motor cruiser or sportfisher</td><td>High power for its installed size and weight</td><td>Cooling, aftercooler, electronics and load history</td></tr>
+        <tr><th>Sterndrive package</th><td>Compact planing craft</td><td>Efficient thrust and trim with a compact installation</td><td>Corrosion, bellows, transom assembly and haul-out work</td></tr>
+        <tr><th>Pod-drive package</th><td>Modern motor yacht</td><td>Integrated manoeuvring and efficient forward-facing propulsion</td><td>Proprietary service, underwater hardware and system complexity</td></tr>
+        <tr><th>Commercial-duty inboard</th><td>Workboat, ferry or high-hour cruiser</td><td>Designed around load factor and operating hours</td><td>Weight, installed volume and rating discipline</td></tr>
+        <tr><th>Marinised base engine</th><td>Repower, yacht auxiliary or genset</td><td>Widely understood long motor and parts crossover</td><td>Marine-specific components still depend on the mariniser</td></tr>
+        <tr><th>Generator set</th><td>Yacht or commercial vessel requiring AC power</td><td>Purpose-built constant-speed electrical generation</td><td>Light loading, enclosure heat and separate wet-exhaust system</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 id="yacht-auxiliary">Compact yacht auxiliary engines</h2>
+  <p>
+    Yacht auxiliaries are small inboard diesels used for harbour manoeuvring,
+    charging and propulsion when the wind fails. They commonly drive a shaft
+    through a reduction gearbox or connect to a saildrive. Naturally aspirated
+    mechanical engines remain common, while newer families may add common-rail
+    injection and electronic controls.
+  </p>
+  <p>
+    The selection problem is normally installation geometry rather than raw
+    power. Record engine-bed spacing, shaft height and angle, exhaust route,
+    cooling-water connection, service clearances, panel and loom requirements,
+    alternator output and dry weight. An engine that fits the output calculation
+    but cannot be serviced in the compartment is a poor repower.
+  </p>
+  <p>
+    Australian examples include Yanmar YM and JH families, Volvo Penta D1 and
+    D2, and marinised Kubota-based ranges from Beta, Nanni, Craftsman and Solé.
+    These examples identify the category; availability and exact specifications
+    must be checked against the current Australian offer.
+  </p>
+
+  <h2 id="planing-inboard">High-speed planing-craft inboards</h2>
+  <p>
+    Planing craft need high output relative to engine size and vessel weight.
+    Turbocharging, charge-air cooling, common-rail fuel systems and electronic
+    controls are therefore normal. The engine may turn a conventional shaft,
+    sterndrive, waterjet or pod system.
+  </p>
+  <p>
+    Do not compare maximum horsepower without the manufacturer's duty rating.
+    A leisure rating intended for limited annual hours and short periods at
+    full output is not interchangeable with a commercial rating. The propeller,
+    reduction ratio and loaded maximum rpm must also agree; an overloaded
+    engine can smoke, run hot and age quickly even when the brochure power looks
+    sufficient.
+  </p>
+  <p>
+    Compare aftercooler service requirements, diagnostic access, fuel-system
+    sensitivity, parts lead times and the ability to remove major components
+    from the engine room. Twin-engine access that looks acceptable before the
+    deck goes on can be expensive for the life of the boat.
+  </p>
+
+  <h2 id="sterndrive-and-pod">Sterndrive and pod-drive packages</h2>
+  <p>
+    A sterndrive or pod is not an engine type, but it changes the ownership
+    decision enough to compare as a complete propulsion system. Sterndrives
+    place the gearbox and steerable lower unit outside the transom. Pod systems
+    combine underwater gear, steering, exhaust and electronic control in an
+    integrated package.
+  </p>
+  <p>
+    Both can improve packaging and propulsion efficiency. Both also add
+    underwater seals, oil, anodes and scheduled haul-out work. Before buying,
+    identify the exact drive generation, obtain service history for the drive as
+    well as the engine, confirm local diagnostic capability and price the
+    time-based jobs. Read the detailed
+    <a href="/guides/shaft-vs-sterndrive-vs-ips/">shaft, sterndrive and IPS comparison</a>.
+  </p>
+
+  <h2 id="commercial-duty">Commercial-duty and workboat engines</h2>
+  <p>
+    Commercial engines are selected against annual operating hours, average
+    load, time at rated output and regulatory or classification requirements.
+    Manufacturers may offer several ratings from one displacement. The lower
+    headline output can be the correct—and longer-lived—choice for a vessel that
+    works every day.
+  </p>
+  <p>
+    Cooling options can include heat-exchanger, keel-cooled and separate-circuit
+    arrangements. Auxiliary power take-offs, dry or wet exhaust, survey
+    documentation and remote monitoring may matter as much as propulsion power.
+    Condition monitoring and oil-analysis trends are particularly valuable
+    because they turn a service history into evidence rather than a collection
+    of invoices.
+  </p>
+
+  <h2 id="marinised-base-engines">Marinised industrial base engines</h2>
+  <p>
+    Several marine brands begin with an industrial long motor and add the heat
+    exchanger, raw-water pump, exhaust elbow, mounts, gearbox interface,
+    alternator, control panel and wiring needed for a boat. This can widen
+    knowledge and availability for base-engine parts, but it does not make every
+    component interchangeable.
+  </p>
+  <p>
+    Keep both identities in the vessel record: the marine brand and model, plus
+    the base-engine family where confirmed. Use the mariniser's manual for the
+    marine cooling, exhaust and installation systems. Ordering an industrial
+    part by appearance can produce the wrong material, calibration or corrosion
+    protection for marine use.
+  </p>
+
+  <h2 id="generator-sets">Marine generator sets</h2>
+  <p>
+    A marine genset runs at governed constant speed to produce AC power. It has
+    its own raw-water circuit, heat exchanger, wet exhaust, controls and sound
+    enclosure. It should not be compared with propulsion engines by horsepower
+    because its useful output is electrical load and power quality.
+  </p>
+  <p>
+    Build a real load schedule before sizing. Chronic light loading can be as
+    unhelpful as undersizing, while air-conditioning start loads and battery
+    charging can be much higher than their steady-state figures. Check access to
+    the raw-water pump, filters, alternator end and exhaust components inside the
+    enclosure.
+  </p>
+
+  <h2 id="shortlist">How to build an engine shortlist</h2>
+  <ol class="decision-steps">
+    <li><strong>Define the operating profile.</strong> Record annual hours, displacement or planing duty, expected cruise load and maximum continuous demand.</li>
+    <li><strong>Measure the installed envelope.</strong> Include mounts, shaft line, gearbox, service clearances, exhaust, cooling, air intake and removal path.</li>
+    <li><strong>Match the driveline.</strong> Confirm reduction ratio, rotation, propeller calculation, shaft torque and whether the existing drive can accept the proposed engine.</li>
+    <li><strong>Compare the complete package.</strong> List gearbox or drive, panel, loom, alternator, mounts, exhaust, cooling parts, commissioning and warranty registration.</li>
+    <li><strong>Check Australian support.</strong> Ask who commissions the engine, who holds diagnostic access, where common parts are stocked and what happens outside the capital cities.</li>
+    <li><strong>Keep claims model-specific.</strong> Write the exact model, rating, serial-number range and specification revision into every quote.</li>
+  </ol>
+  <p>
+    Continue with the <a href="/guides/marine-diesel-repower-measurement-guide/">repower measurement guide</a>,
+    compare <a href="/guides/new-vs-reconditioned-marine-engine/">new and reconditioned engines</a>,
+    and use the <a href="/marine-engine-suppliers/">Australian supplier guide</a> when requesting proposals.
+  </p>
+
+  <section class="faq-list" aria-labelledby="frequently-asked-questions">
+    <h2 id="frequently-asked-questions">Frequently asked questions</h2>
+    {faqs.map((faq) => (
+      <details><summary>{faq.question}</summary><p>{faq.answer}</p></details>
+    ))}
+  </section>
+
+  <SourcePanel title="Manufacturer comparison sources" links={sources} />
+</Page>

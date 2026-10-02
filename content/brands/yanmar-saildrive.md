@@ -1,9 +1,9 @@
 ---
 url: /engine-brands/yanmar-saildrive/
-title: Yanmar & Volvo Saildrives Marine Engines In Australia
+title: Yanmar & Volvo Saildrives In Australia
 page_type: brand-hub
 wave: 3
-primary_keyword: yanmar & volvo saildrives marine engine
+primary_keyword: yanmar volvo saildrives australia
 secondary_keywords: [yanmar & volvo saildrives marine parts australia, yanmar & volvo saildrives marine service]
 priority: P0
 parent: /engine-brands/

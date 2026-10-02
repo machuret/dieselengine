@@ -1,10 +1,10 @@
 ---
 url: /engine-brands/man-marine/
-title: MAN Marine Marine Engines In Australia
+title: MAN Marine Engines In Australia
 page_type: brand-hub
 wave: 3
-primary_keyword: man marine marine engine
-secondary_keywords: [man marine marine parts australia, man marine marine service]
+primary_keyword: man marine engines australia
+secondary_keywords: [man marine parts australia, man marine service]
 priority: P1
 parent: /engine-brands/
 status: ready

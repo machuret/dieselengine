@@ -1,10 +1,10 @@
 ---
 url: /engine-brands/john-deere-marine/
-title: John Deere Marine Marine Engines In Australia
+title: John Deere Marine Engines In Australia
 page_type: brand-hub
 wave: 3
-primary_keyword: john deere marine marine engine
-secondary_keywords: [john deere marine marine parts australia, john deere marine marine service]
+primary_keyword: john deere marine engines australia
+secondary_keywords: [john deere marine parts australia, john deere marine service]
 priority: P0
 parent: /engine-brands/
 status: ready

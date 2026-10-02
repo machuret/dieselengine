@@ -8,23 +8,48 @@ const brands = allPages
   .map((page) => ({ page, mark: brandMarkFor(page.url), slug: brandSlug(page.url) }))
   .filter(({ mark }) => mark)
   .sort((a, b) => a.mark.name.localeCompare(b.mark.name));
+
+const groups = [
+  {
+    title: 'Propulsion engines',
+    description: 'Inboard engines used for sailing auxiliaries, planing craft, workboats and commercial vessels.',
+    items: brands.filter(({ page }) => !['transmission', 'saildrive', 'base-engine', 'genset'].includes(page.brandSegment)),
+  },
+  {
+    title: 'Platforms, drives and gearboxes',
+    description: 'Base-engine platforms, saildrives and marine transmissions need to be identified separately from the propulsion-engine badge.',
+    items: brands.filter(({ page }) => ['transmission', 'saildrive', 'base-engine'].includes(page.brandSegment)),
+  },
+  {
+    title: 'Onboard power',
+    description: 'Generator sets produce electricity at constant speed; they are not propulsion engines.',
+    items: brands.filter(({ page }) => page.brandSegment === 'genset'),
+  },
+];
 ---
 <section class="brand-directory" aria-labelledby="brand-directory-title">
   <div class="brand-directory-head">
     <p class="kicker">Brand directory</p>
     <h2 id="brand-directory-title">Find your engine or gearbox</h2>
     <p>Select the name on the engine plate. Combined pages cover related base engines, legacy names and drive systems.</p>
+    <p><a class="inline-cta" href="/marine-diesel-engine-types/">Compare engine types before comparing brands <span aria-hidden="true">→</span></a></p>
   </div>
-  <ul>
-    {brands.map(({ page, mark, slug }) => (
-      <li>
-        <a href={page.url} aria-label={`Open the ${mark.name} guide`}>
-          <BrandMark slug={slug} compact={true} />
-          <span>{mark.name}</span>
-          <span aria-hidden="true">→</span>
-        </a>
-      </li>
-    ))}
-  </ul>
+  {groups.map((group) => group.items.length > 0 && (
+    <div class="brand-directory__group">
+      <h3>{group.title}</h3>
+      <p>{group.description}</p>
+      <ul>
+        {group.items.map(({ page, mark, slug }) => (
+          <li>
+            <a href={page.url} aria-label={`Open the ${mark.name} guide`}>
+              <BrandMark slug={slug} compact={true} />
+              <span>{mark.name}</span>
+              <span aria-hidden="true">→</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  ))}
   <p class="brand-trademark-note">Manufacturer marks are shown for identification. Each mark remains the property of its respective owner.</p>
 </section>

@@ -24,6 +24,41 @@ because it widens your parts sources and your pool of mechanics.
 Find the engine plate on the rocker cover or block. It will read something like
 `D2-55`, `3YM30`, `QSB 6.7` or `4JH4-TE`.
 
+Start with the equipment category before the badge. A compact sailing
+auxiliary, a high-output planing engine and a commercial continuous-duty engine
+are not substitutes simply because their power overlaps.
+→ [Compare marine diesel engine types in Australia](/marine-diesel-engine-types/)
+
+## New availability versus the installed fleet
+
+The pages below cover both engines offered through current manufacturer and
+distributor networks and legacy families still found in Australian boats. A
+model appearing here does not mean it remains available new. Product ranges,
+duty ratings, emissions variants and distributor arrangements change.
+
+For a new purchase, confirm the exact model and rating on the manufacturer's
+current product page, then obtain an Australian package proposal showing the
+gearbox or drive, controls, cooling and exhaust components, commissioning,
+warranty registration and local service responsibility. For an existing boat,
+the engine plate and serial number matter more than today's brochure.
+
+## How to compare brand profiles
+
+Use the same six checks on every profile:
+
+1. **Equipment class** — propulsion engine, integrated drive, transmission,
+   base-engine platform or generator set.
+2. **Duty rating** — leisure, intermittent commercial or continuous duty, with
+   the permitted annual hours and load factor.
+3. **Installation** — dimensions, mounts, gearbox ratio, exhaust, cooling,
+   electrical system and service clearances.
+4. **Control generation** — mechanical or electronic, and who has the necessary
+   diagnostic access in your cruising area.
+5. **Australian support** — commissioning capability, common-parts stock,
+   regional field service and realistic lead times for major components.
+6. **Current versus legacy status** — whether the family is sold new, supported
+   as an installed engine, or reliant on base-engine and aftermarket knowledge.
+
 ## Inboard and sterndrive
 
 - **[Volvo Penta](/engine-brands/volvo-penta/)** — the dominant marine diesel

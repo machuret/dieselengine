@@ -1,9 +1,9 @@
 ---
 url: /engine-brands/marine-gensets/
-title: Marine Generator Sets Marine Engines In Australia
+title: Marine Generator Sets In Australia
 page_type: brand-hub
 wave: 3
-primary_keyword: marine generator sets marine engine
+primary_keyword: marine generator sets australia
 secondary_keywords: [marine generator sets marine parts australia, marine generator sets marine service]
 priority: P0
 parent: /engine-brands/

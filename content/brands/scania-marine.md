@@ -1,10 +1,10 @@
 ---
 url: /engine-brands/scania-marine/
-title: Scania Marine Marine Engines In Australia
+title: Scania Marine Engines In Australia
 page_type: brand-hub
 wave: 3
-primary_keyword: scania marine marine engine
-secondary_keywords: [scania marine marine parts australia, scania marine marine service]
+primary_keyword: scania marine engines australia
+secondary_keywords: [scania marine parts australia, scania marine service]
 priority: P1
 parent: /engine-brands/
 status: ready

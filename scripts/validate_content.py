@@ -74,6 +74,11 @@ def main():
               newline="", encoding="utf-8") as fh:
         for row in csv.DictReader(fh):
             planned[row["url"]] = row
+    # Astro-authored routes live outside keyword-map.csv but are still valid
+    # internal-link targets. Keep content-plan enforcement for Markdown pages
+    # while recognising the same static route table used by the sitemap.
+    known_urls = set(planned)
+    known_urls.update(route["url"] for route in SITE.get("staticRoutes", []))
 
     errors, warnings, seen = [], [], set()
     pages = []
@@ -158,7 +163,7 @@ def main():
                         f"(or site.config defaultAuthor)")
 
         for link in re.findall(r"\]\((/[^)#\s]*)\)", body):
-            if link not in planned and link != "/":
+            if link not in known_urls and link != "/":
                 warnings.append(f"{rel}: links to unplanned url {link}")
 
     print(f"Scanned {len(pages)} pages ({len(seen)} unique urls)")

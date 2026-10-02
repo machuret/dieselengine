@@ -1,10 +1,10 @@
 ---
 url: /engine-brands/caterpillar-marine/
-title: Caterpillar Marine Marine Engines In Australia
+title: Caterpillar Marine Engines In Australia
 page_type: brand-hub
 wave: 3
-primary_keyword: caterpillar marine marine engine
-secondary_keywords: [caterpillar marine marine parts australia, caterpillar marine marine service]
+primary_keyword: caterpillar marine engines australia
+secondary_keywords: [caterpillar marine parts australia, caterpillar marine service]
 priority: P0
 parent: /engine-brands/
 status: ready

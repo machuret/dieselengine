@@ -1,9 +1,9 @@
 ---
 url: /engine-brands/twin-disc/
-title: Twin Disc Gearboxes Marine Engines In Australia
+title: Twin Disc Marine Gearboxes In Australia
 page_type: brand-hub
 wave: 3
-primary_keyword: twin disc gearboxes marine engine
+primary_keyword: twin disc marine gearboxes australia
 secondary_keywords: [twin disc gearboxes marine parts australia, twin disc gearboxes marine service]
 priority: P0
 parent: /engine-brands/

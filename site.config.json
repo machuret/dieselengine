@@ -114,6 +114,11 @@
       "priority": "0.7"
     },
     {
+      "url": "/marine-diesel-engine-types/",
+      "section": "engines",
+      "priority": "0.8"
+    },
+    {
       "url": "/about/",
       "section": "pages",
       "priority": "0.6"

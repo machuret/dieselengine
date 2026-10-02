@@ -1,9 +1,9 @@
 ---
 url: /engine-brands/kubota-marine/
-title: Kubota Marine Base Engines Marine Engines In Australia
+title: Kubota Marine Base Engines In Australia
 page_type: brand-hub
 wave: 3
-primary_keyword: kubota marine base engines marine engine
+primary_keyword: kubota marine base engines australia
 secondary_keywords: [kubota marine base engines marine parts australia, kubota marine base engines marine service]
 priority: P0
 parent: /engine-brands/

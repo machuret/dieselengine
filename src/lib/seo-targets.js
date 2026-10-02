@@ -163,10 +163,12 @@ export function optimisePageSeo(page, currentDescription) {
       } else if (/saildrive|genset|base-engine/i.test(page.brandSegment || '')) {
         page.h1 = `${brand} in Australia`;
       } else {
-        page.h1 = `${brand} Engines in Australia`;
+        page.h1 = /\bmarine$/i.test(brand)
+          ? `${brand} Engines in Australia`
+          : `${brand} Marine Engines in Australia`;
       }
       page.title = page.h1;
-      page.primaryKeyword = `${brand} Australia`;
+      page.primaryKeyword = page.h1.replace(/ in Australia$/i, ' Australia');
     } else {
       page.title = page.h1;
     }

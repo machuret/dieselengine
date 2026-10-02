@@ -151,6 +151,8 @@ export function qualityWarnings(page) {
 }
 
 export function sectionOf(url) {
+  const configuredRoute = (site.staticRoutes ?? []).find((route) => route.url === url);
+  if (configuredRoute?.section) return configuredRoute.section;
   for (const s of site.sections) if (new RegExp(s.match).test(url)) return s.id;
   return 'pages';
 }

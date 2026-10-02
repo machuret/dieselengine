@@ -21,9 +21,9 @@ nothing else that matters to you as an owner. It is cooled by the sea it floats
 in, it corrodes from the inside as well as the outside, it spends most of its
 life switched off, and when it stops working you cannot pull over.
 
-This site explains what is actually happening inside your engine, what work
-should cost in Australia, and how to find someone competent. We don't repair
-engines and we don't sell parts.
+This site explains what is actually happening inside your engine, what shapes
+the scope and cost of marine work in Australia, and how to find someone
+competent. We don't repair engines and we don't sell parts.
 
 ## What makes a marine diesel different
 
@@ -119,7 +119,8 @@ atmosphere that attacks every connection.
   own seal and anode regime.
 - **Pod drives** — Volvo Penta IPS and similar.
 
-→ [Shaft drive vs sterndrive vs IPS](/guides/shaft-vs-sterndrive-vs-ips/) ·
+→ [Compare marine diesel engine types in Australia](/marine-diesel-engine-types/) ·
+[Shaft drive vs sterndrive vs IPS](/guides/shaft-vs-sterndrive-vs-ips/) ·
 [How a saildrive works](/guides/how-a-saildrive-works/)
 
 ## Know your engine
@@ -127,7 +128,8 @@ atmosphere that attacks every connection.
 Fault patterns follow the engine, not the boat's badge. Many Australian yachts
 carry a Kubota industrial block under a Beta, Nanni, Craftsman or Solé cover.
 
-→ Marine diesel engine brands in Australia
+→ [Marine diesel engine brands in Australia](/engine-brands/) ·
+[How to identify your exact engine](/how/how-to-identify-your-marine-engine/)
 
 ## Something wrong right now?
 

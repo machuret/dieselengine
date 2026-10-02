@@ -1,10 +1,10 @@
 ---
 url: /engine-brands/isuzu-marine/
-title: Isuzu Marine Marine Engines In Australia
+title: Isuzu Marine Engines In Australia
 page_type: brand-hub
 wave: 3
-primary_keyword: isuzu marine marine engine
-secondary_keywords: [isuzu marine marine parts australia, isuzu marine marine service]
+primary_keyword: isuzu marine engines australia
+secondary_keywords: [isuzu marine parts australia, isuzu marine service]
 priority: P1
 parent: /engine-brands/
 status: ready

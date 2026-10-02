@@ -1,10 +1,10 @@
 ---
 url: /engine-brands/craftsman-marine/
-title: Craftsman Marine Marine Engines In Australia
+title: Craftsman Marine Engines In Australia
 page_type: brand-hub
 wave: 3
-primary_keyword: craftsman marine marine engine
-secondary_keywords: [craftsman marine marine parts australia, craftsman marine marine service]
+primary_keyword: craftsman marine engines australia
+secondary_keywords: [craftsman marine parts australia, craftsman marine service]
 priority: P1
 parent: /engine-brands/
 status: ready

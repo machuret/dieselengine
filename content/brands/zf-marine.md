@@ -1,9 +1,9 @@
 ---
 url: /engine-brands/zf-marine/
-title: ZF Marine Gearboxes Marine Engines In Australia
+title: ZF Marine Gearboxes In Australia
 page_type: brand-hub
 wave: 3
-primary_keyword: zf marine gearboxes marine engine
+primary_keyword: zf marine gearboxes australia
 secondary_keywords: [zf marine gearboxes marine parts australia, zf marine gearboxes marine service]
 priority: P0
 parent: /engine-brands/

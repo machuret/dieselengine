@@ -1,10 +1,10 @@
 ---
 url: /engine-brands/lombardini-kohler/
-title: Lombardini / Kohler Marine Marine Engines In Australia
+title: Lombardini / Kohler Marine Engines In Australia
 page_type: brand-hub
 wave: 3
-primary_keyword: lombardini / kohler marine marine engine
-secondary_keywords: [lombardini / kohler marine marine parts australia, lombardini / kohler marine marine service]
+primary_keyword: lombardini kohler marine engines australia
+secondary_keywords: [lombardini marine parts australia, kohler marine service]
 priority: P1
 parent: /engine-brands/
 status: ready

@@ -1,10 +1,10 @@
 ---
 url: /engine-brands/doosan-marine/
-title: Doosan Marine Marine Engines In Australia
+title: Doosan Marine Engines In Australia
 page_type: brand-hub
 wave: 3
-primary_keyword: doosan marine marine engine
-secondary_keywords: [doosan marine marine parts australia, doosan marine marine service]
+primary_keyword: doosan marine engines australia
+secondary_keywords: [doosan marine parts australia, doosan marine service]
 priority: P1
 parent: /engine-brands/
 status: ready

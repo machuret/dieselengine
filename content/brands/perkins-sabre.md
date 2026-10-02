@@ -1,10 +1,10 @@
 ---
 url: /engine-brands/perkins-sabre/
-title: Perkins & Sabre Marine Marine Engines In Australia
+title: Perkins & Sabre Marine Engines In Australia
 page_type: brand-hub
 wave: 3
-primary_keyword: perkins & sabre marine marine engine
-secondary_keywords: [perkins & sabre marine marine parts australia, perkins & sabre marine marine service]
+primary_keyword: perkins sabre marine engines australia
+secondary_keywords: [perkins marine parts australia, sabre marine service]
 priority: P0
 parent: /engine-brands/
 status: ready

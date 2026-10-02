@@ -1,10 +1,10 @@
 ---
 url: /engine-brands/beta-marine/
-title: Beta Marine Marine Engines In Australia
+title: Beta Marine Engines In Australia
 page_type: brand-hub
 wave: 3
-primary_keyword: beta marine marine engine
-secondary_keywords: [beta marine marine parts australia, beta marine marine service]
+primary_keyword: beta marine engines australia
+secondary_keywords: [beta marine parts australia, beta marine service]
 priority: P0
 parent: /engine-brands/
 status: ready

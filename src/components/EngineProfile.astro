@@ -1,0 +1,49 @@
+---
+import { engineProfileFor, officialEngineSources } from '../data/engine-profiles.js';
+import { brandSlug } from '../lib/brand-marks.js';
+
+const { page } = Astro.props;
+const slug = brandSlug(page.url);
+const profile = engineProfileFor(page.brandSegment);
+const official = officialEngineSources[slug];
+const families = page.engineFamilies ?? [];
+---
+{page.pageType === 'brand-hub' && (
+  <section class="engine-profile" aria-labelledby="engine-profile-title">
+    <div class="engine-profile__head">
+      <p class="kicker">Australian engine profile</p>
+      <h2 id="engine-profile-title">How {page.brand ?? page.title} fits the market</h2>
+      <p>
+        {page.brand ?? page.title} is classified here as {profile.label.toLowerCase()}.
+        Confirm the exact model, generation and duty rating before comparing it
+        with another engine or propulsion system.
+      </p>
+    </div>
+    <dl class="engine-profile__facts">
+      <div><dt>Equipment class</dt><dd>{profile.group}</dd></div>
+      <div><dt>Engine type</dt><dd>{profile.label}</dd></div>
+      <div><dt>Australian fleet context</dt><dd>{page.brandNotes ?? profile.applications}</dd></div>
+      <div><dt>Compare first</dt><dd>{profile.priority}</dd></div>
+    </dl>
+
+    {families.length > 0 && (
+      <div class="engine-profile__families">
+        <h3>Families encountered in Australia</h3>
+        <ul>{families.map((family) => <li>{family}</li>)}</ul>
+        <p>
+          The list can include current and legacy equipment; confirm new-engine
+          availability with the Australian distributor.
+        </p>
+      </div>
+    )}
+
+    <div class="engine-profile__actions">
+      <a href="/marine-diesel-engine-types/">Compare marine engine types <span aria-hidden="true">→</span></a>
+      <a href="/how/how-to-identify-your-marine-engine/">Identify your exact model <span aria-hidden="true">→</span></a>
+      {page.brandSegment !== 'transmission' && page.brandSegment !== 'saildrive' && (
+        <a href="/guides/new-vs-reconditioned-marine-engine/">Compare new and reconditioned <span aria-hidden="true">→</span></a>
+      )}
+      {official && <a href={official.url} rel="external noopener">Official product information <span aria-hidden="true">↗</span></a>}
+    </div>
+  </section>
+)}

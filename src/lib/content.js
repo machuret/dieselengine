@@ -88,6 +88,12 @@ function build() {
     if (page.pageType === 'brand-hub' || page.pageType === 'distributor') {
       page.brand = ENGINE_BRANDS[slug]?.brand ?? null;
       page.brandSegment = ENGINE_BRANDS[slug]?.segment ?? null;
+      page.engineFamilies = (ENGINE_BRANDS[slug]?.notable_engine_families ?? '')
+        .split(';')
+        .map((family) => family.trim())
+        .filter(Boolean);
+      page.brandNotes = ENGINE_BRANDS[slug]?.notes ?? null;
+      page.auRelevance = Number(ENGINE_BRANDS[slug]?.au_relevance ?? 0);
     }
     if (page.pageType === 'distributor') {
       page.cluster = distributorCluster(page.brandSegment);

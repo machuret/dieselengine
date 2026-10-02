@@ -1,10 +1,10 @@
 ---
 url: /engine-brands/cummins-marine/
-title: Cummins Marine Marine Engines In Australia
+title: Cummins Marine Engines In Australia
 page_type: brand-hub
 wave: 3
-primary_keyword: cummins marine marine engine
-secondary_keywords: [cummins marine marine parts australia, cummins marine marine service]
+primary_keyword: cummins marine engines australia
+secondary_keywords: [cummins marine parts australia, cummins marine service]
 priority: P0
 parent: /engine-brands/
 status: ready
