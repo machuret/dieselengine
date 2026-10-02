@@ -129,6 +129,11 @@
       "priority": "0.6"
     },
     {
+      "url": "/about/gabriel-machuret/",
+      "section": "pages",
+      "priority": "0.5"
+    },
+    {
       "url": "/editorial-policy/",
       "section": "pages",
       "priority": "0.6"

@@ -1,0 +1,142 @@
+---
+import Page from '../../layouts/Page.astro';
+import site from '../../../site.config.json' with { type: 'json' };
+
+const page = {
+  url: '/about/gabriel-machuret/', title: 'Gabriel Machuret — Founder',
+  seoTitle: 'Gabriel Machuret — Founder of Marine Diesel Engine Australia',
+  seoTitleTag: 'Gabriel Machuret | Marine Diesel Engine Australia Founder',
+  pageType: 'founder-profile', status: 'ready',
+  author: 'Gabriel Machuret', authorType: 'Person',
+  authorUrl: '/about/gabriel-machuret/', reviewer: null,
+  needsReviewer: false, parent: '/about/', parentTitle: 'About us',
+  schema: ['AboutPage', 'BreadcrumbList'], updated: '2026-10-02',
+  indexable: true, blockers: [], faqs: [],
+  headings: [
+    { depth: 2, slug: 'marketing-and-publishing', text: 'Marketing and publishing' },
+    { depth: 2, slug: 'building-around-life', text: 'Building around the life I want' },
+    { depth: 2, slug: 'why-marine-diesel-engine', text: 'Why Marine Diesel Engine Australia' },
+    { depth: 2, slug: 'what-i-am-and-am-not', text: 'What I am—and what I am not' },
+    { depth: 2, slug: 'get-in-touch', text: 'Get in touch' },
+  ],
+  description: 'Meet Gabriel Machuret, founder of Marine Diesel Engine Australia and YouSail. Learn about his publishing career, books and sailing plans.',
+  primaryKeyword: 'Gabriel Machuret founder', searchIntent: 'Navigational',
+  extraSchema: [
+    {
+      '@type': 'ProfilePage',
+      '@id': `${site.domain}/about/gabriel-machuret/#profile`,
+      mainEntity: { '@id': `${site.domain}/about/gabriel-machuret/#person` },
+      dateModified: '2026-10-02',
+    },
+    {
+      '@type': 'Person',
+      '@id': `${site.domain}/about/gabriel-machuret/#person`,
+      name: 'Gabriel Machuret',
+      url: `${site.domain}/about/gabriel-machuret/`,
+      jobTitle: 'Founder and publisher',
+      description: 'Founder of Marine Diesel Engine Australia and YouSail; marketer, author and digital publisher.',
+      sameAs: ['https://yousail.com.au/'],
+      worksFor: { '@id': `${site.domain}/#publisher` },
+    },
+  ],
+};
+---
+<Page page={page}>
+  <header class="founder-profile-hero">
+    <div class="founder-monogram founder-monogram--large" aria-hidden="true">GM</div>
+    <div>
+      <p class="kicker">Founder and publisher</p>
+      <h1>Gabriel Machuret</h1>
+      <p>
+        I’m Gabriel, the creator of Marine Diesel Engine Australia and
+        <a href="https://yousail.com.au/" rel="noopener noreferrer">YouSail</a>.
+        I build useful websites around the life I want to live. Right now, that
+        life is sailing.
+      </p>
+    </div>
+  </header>
+
+  <h2 id="marketing-and-publishing">Marketing and publishing</h2>
+  <p>
+    My background is marketing. I have spent more than a decade in search
+    engine optimisation and app store optimisation, and I was one of the first
+    people to treat ASO as its own discipline. In 2013, I launched the first
+    ASO course on Udemy, then wrote <em>The ASO Bible</em> and <em>ASO Ninja</em>.
+    More than 10,000 students have been through my courses.
+  </p>
+  <p>
+    Along the way I ran a marketing agency and worked with companies including
+    Red Bull, Disney, EA Games, FreshBooks, PBS and Xerox. I have helped more
+    than 500 developers and app companies get found, and spoken at conferences
+    in London, Singapore, China and Thailand. I also acquired the ASO company
+    Appmind, which was later acquired by Mobile Action, where I stayed on as a
+    consultant and ambassador.
+  </p>
+  <p>
+    Not everything I write is about marketing. <em>Zero Excuses</em> is my book
+    about living a beautiful life. <em>The Lazy Bastard</em> is a productivity
+    guide for procrastinators.
+  </p>
+
+  <h2 id="building-around-life">Building around the life I want</h2>
+  <p>
+    I have a habit: I build websites around the life I want to live. When I
+    worked as a diving instructor, I built diving websites. Now it is sailing.
+  </p>
+  <p>
+    My partner Kristy and I are working towards buying a yacht, moving aboard
+    and sailing Australia and the Pacific. We are still learning, taking
+    courses, spending time on boats and asking a lot of questions. That process
+    has already produced a network of useful sailing projects, including Top
+    Marinas, Sailing Schools, Sailing Courses, Sailing Clubs, Top Charters and
+    Buy Sails.
+  </p>
+
+  <h2 id="why-marine-diesel-engine">Why Marine Diesel Engine Australia</h2>
+  <p>
+    Prepare for life aboard and engine questions arrive quickly. What does a
+    warning sign mean? Which maintenance jobs belong on the calendar? How do
+    two engines really compare? What should a repower quote include? The answers
+    live in many different places and are often written for technicians rather
+    than owners.
+  </p>
+  <p>
+    So I did what I know how to do: collect information, organise it around real
+    questions and make it easier to use. Marine Diesel Engine Australia is not
+    a substitute for a workshop manual or mechanic. It is a better starting
+    point for understanding the issue and having a more informed conversation
+    with the right professional.
+  </p>
+
+  <aside class="founder-quote">
+    <p>“Moving onto a yacht is me running out of excuses.”</p>
+  </aside>
+
+  <h2 id="what-i-am-and-am-not">What I am—and what I am not</h2>
+  <p>
+    I am not a marine mechanic, naval architect or expert sailor, and I have not
+    worked on every engine described here. My expertise is research, digital
+    publishing and making complex information easier to navigate. Technical
+    claims should come from identifiable primary sources, and qualified review
+    should be named rather than implied.
+  </p>
+  <p>
+    That distinction matters. Advice about an engine can be incomplete or
+    wrong, including advice published here. Always check the manual for the
+    exact model and installation, and use a qualified marine mechanic for
+    diagnosis, safety-critical work and decisions that could damage the vessel
+    or put people at risk.
+  </p>
+
+  <h2 id="get-in-touch">Get in touch</h2>
+  <p>
+    I’m based in Merimbula on the NSW South Coast. If you maintain marine
+    engines, represent a marine brand, have evidence that can improve a guide or
+    simply want to talk boats, email me at
+    <a href="mailto:gabriel@yousail.com.au">gabriel@yousail.com.au</a>.
+  </p>
+  <p class="about-close">
+    Follow the wider sailing story at
+    <a href="https://yousail.com.au/" rel="noopener noreferrer">YouSail.com.au <span aria-hidden="true">↗</span></a>.
+  </p>
+</Page>

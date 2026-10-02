@@ -13,7 +13,8 @@ const staticRecords = [
   ['/resources/', 'Marine Diesel Authority Resources', 'Official manufacturer manuals, Australian regulators, safety organisations and consumer resources for marine engine owners.', 'Resources'],
   ['/marine-diesel-engine-types/', 'Marine Diesel Engine Types in Australia', 'Compare yacht auxiliaries, planing inboards, sterndrives, pod systems, commercial engines, marinised base engines and generator sets.', 'Engine comparison'],
   ['/marine-diesel-engine-comparisons/', 'Marine Diesel Engine Comparisons Australia', 'Explore 15 research-based marine engine comparisons for Australian yacht repowers, commercial workboats and high-output motor yachts.', 'Engine comparison'],
-  ['/about/', 'About Marine Diesel Engine Australia', 'Who publishes this independent marine engine information site and what its editorial team does and does not do.', 'About'],
+  ['/about/', 'About Marine Diesel Engine Australia', 'Meet the people behind this independent publication, why Gabriel Machuret created it and how its marine engine guides are researched.', 'About'],
+  ['/about/gabriel-machuret/', 'Gabriel Machuret — Founder', 'Meet the founder of Marine Diesel Engine Australia and YouSail, including his publishing background and sailing story.', 'About'],
   ['/editorial-policy/', 'Editorial and Sourcing Policy', 'How the site researches, sources, reviews, updates and corrects marine diesel information.', 'Policy'],
   ['/disclaimer/', 'Marine Diesel Information Disclaimer', 'Important limits of general marine diesel information and when to use qualified professional help.', 'Safety'],
 ];

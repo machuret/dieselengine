@@ -7,71 +7,156 @@ const page = {
   seoTitle: 'About Marine Diesel Engine Australia', pageType: 'about',
   status: 'ready', author: site.defaultAuthor, reviewer: null,
   needsReviewer: false, parent: '/', parentTitle: 'Home',
-  schema: ['AboutPage', 'BreadcrumbList'], updated: site.legalUpdated,
+  schema: ['AboutPage', 'BreadcrumbList'], updated: '2026-10-02',
   indexable: true, blockers: [], faqs: [],
   headings: [
-    { depth: 2, slug: 'editorial-team', text: 'Our editorial team' },
-    { depth: 2, slug: 'what-we-publish', text: 'What we publish' },
-    { depth: 2, slug: 'what-we-do-not-do', text: 'What we do not do' },
-    { depth: 2, slug: 'how-to-contact-us', text: 'How to contact us' },
+    { depth: 2, slug: 'why-this-site-exists', text: 'Why this site exists' },
+    { depth: 2, slug: 'meet-the-founder', text: 'Meet the founder' },
+    { depth: 2, slug: 'how-we-build-the-guides', text: 'How we build the guides' },
+    { depth: 2, slug: 'editorial-team', text: 'Editorial team and technical review' },
+    { depth: 2, slug: 'editorial-independence', text: 'Editorial independence' },
+    { depth: 2, slug: 'the-yousail-network', text: 'The YouSail network' },
+    { depth: 2, slug: 'contact-us', text: 'Contact us' },
   ],
-  description: 'Learn who publishes Marine Diesel Engine Australia, what our independent engine guides cover and how we research, disclose and correct information.',
+  description: 'Meet the people behind Marine Diesel Engine Australia, learn why Gabriel Machuret created the site and see how its independent engine guides are researched.',
   primaryKeyword: 'about Marine Diesel Engine Australia', searchIntent: 'Navigational',
+  extraSchema: [
+    {
+      '@type': 'Person',
+      '@id': `${site.domain}/about/gabriel-machuret/#person`,
+      name: 'Gabriel Machuret',
+      url: `${site.domain}/about/gabriel-machuret/`,
+      jobTitle: 'Founder',
+      worksFor: { '@id': `${site.domain}/#publisher` },
+      sameAs: ['https://yousail.com.au/'],
+    },
+  ],
 };
 ---
 <Page page={page}>
-  <h1>About Marine Diesel Engine Australia</h1>
+  <header class="about-hero">
+    <p class="kicker">Independent Australian publication</p>
+    <h1>About Marine Diesel Engine Australia</h1>
+    <p>
+      We make marine diesel information easier to find, compare and use. Marine
+      Diesel Engine Australia is part of <a href="https://yousail.com.au/" rel="noopener noreferrer">YouSail</a>,
+      an Australian sailing network created by Gabriel Machuret.
+    </p>
+    <div class="about-principles" aria-label="Our publishing principles">
+      <span>Practical</span><span>Independent</span><span>Source-led</span>
+    </div>
+  </header>
+
+  <h2 id="why-this-site-exists">Why this site exists</h2>
   <p>
-    Marine Diesel Engine Australia is an independent educational publication
-    for Australian boat owners, buyers and operators. It turns common engine
-    symptoms, service decisions and marine terminology into practical starting
-    points, with safety limits and links to primary sources made clear.
+    Plan a life aboard a yacht and the engine stops being a mysterious box under
+    the companionway. It becomes the system that gets you into an anchorage,
+    charges essential equipment and brings you home when the wind disappears.
+    Yet useful answers are scattered across manuals, manufacturer pages,
+    workshop knowledge, forums and old owner discussions.
+  </p>
+  <p>
+    We built this publication to organise that information around the decisions
+    Australian boat owners actually make: understanding a symptom, planning a
+    service, comparing engines, assessing a used boat, budgeting for a repower
+    and finding the right professional help.
   </p>
 
-  <h2 id="editorial-team">Our editorial team</h2>
+  <section class="founder-card" aria-labelledby="meet-the-founder">
+    <div class="founder-monogram" aria-hidden="true">GM</div>
+    <div>
+      <p class="kicker">Founder</p>
+      <h2 id="meet-the-founder">Meet Gabriel Machuret</h2>
+      <p>
+        Gabriel is a marketer, researcher and sailor in the making. He has spent
+        more than a decade turning difficult-to-find information into useful
+        digital resources. Marine Diesel Engine Australia applies that work to
+        one of boating’s most technical and consequential subjects.
+      </p>
+      <a class="text-arrow" href="/about/gabriel-machuret/">Read Gabriel’s story <span aria-hidden="true">→</span></a>
+    </div>
+  </section>
+
+  <h2 id="how-we-build-the-guides">How we build the guides</h2>
   <p>
-    Articles are prepared under the organisational byline “The Marine Diesel
-    Engine editorial team”. That byline describes a publishing function, not a
-    named marine engineer or a claim of professional certification. Where a
-    qualified person reviews a page, the reviewer will be identified on that
-    page. A page without a named reviewer should not be read as technically
-    certified.
+    Our starting point is primary evidence: current manufacturer specifications,
+    engine manuals, Australian regulator guidance and recognised safety
+    organisations. We compare claims across sources, state the model or duty
+    context where it matters, link readers to the underlying material and mark
+    the limits of general advice.
   </p>
+  <div class="about-method-grid">
+    <article>
+      <strong>Start with the real question</strong>
+      <span>What does a boat owner need to identify, compare or ask next?</span>
+    </article>
+    <article>
+      <strong>Prefer primary sources</strong>
+      <span>Manuals, manufacturer data and official Australian guidance come first.</span>
+    </article>
+    <article>
+      <strong>Separate facts from judgement</strong>
+      <span>Specifications are labelled; selection advice includes its assumptions.</span>
+    </article>
+    <article>
+      <strong>Correct the record</strong>
+      <span>Readers and businesses can submit evidence through our corrections process.</span>
+    </article>
+  </div>
   <p>
-    The site is powered by <strong>YouSail.com.au</strong>. YouSail provides the
-    publishing platform and editorial support; the site does not operate a
-    repair workshop or sell marine engines and parts.
+    Read our <a href="/editorial-policy/">editorial policy</a>, explore our
+    <a href="/resources/">authority resources</a> or see how we handle
+    <a href="/corrections/">corrections</a>.
   </p>
 
-  <h2 id="what-we-publish">What we publish</h2>
+  <h2 id="editorial-team">Editorial team and technical review</h2>
   <p>
-    The library covers marine diesel troubleshooting, cooling and exhaust
-    systems, routine service work, buying and repowering decisions, engine
-    brands, supplier categories and Australian location guides. Our aim is to
-    help a reader ask better questions and recognise when professional help is
-    required—not to replace the manual for a specific engine or vessel.
+    “The Marine Diesel Engine editorial team” is our organisational publishing
+    byline. It describes the research, writing, editing and maintenance of the
+    site; it is not the name of a marine engineer and does not imply technical
+    certification. Gabriel leads the publication and its information design.
   </p>
   <p>
-    Read our <a href="/editorial-policy/">editorial policy</a> for the source
-    hierarchy, update process and use of publishing tools. The
-    <a href="/resources/">authority resources</a> page links directly to
-    manufacturers, regulators and safety organisations.
+    When a qualified person reviews a guide, that reviewer is identified by
+    name on the page. If no reviewer is named, readers should not assume that a
+    marine mechanic has certified the content.
   </p>
 
-  <h2 id="what-we-do-not-do">What we do not do</h2>
+  <h2 id="editorial-independence">Editorial independence</h2>
   <p>
-    We do not diagnose individual engines, supervise repairs, warrant the work
-    of listed businesses or guarantee that general information fits a
-    particular installation. Prices and business details are published only
-    when the source and context can be stated. Read the
-    <a href="/disclaimer/">information disclaimer</a> before acting on a guide.
+    We are an information publisher, not a marine workshop, engine distributor
+    or parts seller. We do not diagnose individual engines or claim that a
+    general guide replaces a model-specific manual, a qualified marine mechanic
+    or an onboard inspection. A named technical reviewer appears only where a
+    real person has reviewed that page.
+  </p>
+  <p>
+    Business listings are not endorsements. Where a listing or referral is
+    commercial, we disclose it. Safety-sensitive pages tell readers when to stop
+    the engine and seek professional help. Before acting on a guide, read the
+    <a href="/disclaimer/">information disclaimer</a>.
   </p>
 
-  <h2 id="how-to-contact-us">How to contact us</h2>
+  <h2 id="the-yousail-network">The YouSail network</h2>
   <p>
-    Use the <a href="/contact/">contact form</a> to report a factual error,
-    suggest a primary source or request a business-listing change. Our
-    <a href="/corrections/">corrections policy</a> explains what evidence helps
-    us assess a change quickly.
+    Marine Diesel Engine Australia sits alongside a growing collection of
+    practical Australian boating resources. The network covers marinas, sailing
+    schools, courses, clubs, charters, sails and other parts of life on the water.
+  </p>
+  <div class="network-links" aria-label="YouSail network topics">
+    <span>Top Marinas</span><span>Sailing Schools</span><span>Sailing Courses</span>
+    <span>Sailing Clubs</span><span>Top Charters</span><span>Buy Sails</span>
+  </div>
+
+  <h2 id="contact-us">Contact us</h2>
+  <p>
+    If you represent a marine brand, maintain engines professionally, have a
+    primary source we should review or have found a factual error, we would like
+    to hear from you. Use our <a href="/contact/">contact form</a> or email
+    <a href="mailto:gabriel@yousail.com.au">gabriel@yousail.com.au</a>.
+  </p>
+  <p class="about-close">
+    For the wider Australian sailing project, visit
+    <a href="https://yousail.com.au/" rel="noopener noreferrer">YouSail.com.au <span aria-hidden="true">↗</span></a>.
   </p>
 </Page>

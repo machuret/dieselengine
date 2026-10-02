@@ -5,8 +5,10 @@ import site from '../../site.config.json' with { type: 'json' };
   <div class="footer-inner">
     <div>
       <div class="footer-powered">
-        <img src="/brand/yousail-logo.png" width="64" height="64" alt="YouSail logo" loading="lazy" />
-        <p>Powered by <strong>YouSail.com.au</strong></p>
+        <a href="https://yousail.com.au/" rel="noopener noreferrer" aria-label="Powered by YouSail.com.au">
+          <img src="/brand/yousail-logo.png" width="64" height="64" alt="" loading="lazy" />
+          <span>Powered by <strong>YouSail.com.au</strong></span>
+        </a>
       </div>
       <p><strong>{site.name}</strong> — {site.tagline}.</p>
       <p>
@@ -46,7 +48,8 @@ import site from '../../site.config.json' with { type: 'json' };
         <a href="/search/">Search the site</a>
         <a href="/find-a-marine-mechanic/">Find a mechanic</a>
         <a href="/resources/">Authority resources</a>
-        <a href="/about/">About this publication</a>
+        <a href="/about/">About us</a>
+        <a href="/about/gabriel-machuret/">Gabriel Machuret</a>
         <a href="/editorial-policy/">Editorial policy</a>
         <a href="/corrections/">Corrections policy</a>
         <a href="/contact/">Contact</a>

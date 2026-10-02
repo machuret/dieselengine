@@ -73,10 +73,10 @@ const jsonld = {
       ...(page.updated ? { dateModified: page.updated } : {}),
       ...(page.keywords?.length ? { keywords: page.keywords.join(', ') } : {}),
       ...(page.author ? { author: {
-        '@type': 'Organization',
-        '@id': `${site.domain}/about/#editorial-team`,
+        '@type': page.authorType ?? 'Organization',
+        '@id': page.authorType === 'Person' ? `${site.domain}${page.authorUrl}#person` : `${site.domain}/about/#editorial-team`,
         name: page.author,
-        url: `${site.domain}/about/`,
+        url: new URL(page.authorUrl ?? '/about/', site.domain).href,
       } } : {}),
       ...(page.reviewer ? { reviewedBy: { '@type': 'Person', name: page.reviewer } } : {}),
       publisher: { '@id': `${site.domain}/#publisher` },
@@ -242,7 +242,7 @@ const jsonld = {
           <Related page={page} />
           <footer class="byline">
             {page.author
-              ? <p>Editorially prepared by <a href="/about/#editorial-team">{page.author}</a>{page.reviewer ? `. Technically reviewed by ${page.reviewer}.` : ''}</p>
+              ? <p>Editorially prepared by <a href={page.authorUrl ?? '/about/#editorial-team'}>{page.author}</a>{page.reviewer ? `. Technically reviewed by ${page.reviewer}.` : ''}</p>
               : <p>Author not yet assigned.</p>}
             {page.updated && <p>Last updated {page.updated}.</p>}
             <p><a href="/editorial-policy/">How we research, source and correct our guides</a>.</p>

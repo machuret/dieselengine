@@ -85,6 +85,7 @@ ${questionClusters.map((c) => `- [${c.title}](${d}/questions/${c.slug}/): ${c.bl
 ## Site information
 
 - [About this publication](${d}/about/)
+- [Gabriel Machuret — founder](${d}/about/gabriel-machuret/)
 - [Editorial and sourcing policy](${d}/editorial-policy/)
 - [Corrections policy](${d}/corrections/)
 - [Site index](${d}/sitemap/)
