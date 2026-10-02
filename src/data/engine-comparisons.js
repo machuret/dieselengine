@@ -9,6 +9,174 @@ const yachtVisual = { comparisonGroup: 'yacht', image: '/images/marine-engine-co
 const commercialVisual = { comparisonGroup: 'commercial', image: '/images/marine-engine-comparison-commercial.jpg', imageAlt: 'Twin unbranded commercial marine diesel engines installed beside a central service walkway in a workboat engine room', imageCaption: 'Original editorial visual—not specific models. Commercial selection starts with duty rating, operating hours, installation engineering and field support.' };
 const performanceVisual = { comparisonGroup: 'performance', image: '/images/marine-engine-comparison-performance-yacht.jpg', imageAlt: 'Twin unbranded high-output marine diesel engines installed symmetrically in a large motor yacht engine room', imageCaption: 'Original editorial visual—not specific models. High-output engines must be compared as complete propulsion systems, not isolated horsepower figures.' };
 
+const modelMatchups = {
+  'yanmar-vs-volvo-penta': {
+    title: 'Yanmar 3YM30AE vs Volvo Penta D1-30 Marine Engine',
+    context: 'A compact yacht-auxiliary shortlist near 30 hp. Volvo Penta publishes the current D1 as a family range, so the exact D1-30F package sheet and selected gearbox or saildrive still need to be obtained with the quote.',
+    left: { model: 'Yanmar 3YM30AE', output: '21.3 kW / 29.1 mhp', rpm: '3,200 rpm', cylinders: '3 in-line', displacement: '1.266 L', weight: '127 kg without gear', rating: 'ISO 8665 crankshaft output', driveline: 'KM2P-1 shaft gear or SD25 saildrive' },
+    right: { model: 'Volvo Penta D1-30F', output: 'D1 family up to 20 kW / 27 hp', rpm: 'Confirm exact D1-30F sheet', cylinders: '3 in-line', displacement: 'D1 family up to 1.1 L', weight: 'Confirm with gear or saildrive', rating: 'Current D1 family specification', driveline: 'Inboard shaft or Volvo Penta saildrive' },
+    verdict: 'The Yanmar publishes slightly more headline output, but this is principally a footprint, drive, control and installation comparison. Require the D1-30F product sheet for the exact Australian package before scoring the numbers.',
+    sources: [
+      { title: 'Yanmar — 3YM30AE specifications', url: 'https://www.yanmar.com/marine/product/engines/3ym30ae/' },
+      { title: 'Volvo Penta — current D1 marine engine range', url: 'https://www.volvopenta.com/marine/all-marine-engines/' },
+    ],
+  },
+  'beta-marine-vs-nanni': {
+    title: 'Beta 30 vs Nanni N3.30 Marine Engine',
+    context: 'A particularly close model pairing: both use a 1.123-litre, three-cylinder Kubota base and produce about 30 hp, but the marinisation, dimensions, included equipment and support channel remain brand-specific.',
+    left: { model: 'Beta 30', output: '30 hp / 22.1 kW', rpm: '3,600 rpm', cylinders: '3 in-line', displacement: '1.123 L', weight: '139 kg', rating: 'Recreational specification', driveline: 'Multiple shaft gears; saildrive version available' },
+    right: { model: 'Nanni N3.30', output: '21.3 kW / 29 hp', rpm: '3,600 rpm', cylinders: '3 in-line', displacement: '1.123 L', weight: '136 kg', rating: 'Nanni M5', driveline: 'Shaft line or saildrive' },
+    verdict: 'The base-engine numbers are almost identical. Compare mount geometry, sump, exhaust, gearbox, panel, alternator, warranty party and which mariniser-specific parts are held locally.',
+    sources: [
+      { title: 'Beta Marine — Beta 30 technical specifications', url: 'https://betamarine.co.uk/portfolio/beta-30/' },
+      { title: 'Nanni — N3.30 specifications', url: 'https://nannienergy.com/product/engine-n3-30/' },
+    ],
+  },
+  'cummins-vs-caterpillar': {
+    title: 'Cummins QSB6.7 425 vs Caterpillar C9.3 416 Marine Engine',
+    context: 'A deliberately power-adjacent comparison that demonstrates why matching horsepower alone is unsafe: the Cummins high-output rating and Cat C commercial rating are not the same duty proposition.',
+    left: { model: 'Cummins QSB6.7 425', output: '312 kW / 425 mhp', rpm: '3,000 rpm', cylinders: '6 in-line', displacement: '6.7 L', weight: '658 kg', rating: 'High Output', driveline: 'Conventional marine gear selected separately' },
+    right: { model: 'Cat C9.3 416', output: '310 bkW / 416 bhp', rpm: '2,100 rpm', cylinders: '6 in-line', displacement: '9.3 L', weight: '1,122 kg approximate', rating: 'C rating', driveline: 'Commercial marine gear selected separately' },
+    verdict: 'Outputs are close, but rated speed, displacement, mass and duty category are materially different. Only compare them after the vessel mission and permitted full-load exposure are documented.',
+    sources: [
+      { title: 'Cummins — QSB6.7 marine specifications and ratings', url: 'https://www.cummins.com/en-eu/engines/products/qsb67qsb7' },
+      { title: 'Caterpillar — C9.3 commercial propulsion specifications', url: 'https://www.cat.com/en_US/products/new/power-systems/marine-power-systems/commercial-propulsion-engines/1000015283.html' },
+    ],
+  },
+  'john-deere-vs-scania': {
+    title: 'John Deere 6090SFM85 550 vs Scania DI13 070M 550 Marine Engine',
+    context: 'Both carry a 550 hp headline, but Deere identifies this output as an M5 rating at 2,500 rpm while the Scania example is an ICFN commercial rating at 1,800 rpm.',
+    left: { model: 'John Deere 6090SFM85 M5', output: '410 kW / 550 bhp', rpm: '2,500 rpm', cylinders: '6 in-line', displacement: '9.0 L', weight: '1,056 kg dry', rating: 'M5', driveline: 'Commercial shaft gear selected to application' },
+    right: { model: 'Scania DI13 070M', output: '405 kW / 550 hp', rpm: '1,800 rpm', cylinders: '6 in-line', displacement: '12.7 L', weight: '1,180 kg excluding fluids', rating: 'ICFN', driveline: 'Commercial shaft gear selected to application' },
+    verdict: 'The identical horsepower label does not make these interchangeable. The 700 rpm speed difference and rating definitions change gearbox ratio, propeller calculation and allowable operating profile.',
+    sources: [
+      { title: 'John Deere — 6090SFM85 propulsion specification', url: 'https://www.deere.com/assets/pdfs/common/industries/engines-and-drivetrain/specsheets/6090sfm85_a.pdf' },
+      { title: 'Scania — DI13 marine engine specifications', url: 'https://www.scania.com/br/pt/home/products/power-solutions/marine-power-systems/marine-power-systems-specifications.html' },
+    ],
+  },
+  'man-vs-volvo-penta': {
+    title: 'MAN V8-1000 vs Volvo Penta D13-1000 Marine Engine',
+    context: 'A 1,000 hp shaft-drive comparison for large motor yachts. It contrasts a 16.16-litre V8 with a 12.8-litre in-line six and must be separated from a Volvo Penta IPS package comparison.',
+    left: { model: 'MAN V8-1000', output: '735 kW / 1,000 hp', rpm: '2,300 rpm', cylinders: 'V8', displacement: '16.16 L', weight: '1,780 kg average dry', rating: 'Pleasure-duty specification', driveline: 'Conventional marine gear and shaft' },
+    right: { model: 'Volvo Penta D13-1000', output: '735 kW / 1,000 hp', rpm: 'Confirm offered variant', cylinders: '6 in-line', displacement: '12.8 L', weight: 'Confirm offered package', rating: 'Volvo Penta Rating 5 on current IMO III listing', driveline: 'Inboard shaft; D13 also exists in IPS packages' },
+    verdict: 'Power is equal on paper, but engine configuration, displacement, installation mass and system boundary differ. Compare shaft-to-shaft proposals and do not price a bare engine against an IPS system.',
+    sources: [
+      { title: 'MAN — V8-1000 pleasure-engine technical data', url: 'https://www.man.eu/content/dam/man/man-engines/doc/produkte/marine-1/Marine_Pleasure_A5_EN_250730_web.pdf/_jcr_content/renditions/original./Marine_Pleasure_A5_EN_250730_web.pdf' },
+      { title: 'Volvo Penta — D13-1000 IMO III inboard technical data', url: 'https://www.volvopenta.com/en-us/marine/all-marine-engines/d13-imo-iii/' },
+    ],
+  },
+  'yanmar-vs-beta-marine': {
+    title: 'Yanmar 3YM30AE vs Beta 30 Marine Engine',
+    context: 'Two compact shaft-drive repower candidates around 30 hp, with different displacement, rated speed, standard alternator and package architecture.',
+    left: { model: 'Yanmar 3YM30AE', output: '21.3 kW / 29.1 mhp', rpm: '3,200 rpm', cylinders: '3 in-line', displacement: '1.266 L', weight: '127 kg without gear', rating: 'ISO 8665 crankshaft output', driveline: 'KM2P-1 shaft gear or SD25 saildrive' },
+    right: { model: 'Beta 30', output: '30 hp / 22.1 kW', rpm: '3,600 rpm', cylinders: '3 in-line', displacement: '1.123 L', weight: '139 kg', rating: 'Recreational specification', driveline: 'Choice of shaft gears; saildrive variant' },
+    verdict: 'The outputs are close enough for a real shortlist, but mount centres, shaft height, rated speed, alternator, gearbox ratio and propeller demand need to be compared from dimensioned proposals.',
+    sources: [
+      { title: 'Yanmar — 3YM30AE specifications', url: 'https://www.yanmar.com/marine/product/engines/3ym30ae/' },
+      { title: 'Beta Marine — Beta 30 technical specifications', url: 'https://betamarine.co.uk/portfolio/beta-30/' },
+    ],
+  },
+  'yanmar-vs-nanni': {
+    title: 'Yanmar 4JH45 vs Nanni N4.50 Marine Engine',
+    context: 'A naturally aspirated four-cylinder comparison around 45–48 hp. Displacement and dry mass are close, but injection system, rated speed and controls differ.',
+    left: { model: 'Yanmar 4JH45', output: '33.1 kW / 45 mhp', rpm: '3,000 rpm', cylinders: '4 in-line', displacement: '2.190 L', weight: '220 kg without gear', rating: 'ISO 8665 crankshaft output', driveline: 'Multiple shaft gears or SD60 saildrive' },
+    right: { model: 'Nanni N4.50', output: '35.4 kW / 47.5 hp', rpm: '2,800 rpm', cylinders: '4 in-line', displacement: '2.197 L', weight: '216 kg dry', rating: 'Nanni M4', driveline: 'Shaft line or saildrive' },
+    verdict: 'Physical mass and displacement are similar, but the Yanmar uses common-rail direct injection while the Nanni sheet lists mechanical indirect injection. That affects controls, diagnostics and installation—not simply output.',
+    sources: [
+      { title: 'Yanmar — 4JH45 specifications', url: 'https://www.yanmar.com/marine/product/engines/4jh45/' },
+      { title: 'Nanni — propulsion product guide including N4.50', url: 'https://nannienergy.com/wp-content/uploads/2023/08/nanni-ProductGuide_en.pdf' },
+    ],
+  },
+  'beta-marine-vs-vetus': {
+    title: 'Beta 38 vs VETUS M4.45 Marine Engine',
+    context: 'A compact four-cylinder repower comparison where the VETUS carries more headline power and displacement, while the Beta publishes a lower dry package mass.',
+    left: { model: 'Beta 38', output: '38 hp / 28.3 kW', rpm: '3,600 rpm', cylinders: '4 in-line', displacement: '1.498 L', weight: '168 kg', rating: 'Recreational specification', driveline: 'Multiple shaft gears; saildrive version available' },
+    right: { model: 'VETUS M4.45', output: '42 hp / about 31 kW', rpm: 'Confirm offered specification', cylinders: '4 in-line', displacement: '1.758 L', weight: 'Confirm complete marine package', rating: 'M-Line recreational package', driveline: 'Shaft and saildrive-compatible versions' },
+    verdict: 'These are shortlist neighbours, not exact twins. Confirm full-load rpm, complete package mass, mount drawing and gear ratio before using the 4 hp difference in a propeller calculation.',
+    sources: [
+      { title: 'Beta Marine — Beta 38 technical specifications', url: 'https://betamarine.co.uk/portfolio/beta-38/' },
+      { title: 'VETUS — M4.45 marine engine information', url: 'https://webshop.vetus.com/en/product/42-hp-m4-45-marine-diesel-engine' },
+    ],
+  },
+  'volvo-penta-vs-cummins': {
+    title: 'Volvo Penta D8-600 vs Cummins QSB6.7 550 Marine Engine',
+    context: 'A performance-boat shortlist near 550–600 hp. The comparison only works when the Volvo Penta proposal is conventional shaft drive; an IPS package has a different system boundary.',
+    left: { model: 'Volvo Penta D8-600', output: '441 kW / 600 hp', rpm: 'Confirm current variant sheet', cylinders: '6 in-line', displacement: '7.7 L', weight: 'Confirm shaft package', rating: 'Current D8 recreational offering', driveline: 'Inboard shaft or model-specific Volvo Penta drive' },
+    right: { model: 'Cummins QSB6.7 550', output: '405 kW / 550 mhp', rpm: '3,300 rpm', cylinders: '6 in-line', displacement: '6.7 L', weight: '658 kg', rating: 'High Output', driveline: 'Conventional marine gear and shaft' },
+    verdict: 'The Volvo Penta has 50 hp more headline output; the Cummins publishes a compact 6.7-litre package. Compare installed shaft power, duty limits, gear ratio, controls, ventilation and total package mass.',
+    sources: [
+      { title: 'Volvo Penta — current D8 marine engine range', url: 'https://www.volvopenta.com/marine/all-marine-engines/' },
+      { title: 'Cummins — QSB6.7 marine specifications and ratings', url: 'https://www.cummins.com/en-eu/engines/products/qsb67qsb7' },
+    ],
+  },
+  'volvo-penta-vs-scania': {
+    title: 'Volvo Penta D13-800 vs Scania DI13 088M 750 Marine Engine',
+    context: 'Two 13-litre-class commercial candidates with a 50 hp nominal gap. The exact Scania duty definition and Volvo Penta rating number must be accepted for the same vessel mission before pricing.',
+    left: { model: 'Volvo Penta D13-800 IMO III', output: '588 kW / 800 hp', rpm: 'Confirm selected product sheet', cylinders: '6 in-line', displacement: '12.8 L', weight: 'Confirm engine and SCR package', rating: 'Volvo Penta Rating 4', driveline: 'Inboard shaft or IPS30 system' },
+    right: { model: 'Scania DI13 088M', output: '552 kW / 750 hp', rpm: '2,300 rpm', cylinders: '6 in-line', displacement: '12.7 L', weight: '1,180 kg excluding fluids', rating: 'Published DI13 088M specification', driveline: 'Commercial marine gear and shaft' },
+    verdict: 'Displacement is nearly identical, but output, emissions package, rating basis and driveline integration are not. Include SCR volume and back-pressure requirements where IMO III compliance is required.',
+    sources: [
+      { title: 'Volvo Penta — D13 IMO III inboard technical data', url: 'https://www.volvopenta.com/en-us/marine/all-marine-engines/d13-imo-iii/' },
+      { title: 'Scania — DI13 088M 552 kW specification', url: 'https://www.scania.com/content/dam/scanianoe/market/master/products-and-services/engines/pdf/specs/marine/DI13088_552kW.pdf' },
+    ],
+  },
+  'cummins-vs-john-deere': {
+    title: 'Cummins QSB6.7 425 vs John Deere 6090AFM85 425 Marine Engine',
+    context: 'Both publish 425 hp, but the Cummins is a 6.7-litre high-output engine at 3,000 rpm while the Deere is a 9.0-litre M4 commercial rating at 2,400 rpm.',
+    left: { model: 'Cummins QSB6.7 425', output: '312 kW / 425 mhp', rpm: '3,000 rpm', cylinders: '6 in-line', displacement: '6.7 L', weight: '658 kg', rating: 'High Output', driveline: 'Marine gear selected separately' },
+    right: { model: 'John Deere 6090AFM85 M4', output: '317 kW / 425 bhp', rpm: '2,400 rpm', cylinders: '6 in-line', displacement: '9.0 L', weight: '1,055 kg dry', rating: 'M4', driveline: 'Commercial marine gear selected separately' },
+    verdict: 'The shared 425 hp label masks a 2.3-litre displacement and 600 rpm rated-speed difference. Compare the application rules first; weight and gearbox/propeller design follow from that choice.',
+    sources: [
+      { title: 'Cummins — QSB6.7 marine specifications and ratings', url: 'https://www.cummins.com/en-eu/engines/products/qsb67qsb7' },
+      { title: 'John Deere — 6090AFM85 propulsion specification', url: 'https://www.deere.com/assets/pdfs/common/industries/engines-and-drivetrain/specsheets/6090afm85_a_m1.pdf' },
+    ],
+  },
+  'cummins-vs-man': {
+    title: 'Cummins QSM11 715 vs MAN D2676 LE446 730 Marine Engine',
+    context: 'A light-duty or performance-commercial comparison in the low-700 hp class. Exact application rules still need to be aligned even though output and installed scale appear close.',
+    left: { model: 'Cummins QSM11 715', output: '526 kW / 715 mhp', rpm: '2,500 rpm', cylinders: '6 in-line', displacement: '10.8 L', weight: '1,188 kg published product weight', rating: 'High Output', driveline: 'Conventional marine gear and shaft' },
+    right: { model: 'MAN D2676 LE446', output: '537 kW / 730 hp', rpm: '2,300 rpm', cylinders: '6 in-line', displacement: '12.42 L', weight: 'About 1,215 kg dry', rating: 'Light duty', driveline: 'Conventional marine gear and shaft' },
+    verdict: 'The MAN publishes 15 hp more at 200 rpm less and uses greater displacement. Compare permitted annual hours/full-load share, gear ratio, torque curve and emissions configuration—not peak power alone.',
+    sources: [
+      { title: 'Cummins — QSM11 marine specifications', url: 'https://selfscreening.cummins.com/en-in/engines/products/qsm11?v=1381' },
+      { title: 'MAN — commercial marine D2676 technical data', url: 'https://www.man.eu/content/dam/man/man-engines/doc/produkte/marine-1/Marine-Commercial.pdf/_jcr_content/renditions/original./Marine-Commercial.pdf' },
+    ],
+  },
+  'caterpillar-vs-man': {
+    title: 'Caterpillar C12.9 1000 vs MAN V8-1000 Marine Engine',
+    context: 'An equal-power performance-yacht pairing that contrasts a 12.9-litre in-line six with a 16.16-litre V8. Both publish 735 kW at 2,300 rpm, but their envelopes and control ecosystems differ.',
+    left: { model: 'Cat C12.9 1000', output: '735 bkW / 1,000 mhp', rpm: '2,300 rpm', cylinders: '6 in-line', displacement: '12.9 L', weight: 'Confirm final option configuration', rating: 'High-performance recreational', driveline: 'Conventional shaft; compatible control solutions vary' },
+    right: { model: 'MAN V8-1000', output: '735 kW / 1,000 hp', rpm: '2,300 rpm', cylinders: 'V8', displacement: '16.16 L', weight: '1,780 kg average dry', rating: 'Pleasure-duty specification', driveline: 'Conventional marine gear and shaft' },
+    verdict: 'Rated power and speed match, making this a useful technical comparison. The deciding data are installed dimensions and mass, torque curve, ventilation, exhaust, service access, controls and local commissioning capability.',
+    sources: [
+      { title: 'Caterpillar — C12.9 high-performance marine specification', url: 'https://h-cpc.cat.com/cmms/v2?cid=402&f=product&gid=18375952&it=product&lid=en&nc=1&pid=1000015300&sc=T070' },
+      { title: 'MAN — V8-1000 pleasure-engine technical data', url: 'https://www.man.eu/content/dam/man/man-engines/doc/produkte/marine-1/Marine_Pleasure_A5_EN_250730_web.pdf/_jcr_content/renditions/original./Marine_Pleasure_A5_EN_250730_web.pdf' },
+    ],
+  },
+  'caterpillar-vs-mtu': {
+    title: 'Caterpillar C32B 2000 vs mtu 12V 2000 M96X Marine Engine',
+    context: 'A near-2,000 hp fast-yacht comparison. Published output differs slightly and the engines reach rated power at different speeds, so gearbox and propeller calculations cannot be carried across.',
+    left: { model: 'Cat C32B Twin Turbo', output: '1,491 bkW / 2,000 bhp', rpm: '2,300 rpm', cylinders: 'V12', displacement: '32.1 L', weight: '3,145 kg dry', rating: 'E rating; full 2,000 hp limited to 8% of time', driveline: 'High-performance shaft-drive package' },
+    right: { model: 'mtu 12V 2000 M96X', output: '1,472 kW / 1,974 bhp', rpm: '2,450 rpm', cylinders: 'V12', displacement: '26.8 L', weight: 'Confirm project specification', rating: '1DS / fast vessels with low load factors', driveline: 'Typically matched with specified ZF marine gear' },
+    verdict: 'The Cat publishes more displacement and 26 bhp more at a lower rated speed; the mtu publishes a smaller-displacement, higher-speed package. Compare duty definitions, gear selection, installed weight, service zones and overhaul logistics.',
+    sources: [
+      { title: 'Caterpillar — C32B Twin Turbo specifications', url: 'https://www.cat.com/en_AU/products/new/power-systems/marine-power-systems/high-performance-propulsion-and-maneuvering-solutions/106140.html' },
+      { title: 'mtu — 12V 2000 M96L/M96X marine specification', url: 'https://www.mtu-solutions.com/content/dam/mtu/products/yacht/main-propulsion/mtu-series-2000/3238251_MTU_Marine_spec_10V12V16V2000M96LX_1DS.pdf' },
+    ],
+  },
+  'john-deere-vs-fpt': {
+    title: 'John Deere 6090SFM85 550 vs FPT C90 620 E 550 Marine Engine',
+    context: 'A matched 550 hp comparison using the Deere M5 and the lower-output FPT C90 620 E rating. Rated speed and published package mass still differ materially.',
+    left: { model: 'John Deere 6090SFM85 M5', output: '410 kW / 550 bhp', rpm: '2,500 rpm', cylinders: '6 in-line', displacement: '9.0 L', weight: '1,056 kg dry', rating: 'M5', driveline: 'Commercial marine gear selected separately' },
+    right: { model: 'FPT C90 620 E (550)', output: '404 kW / 550 hp', rpm: '2,530 rpm', cylinders: '6 in-line', displacement: '8.7 L', weight: '940 kg dry', rating: 'B commercial rating', driveline: 'Commercial marine gear selected separately' },
+    verdict: 'Power and rated speed are unusually close. Compare the duty definitions, cooling configuration, 116 kg published dry-weight difference, dimensions, controls, gearbox and Australian support evidence.',
+    sources: [
+      { title: 'John Deere — 6090SFM85 propulsion specification', url: 'https://www.deere.com/assets/pdfs/common/industries/engines-and-drivetrain/specsheets/6090sfm85_a.pdf' },
+      { title: 'FPT Industrial — C90 620 E commercial technical sheet', url: 'https://www.fptindustrial.com/-/media/FPT/Brochures/Engines/MARINE/COMMERCIAL/Marine_Pocket_Commercial_EN_06_2022_web.pdf?rev=9d02900cab0545b19213b3d23366bd71' },
+    ],
+  },
+};
+
 export const engineComparisons = [
   {
     slug: 'yanmar-vs-volvo-penta',
@@ -325,7 +493,7 @@ export const engineComparisons = [
     ownership: 'Commercial selection should include a planned-maintenance and spares review with the technician who will actually support the vessel. Compare daily checks, filter access, cooler service, valve adjustment, software tools and the transport path for a failed major component.',
     usedChecks: commercialUsedChecks, quoteProof: commercialQuoteProof, sourceSlugs: ['john-deere-marine', 'iveco-fpt-marine'], ...commercialVisual,
   },
-];
+].map((comparison) => ({ ...comparison, modelMatchup: modelMatchups[comparison.slug] }));
 
 export function comparisonsForBrand(slug) {
   return engineComparisons.filter((item) => item.left.slug === slug || item.right.slug === slug);

@@ -30,7 +30,26 @@ const faqs = [
     question: 'Are the model families in this guide all sold new in Australia?',
     answer: 'Not necessarily. Australian boats contain current and legacy engines. Confirm current supply, specification, certification, warranty and dealer support with the manufacturer or authorised Australian distributor.',
   },
+  {
+    question: `Are ${comparison.modelMatchup.left.model} and ${comparison.modelMatchup.right.model} direct replacements?`,
+    answer: 'No model should be treated as a direct replacement from a specification table alone. Verify duty approval, dimensions, mounts, shaft height, gearbox or drive, propeller match, cooling, exhaust, controls, electrical system, service clearances and the complete installed mass.',
+  },
 ];
+
+const modelPropertyLabels = {
+  output: 'Rated output', rpm: 'Rated speed', cylinders: 'Cylinder layout',
+  displacement: 'Displacement', weight: 'Published dry weight',
+  rating: 'Rating or duty context', driveline: 'Driveline context',
+};
+const modelSchemaItems = ['left', 'right'].map((side, index) => ({
+  '@type': 'ListItem', position: index + 1,
+  item: {
+    '@type': 'ProductModel', name: comparison.modelMatchup[side].model,
+    additionalProperty: Object.entries(modelPropertyLabels).map(([key, name]) => ({
+      '@type': 'PropertyValue', name, value: comparison.modelMatchup[side][key],
+    })),
+  },
+}));
 
 const page = {
   url: `/marine-diesel-engine-comparisons/${comparison.slug}/`,
@@ -39,8 +58,8 @@ const page = {
   pageType: 'engine-comparison', status: 'ready', author: site.defaultAuthor,
   reviewer: null, needsReviewer: false, indexable: true, blockers: [],
   parent: '/marine-diesel-engine-comparisons/', parentTitle: 'Engine Comparisons',
-  schema: ['Article', 'FAQPage', 'BreadcrumbList'], updated: '2026-10-02',
-  description: metaDescription(`${comparison.title} in Australia: compare applications, duty, installation, driveline, ownership, used-engine checks and quote scope.`, 160),
+  schema: ['TechArticle', 'FAQPage', 'BreadcrumbList'], updated: '2026-10-02',
+  description: metaDescription(`${comparison.title} in Australia, including ${comparison.modelMatchup.left.model} vs ${comparison.modelMatchup.right.model} technical data, duty and installation.`, 160),
   image: comparison.image,
   imageAlt: comparison.imageAlt,
   imageWidth: 1536,
@@ -49,6 +68,7 @@ const page = {
   searchIntent: 'Commercial investigation', faqs,
   headings: [
     { depth: 2, slug: 'real-comparison', text: 'Where this comparison is valid' },
+    { depth: 2, slug: 'model-vs-model', text: comparison.modelMatchup.title },
     { depth: 2, slug: 'differences', text: 'Key marine engine differences' },
     { depth: 2, slug: 'ownership', text: 'Maintenance and ownership' },
     { depth: 2, slug: 'used-engines', text: 'Comparing used engines' },
@@ -56,9 +76,19 @@ const page = {
     { depth: 2, slug: 'decision', text: 'Which marine engine should you choose?' },
     { depth: 2, slug: 'frequently-asked-questions', text: 'Frequently asked questions' },
   ],
+  extraSchema: [{
+    '@type': 'ItemList',
+    '@id': `${site.domain}/marine-diesel-engine-comparisons/${comparison.slug}/#model-matchup-data`,
+    name: comparison.modelMatchup.title,
+    numberOfItems: 2,
+    itemListElement: modelSchemaItems,
+  }],
 };
 
-const sources = comparison.sourceSlugs.map((slug) => officialEngineSources[slug]).filter(Boolean);
+const sources = [
+  ...comparison.modelMatchup.sources,
+  ...comparison.sourceSlugs.map((slug) => officialEngineSources[slug]).filter(Boolean),
+].filter((source, index, list) => list.findIndex((item) => item.url === source.url) === index);
 const sameGroupComparisons = engineComparisons.filter((item) => item.slug !== comparison.slug && item.comparisonGroup === comparison.comparisonGroup);
 const otherComparisons = [
   ...sameGroupComparisons,
@@ -97,6 +127,31 @@ const marineEngineName = (brand) => /\bMarine$/i.test(brand) ? `${brand} Engine`
       <p>{comparison.rightCase}</p>
     </article>
   </div>
+
+  <section class="model-matchup" aria-labelledby="model-vs-model">
+    <p class="kicker">Representative model matchup</p>
+    <h2 id="model-vs-model">{comparison.modelMatchup.title}</h2>
+    <p>{comparison.modelMatchup.context}</p>
+    <p class="table-hint" id="model-data-hint">On a phone, swipe across the table to compare both model specifications.</p>
+    <div class="comparison-table engine-detail-table" role="region" aria-label={`${comparison.modelMatchup.title} technical data`} aria-describedby="model-data-hint" tabindex="0">
+      <table>
+        <thead>
+          <tr><th>Published specification</th><th>{comparison.modelMatchup.left.model}</th><th>{comparison.modelMatchup.right.model}</th></tr>
+        </thead>
+        <tbody>
+          <tr><th>Rated output</th><td>{comparison.modelMatchup.left.output}</td><td>{comparison.modelMatchup.right.output}</td></tr>
+          <tr><th>Rated speed</th><td>{comparison.modelMatchup.left.rpm}</td><td>{comparison.modelMatchup.right.rpm}</td></tr>
+          <tr><th>Cylinder layout</th><td>{comparison.modelMatchup.left.cylinders}</td><td>{comparison.modelMatchup.right.cylinders}</td></tr>
+          <tr><th>Displacement</th><td>{comparison.modelMatchup.left.displacement}</td><td>{comparison.modelMatchup.right.displacement}</td></tr>
+          <tr><th>Published dry weight</th><td>{comparison.modelMatchup.left.weight}</td><td>{comparison.modelMatchup.right.weight}</td></tr>
+          <tr><th>Rating or duty context</th><td>{comparison.modelMatchup.left.rating}</td><td>{comparison.modelMatchup.right.rating}</td></tr>
+          <tr><th>Driveline context</th><td>{comparison.modelMatchup.left.driveline}</td><td>{comparison.modelMatchup.right.driveline}</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="model-matchup__verdict"><strong>What the numbers mean:</strong> {comparison.modelMatchup.verdict}</p>
+    <p class="spec-caveat"><strong>Specification boundary:</strong> Manufacturer data can change by market, emissions build, gear, cooling system and option package. Values above are a shortlisting snapshot, not installation approval. Obtain the current Australian datasheet and dimensioned drawing identified by model and specification revision.</p>
+  </section>
 
   <h2 id="differences">Key marine engine differences</h2>
   <p class="table-hint" id="model-comparison-hint">On a phone, swipe across the table to compare both marine engine options.</p>

@@ -79,11 +79,12 @@ const comparisonGroups = [
   <p class="table-hint" id="head-to-head-table-hint">On a phone, swipe across the table to see the complete comparison.</p>
   <div class="comparison-table" role="region" aria-label="Marine engine brand comparison matrix" aria-describedby="head-to-head-table-hint" tabindex="0">
     <table>
-      <thead><tr><th>Engine comparison</th><th>Most relevant to</th><th>Decision starts with</th></tr></thead>
+      <thead><tr><th>Engine comparison</th><th>Representative model matchup</th><th>Most relevant to</th><th>Decision starts with</th></tr></thead>
       <tbody>
         {engineComparisons.map((item) => (
           <tr>
             <th><a href={`/marine-diesel-engine-comparisons/${item.slug}/`}>{item.shortTitle}</a></th>
+            <td><a href={`/marine-diesel-engine-comparisons/${item.slug}/#model-vs-model`}>{item.modelMatchup.left.model} vs {item.modelMatchup.right.model}</a></td>
             <td>{item.category}</td>
             <td>{item.compare[0]}</td>
           </tr>
@@ -103,6 +104,7 @@ const comparisonGroups = [
             <p class="eyebrow">{item.category}</p>
             <h3><a href={`/marine-diesel-engine-comparisons/${item.slug}/`}>{item.shortTitle}</a></h3>
             <p>{item.validWhen}</p>
+            <p class="comparison-card-models"><strong>Model matchup:</strong> {item.modelMatchup.left.model} vs {item.modelMatchup.right.model}</p>
             <p class="comparison-card-link"><a href={`/marine-diesel-engine-comparisons/${item.slug}/`}>Compare these Marine Engines <span aria-hidden="true">→</span></a></p>
           </article>
         ))}

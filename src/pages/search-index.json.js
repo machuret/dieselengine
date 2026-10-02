@@ -38,9 +38,9 @@ function records() {
     ...engineComparisons.map((comparison) => ({
       url: `/marine-diesel-engine-comparisons/${comparison.slug}/`,
       title: comparison.title,
-      description: `${comparison.category}. Compare exact marine engine packages, installation, duty, maintenance, used-engine evidence and quote scope.`,
+      description: `${comparison.category}. Includes ${comparison.modelMatchup.left.model} vs ${comparison.modelMatchup.right.model} technical data, duty, installation and ownership evidence.`,
       type: 'Engine comparison',
-      keywords: [comparison.shortTitle, comparison.left.name, comparison.right.name],
+      keywords: [comparison.shortTitle, comparison.left.name, comparison.right.name, comparison.modelMatchup.left.model, comparison.modelMatchup.right.model],
     })),
     ...questionClusters.map((cluster) => ({
       url: `/questions/${cluster.slug}/`, title: `${cluster.title} questions`,
