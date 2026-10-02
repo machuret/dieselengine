@@ -16,6 +16,7 @@ import GeoBrief from '../components/GeoBrief.astro';
 import EditorialGuideDirectory from '../components/EditorialGuideDirectory.astro';
 import EditorialReferences from '../components/EditorialReferences.astro';
 import EngineProfile from '../components/EngineProfile.astro';
+import EngineComparisons from '../components/EngineComparisons.astro';
 
 const { page } = Astro.props;
 const canonical = new URL(page.url, site.domain).href;
@@ -226,6 +227,7 @@ const jsonld = {
           )}
           <slot />
           <EngineProfile page={page} />
+          <EngineComparisons page={page} />
           <EditorialReferences page={page} />
           <EditorialVisual page={page} />
           {page.geo && <GeoBrief page={page} />}

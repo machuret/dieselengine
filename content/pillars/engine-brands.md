@@ -29,6 +29,8 @@ auxiliary, a high-output planing engine and a commercial continuous-duty engine
 are not substitutes simply because their power overlaps.
 → [Compare marine diesel engine types in Australia](/marine-diesel-engine-types/)
 
+→ [Compare marine diesel engines head to head](/marine-diesel-engine-comparisons/)
+
 ## New availability versus the installed fleet
 
 The pages below cover both engines offered through current manufacturer and

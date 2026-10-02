@@ -1,0 +1,130 @@
+---
+import Page from '../layouts/Page.astro';
+import SourcePanel from '../components/SourcePanel.astro';
+import { engineComparisons } from '../data/engine-comparisons.js';
+import { officialEngineSources } from '../data/engine-profiles.js';
+import site from '../../site.config.json' with { type: 'json' };
+
+const faqs = [
+  { question: 'Which marine diesel engine brand is best in Australia?', answer: 'There is no universal winner. The better choice is the correctly rated engine that fits the vessel, works with the driveline, can be serviced in the engine room and has credible parts and technical support where the boat operates.' },
+  { question: 'Can I compare two marine engines by horsepower?', answer: 'Not safely. Compare the manufacturer’s duty rating, rated speed, torque and propeller match, installed dimensions, weight, cooling and exhaust requirements, gearbox or drive, electrical integration and support package.' },
+  { question: 'Should I replace an engine with the same brand?', answer: 'Existing beds, controls, drive and service relationships can make the same brand economical, but they do not remove the need to measure. New generations can have different mounts, exhaust, electronics, gearbox ratios and service clearances.' },
+  { question: 'Are these comparisons a substitute for an engine quote?', answer: 'No. They are shortlisting frameworks. A useful quote must identify the exact model, rating and specification revision and list the gearbox or drive, controls, mounts, exhaust, cooling parts, labour, commissioning and warranty responsibilities.' },
+];
+
+const page = {
+  url: '/marine-diesel-engine-comparisons/',
+  title: 'Marine Diesel Engine Comparisons Australia',
+  seoTitle: 'Marine Diesel Engine Comparisons Australia',
+  pageType: 'comparison', status: 'ready', author: site.defaultAuthor,
+  reviewer: null, needsReviewer: false, indexable: true, blockers: [],
+  parent: '/engine-brands/', parentTitle: 'Engine Brands',
+  schema: ['Article', 'FAQPage', 'BreadcrumbList'], updated: '2026-10-02',
+  description: 'Compare marine diesel engine brands in Australia, including Yanmar vs Volvo Penta, Cummins vs Caterpillar and commercial engine alternatives.',
+  primaryKeyword: 'marine diesel engine comparisons Australia',
+  searchIntent: 'Commercial investigation', faqs,
+  headings: [
+    { depth: 2, slug: 'comparison-matrix', text: 'Marine engine comparison matrix' },
+    ...engineComparisons.map((item) => ({ depth: 2, slug: item.slug, text: item.shortTitle })),
+    { depth: 2, slug: 'compare-an-engine-quote', text: 'How to compare engine quotes' },
+    { depth: 2, slug: 'frequently-asked-questions', text: 'Frequently asked questions' },
+  ],
+  extraSchema: [{
+    '@type': 'ItemList',
+    '@id': `${site.domain}/marine-diesel-engine-comparisons/#comparisons`,
+    name: 'Marine diesel engine comparisons in Australia',
+    numberOfItems: engineComparisons.length,
+    itemListElement: engineComparisons.map((item, index) => ({
+      '@type': 'ListItem', position: index + 1, name: item.shortTitle,
+      url: `${site.domain}/marine-diesel-engine-comparisons/#${item.slug}`,
+    })),
+  }],
+};
+
+const sourceSlugs = ['yanmar', 'volvo-penta', 'cummins-marine', 'caterpillar-marine', 'john-deere-marine', 'scania-marine', 'man-marine'];
+const sources = sourceSlugs.map((slug) => officialEngineSources[slug]).filter(Boolean);
+---
+<Page page={page}>
+  <h1>Marine diesel engine comparisons in Australia</h1>
+  <p class="lead">
+    Engine-versus-engine comparisons are useful only when both candidates are
+    being considered for the same job. This guide compares common Australian
+    shortlists without pretending that one brand wins every installation.
+  </p>
+  <p>
+    Start with the vessel’s operating profile and the{' '}
+    <a href="/marine-diesel-engine-types/">correct marine engine type</a>. Then
+    compare exact models, ratings and complete installed packages. Current and
+    legacy ranges can differ substantially, so confirm every specification with
+    the manufacturer and Australian supplier before ordering.
+  </p>
+
+  <h2 id="comparison-matrix">Marine engine comparison matrix</h2>
+  <p class="table-hint" id="head-to-head-table-hint">On a phone, swipe across the table to see the complete comparison.</p>
+  <div class="comparison-table" role="region" aria-label="Marine engine brand comparison matrix" aria-describedby="head-to-head-table-hint" tabindex="0">
+    <table>
+      <thead><tr><th>Engine comparison</th><th>Most relevant to</th><th>Decision starts with</th></tr></thead>
+      <tbody>
+        {engineComparisons.map((item) => (
+          <tr>
+            <th><a href={`#${item.slug}`}>{item.shortTitle}</a></th>
+            <td>{item.category}</td>
+            <td>{item.compare[0]}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  {engineComparisons.map((item) => (
+    <section class="head-to-head" id={item.slug} aria-labelledby={`${item.slug}-title`}>
+      <div class="head-to-head__heading">
+        <p class="kicker">Engine vs engine</p>
+        <h2 id={`${item.slug}-title`}>{item.title}</h2>
+        <p>{item.category}</p>
+      </div>
+      <p class="comparison-scope"><strong>This comparison is valid when:</strong> {item.validWhen}</p>
+      <div class="head-to-head__sides">
+        <article>
+          <span class="versus-label">Option A</span>
+          <h3><a href={`/engine-brands/${item.left.slug}/`}>{item.left.name}</a></h3>
+          <p>{item.leftCase}</p>
+        </article>
+        <span class="versus" aria-hidden="true">VS</span>
+        <article>
+          <span class="versus-label">Option B</span>
+          <h3><a href={`/engine-brands/${item.right.slug}/`}>{item.right.name}</a></h3>
+          <p>{item.rightCase}</p>
+        </article>
+      </div>
+      <div class="head-to-head__checks">
+        <h3>Compare these before choosing</h3>
+        <ul>{item.compare.map((point) => <li>{point}</li>)}</ul>
+      </div>
+      <p class="decision-note"><strong>Decision rule:</strong> {item.decision}</p>
+    </section>
+  ))}
+
+  <h2 id="compare-an-engine-quote">How to compare engine quotes</h2>
+  <p>
+    Put both proposals into the same scope before comparing price. Record the
+    exact engine model, output and duty rating; gearbox or drive and ratio;
+    controls, panel and loom; mounts; exhaust and cooling changes; alternator;
+    propeller work; removal and installation labour; haul-out; fluids;
+    commissioning; sea trial; warranty registration and exclusions.
+  </p>
+  <p>
+    A cheaper engine-only figure is not a cheaper repower if the competing quote
+    includes the driveline and installation work. Use the{' '}
+    <a href="/guides/marine-diesel-repower-measurement-guide/">repower measurement guide</a>,
+    {' '}read the <a href="/guides/new-vs-reconditioned-marine-engine/">new versus reconditioned comparison</a>
+    {' '}and find the appropriate <a href="/marine-engine-suppliers/">Australian supplier category</a>.
+  </p>
+
+  <section class="faq-list" aria-labelledby="frequently-asked-questions">
+    <h2 id="frequently-asked-questions">Frequently asked questions</h2>
+    {faqs.map((faq) => <details><summary>{faq.question}</summary><p>{faq.answer}</p></details>)}
+  </section>
+
+  <SourcePanel title="Official manufacturer range and rating sources" links={sources} />
+</Page>

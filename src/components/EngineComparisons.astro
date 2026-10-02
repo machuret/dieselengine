@@ -1,0 +1,27 @@
+---
+import { brandSlug } from '../lib/brand-marks.js';
+import { comparisonsForBrand } from '../data/engine-comparisons.js';
+
+const { page } = Astro.props;
+const slug = brandSlug(page.url);
+const comparisons = page.pageType === 'brand-hub' ? comparisonsForBrand(slug) : [];
+---
+{comparisons.length > 0 && (
+  <section class="profile-comparisons" aria-labelledby="profile-comparisons-title">
+    <p class="kicker">Engine vs engine</p>
+    <h2 id="profile-comparisons-title">Compare {page.brand ?? page.title} with alternatives</h2>
+    <p>Use a like-for-like matchup to identify the installation, duty and support questions that can actually change the decision.</p>
+    <div class="profile-comparisons__links">
+      {comparisons.map((comparison) => {
+        const rival = comparison.left.slug === slug ? comparison.right : comparison.left;
+        return (
+          <a href={`/marine-diesel-engine-comparisons/#${comparison.slug}`}>
+            <span>{comparison.shortTitle}</span>
+            <small>{comparison.category}</small>
+            <strong>Compare with {rival.name} <span aria-hidden="true">→</span></strong>
+          </a>
+        );
+      })}
+    </div>
+  </section>
+)}
