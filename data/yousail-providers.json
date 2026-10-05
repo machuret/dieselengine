@@ -1,7 +1,7 @@
 {
   "apiVersion": "1",
   "siteKey": "marinedieselengine",
-  "syncedAt": "2026-09-26T16:36:46.735Z",
+  "syncedAt": "2026-10-05T06:00:26.740Z",
   "totalCount": 1,
   "businesses": [
     {
@@ -20,10 +20,10 @@
       "website": "http://onshoremarine.com.au/",
       "phone": "+61 7 5546 2480",
       "email": "info@onshoremarine.com.au",
-      "logoImageUrl": "https://yousail.com.au/api/directory/image/c03d6dd3-3b60-4d1e-b82d-604e0123afed?v=1786519888",
-      "featureImageUrl": null,
+      "logoImageUrl": "https://yousail.com.au/api/directory/image/30f5c94a-ee75-4779-9e42-4a638c5f7100?v=1791071134",
+      "featureImageUrl": "https://yousail.com.au/api/directory/image/c03d6dd3-3b60-4d1e-b82d-604e0123afed?v=1786519888",
       "yousailUrl": "https://yousail.com.au/directory/onshore-marine",
-      "sourceUpdatedAt": "2026-09-26T16:34:49.424267+00:00"
+      "sourceUpdatedAt": "2026-10-03T23:45:34.079552+00:00"
     }
   ]
 }
