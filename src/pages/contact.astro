@@ -21,53 +21,16 @@ const page = {
     repairs.
   </p>
 
-  <form class="contact-form" id="contact-form"
-        action={`mailto:${site.contactEmail}?subject=${encodeURIComponent(subject)}`}
-        method="get">
-    <div class="form-row">
-      <label>Name <input name="name" autocomplete="name" required /></label>
-      <label>Email <input name="email" type="email" autocomplete="email" required /></label>
-    </div>
-    <label>
-      What is this about?
-      <select name="topic">
-        <option>Report a factual error</option>
-        <option>Business listing correction</option>
-        <option>Suggest an authority resource</option>
-        <option>General editorial feedback</option>
-      </select>
-    </label>
-    <label>
-      Page address <span class="optional">optional</span>
-      <input name="page" type="url" inputmode="url" placeholder="https://www.marinedieselengine.com.au/…" />
-    </label>
-    <label>
-      Message
-      <textarea name="message" rows="7" required></textarea>
-    </label>
-    <button type="submit">Open email to send</button>
-    <p class="form-note">
-      This opens your email app with a message addressed to
-      <strong>{site.contactEmail}</strong> and “{site.name}” in the subject.
-      The form does not store or transmit anything by itself.
-    </p>
-  </form>
+  <div data-paperform-id="yousail"></div>
+  <script is:inline>
+    (function() {
+      var script = document.createElement('script');
+      script.src = 'https://paperform.co/__embed.min.js';
+      document.body.appendChild(script);
+    })();
+  </script>
+  <p class="form-note">
+    You can also email
+    <a href={`mailto:${site.contactEmail}?subject=${encodeURIComponent(subject)}`}>{site.contactEmail}</a>.
+  </p>
 </Page>
-
-<script define:vars={{ recipient: site.contactEmail, siteName: site.name }}>
-  document.querySelector('#contact-form')?.addEventListener('submit', (event) => {
-    event.preventDefault();
-    const form = event.currentTarget;
-    if (!(form instanceof HTMLFormElement) || !form.reportValidity()) return;
-    const data = new FormData(form);
-    const topic = String(data.get('topic') ?? 'Website enquiry');
-    const body = [
-      `Name: ${data.get('name') ?? ''}`,
-      `Email: ${data.get('email') ?? ''}`,
-      `Page: ${data.get('page') || 'Not supplied'}`,
-      '',
-      String(data.get('message') ?? ''),
-    ].join('\n');
-    window.location.href = `mailto:${recipient}?subject=${encodeURIComponent(`[${siteName}] ${topic}`)}&body=${encodeURIComponent(body)}`;
-  });
-</script>
