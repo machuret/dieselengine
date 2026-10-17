@@ -1,0 +1,6 @@
+---
+import Layout from '../layouts/Page.astro';
+import NetworkSupporters from '../components/NetworkSupporters.astro';
+---
+<Layout page={{url:'/supporters/',title:'Supporters',description:'Meet the sponsors supporting Marine Diesel Engine and the YouSail network. Browse their logos and visit their official websites.',schema:['WebPage'],pageType:'utility',status:'ready',indexable:true,blockers:[],headings:[],faqs:[],parent:'/',parentTitle:'Home'}}><section class="supporters-intro"><h1>Supporters</h1><p>Meet the organisations supporting Marine Diesel Engine and the YouSail network. Select a logo to visit the sponsor’s website in a new tab.</p></section><NetworkSupporters mode="grid" /></Layout>
+<style>.supporters-intro{max-width:1200px;margin:0 auto;padding:48px 20px}.supporters-intro h1{font-size:clamp(2rem,5vw,3.5rem);line-height:1.15}.supporters-intro p{max-width:70ch;line-height:1.65}</style>
