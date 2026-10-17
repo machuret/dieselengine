@@ -80,7 +80,7 @@ function validateSchema(node, page, label) {
 
 for (const f of files) {
   if (!f.endsWith('.html')) continue;
-  const page = relative(DIST, f);
+  const page = relative(DIST, f).replaceAll('\\', '/');
   const html = readFileSync(f, 'utf8');
   const blocks = [...html.matchAll(/<script\b[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)];
   if (blocks.length) schemaPageCount++;
@@ -117,7 +117,7 @@ for (const f of files) {
 const routes = new Map();
 for (const f of files) {
   if (!f.endsWith('index.html')) continue;
-  const rel = relative(DIST, f).replace(/index\.html$/, '');
+  const rel = relative(DIST, f).replaceAll('\\', '/').replace(/index\.html$/, '');
   const url = '/' + rel;
   const html = readFileSync(f, 'utf8');
   const indexable = !/<meta name="robots" content="noindex/.test(html);
@@ -183,7 +183,7 @@ let internalLinkCount = 0;
 let localImageCount = 0;
 for (const f of files) {
   if (!f.endsWith('.html')) continue;
-  const page = relative(DIST, f);
+  const page = relative(DIST, f).replaceAll('\\', '/');
   const html = readFileSync(f, 'utf8');
 
   for (const [, href] of html.matchAll(/<a\b[^>]*\bhref=["']([^"']+)["'][^>]*>/gi)) {
@@ -228,7 +228,7 @@ if (!existsSync(indexPath)) {
 for (const f of files) {
   if (!f.endsWith('.html')) continue;
   const m = readFileSync(f, 'utf8').match(/\{\{[A-Z][A-Z0-9_:.-]*\}\}/);
-  if (m) errors.push(`${relative(DIST, f)} contains an unresolved placeholder ${m[0]}`);
+  if (m) errors.push(`${relative(DIST, f).replaceAll('\\', '/')} contains an unresolved placeholder ${m[0]}`);
 }
 
 /**
@@ -267,7 +267,7 @@ for (const section of GEO_SECTIONS) {
   const pages = [];
   for (const f of files) {
     if (!f.endsWith('index.html')) continue;
-    const rel = relative(DIST, f);
+    const rel = relative(DIST, f).replaceAll('\\', '/');
     if (!section.test(rel)) continue;
     const t = trigrams(prose(readFileSync(f, 'utf8')));
     if (t.size > 200) pages.push({ rel, t });
@@ -314,7 +314,7 @@ for (const section of GEO_SECTIONS) {
 const bySlug = new Map();
 for (const f of files) {
   if (!f.endsWith('index.html')) continue;
-  const rel = relative(DIST, f);
+  const rel = relative(DIST, f).replaceAll('\\', '/');
   const m =
     /^(marine-diesel|marine-mechanics|buy-marine-diesel-engine)\/([^/]+)\/index\.html$/.exec(rel) ??
     /^(engine-brands|distributors)\/([^/]+)\/index\.html$/.exec(rel);

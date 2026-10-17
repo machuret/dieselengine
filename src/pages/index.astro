@@ -2,6 +2,7 @@
 import site from '../../site.config.json' with { type: 'json' };
 import Masthead from '../components/Masthead.astro';
 import SiteFooter from '../components/SiteFooter.astro';
+import NetworkSupporters from '../components/NetworkSupporters.astro';
 import { allPages } from '../lib/content.js';
 import { seoTitle } from '../lib/extract.js';
 import { questionClusters } from '../lib/questions.js';
@@ -262,6 +263,7 @@ const jsonld = {
       )}
     </main>
 
+    <NetworkSupporters />
     <SiteFooter />
   </body>
 </html>

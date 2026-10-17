@@ -1,4 +1,5 @@
 ---
+import NetworkSupporters from "../components/NetworkSupporters.astro";
 import site from '../../site.config.json' with { type: 'json' };
 import { seoTitle } from '../lib/extract.js';
 import Masthead from '../components/Masthead.astro';
@@ -275,6 +276,7 @@ const jsonld = {
       </div>
     </main>
 
-    <SiteFooter />
+    {Astro.url.pathname === '/' && <NetworkSupporters />}
+<SiteFooter />
   </body>
 </html>

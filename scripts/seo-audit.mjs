@@ -1,14 +1,15 @@
 import { readFile, readdir } from 'node:fs/promises';
 import { join, relative, sep } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-const dist = new URL('../dist/', import.meta.url);
+const dist = fileURLToPath(new URL('../dist/', import.meta.url));
 const domain = 'https://www.marinedieselengine.com.au';
 
 async function htmlFiles(directory) {
   const entries = await readdir(directory, { withFileTypes: true });
   const nested = await Promise.all(entries.map((entry) => {
-    const path = join(directory.pathname, entry.name);
-    return entry.isDirectory() ? htmlFiles(new URL(`file://${path}${sep}`)) : path.endsWith('.html') ? [path] : [];
+    const path = join(directory, entry.name);
+    return entry.isDirectory() ? htmlFiles(path) : path.endsWith('.html') ? [path] : [];
   }));
   return nested.flat();
 }
@@ -28,7 +29,7 @@ const errors = [];
 for (const file of files) {
   const html = await readFile(file, 'utf8');
   if (/<meta\s+name=["']robots["'][^>]*content=["'][^"']*noindex/i.test(html)) continue;
-  const route = `/${relative(dist.pathname, file).split(sep).join('/').replace(/index\.html$/, '')}`;
+  const route = `/${relative(dist, file).split(sep).join('/').replace(/index\.html$/, '')}`;
   const title = capture(html, /<title>([\s\S]*?)<\/title>/i);
   const description = capture(html, /<meta\s+name="description"\s+content="([^"]*)"/i);
   const canonical = capture(html, /<link\s+rel="canonical"\s+href="([^"]*)"/i);

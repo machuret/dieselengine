@@ -55,6 +55,7 @@ const REVIEW_REQUIRED = new Set(['symptom', 'engine-model', 'brand-symptom', 'ho
 /** Minimal front-matter reader for the simple `key: value` / `[a, b]` form
  *  the content files use. Only needed outside the Vite pipeline. */
 export function parseFrontMatter(text) {
+  text = text.replaceAll('\r\n', '\n');
   if (!text.startsWith('---\n')) return { data: {}, body: text };
   const end = text.indexOf('\n---\n', 4);
   if (end === -1) return { data: {}, body: text };
