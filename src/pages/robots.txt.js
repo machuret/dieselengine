@@ -53,6 +53,7 @@ export function GET() {
     '# Named AI agents, allowed explicitly rather than by default.',
     ...AI_AGENTS.flatMap((a) => [`User-agent: ${a}`, 'Allow: /', '']),
     `Sitemap: ${site.domain}/sitemap.xml`,
+    `Sitemap: ${site.domain}/sitemap-supporters.xml`,
     '',
   ].join('\n');
 
