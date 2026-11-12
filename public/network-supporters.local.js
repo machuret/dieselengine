@@ -3,6 +3,8 @@
   "use strict";
   if (!window.customElements || customElements.get("yousail-supporters")) return;
   const localFeatures = {"b24859a7-962f-4cb4-b672-2f6df2dfb9c8": "boateye360", "7748bb5b-c629-440d-add3-fc529208acd6": "captain-matt", "e5fa1470-b4f1-439f-acef-4769393297a6": "easy-inflatables", "1d81e8a0-07db-487d-8c15-4d538e3ec96d": "ferosticker", "27333a09-a950-4eff-a6ed-9b9c3ffa4544": "flying-fish-sailing", "bb2002c8-1695-41ca-8a48-3c34e8dc7aa6": "honu", "c0f62604-3a7f-46db-920d-adebe41e6915": "mainstay-sailing", "3ed4bde9-5da8-4314-a778-09a54ea09563": "shakesure", "5869f49c-4e9d-4d5f-a531-f3214b5abc34": "sos-marine", "c82286b4-e77e-49b7-963b-c0b97ecaf71b": "survival-kit", "0d2854f5-2741-40dd-9c61-1fec3355a923": "water-makers-australia"};
+  Object.assign(localFeatures, {"boat-names-australia": "boat-names-australia", "ceadb196-8d0b-4829-97ac-2d75c71f1617": "bushman", "seaair": "seaair", "5c512d76-395d-4971-b512-4e8c4a4ae028": "poclink", "31419ce8-2c0a-47cb-9bae-fbe96888608c": "acebeam"});
+  const additions = [{"id": "boat-names-australia", "name": "Boat Names Australia", "targetUrl": "https://www.boatnames.com.au/", "logoUrl": "/images/supporters/boat-names-australia/logo.png"}, {"id": "ceadb196-8d0b-4829-97ac-2d75c71f1617", "name": "Bushman", "targetUrl": "https://bushman.com.au/", "logoUrl": "/images/supporters/bushman/logo.png"}, {"id": "seaair", "name": "SeaAir", "targetUrl": "https://seaair.com/", "logoUrl": "/images/supporters/seaair/logo.png"}, {"id": "5c512d76-395d-4971-b512-4e8c4a4ae028", "name": "Poclink", "targetUrl": "https://poclink.com/", "logoUrl": "/images/supporters/poclink/logo.png"}, {"id": "31419ce8-2c0a-47cb-9bae-fbe96888608c", "name": "Acebeam", "targetUrl": "https://www.acebeam.com/", "logoUrl": "/images/supporters/acebeam/logo.png"}];
   const feeds = new Map();
   let settings;
   function carouselEnabled(site) {
@@ -29,7 +31,7 @@
         if (!response.ok) throw new Error("Supporters unavailable");
         const body = await response.json();
         if (body.version !== 1 || !Array.isArray(body.sponsors)) throw new Error("Unsupported feed");
-        return body.sponsors;
+        return [...body.sponsors, ...additions.filter(extra => !body.sponsors.some(s => new URL(s.targetUrl).hostname.replace(/^www\./, "") === new URL(extra.targetUrl).hostname.replace(/^www\./, "")))];
       }).catch((error) => { feeds.delete(site); throw error; }).finally(() => clearTimeout(timeout));
       feeds.set(site, request);
     }
@@ -99,7 +101,7 @@
         }
         for (let sponsor of order) {
           if (localFeatures[sponsor.id] === "survival-kit") sponsor = { ...sponsor, name: "SURVIVAL" };
-          const target = webUrl(sponsor.targetUrl); const logoUrl = webUrl(sponsor.logoUrl);
+          const target = webUrl(sponsor.targetUrl); const logoUrl = sponsor.logoUrl?.startsWith("/images/supporters/") ? new URL(sponsor.logoUrl, location.origin).href : webUrl(sponsor.logoUrl);
           if (!target || !logoUrl || typeof sponsor.name !== "string") continue;
           const item = element("li"); const link = element("a"); link.className = "logo";
           const slug = localFeatures[sponsor.id];
