@@ -1737,3 +1737,43 @@ footer.site nav a:hover { color: var(--accent); text-decoration: underline; }
   .feature-copy { padding: 1rem; }
   .prose > h2 { margin-top: 2.25rem; }
 }
+
+/* Cover spread: a solid reading surface beside the full-colour engine bay. */
+.hero { background: #082c3b; }
+.hero-inner { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0; max-width: 90rem; padding: 0; }
+.hero-main { display: block; grid-area: auto; padding: clamp(1.75rem, 4vw, 4rem) 0; }
+.hero .eyebrow { margin: 0 0 1rem; color: #9ef3df; }
+.hero h1 { max-width: 16ch; color: #fffaf0; }
+.hero .hero-lede { color: #e2eff1; max-width: 41ch; }
+.hero-action {
+  display: inline-flex; align-items: center; gap: 1.2rem; margin-top: 1.4rem;
+  padding: .7rem 1rem; border-radius: .2rem; background: #a3f1de;
+  color: #082c3b; font-weight: 700; text-decoration: none;
+}
+.hero-action:hover { background: white; color: #082c3b; }
+.hero-photo { display: block; width: 100%; height: auto; object-fit: cover; }
+@media (min-width: 52rem) {
+  .hero-inner { grid-template-columns: 4fr 5fr; }
+  .hero-main { align-self: center; padding-right: clamp(2rem, 4vw, 5rem); }
+  .hero-photo { height: 100%; min-height: 24rem; }
+}
+.publisher-spread { padding-block: clamp(1.4rem, 3vw, 2.5rem); }
+.hero .publisher-spread .hero-note {
+  max-width: none; margin: 0 0 .85rem; border: 0; padding: 0;
+  color: #fffaf0; font: italic clamp(1rem, 2vw, 1.35rem)/1.45 var(--editorial-face);
+}
+.publisher-spread .publisher-note { width: 100%; margin: 0; border-radius: .35rem; }
+.publisher-spread .publisher-note > img { max-height: none; }
+.publisher-note-copy p { margin: 0; }
+@media (min-width: 48rem) {
+  .publisher-spread .publisher-note-copy {
+    position: absolute; width: 1px; height: 1px; overflow: hidden;
+    clip-path: inset(50%); padding: 0; border: 0;
+  }
+}
+.symptom-index { padding: clamp(1rem, 3vw, 2rem); color: #fff; background: #102f42; }
+.symptom-index h2 { color: #c4f8ec; scroll-margin-top: 6rem; }
+.symptom-index .a { color: #cedee5; }
+@media (min-width: 52rem) {
+  .symptom-index ul { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 2.25rem; }
+}
