@@ -16,49 +16,52 @@ last_updated: 2026-09-11
 
 # Craftsman Marine in Australia
 
-Craftsman Marine is a Dutch marinizer working from industrial blocks, appearing
-in the Australian fleet mostly in imported yachts and in repowers.
+Craftsman Marine packages industrial engines for marine use in the Netherlands.
+Australian owners are most likely to meet one in an imported yacht or a vessel
+that has already been repowered.
 
-## Where you find them
+## Models owners encounter
 
-**CM2.16, CM3.27 and CM4.42** — small to medium cruising yacht auxiliaries, on
-shaft and saildrive.
+The **CM2.16, CM3.27 and CM4.42** cover small and medium cruising-yacht duties.
+Installations may drive a conventional shaft or a saildrive, so identify the
+gearbox or drive at the same time as the engine.
 
-## What owners should know
+## Two identities matter
 
-**The marinizer pattern applies.** Base engine parts follow the underlying
-industrial block and its network; marine componentry — heat exchanger, manifold,
-sea water pump, panel, loom — is Craftsman's own and comes through the marine
-channel.
+The Craftsman model identifies the complete marine package, while a second
+identity may apply to the industrial engine beneath it. Routine filters and
+some service items can follow the base engine; the heat exchanger, exhaust
+manifold, raw-water pump, wiring and instruments belong to the marine package.
 
-**Establish which base engine you have.** It widens where servicing items can be
-sourced considerably — see
+Find both identities before asking for parts. That can broaden the options for
+ordinary service consumables — see
 [how to identify your marine engine](/how/how-to-identify-your-marine-engine/).
 
-**The Australian network is small.** Confirm marine parts availability and lead
-time before committing, and carry spares for anything beyond coastal work.
+Australian specialist coverage is limited compared with the major-volume
+brands. Before buying an engine or approving a large repair, establish who can
+supply Craftsman-specific components and how long they normally take.
 
-**Mechanical simplicity across much of the range** means independent servicing
-is realistic, which matters more the further you are from a capital.
+Much of the range is mechanically straightforward enough for an experienced
+independent diesel technician. The technician still needs the right manual and
+correct part references.
 
-## Before ordering parts
+## Make the parts enquiry unambiguous
 
-Record both identification plates if the installation has them: the Craftsman
-model identifies the marine package, while the underlying industrial engine
-determines many routine service items. Photograph the existing part before
-removal and compare hose sizes, mounting points and electrical connections.
-An impeller or filter may be easy to cross-reference; a heat exchanger,
-instrument panel or exhaust component usually is not. Confirm return terms
-before ordering a part from overseas.
+Photograph every identification plate and the component that needs replacement.
+Include hose diameters, mounting locations, electrical plugs and any stamped
+number in the enquiry. A supplier may be able to cross-reference a filter or
+impeller, but a panel or fabricated cooling and exhaust component needs closer
+matching. If the item must come from overseas, settle the return conditions
+before placing the order.
 
 ## Frequently asked questions
 
-**Is Craftsman Marine supported in Australia?** The network is small. Confirm marine parts availability and lead time before booking work.
+**How do I find Australian support?** Start with the engine's complete model and serial details, then ask suppliers specifically about Craftsman marine components and lead times.
 
-**What is the base engine?** Craftsman\u2019s documentation identifies it. Knowing it widens where base engine parts can be sourced.
+**Why is there more than one identification plate?** One can describe the marine package and another the industrial engine used inside it; both may be needed for an accurate parts search.
 
-**Can an independent work on one?** Much of the range is mechanical, so yes.
+**Can a general diesel technician service it?** Often, provided the technician has the correct manual, model information and access to the marine-specific parts.
 
-**What spares should I carry?** Impeller and cover gasket, belts, filters, and anything specific to your model.
+**Which onboard spares are sensible?** Ask the regular workshop to nominate service consumables and any model-specific component that would otherwise cause a long delay.
 
-**Why do I see them in European yachts?** Craftsman was a factory option on a number of European builders\u2019 boats.
+**Where are Craftsman engines usually found?** In Australia they are commonly encountered in imported yachts and existing repower installations.
