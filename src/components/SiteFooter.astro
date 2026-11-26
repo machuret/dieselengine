@@ -5,12 +5,13 @@ import site from '../../site.config.json' with { type: 'json' };
   <div class="footer-inner">
     <div>
       <div class="footer-powered">
-        <a href="https://yousail.com.au/" rel="noopener noreferrer" aria-label="Powered by YouSail.com.au">
+        <a href={site.publisherUrl} rel="noopener noreferrer" aria-label="YouSail publishing brand">
           <img src="/brand/yousail-logo.png" width="64" height="64" alt="" loading="lazy" />
-          <span>Powered by <strong>YouSail.com.au</strong></span>
+          <span>Published by <strong>YouSail</strong></span>
         </a>
       </div>
-      <p><strong>{site.name}</strong> — {site.tagline}.</p>
+      <p><strong>YouSail</strong> publishes the {site.name} — {site.tagline}.</p>
+      <p class="muted">YouSail · ABN {site.abn}</p>
       <p>
         We are an independent information site. We do not work on boats, sell
         parts, or perform any of the work described here. Where a listing is a

@@ -102,13 +102,12 @@ export function slugifyQuestion(q) {
  * characters, and every title on this site was over it because the full page
  * title plus the brand never fit. Prefer an explicit seo_title, preserve
  * location terms such as Australia when they express search intent, and only
- * append the site brand when there is room for it.
+ * append the publishing brand. Article titles remain descriptive while the
+ * suffix makes the publisher clear in browser and sharing contexts.
  */
-export function seoTitle(page, brand, max = 60) {
+export function seoTitle(page, brand) {
   const base = (page.seoTitle || page.title || '').trim();
-  const withBrand = `${base} | ${brand}`;
-  if (withBrand.length <= max) return withBrand;
-  return base.length <= max ? base : base.slice(0, base.lastIndexOf(' ', max)).trim();
+  return base.endsWith(`| ${brand}`) ? base : `${base} | ${brand}`;
 }
 
 

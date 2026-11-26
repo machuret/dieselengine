@@ -1,14 +1,8 @@
 ---
 import site from '../../site.config.json' with { type: 'json' };
 ---
-<div class="publisher-bar" aria-label="Publisher">
-  <div class="publisher-inner">
-    <img src="/brand/yousail-logo.png" width="32" height="32" alt="YouSail logo" />
-    <span>Powered by <strong>YouSail.com.au</strong></span>
-  </div>
-</div>
 <header class="site">
-  <a class="brand" href="/">
+  <div class="brand" aria-label="YouSail, publisher of the Marine Diesel Engine Guide">
     {/* A propeller-and-water mark: specific to marine, no anchors or rope. */}
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
       <circle cx="12" cy="12" r="2.1" fill="currentColor" />
@@ -21,8 +15,10 @@ import site from '../../site.config.json' with { type: 'json' };
       <path d="M2 21c1.6 0 1.6-1.2 3.2-1.2S6.8 21 8.4 21s1.6-1.2 3.2-1.2S13.2 21 14.8 21s1.6-1.2 3.2-1.2S19.6 21 22 21"
             stroke="currentColor" stroke-width="1.4" stroke-linecap="round" opacity=".45" />
     </svg>
-    {site.shortName}
-  </a>
+    <a class="brand-publisher" href={site.publisherUrl}>YouSail</a>
+    <span class="brand-divider" aria-hidden="true">|</span>
+    <a class="brand-guide" href="/">Marine Diesel Engine Guide</a>
+  </div>
   <div class="nav-menu">
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Menu</button>
     <nav id="primary-nav" aria-label="Primary">
@@ -35,6 +31,20 @@ import site from '../../site.config.json' with { type: 'json' };
     </nav>
   </div>
 </header>
+
+<aside class="publisher-note" aria-label="Publisher clarification">
+  <img
+    src="/yousail-lawyer-banner.png"
+    width="2176"
+    height="727"
+    alt=""
+    decoding="async"
+  />
+  <div class="publisher-note-copy">
+    <p>Are you a lawyer visiting this website?</p>
+    <p>You’ve found YouSail. We’re not Marine Diesel Pty Ltd.</p>
+  </div>
+</aside>
 
 <script>
   const menu = document.querySelector<HTMLElement>('.nav-menu');

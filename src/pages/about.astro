@@ -3,8 +3,8 @@ import Page from '../layouts/Page.astro';
 import site from '../../site.config.json' with { type: 'json' };
 
 const page = {
-  url: '/about/', title: 'About Marine Diesel Engine Australia',
-  seoTitle: 'About Marine Diesel Engine Australia', pageType: 'about',
+  url: '/about/', title: 'About the Marine Diesel Engine Guide',
+  seoTitle: 'About the Marine Diesel Engine Guide', pageType: 'about',
   status: 'ready', author: site.defaultAuthor, reviewer: null,
   needsReviewer: false, parent: '/', parentTitle: 'Home',
   schema: ['AboutPage', 'BreadcrumbList'], updated: '2026-10-02',
@@ -18,8 +18,8 @@ const page = {
     { depth: 2, slug: 'the-yousail-network', text: 'The YouSail network' },
     { depth: 2, slug: 'contact-us', text: 'Contact us' },
   ],
-  description: 'Meet the people behind Marine Diesel Engine Australia, learn why Gabriel Machuret created the site and see how its independent engine guides are researched.',
-  primaryKeyword: 'about Marine Diesel Engine Australia', searchIntent: 'Navigational',
+  description: 'Meet the people behind YouSail’s Marine Diesel Engine Guide and see how its independent Australian engine guides are researched.',
+  primaryKeyword: 'about Marine Diesel Engine Guide', searchIntent: 'Navigational',
   extraSchema: [
     {
       '@type': 'Person',
@@ -36,11 +36,11 @@ const page = {
 <Page page={page}>
   <header class="about-hero">
     <p class="kicker">Independent Australian publication</p>
-    <h1>About Marine Diesel Engine Australia</h1>
+    <h1>About the Marine Diesel Engine Guide</h1>
     <p>
-      We make marine diesel information easier to find, compare and use. Marine
-      Diesel Engine Australia is part of <a href="https://yousail.com.au/" rel="noopener noreferrer">YouSail</a>,
-      an Australian sailing network created by Gabriel Machuret.
+      We make marine diesel information easier to find, compare and use.
+      <a href={site.publisherUrl} rel="noopener noreferrer">YouSail</a> publishes
+      this independent guide. It is not affiliated with or endorsed by Marine Diesel Pty Ltd.
     </p>
     <div class="about-principles" aria-label="Our publishing principles">
       <span>Practical</span><span>Independent</span><span>Source-led</span>
@@ -70,7 +70,7 @@ const page = {
       <p>
         Gabriel is a marketer, researcher and sailor in the making. He has spent
         more than a decade turning difficult-to-find information into useful
-        digital resources. Marine Diesel Engine Australia applies that work to
+        digital resources. YouSail’s Marine Diesel Engine Guide applies that work to
         one of boating’s most technical and consequential subjects.
       </p>
       <a class="text-arrow" href="/about/gabriel-machuret/">Read Gabriel’s story <span aria-hidden="true">→</span></a>
@@ -111,7 +111,7 @@ const page = {
 
   <h2 id="editorial-team">Editorial team and technical review</h2>
   <p>
-    “The Marine Diesel Engine editorial team” is our organisational publishing
+    “The YouSail editorial team” is our organisational publishing
     byline. It describes the research, writing, editing and maintenance of the
     site; it is not the name of a marine engineer and does not imply technical
     certification. Gabriel leads the publication and its information design.
@@ -139,7 +139,7 @@ const page = {
 
   <h2 id="the-yousail-network">The YouSail network</h2>
   <p>
-    Marine Diesel Engine Australia sits alongside a growing collection of
+    YouSail’s Marine Diesel Engine Guide sits alongside a growing collection of
     practical Australian boating resources. The network covers marinas, sailing
     schools, courses, clubs, charters, sails and other parts of life on the water.
   </p>

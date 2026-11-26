@@ -45,6 +45,10 @@ const schemaType = page.schema.includes('TechArticle')
         : 'Article';
 const headings = page.headings ?? [];
 const showToc = headings.length >= 4;
+const title = seoTitle(
+  { title: page.seoTitleTag ?? page.seoTitle ?? page.title },
+  site.publisherName,
+);
 
 const crumbs = [
   { name: 'Home', url: '/' },
@@ -113,11 +117,11 @@ const jsonld = {
     {
       '@type': 'Organization',
       '@id': `${site.domain}/#publisher`,
-      name: site.name,
-      url: site.domain,
-      description: site.description,
-      logo: { '@type': 'ImageObject', url: new URL('/favicon.svg', site.domain).href },
-      creator: { '@type': 'Organization', name: 'YouSail.com.au' },
+      name: site.publisherName,
+      url: site.publisherUrl,
+      description: `YouSail publishes the independent ${site.name}.`,
+      logo: { '@type': 'ImageObject', url: new URL('/brand/yousail-logo.png', site.domain).href },
+      identifier: { '@type': 'PropertyValue', propertyID: 'ABN', value: site.abn },
     },
     // A location hub is about a place; say so in a way a machine can read.
     ...(page.geo
@@ -168,7 +172,7 @@ const jsonld = {
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{page.seoTitleTag ?? seoTitle(page, site.shortName)}</title>
+    <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -180,15 +184,15 @@ const jsonld = {
       : <meta name="robots" content="noindex, follow" />}
     <meta name="theme-color" content="#0d6273" />
     <meta property="og:type" content="article" />
-    <meta property="og:title" content={page.title} />
+    <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <meta property="og:locale" content="en_AU" />
-    <meta property="og:site_name" content={site.name} />
+    <meta property="og:site_name" content={`${site.name} | ${site.publisherName}`} />
     <meta property="og:image" content={socialImage} />
     <meta property="og:image:alt" content={socialImageAlt} />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={page.title} />
+    <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={socialImage} />
     <meta name="twitter:image:alt" content={socialImageAlt} />

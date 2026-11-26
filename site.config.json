@@ -1,13 +1,16 @@
 {
   "domain": "https://www.marinedieselengine.com.au",
-  "name": "Marine Diesel Engine",
-  "shortName": "MarineDieselEngine.com.au",
+  "name": "Marine Diesel Engine Guide",
+  "shortName": "Marine Diesel Engine Guide",
+  "publisherName": "YouSail",
+  "publisherUrl": "https://yousail.com.au/",
+  "abn": "90 704 587 493",
   "tagline": "Independent marine diesel information for Australia",
   "description": "Independent Australian guides to marine diesel engines, faults, service costs and how to find a marine mechanic. We do not sell repairs.",
   "locale": "en-AU",
   "country": "AU",
   "_comment_publishing": "defaultAuthor is the publishing organisation and is a legitimate byline. defaultReviewer must be a real, named marine mechanic whose review can be substantiated \u2014 never a placeholder, nickname or unrelated business. Leave it null until that person has reviewed the material.",
-  "defaultAuthor": "The Marine Diesel Engine editorial team",
+  "defaultAuthor": "The YouSail editorial team",
   "defaultReviewer": null,
   "sections": [
     {

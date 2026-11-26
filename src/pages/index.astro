@@ -55,12 +55,13 @@ const locations = allPages.filter((p) => p.pageType === 'city-hub');
 const services = allPages.filter((p) => p.pageType === 'service-national');
 const featuredServices = services.slice(0, 12);
 const socialImage = new URL(site.socialImage, site.domain).href;
+const homeTitle = 'Marine Diesel Engine Guide | YouSail';
 
 const jsonld = {
   '@context': 'https://schema.org',
   '@graph': [
-    { '@type': 'Organization', '@id': `${site.domain}/#publisher`, name: site.name, url: site.domain, description: site.description, logo: { '@type': 'ImageObject', url: new URL('/favicon.svg', site.domain).href }, creator: { '@type': 'Organization', name: 'YouSail.com.au' }, publishingPrinciples: `${site.domain}/editorial-policy/` },
-    { '@type': 'WebSite', '@id': `${site.domain}/#website`, url: canonical, name: site.name, inLanguage: site.locale, image: socialImage, publisher: { '@id': `${site.domain}/#publisher` }, creator: { '@type': 'Organization', name: 'YouSail.com.au' }, potentialAction: { '@type': 'SearchAction', target: { '@type': 'EntryPoint', urlTemplate: `${site.domain}/search/?q={search_term_string}` }, 'query-input': 'required name=search_term_string' } },
+    { '@type': 'Organization', '@id': `${site.domain}/#publisher`, name: site.publisherName, url: site.publisherUrl, description: `YouSail publishes the independent ${site.name}.`, logo: { '@type': 'ImageObject', url: new URL('/brand/yousail-logo.png', site.domain).href }, identifier: { '@type': 'PropertyValue', propertyID: 'ABN', value: site.abn }, publishingPrinciples: `${site.domain}/editorial-policy/` },
+    { '@type': 'WebSite', '@id': `${site.domain}/#website`, url: canonical, name: site.name, alternateName: homeTitle, inLanguage: site.locale, image: socialImage, publisher: { '@id': `${site.domain}/#publisher` }, potentialAction: { '@type': 'SearchAction', target: { '@type': 'EntryPoint', urlTemplate: `${site.domain}/search/?q={search_term_string}` }, 'query-input': 'required name=search_term_string' } },
   ],
 };
 ---
@@ -69,7 +70,7 @@ const jsonld = {
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Marine Diesel Engines Australia | Problems & Mechanics</title>
+    <title>{homeTitle}</title>
     <meta name="description" content={site.description} />
     <link rel="canonical" href={canonical} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -78,15 +79,16 @@ const jsonld = {
     <link rel="manifest" href="/site.webmanifest" />
     <meta name="robots" content={ready > 0 ? 'index, follow' : 'noindex, follow'} />
     <meta name="theme-color" content="#0d6273" />
-    <meta property="og:title" content={site.name} />
+    <meta property="og:title" content={homeTitle} />
     <meta property="og:description" content={site.description} />
     <meta property="og:url" content={canonical} />
     <meta property="og:locale" content="en_AU" />
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={homeTitle} />
     <meta property="og:image" content={socialImage} />
     <meta property="og:image:alt" content="Marine diesel engine installed in a yacht engine bay" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={site.name} />
+    <meta name="twitter:title" content={homeTitle} />
     <meta name="twitter:description" content={site.description} />
     <meta name="twitter:image" content={socialImage} />
     <script type="application/ld+json" set:html={JSON.stringify(jsonld)} />
