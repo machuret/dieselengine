@@ -1687,3 +1687,53 @@ footer.site nav a:hover { color: var(--accent); text-decoration: underline; }
   .provider-actions { display: grid; }
   .provider-actions a { text-align: center; }
 }
+
+/* The editorial pages pair a book face with the existing instrument labels. */
+:root { --editorial-face: Georgia, "Times New Roman", serif; }
+.hero h1, .field-notes-head h2, .system-map-copy h2, .section-head,
+.feature-copy strong, .workshop-grid strong, .prose > h1, .prose > h2 {
+  font-family: var(--editorial-face);
+  font-weight: 500;
+  text-wrap: balance;
+}
+.hero h1 {
+  font-size: clamp(2.7rem, 5.1vw, 4.7rem);
+  letter-spacing: -.045em;
+}
+.field-notes-head {
+  border-top: 3px double var(--accent);
+  padding-top: 1.15rem;
+}
+.field-notes-head h2 {
+  font-size: clamp(1.85rem, 3.4vw, 3rem);
+  line-height: 1.06;
+}
+.feature-card { border-radius: .35rem; }
+.feature-card::after {
+  background: linear-gradient(to top, #041725 0%, rgb(4 23 37 / .86) 22%, transparent 75%);
+}
+.feature-copy strong { font-size: clamp(1.6rem, 2.6vw, 2.55rem); line-height: 1.08; }
+@media (min-width: 48rem) {
+  .feature-grid { grid-template-columns: 3fr 2fr; }
+  .feature-copy { padding: 1.75rem; }
+}
+.prose > h1 {
+  max-width: 23ch;
+  font-size: clamp(2.35rem, 4.7vw, 3.8rem);
+  letter-spacing: -.045em;
+  line-height: 1.04;
+}
+.prose > h1::before {
+  content: ""; display: block; width: 3rem;
+  border-top: 3px solid var(--accent); margin-bottom: 1rem;
+}
+.prose > h2 {
+  border-top: 1px solid var(--rule); padding-top: .8em;
+  font-size: clamp(1.55rem, 2.8vw, 2.15rem);
+}
+.prose > p { line-height: 1.72; }
+@media (max-width: 43.99rem) {
+  .feature-card { min-height: 18rem; }
+  .feature-copy { padding: 1rem; }
+  .prose > h2 { margin-top: 2.25rem; }
+}
